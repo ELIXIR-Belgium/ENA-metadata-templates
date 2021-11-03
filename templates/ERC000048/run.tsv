@@ -1,0 +1,2 @@
+"alias"	"experiment_alias"	"file_name"	"file_format"
+"Mandatory. Unique identificator for each run."	"Mandatory. From_experiment_metadata"	"Mandatory. The name or relative pathname of a run data file."	"Mandatory. The run data file model."
