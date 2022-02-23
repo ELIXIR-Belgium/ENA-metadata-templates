@@ -1,0 +1,184 @@
+## Description of the metadata fields
+
+### Study
+
+| field name | requirement | description |
+| ------- | ------- | ------- |
+| alias | Mandatory | Unique identificator for a study. This is used to link experiments to the study. |
+| title | Mandatory | Title of the study as would be used in a publication. |
+| study_type | Mandatory | The STUDY_TYPE presents a controlled vocabulary for expressing the overall purpose of the study. |
+| new_study_type | Optional if ‘study_type’ is not ‘other’ | To propose a new term, select Other and enter a new study type. |
+| study_abstract | Optional | Briefly describes the goals, purpose, and scope of the Study.  This need not be listed if it can be inherited from a referenced publication. |
+
+
+### Experiment
+
+| field name | requirement | description |
+| ------- | ------- | ------- |
+| alias | Mandatory | Unique identificator for each experiment. This is used to link runs to experiments. |
+| title | Optional | Short text that can be used to call out experiment records in searches or in displays. This element is technically optional but should be used for all new records. |
+| study_alias | Mandatory | Identifies the parent study. (From study metadata) |
+| sample_alias | Mandatory | (From sample metadata) |
+| design_description | Optional | Goal and setup of the individual library including library was constructed. |
+| library_name | Optional | The submitter's name for this library. |
+| library_strategy | Mandatory | Sequencing technique intended for this library. |
+| library_source | Mandatory | The LIBRARY_SOURCE specifies the type of source material that is being sequenced. |
+| library_selection | Mandatory | Method used to enrich the target in the sequence library preparation |
+| library_layout | Mandatory | LIBRARY_LAYOUT specifies whether to expect single, paired, or other configuration of reads. In the case of paired reads, information about the relative distance and orientation is specified. |
+| insert_size | Optional | Insert size for paired reads |
+| library_construction_protocol | Optional | Free form text describing the protocol by which the sequencing library was constructed. |
+| platform | Mandatory | The PLATFORM record selects which sequencing platform and platform-specific runtime parameters. This will be determined by the Center. Optional if 'instrument_model' is provided. |
+| instrument_model | Mandatory | Model of the sequencing instrument. |
+
+
+### Run
+
+| field name | requirement | description |
+| ------- | ------- | ------- |
+| alias | Mandatory | Unique identificator for each run. |
+| experiment_alias | Mandatory | From_experiment_metadata |
+| file_name | Mandatory | The name or relative pathname of a run data file. |
+| file_format | Mandatory | The run data file model. |
+
+
+
+### Sample (this checklist)
+| field name | requirement | description |
+| ------- | ------- | ------- |
+| alias | Mandatory | Unique identificator for each sample. This is used to link experiments to the samples. |
+| title | Mandatory | Short text that can be used to call out sample records in search results or in displays. |
+| scientific_name | Mandatory | Scientific name of sample that distinguishes its taxonomy.  Please use a name or synonym that is tracked in the INSDC Taxonomy database. Also, this field can be used to confirm the TAXON_ID setting. |
+| sample_description | Mandatory | Free-form text describing the sample, its origin, and its method of isolation. |
+| Event Date/Time | Mandatory | Date and time in utc when the sampling event started and ended, e.g. each ctd cast, net tow, or bucket collection is a distinct event. Format: yyyy-mm-ddthh:mm:ssz. Example: 2013-06-21t14:05:00z/2013-06-21t14:46:00z. |
+| Latitude Start | Mandatory | Latitude of the location where the sampling event started, e.g. each ctd cast, net tow, or bucket collection is a distinct event. Format: ##.####, Decimal degrees; north= +, south= -; use wgs 84 for gps data. Example: -24.6666.. Units: dd |
+| Longitude Start | Mandatory | Longitude of the location where the sampling event started, e.g. each ctd cast, net tow, or bucket collection is a distinct event. Format: ###.####, Decimal degrees; east= +, west= -; use wgs 84 for gps data. Example: -096.1012.. Units: dd |
+| Latitude End | Recommended | Latitude of the location where the sampling event ended, e.g. each ctd cast, net tow, or bucket collection is a distinct event. Format: ##.####, Decimal degrees; north= +, south= -; use wgs 84 for gps data. Example: -24.6643.. Units: dd |
+| Longitude End | Recommended | Longitude of the location where the sampling event ended, e.g. each ctd cast, net tow, or bucket collection is a distinct event. Format: ###.####, Decimal degrees; east= +, west= -; use wgs 84 for gps data. Example: -096.1171.. Units: dd |
+| Depth | Mandatory | The distance below the surface of the water at which a measurement was made or a sample was collected. Format: ####.##, Positive below the sea surface. Sdn:p06:46:ulaa for m. Example: 14.71. Units: m |
+| Protocol Label | Mandatory | Identifies the protocol used to produce the sample, e.g. filtration and preservation. Example: bact_nuc_w0.22-1.6. |
+| project name | Mandatory | Name of the project within which the sequencing was organized |
+| experimental factor | Optional | Experimental factors are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This field accepts ontology terms from experimental factor ontology (efo) and/or ontology for biomedical investigations (obi). For a browser of efo (v 2.43) terms, please see http://purl.bioontology.org/ontology/efo; for a browser of obi (v 2013-10-25) terms please see http://purl.bioontology.org/ontology/obi |
+| ploidy | Optional | The ploidy level of the genome (e.g. allopolyploid, haploid, diploid, triploid, tetraploid). It has implications for the downstream study of duplicated gene and regions of the genomes (and perhaps for difficulties in assembly). For terms, please select terms listed under class ploidy (pato:001374) of phenotypic quality ontology (pato), and for a browser of pato (v 2013-10-28) please refer to http://purl.bioontology.org/ontology/pato. Mandatory for migs of eukaryotes. |
+| number of replicons | Optional | Reports the number of replicons in a nuclear genome of eukaryotes, in the genome of a bacterium or archaea or the number of segments in a segmented virus. Always applied to the haploid chromosome count of a eukaryote. Mandatory for migs of eukaryotes, bacteria, archaea and segmented virus. |
+| extrachromosomal elements | Optional | Do plasmids exist of significant phenotypic consequence (e.g. ones that determine virulence or antibiotic resistance). Megaplasmids? Other plasmids (borrelia has 15+ plasmids). |
+| estimated size | Optional | The estimated size of the genome (in bp) prior to sequencing. Of particular importance in the sequencing of (eukaryotic) genome which could remain in draft form for a long or unspecified period. Mandatory for migs of eukaryotes. |
+| reference for biomaterial | Optional | Primary publication if isolated before genome publication; otherwise, primary genome report. Mandatory for migs of bacteria and archaea. |
+| finishing strategy | Optional | Was the genome project intended to produce a complete or draft genome, coverage, the fold coverage of the sequencing expressed as 2x, 3x, 18x etc, and how many contigs were produced for the genome. Mandatory for migs of eukaryote, bacteria and archaea. |
+| annotation source | Optional | For cases where annotation was provided by a community jamboree or model organism database rather than by a specific submitter |
+| sample volume or weight for DNA extraction | Optional | Volume (ml) or weight (g) of sample processed for dna extraction. Units: g, ml, mg, ng |
+| nucleic acid extraction | Optional | Link to a literature reference, electronic resource or a standard operating procedure (sop) |
+| nucleic acid amplification | Optional | Link to a literature reference, electronic resource or a standard operating procedure (sop) |
+| library size | Optional | Total number of clones in the library prepared for the project |
+| library reads sequenced | Optional | Total number of clones sequenced from the library |
+| library construction method | Optional | Library construction method used for clone libraries |
+| library vector | Optional | Cloning vector type(s) used in construction of libraries |
+| library screening strategy | Optional | Specific enrichment or screening methods applied before and/or after creating clone libraries in order to select a specific group of sequences |
+| target gene | Optional | Targeted gene or locus name for marker gene studies |
+| target subfragment | Optional | Name of subfragment of a gene or locus. Important to e.g. identify special regions on marker genes like v6 on 16s rrna |
+| pcr primers | Optional | Pcr primers that were used to amplify the sequence of the targeted gene, locus or subfragment. This field should contain all the primers used for a single pcr reaction if multiple forward or reverse primers are present in a single pcr reaction. The primer sequence should be reported in uppercase letters |
+| multiplex identifiers | Optional | Molecular barcodes, called multiplex identifiers (mids), that are used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters |
+| adapters | Optional | Adapters provide priming sequences for both amplification and sequencing of the sample-library fragments. Both adapters should be reported; in uppercase letters |
+| pcr conditions | Optional | Description of reaction conditions and components for pcr in the form of 'initial denaturation:94degc_1.5min; annealing=...' |
+| sequence quality check | Optional | Indicate if the sequence has been called by automatic systems (none) or undergone a manual editing procedure (e.g. by inspecting the raw data or chromatograms). Applied only for sequences that are not submitted to sra or dra |
+| chimera check | Optional | A chimeric sequence, or chimera for short, is a sequence comprised of two or more phylogenetically distinct parent sequences. Chimeras are usually pcr artifacts thought to occur when a prematurely terminated amplicon reanneals to a foreign dna strand and is copied to completion in the following pcr cycles. The point at which the chimeric sequence changes from one parent to the next is called the breakpoint or conversion point |
+| relevant electronic resources | Optional | - |
+| relevant standard operating procedures | Optional | Standard operating procedures used in assembly and/or annotation of genomes, metagenomes or environmental sequences |
+| environmental package | Mandatory | Migs/mims/mimarks extension for reporting of measurements and observations obtained from one or more of the environments where the sample was obtained. All environmental packages listed here are further defined in separate subtables. By giving the name of the environmental package, a selection of fields can be made from the subtables and can be reported |
+| environment (biome) | Mandatory | Biomes are defined based on factors such as plant structures, leaf types, plant spacing, and other factors like climate. Biome should be treated as the descriptor of the broad ecological context of a sample. Examples include: desert, taiga, deciduous woodland, or coral reef. Envo (v 2013-06-14) terms can be found via the link: www.environmentontology.org/browse-envo |
+| environment (feature) | Mandatory | Environmental feature level includes geographic environmental features. Compared to biome, feature is a descriptor of the more local environment. Examples include: harbor, cliff, or lake. Envo (v 2013-06-14) terms can be found via the link: www.environmentontology.org/browse-envo |
+| environment (material) | Mandatory | The environmental material level refers to the material that was displaced by the sample, or material in which a sample was embedded, prior to the sampling event. Environmental material terms are generally mass nouns. Examples include: air, soil, or water. Envo (v 2013-06-14) terms can be found via the link: www.environmentontology.org/browse-envo |
+| Sampling Campaign | Mandatory | Refers to a finite or indefinite activity aiming at collecting data/samples, e.g. a cruise, a time series, a mesocosm experiment. Example: tara_20110401z. |
+| Sampling Site | Mandatory | Refers to the site/station where data/sample collection is performed. Term list: osd site registry or sdn:c17, http://tinyurl.com/oxux985 example: poseidon-e1-m3a time series station. |
+| Sampling Platform | Mandatory | Refers to the unique stage from which the sampling device has been deployed. Includes platform category from sdn:l06, http://seadatanet.maris2.nl/v_bodc_vocab_v2/search.asp?Lib=l06, and platform name. Example: research vessel tara. |
+| source material identifiers | Optional | A unique identifier assigned to a material sample (as defined by http://rs.tdwg.org/dwc/terms/materialsampleid, and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples. The insdc qualifiers /specimen_voucher, /bio_material, or /culture_collection may or may not share the same value as the source_mat_id field. For instance, the /specimen_voucher qualifier and source_mat_id may both contain 'uam:herps:14' , referring to both the specimen voucher and sampled tissue with the same identifier. However, the /culture_collection qualifier may refer to a value from an initial culture (e.g. Atcc:11775) while source_mat_id would refer to an identifier from some derived culture from which the nucleic acids were extracted (e.g. xatc123 or ark:/2154/r2). |
+| sample collection device or method | Optional | The method or deviced employed for collecting the sample |
+| sample material processing | Optional | Any processing applied to the sample during or after retrieving the sample from environment. This field accepts obi, for a browser of obi (v 2013-10-25) terms please see http://purl.bioontology.org/ontology/obi |
+| isolation and growth condition | Optional | Publication reference in the form of pubmed id (pmid), digital object identifier (doi) or url for isolation and growth condition specifications of the organism/material. Mandatory for migs and mimarks specimen. |
+| propagation | Optional | This field is specific to different taxa. For plants: sexual/asexual, for phages: lytic/lysogenic, for plasmids: incompatibility group (note: there is the strong opinion to name phage propagation obligately lytic or temperate, therefore we also give this choice. Mandatory for migs of eukaryotes, plasmids and viruses. |
+| amount or size of sample collected | Optional | Amount or size of sample (volume, mass or area) that was collected. Units: l, g, kg, m2, m3 |
+| biomass | Optional | Amount of biomass; should include the name for the part of biomass measured, e.g. microbial, total. can include multiple measurements. Units: g, kg, t |
+| density | Optional | Density of sample. Units: g/m3 |
+| oxygenation status of sample | Optional | Oxygenation status of sample |
+| organism count | Optional | Total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts |
+| sample storage duration | Optional | Duration for which sample was stored. Units: days, hours, months, weeks, years |
+| sample storage temperature | Optional | Temperature at which sample was stored, e.g. -80. Units: °c |
+| sample storage location | Optional | Location at which sample was stored, usually name of a specific freezer/room |
+| Marine Region | Mandatory | The geographical origin of the sample as defined by the marine region name chosen from the marine regions vocabulary at http://www.marineregions.org/. Example: aegean sea. |
+| Temperature | Mandatory | Temperature of water at the time of taking the sample. Format: ##.####, Sdn:p02:75:temp, sdn:p06:46:upaa for °c. Example: 17.7122.. Units: ºc |
+| Salinity | Mandatory | Salinity of water at the time of taking the sample. Format: ##.#, Sdn:p02::psal, sdn:p06::ugkg for psu. Example: 39.1 psu.. Units: psu |
+| specific host | Optional | If there is a host involved, please provide its taxid (or environmental if not actually isolated from the dead or alive host - i.e. pathogen could be isolated from a swipe of a bench etc) and report whether it is a laboratory or natural host). From this we can calculate any number of groupings of hosts (e.g. animal vs plant, all fish hosts, etc) |
+| health or disease status of specific host | Optional | Health or disease status of specific host at time of collection. This field accepts pato (v 2013-10-28) terms, for a browser please see http://purl.bioontology.org/ontology/pato |
+| alkalinity | Optional | Alkalinity, the ability of a solution to neutralize acids to the equivalence point of carbonate or bicarbonate. Units: meq/l |
+| atmospheric data | Optional | Measurement of atmospheric data; can include multiple data |
+| conductivity | Optional | Electrical conductivity of water. Units: ms/cm |
+| water current | Optional | Measurement of magnitude and direction of flow within a fluid. Units: knot, m3/s |
+| fluorescence | Optional | Raw (volts) or converted (mg chla/m^3) fluorescence of the water. Units: v, mg chla/m3 |
+| light intensity | Optional | Measurement of light intensity. Units: lux |
+| mean friction velocity | Optional | Measurement of mean friction velocity. Units: m/s |
+| mean peak friction velocity | Optional | Measurement of mean peak friction velocity. Units: m/s |
+| downward PAR | Optional | Visible waveband radiance and irradiance measurements in the water column. Units: µe/m2/s |
+| photon flux | Optional | Measurement of photon flux. Units: µmol/m2/s |
+| pressure | Optional | Pressure to which the sample is subject, in atmospheres. Units: atm, bar |
+| tidal stage | Optional | Stage of tide |
+| turbidity | Optional | Turbidity measurement. Units: ftu, ntu |
+| pH | Optional | Ph measurement |
+| total depth of water column | Optional | Measurement of total depth of water column. Units: m |
+| alkyl diethers | Optional | Concentration of alkyl diethers. Units: m/l, µg/l |
+| aminopeptidase activity | Optional | Measurement of aminopeptidase activity. Units: mol/l/h |
+| ammonium | Optional | Concentration of ammonium. Units: µmol/l |
+| bacterial carbon production | Optional | Measurement of bacterial carbon production. Units: ng/h |
+| bacterial production | Optional | Bacterial production in the water column measured by isotope uptake. Units: mg/m3/d |
+| bacterial respiration | Optional | Measurement of bacterial respiration in the water column. Units: mg/m3/d |
+| bishomohopanol | Optional | Concentration of bishomohopanol. Units: µg/l, µg/g |
+| bromide | Optional | Concentration of bromide. Units: parts/million, µmol/l |
+| calcium | Optional | Concentration of calcium. Units: mg/l, parts/million, µmol/l |
+| carbon/nitrogen ratio | Optional | Ratio of amount or concentrations of carbon to nitrogen |
+| chloride | Optional | Concentration of chloride. Units: mg/l |
+| chlorophyll | Optional | Concentration of chlorophyll. Units: mg/m3, µg/l |
+| diether lipids | Optional | Concentration of diether lipids; can include multiple types of diether lipids. Units: ng/l |
+| dissolved carbon dioxide | Optional | Concentration of dissolved carbon dioxide. Units: µmol/l |
+| dissolved hydrogen | Optional | Concentration of dissolved hydrogen. Units: µmol/l |
+| dissolved inorganic carbon | Optional | Dissolved inorganic carbon concentration. Units: µg/l |
+| dissolved inorganic nitrogen | Optional | Concentration of dissolved inorganic nitrogen. Units: µg/l |
+| dissolved inorganic phosphorus | Optional | Concentration of dissolved inorganic phosphorus. Units: µg/l |
+| dissolved organic carbon | Optional | Concentration of dissolved organic carbon. Units: µmol/l |
+| dissolved organic nitrogen | Optional | Dissolved organic nitrogen concentration measured as; total dissolved nitrogen - nh4 - no3 - no2. Units: mg/l, µg/l |
+| dissolved oxygen | Optional | Concentration of dissolved oxygen. Units: µmol/kg |
+| glucosidase activity | Optional | Measurement of glucosidase activity. Units: mol/l/h |
+| magnesium | Optional | Concentration of magnesium. Units: mg/l, mol/l, parts/million |
+| n-alkanes | Optional | Concentration of n-alkanes; can include multiple n-alkanes. Units: µmol/l |
+| nitrate | Optional | Concentration of nitrate. Units: µmol/l |
+| nitrite | Optional | Concentration of nitrite. Units: µmol/l |
+| nitrogen | Optional | Concentration of nitrogen (total). Units: µmol/l |
+| organic carbon | Optional | Concentration of organic carbon. Units: µmol/l |
+| organic matter | Optional | Concentration of organic matter. Units: µg/l |
+| organic nitrogen | Optional | Concentration of organic nitrogen. Units: µg/l |
+| particulate organic carbon | Optional | Concentration of particulate organic carbon. Units: µg/l |
+| particulate organic nitrogen | Optional | Concentration of particulate organic nitrogen. Units: µg/l |
+| petroleum hydrocarbon | Optional | Concentration of petroleum hydrocarbon. Units: µmol/l |
+| phaeopigments | Optional | Concentration of phaeopigments; can include multiple phaeopigments. Units: mg/m3, µg/l |
+| phosphate | Optional | Concentration of phosphate. Units: µmol/l |
+| phospholipid fatty acid | Optional | Concentration of phospholipid fatty acids; can include multiple values. Units: mol/l, mol/g |
+| potassium | Optional | Concentration of potassium. Units: parts/million, µmol/l |
+| primary production | Optional | Measurement of primary production. Units: g/m2/day, mg/m3/day |
+| redox potential | Optional | Redox potential, measured relative to a hydrogen cell, indicating oxidation or reduction potential. Units: mv |
+| silicate | Optional | Concentration of silicate. Units: µmol/l |
+| sodium | Optional | Sodium concentration. Units: parts/million, µmol/l |
+| soluble reactive phosphorus | Optional | Concentration of soluble reactive phosphorus. Units: µmol/l |
+| sulfate | Optional | Concentration of sulfate. Units: mg/l, µmol/l |
+| sulfide | Optional | Concentration of sulfide. Units: mg/l, µmol/l |
+| suspended particulate matter | Optional | Concentration of suspended particulate matter. Units: mg/l |
+| total dissolved nitrogen | Optional | Total dissolved nitrogen concentration, reported as nitrogen, measured by: total dissolved nitrogen = nh4 + no3no2 + dissolved organic nitrogen. Units: µg/l |
+| total inorganic nitrogen | Optional | Total inorganic nitrogen content. Units: µg/l |
+| total nitrogen | Optional | Total nitrogen content of the sample. Units: µg/l, µmol/l |
+| total particulate carbon | Optional | Total particulate carbon content. Units: µg/l, µmol/l |
+| total phosphorus | Optional | Total phosphorus concentration, calculated by: total phosphorus = total dissolved phosphorus + particulate phosphorus. Can also be measured without filtering, reported as phosphorus. Units: µmol/l |
+| miscellaneous parameter | Optional | Any other measurement performed or parameter collected, that is not listed here |
+| subspecific genetic lineage | Optional | This should provide further information about the genetic distinctness of this lineage by recording additional information i.e biovar, serovar, serotype, biovar, or any relevant genetic typing schemes like group i plasmid. It can also contain alternative taxonomic information |
+| trophic level | Optional | Trophic levels are the feeding position in a food chain. Microbes can be a range of producers (e.g. chemolithotroph) |
+| relationship to oxygen | Optional | Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments |
+| known pathogenicity | Optional | To what is the entity pathogenic, for instance plant, fungi, bacteria |
+| encoded traits | Optional | Should include key traits like antibiotic resistance or xenobiotic degradation phenotypes for plasmids, converting genes for phage |
+| observed biotic relationship | Optional | Is it free-living or in a host and if the latter what type of relationship is observed |
+| chemical administration | Optional | List of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, n fertilizer, air filter); can include multiple compounds. For chemical entities of biological interest ontology (chebi) (v111), please see http://purl.bioontology.org/ontology/chebi |
+| perturbation | Optional | Type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types |
