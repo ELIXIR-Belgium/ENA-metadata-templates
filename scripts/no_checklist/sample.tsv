@@ -1,0 +1,2 @@
+"alias"	"title"	"scientific_name"	"sample_description"
+"Mandatory. Unique identificator for each sample. This is used to link experiments to the samples."	"Mandatory. Short text that can be used to call out sample records in search results or in displays."	"Mandatory. Scientific name of sample that distinguishes its taxonomy.  Please use a name or synonym that is tracked in the INSDC Taxonomy database. Also, this field can be used to confirm the TAXON_ID setting."	"Mandatory. Free-form text describing the sample, its origin, and its method of isolation."
