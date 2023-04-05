@@ -1,4 +1,4 @@
-**IMPORTANT** The templates in this repo are still working, but are not up to date. We are looking into automatically updating these templates based on changes made on the ENA side.
+**IMPORTANT** The templates available here are up to date until 16-05-2022 and may not reflect changes on ENA schemas and checklists made since then. We are working on implementing automatic updates. Meanwhile, please [open an issue](https://github.com/ELIXIR-Belgium/ENA-metadata-templates/issues) in case an out of date template causes problems in your pipeline.
 
 # ENA-metadata-templates
 
