@@ -1,0 +1,97 @@
+study:
+  description: A Study is a container for a sequencing investigation that may comprise multiple experiments. The Study has an overall goal, but is otherwise minimally defined in the SRA.  A Study is composed of a descriptor, zero or more experiments, and zero or more analyses. The submitter may decorate the Study with web links and properties.
+  fields: 
+    - field name: alias
+      cardinality: mandatory
+      description: Unique identificator for a study. This is used to link experiments to the study.
+    - field name: title
+      cardinality: mandatory
+      description: Title of the study as would be used in a publication.
+    - field name: study_type
+      cardinality: mandatory
+      description: The STUDY_TYPE presents a controlled vocabulary for expressing the overall purpose of the study.
+    - field name: new_study_type
+      cardinality: optional
+      description: Optional if 'study_type' is not 'other'To propose a new term, select Other and enter a new study type.
+    - field name: study_abstract
+      cardinality: optional
+      description: Briefly describes the goals, purpose, and scope of the Study.  This need not be listed if it can be inherited from a referenced publication.
+
+experiment:
+  description: 
+  fields: 
+    - field name: alias
+      cardinality: mandatory
+      description: Unique identificator for each experiment. This is used to link runs to experiments.
+    - field name: title
+      cardinality: optional
+      description: Short text that can be used to call out experiment records in searches or in displays. This element is technically optional but should be used for all new records.
+    - field name: study_alias
+      cardinality: mandatory
+      description: Identifies the parent study. (From study metadata)
+    - field name: sample_alias
+      cardinality: mandatory
+      description: (From sample metadata)
+    - field name: design_description
+      cardinality: optional
+      description: Goal and setup of the individual library including library was constructed.
+    - field name: library_name
+      cardinality: optional
+      description: The submitter's name for this library.
+    - field name: library_strategy
+      cardinality: mandatory
+      description: Sequencing technique intended for this library.
+    - field name: library_source
+      cardinality: mandatory
+      description: The LIBRARY_SOURCE specifies the type of source material that is being sequenced.
+    - field name: library_selection
+      cardinality: mandatory
+      description: Method used to enrich the target in the sequence library preparation
+    - field name: library_layout
+      cardinality: mandatory
+      description: LIBRARY_LAYOUT specifies whether to expect single, paired, or other configuration of reads. In the case of paired reads, information about the relative distance and orientation is specified.
+    - field name: insert_size
+      cardinality: optional
+      description: Insert size for paired reads
+    - field name: library_construction_protocol
+      cardinality: optional
+      description: Free form text describing the protocol by which the sequencing library was constructed.
+    - field name: platform
+      cardinality: mandatory
+      description: The PLATFORM record selects which sequencing platform and platform-specific runtime parameters. This will be determined by the Center. optional if 'instrument_model' is provided.
+    - field name: instrument_model
+      cardinality: mandatory
+      description: Model of the sequencing instrument.
+
+run:
+  description: A run contains a group of reads generated for a particular experiment.
+  fields: 
+    - field name: alias
+      cardinality: mandatory
+      description: Unique identificator for each run.
+    - field name: experiment_alias
+      cardinality: mandatory
+      description: From_experiment_metadata
+    - field name: file_name
+      cardinality: mandatory
+      description: The name or relative pathname of a run data file.
+    - field name: file_format
+      cardinality: mandatory
+      description: The run data file model.
+
+sample:
+  description: A Sample defines an isolate of sequenceable material upon which sequencing experiments can be based.  The Sample object may be a surrogate for taxonomy accession or an anonymized individual identifier.  Or, it may fully specify provenance and isolation method of the starting material.
+  fields: 
+    - field name: alias
+      cardinality: mandatory
+      description: Unique identificator for each run.
+    - field name: title
+      cardinality: mandatory
+      description: Short text that can be used to call out sample records in search results or in displays.
+    - field name: taxon_id
+      cardinality: mandatory
+      description: NCBI Taxonomy Identifier.  This is appropriate for individual organisms and some environmental samples.
+    - field name: sample_description
+      cardinality: optional
+      description: Free-form text describing the sample, its origin, and its method of isolation.
+
