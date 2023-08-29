@@ -5,6 +5,7 @@ from urllib3.util.retry import Retry
 import time
 import xlsxwriter
 import os
+import yaml
 
 def fetch_object(url):
     print('  GET ' + url)
@@ -79,6 +80,7 @@ def fetching_checklists():
 
 def fetch_sample_attrib(root):
     # Looping over all fields and storing their name and cardinality
+    output_list = []
     for attribute in root.iter('FIELD'):
         output = {}
         output['name'] = ''
@@ -103,20 +105,30 @@ def fetch_sample_attrib(root):
                         for value in options:
                             for choice in value:
                                 output['choices'].append(choice.text)
-        yield output
+        output_list.append(output)
+    return output_list
 
 
 def main():
 
     mapping = { "run":["FILE"], "experiment":["LIBRARY_SELECTION", "LIBRARY_SOURCE", "LIBRARY_STRATEGY", "LOCUS"], "common":["PLATFORM"], "study":["STUDY_TYPE"]}
     template_names= ["ENA.project", "SRA.common", "SRA.experiment", "SRA.run", "SRA.sample", "SRA.study", "SRA.submission"]
+    yaml_file_path = "/home/bedro/Documents/ENA-metadata-templates/scripts/controlled_vocabulary/fixed_fields.yml"
+    try:
+        with open(yaml_file_path, 'r') as yaml_file:
+            fixed_fields = yaml.safe_load(yaml_file)
+    except FileNotFoundError:
+        print(f"File '{yaml_file_path}' not found.")
+    except yaml.YAMLError as e:
+        print("Error reading YAML:", e)
     
     for template_name in template_names:
         template_name_sm = template_name.split(".")[1]
         print(f"Downloading {template_name_sm} template")
         # Getting the xml checklist from ENA
         url = f"https://raw.githubusercontent.com/enasequence/schema/master/src/main/resources/uk/ac/ebi/ena/sra/schema/{template_name}.xsd"
-        response = fetch_object(url)    
+        response = fetch_object(url)
+        
         if template_name_sm in mapping.keys():
             for template_block in mapping[template_name_sm]:
                 # Parsing XSD
@@ -161,14 +173,12 @@ def main():
         url = f"https://www.ebi.ac.uk/ena/browser/api/xml/{checklist}?download=true"
         response = fetch_object(url)
 
-        # Dictionary that will contain all attributes needed
-        xml_tree = {}
-
         # Parsing XML
         root = etree.fromstring(response.content)
         root_dir = "templates"
         folder_name = checklist
         folder_path = os.path.join(root_dir, folder_name)
+        sample_attributes = fetch_sample_attrib(root)
         
         # Create the folder if it doesn't exist
         os.makedirs(folder_path, exist_ok=True)
@@ -177,12 +187,16 @@ def main():
         for j in ["experiment","study", "run", "sample"]:
             tsv_file_name = f"{j}.tsv"
             tsv_file_path = os.path.join(folder_path, tsv_file_name)
-            
+            header_list = []
+            for attribute in fixed_fields[j]['fields']:
+                header_list.append(attribute['name'])
+            if j == "sample" and sample_attributes:
+                for sample_attribute in sample_attributes:
+                    header_list.append(sample_attribute['name'])
+            header_string = '\t'.join(header_list) + '\n'    
             # Create or overwrite the TSV file
             with open(tsv_file_path, 'w') as tsv_file:
-                tsv_file.write("Column1\tColumn2\tColumn3\n")
-                tsv_file.write("Value1\tValue2\tValue3\n")
-                tsv_file.write("Value4\tValue5\tValue6\n")
+                tsv_file.write(header_string)
         
         # Create the README.md file
         readme_file_path = os.path.join(folder_path, "README.md")
@@ -213,7 +227,7 @@ def main():
             worksheet.set_column(0, 300, 15)
             index = 0
             if name == "sample":
-                for checklist in fetch_sample_attrib(root):
+                for checklist in sample_attributes:
                     if name:
                         # Write the header
                         worksheet.write(0, index, name, header_format)
