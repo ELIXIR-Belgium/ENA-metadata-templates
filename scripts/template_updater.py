@@ -114,11 +114,11 @@ def create_attributes(ena_object_name, ena_cv, sample_attributes, xml_tree):
     for attribute in ena_cv['fields']:
         if attribute['name'] in xml_tree.keys():
             attribute['cv'] = xml_tree[attribute['name']]
-
         yield attribute
-        if ena_object_name == "sample" and sample_attributes:
-            for sample_attribute in sample_attributes:
-                yield sample_attribute
+
+    if ena_object_name == "sample" and sample_attributes:
+        for sample_attribute in sample_attributes:
+            yield sample_attribute
 
 def index_to_letter(index):
     """Converts a 0-based index to an Excel column letter."""
@@ -129,6 +129,9 @@ def index_to_letter(index):
         index = (index - remainder) // 26 - 1
 
     return column_letter
+
+def create_alphanum (attrib):
+    return ''.join(char for char in attrib if char.isalnum())
 
 def main():
 
@@ -192,7 +195,7 @@ def main():
                 else:
                     break
 
-    for response_object in [{'accession':'ERC000013'}]: #fetching_checklists():
+    for response_object in fetching_checklists(): #[{'accession':'ERC000013'}]: 
         checklist = response_object['accession']
         print(f"Parsing {checklist}")
         # Getting the xml checklist from ENA
@@ -240,6 +243,8 @@ def main():
 
             # Initiate table to README
             readme_file.write(f"## {ena_object_name.title()}\n\n")
+            readme_file.write( ena_cv['description'] + "\n\n")
+
             df = pd.DataFrame(columns=["Field name", "Cardinality", "Description", "CV"])
 
             # Create worksheet
@@ -266,7 +271,7 @@ def main():
                         cv_worksheet.write(row_index, col_index, str(value))
                     # Define a named range for the valid values.
                     range = f"'cv_{ena_object_name}'!${index_to_letter(col_index)}$1:${index_to_letter(col_index)}${len(attrib['cv'])}"
-                    name = re.sub(r'[!\(\)\'*?/\\[\]:]', '_', attrib["name"]).replace(' ', '_')
+                    name = create_alphanum(attrib['name'])
                     workbook.define_name(name, range)
 
                 # Write the header
@@ -276,7 +281,7 @@ def main():
                 worksheet.write(1, col_index, f"({attrib['cardinality'].capitalize()}) {attrib['description'].capitalize()}{attrib['units']}", description_format)
                 # Add data validation
                 if 'cv' in attrib and attrib['cv']:
-                    name = re.sub(r'[!\'*?/\\[\]:]', '_', attrib["name"]).replace(' ', '_')
+                    name = create_alphanum(attrib['name'])
                     worksheet.data_validation(2, col_index, 100, col_index, {'validate': 'list', 'source': f'={name}'})
                 col_index += 1
             # write data table to README

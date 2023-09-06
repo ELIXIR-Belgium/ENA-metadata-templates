@@ -23,7 +23,7 @@ study:
       units: ""
 
 experiment:
-  description: 
+  description: ""
   fields: 
     - name: alias
       cardinality: mandatory
