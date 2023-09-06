@@ -133,6 +133,18 @@ def index_to_letter(index):
 def create_alphanum (attrib):
     return ''.join(char for char in attrib if char.isalnum())
 
+def descriptor_xml(root):
+    for attribute in root.iter('DESCRIPTOR'):
+        name = ""
+        description = ""
+        for sub_attr in attribute:
+            if sub_attr.tag == 'LABEL':
+                name = sub_attr.text
+            elif sub_attr.tag == 'DESCRIPTION':
+                description = sub_attr.text
+        return name, description
+
+
 def main():
 
     mapping = { "run":["FILE"], "experiment":["LIBRARY_SELECTION", "LIBRARY_SOURCE", "LIBRARY_STRATEGY", "LOCUS"], "common":["PLATFORM"], "study":["STUDY_TYPE"]}
@@ -208,6 +220,7 @@ def main():
         folder_name = checklist
         folder_path = os.path.join(root_dir, folder_name)
         sample_attributes = fetch_sample_attrib(root)
+        checklist_name, checklist_description = descriptor_xml(root)
         
         # Create the folder if it doesn't exist
         os.makedirs(folder_path, exist_ok=True)
@@ -228,8 +241,8 @@ def main():
         # Create or overwrite the README.md file
         readme_file_path = os.path.join(folder_path, "README.md")
         readme_file = open(readme_file_path, 'w')
-        readme_file.write("# Description of the metadata fields\n\n")
-        
+        readme_file.write(f"# {checklist}: {checklist_name}\n\n")
+        readme_file.write(f"{checklist_description}\n\n")
         # Create the XLSX
         xlsx_file_name = f"metadata_template_{checklist}.xlsx"
         xlsx_file_path = os.path.join(folder_path, xlsx_file_name)

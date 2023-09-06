@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000045: COMPARE-ECDC-EFSA pilot food-associated reporting standard
+
+A checklist for reporting metadata of food-borne pathogen samples for the COMPARE-ECDC-EFSA reporting system.
 
 ## Study
 

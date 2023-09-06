@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000038: ENA Shellfish Checklist
+
+Shellfish contextual information associated with molecular data. The checklist has been developed in collaboration with EMBRIC Project partners.
 
 ## Study
 

@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000028: ENA prokaryotic pathogen minimal sample checklist
+
+Minimum information required for a prokaryotic pathogen sample
 
 ## Study
 

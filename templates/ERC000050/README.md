@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000050: ENA binned metagenome
+
+Minimum information to standardise metadata of binned metagenome samples. Ensures binned and MAG metagenome assembly metadata is compatible.
 
 ## Study
 

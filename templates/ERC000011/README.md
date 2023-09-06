@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000011: ENA default sample checklist
+
+Minimum information required for the sample
 
 ## Study
 

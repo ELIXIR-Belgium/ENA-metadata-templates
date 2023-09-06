@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000044: COMPARE-ECDC-EFSA pilot human-associated reporting standard
+
+A checklist for reporting metadata of human-associated pathogen samples for the COMPARE-ECDC-EFSA reporting system.
 
 ## Study
 

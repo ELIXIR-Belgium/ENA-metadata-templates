@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000051: PDX Checklist
+
+Minimum information required for reporting samples associated with patient-derived xenograft (PDX) models or patient samples
 
 ## Study
 

@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000029: ENA Global Microbial Identifier reporting standard checklist GMI_MDM:1.1
+
+Minimum Data for Matching (MDM). A checklist for reporting metadata of pathogen samples for the Global Microbial Identifier (GMI) reporting system. More about GMI can be found here http://www.g-m-i.org/
 
 ## Study
 

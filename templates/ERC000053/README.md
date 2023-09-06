@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000053: Tree of Life Checklist
+
+Minimum information required for reporting samples associated with the Tree of Life Programme (https://www.sanger.ac.uk/programme/tree-of-life/).
 
 ## Study
 

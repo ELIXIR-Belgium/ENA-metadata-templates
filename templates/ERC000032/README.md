@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000032: ENA Influenza virus reporting standard checklist
+
+Minimum information about an Influenza virus sample. A checklist for reporting metadata of Influenza virus samples associated with genomic data. This minimum metadata standard supports submission of avian, human and mammalian surveillance data as well as serology and viruse isolate information (where available). The ENA Influenza sample checklist is based on standards in use at the Influenza Research Database.
 
 ## Study
 

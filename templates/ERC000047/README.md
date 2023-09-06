@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000047: GSC MIMAGS
+
+Genomic Standards Consortium package extension for reporting of measurements and observations obtained from the environment where the sample was obtained. By choosing the environmental package, a selection of fields can be made from a relevant subsets of the GSC terms.
 
 ## Study
 

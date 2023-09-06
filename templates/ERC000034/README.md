@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000034: ENA mutagenesis by carcinogen treatment checklist
+
+Minimum Information required for reporting samples associated with genomic data, derived from carcinogen induced animal tumours. This minimum metadata standard was developed in collaboration with Duncan Odom lab for the Mouse Liver Cancer Evolution Project.
 
 ## Study
 

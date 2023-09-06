@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000036: ENA sewage checklist
+
+Minimum information about sewage samples. A checklist for reporting of sewage surveillance samples associated with sequence data from metagenomic sequencing projects. This minimum metadata standard was developed by the COMPARE platform.
 
 ## Study
 

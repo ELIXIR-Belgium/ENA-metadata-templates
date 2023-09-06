@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000052: HoloFood Checklist
+
+Minimum information required for reporting HoloFood samples. HoloFood is a 'hologenomic' approach that will improve the efficiency of food production systems by understanding the biomolecular and physiological processes affected by incorporating feed additives and novel sustainable feeds in farmed animals (https://www.holofood.eu/).
 
 ## Study
 

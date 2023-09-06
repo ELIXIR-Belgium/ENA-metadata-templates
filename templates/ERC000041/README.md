@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000041: ENA Global Microbial Identifier Proficiency Test (GMI PT) checklist
+
+Minimum information to standardise metadata related to samples used in GMI PT (Global Microbial Identifier Proficiency Test). A checklist for reporting metadata of GMI PT samples associated with molecular data. This minimum metadata standard was developed by the COMPARE platform and can be used for submission of sample metadata derived from Campylobacter coli, Campylobacter jejuni, Listeria monocytogenes, Klebsiella pneumoniae, Salmonella enterica, Escherichia coli and Staphylococcus aureus.
 
 ## Study
 

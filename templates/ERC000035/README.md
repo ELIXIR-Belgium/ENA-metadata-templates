@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000035: Crop Plant sample enhanced annotation checklist
+
+The ENA Crop sample enhanced checklist has been developed in collaboration with a number of EMBL-EBI teams to capture enriched annotation of published crop plant samples that lack sufficient reported metadata and are typically associated with systematic transcriptomic realignment-based analyses.
 
 ## Study
 

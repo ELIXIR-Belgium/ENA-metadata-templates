@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000040: UniEuk_EukBank
+
+Minimum information required for reporting samples associated with the UniEuk EukBank initiative. This checklist aims to capture contextual metadata associated with V4 18S SSU rRNA molecular data.
 
 ## Study
 

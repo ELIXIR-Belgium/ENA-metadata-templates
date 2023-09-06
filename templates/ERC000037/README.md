@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000037: Plant Sample Checklist
+
+ENA implementation of plant specimen contextual information associated with molecular data. The checklist has been developed in collaboration with the NCBI-GenBank and iPlant data resources under the umbrella of the Genomic Standards Consortium.
 
 ## Study
 

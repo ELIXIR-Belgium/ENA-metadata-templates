@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000043: ENA Marine Microalgae Checklist
+
+Marine microalgae contextual information. The checklist has been developed in collaboration with EMBRIC Project partners and is suitable for reporting metadata related to environmental samples and those in culture collections.
 
 ## Study
 

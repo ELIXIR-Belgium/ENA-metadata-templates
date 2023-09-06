@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000027: ENA Micro B3
+
+Minimum information about a Micro B3 sample. A checklist for reporting metadata of marine microbial samples associated with genomics data. NOTE: Non-genomics data, i.e. oceanographic environmental data and morphology-based biodiversity data, should be submitted to the appropriate National Oceanographic Data Centre according to established reporting practices maintained by oceanographic community experts. Major National Oceanographic Data Centres from countries bordering the North-East Atlantic, and its adjacent seas: the Mediterranean, the Black Sea, the Baltic, the North Sea and the Arctic are listed at http://www.seadatanet.org/Overview/Partners. For the Ocean Sampling Day campaign, non-genomics data shall be reported to the PANGAEA (http://www.pangaea.de/submit/).
 
 ## Study
 

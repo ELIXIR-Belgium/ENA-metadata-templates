@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000030: ENA Tara Oceans
+
+Minimum information about a Tara Oceans sample. A checklist for reporting metadata of oceanic plankton samples associated with genomics data from the Tara Oceans Expedition.
 
 ## Study
 

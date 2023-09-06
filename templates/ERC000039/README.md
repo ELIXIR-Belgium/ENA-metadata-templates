@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000039: ENA parasite sample checklist
+
+Minimum information about parasite samples. A checklist for reporting metadata of parasite samples associated with molecular data. This standard was developed by the COMPARE platform and can be used for submission of sample metadata derived from protozoan parasites (e.g. Cryptosporidium) and also multicellular eukaryotic parasites (e.g. Platyhelminthes and Nematoda).
 
 ## Study
 

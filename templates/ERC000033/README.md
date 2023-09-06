@@ -1,4 +1,6 @@
-# Description of the metadata fields
+# ERC000033: ENA virus pathogen reporting standard checklist
+
+Minimum information about a virus pathogen. A checklist for reporting metadata of virus pathogen samples associated with genomic data. This minimum metadata standard was developed by the COMPARE platform for submission of virus surveillance and outbreak data (such as Ebola) as well as virus isolate information.
 
 ## Study
 
