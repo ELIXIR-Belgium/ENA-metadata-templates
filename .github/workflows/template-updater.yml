@@ -1,5 +1,5 @@
 
-name: Updating checklists and xsd templates
+name: Updating templates
 
 on:
   schedule:
