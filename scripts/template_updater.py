@@ -7,7 +7,6 @@ import xlsxwriter
 import os
 import pandas as pd
 import yaml
-import re
 
 def fetch_object(url):
     print('  GET ' + url)
