@@ -148,7 +148,7 @@ def main():
 
     mapping = { "run":["FILE"], "experiment":["LIBRARY_SELECTION", "LIBRARY_SOURCE", "LIBRARY_STRATEGY", "LOCUS"], "common":["PLATFORM"], "study":["STUDY_TYPE"]}
     template_names= ["ENA.project", "SRA.common", "SRA.experiment", "SRA.run", "SRA.sample", "SRA.study", "SRA.submission"]
-    yaml_file_path = "/home/bedro/Documents/ENA-metadata-templates/scripts/controlled_vocabulary/fixed_fields.yml"
+    yaml_file_path = "scripts/controlled_vocabulary/fixed_fields.yml"
     try:
         with open(yaml_file_path, 'r') as yaml_file:
             fixed_fields = yaml.safe_load(yaml_file)
@@ -215,7 +215,7 @@ def main():
 
         # Parsing XML
         root = etree.fromstring(response.content)
-        root_dir = "/home/bedro/Documents/ENA-metadata-templates/templates"
+        root_dir = "templates"
         folder_name = checklist
         folder_path = os.path.join(root_dir, folder_name)
         sample_attributes = fetch_sample_attrib(root)
