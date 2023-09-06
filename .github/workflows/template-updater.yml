@@ -1,0 +1,47 @@
+
+name: Updating checklists and xsd templates
+
+on:
+  schedule:
+    - cron:  '0 13 * * 1'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r scripts/requirements.txt
+
+    - name: Run template
+      run: python scripts/template_updater.py
+
+    - name: Show differences
+      run: 'git diff --stat'
+    - name: Create Pull Request
+      id: cpr
+      uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: Update ENA templates 
+        title: 'Automatic update ENA templates'
+        body: |
+          This PR is automatically generated based on changes in the ena_upload/templates/ENA_template_samples_ERC0000XX.xml files.
+
+          Please verify if these changes are valid.
+        labels: |
+          automatic PR
+        reviewers: bedroesb
+        branch: checklist_update
+        base: main
+
+    - name: Check output
+      run: |
+        echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
