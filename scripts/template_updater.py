@@ -5,7 +5,9 @@ from urllib3.util.retry import Retry
 import time
 import xlsxwriter
 import os
+import pandas as pd
 import yaml
+import re
 
 def fetch_object(url):
     print('  GET ' + url)
@@ -86,7 +88,7 @@ def fetch_sample_attrib(root):
         output['name'] = ''
         output['cardinality'] = ''
         output['description'] = ''
-        output['choices'] = []
+        output['cv'] = []
         output['units'] = ''
         for sub_attr in attribute:
             if sub_attr.tag == 'NAME':
@@ -104,10 +106,29 @@ def fetch_sample_attrib(root):
                     if options.tag == 'TEXT_CHOICE_FIELD':
                         for value in options:
                             for choice in value:
-                                output['choices'].append(choice.text)
+                                output['cv'].append(choice.text)
         output_list.append(output)
     return output_list
 
+def create_attributes(ena_object_name, ena_cv, sample_attributes, xml_tree):
+    for attribute in ena_cv['fields']:
+        if attribute['name'] in xml_tree.keys():
+            attribute['cv'] = xml_tree[attribute['name']]
+
+        yield attribute
+        if ena_object_name == "sample" and sample_attributes:
+            for sample_attribute in sample_attributes:
+                yield sample_attribute
+
+def index_to_letter(index):
+    """Converts a 0-based index to an Excel column letter."""
+    column_letter = ""
+    while index >= 0:
+        remainder = index % 26
+        column_letter = chr(65 + remainder) + column_letter
+        index = (index - remainder) // 26 - 1
+
+    return column_letter
 
 def main():
 
@@ -121,7 +142,8 @@ def main():
         print(f"File '{yaml_file_path}' not found.")
     except yaml.YAMLError as e:
         print("Error reading YAML:", e)
-    
+
+    xml_tree = {}
     for template_name in template_names:
         template_name_sm = template_name.split(".")[1]
         print(f"Downloading {template_name_sm} template")
@@ -137,34 +159,38 @@ def main():
                 incl = etree.XInclude()
                 incl(root)
                 xsd_dict = elem2dict(root)
+                
                 if template_block == "FILE":
                     query_dict = (list(findkeys(xsd_dict, 'filetype')))[0]
-                    xml_tree = query_dict['simpleType']['restriction']['enumeration']
+                    xml_tree['file_format'] = query_dict['simpleType']['restriction']['enumeration']
                 elif template_block == "LIBRARY_SELECTION":
                     query_dict = (list(findkeys(xsd_dict, 'typeLibrarySelection')))[0]
-                    xml_tree = query_dict['restriction']['enumeration']
+                    xml_tree['library_selection'] = query_dict['restriction']['enumeration']
                 elif template_block == "LIBRARY_SOURCE":
                     query_dict = (list(findkeys(xsd_dict, 'typeLibrarySource')))[0]
-                    xml_tree = query_dict['restriction']['enumeration']
+                    xml_tree['library_source'] = query_dict['restriction']['enumeration']
                 elif template_block == "LOCUS":
                     query_dict = (list(findkeys(xsd_dict, 'locus_name')))[0]
-                    xml_tree = query_dict['simpleType']['restriction']['enumeration']
+                    xml_tree['locus'] = query_dict['simpleType']['restriction']['enumeration']
                 elif template_block == "STUDY_TYPE":
                     query_dict = (list(findkeys(xsd_dict, 'existing_study_type')))[0]
-                    xml_tree = query_dict['simpleType']['restriction']['enumeration']
+                    xml_tree['study_type'] = query_dict['simpleType']['restriction']['enumeration']
                 elif template_block == "LIBRARY_STRATEGY":
                     query_dict = (list(findkeys(xsd_dict, 'typeLibraryStrategy')))[0]
-                    xml_tree = query_dict['restriction']['enumeration']
+                    xml_tree['library_strategy'] = query_dict['restriction']['enumeration']
                 elif template_block == "PLATFORM":
                     platformtype_dict = (list(findkeys(xsd_dict, 'PlatformType')))[0]
-                    xml_tree = {}
+                    xml_tree['platform'] = []
+                    xml_tree['instrument_model'] = []
                     for platformtype, instrument_models in platformtype_dict['choice'].items():
+                        xml_tree['platform'].append(platformtype)
                         instrument_models_dict = (list(findkeys(xsd_dict, instrument_models['complexType']['sequence']['INSTRUMENT_MODEL'].strip('com:'))))[0]
-                        xml_tree[platformtype] = instrument_models_dict['restriction']['enumeration']
+                        xml_tree['instrument_model'].extend(instrument_models_dict['restriction']['enumeration'])
+                    xml_tree['instrument_model'] = sorted(list(set(xml_tree['instrument_model'])))
+
 
                 else:
                     break
-            print(xml_tree)
 
     for response_object in [{'accession':'ERC000013'}]: #fetching_checklists():
         checklist = response_object['accession']
@@ -175,7 +201,7 @@ def main():
 
         # Parsing XML
         root = etree.fromstring(response.content)
-        root_dir = "templates"
+        root_dir = "/home/bedro/Documents/ENA-metadata-templates/templates"
         folder_name = checklist
         folder_path = os.path.join(root_dir, folder_name)
         sample_attributes = fetch_sample_attrib(root)
@@ -184,60 +210,80 @@ def main():
         os.makedirs(folder_path, exist_ok=True)
         
         # Create the TSV files
-        for j in ["experiment","study", "run", "sample"]:
-            tsv_file_name = f"{j}.tsv"
+        for ena_object_name, ena_cv in fixed_fields.items():
+            tsv_file_name = f"{ena_object_name}.tsv"
             tsv_file_path = os.path.join(folder_path, tsv_file_name)
             header_list = []
-            for attribute in fixed_fields[j]['fields']:
-                header_list.append(attribute['name'])
-            if j == "sample" and sample_attributes:
-                for sample_attribute in sample_attributes:
-                    header_list.append(sample_attribute['name'])
+            for attrib in create_attributes(ena_object_name, ena_cv, sample_attributes, xml_tree):
+                header_list.append(f"\"{attrib['name']}\"")
+            
             header_string = '\t'.join(header_list) + '\n'    
             # Create or overwrite the TSV file
             with open(tsv_file_path, 'w') as tsv_file:
                 tsv_file.write(header_string)
         
-        # Create the README.md file
-        readme_file_path = os.path.join(folder_path, "README.md")
-        
         # Create or overwrite the README.md file
-        with open(readme_file_path, 'w') as readme_file:
-            readme_file.write("# Folder Information\n")
-            readme_file.write("This is a sample README file.\n")
-            readme_file.write("You can add more information here.\n")
+        readme_file_path = os.path.join(folder_path, "README.md")
+        readme_file = open(readme_file_path, 'w')
+        readme_file.write("# Description of the metadata fields\n\n")
         
         # Create the XLSX
         xlsx_file_name = f"metadata_template_{checklist}.xlsx"
         xlsx_file_path = os.path.join(folder_path, xlsx_file_name)
 
         workbook = xlsxwriter.Workbook(xlsx_file_path)
-        worksheet_names = ["cv", "study", "sample", "experiment", "run"]
+        
         header_format = workbook.add_format({'bold': True, 'align': 'center'})
         description_format = workbook.add_format({'text_wrap': True, 'align': 'center', 'valign':'top'})
 
-        cv_columns = ["section", "metadata_field", "permitted_value"]
-        
-        # Create controlled vocabulary worksheet
+        for ena_object_name, ena_cv in fixed_fields.items():
 
-        for name in worksheet_names:
+            # Initiate table to README
+            readme_file.write(f"## {ena_object_name.title()}\n\n")
+            df = pd.DataFrame(columns=["Field name", "Cardinality", "Description", "CV"])
 
-            worksheet = workbook.add_worksheet(name)
-            
+            # Create worksheet
+            worksheet = workbook.add_worksheet(ena_object_name)
             worksheet.set_column(0, 300, 15)
-            index = 0
-            if name == "sample":
-                for checklist in sample_attributes:
-                    if name:
-                        # Write the header
-                        worksheet.write(0, index, name, header_format)
-                        # Write the description row
-                        worksheet.set_row(1, 100)
-                        worksheet.write(1, index, f"({checklist['cardinality'].capitalize()}) {checklist['description'].capitalize()}{checklist['units']}", description_format)
-                        # Add data validation
-                        if checklist['choices']:
-                            worksheet.data_validation(2, index, 100, index, {'validate': 'list', 'source': checklist['choices']})
-                    index += 1
+            col_index = 0
+
+            # Create worksheet for the controlled vocabulary
+            cv_worksheet = workbook.add_worksheet(f"cv_{ena_object_name}")
+            cv_worksheet.hide()
+            
+            for i, attrib in enumerate(create_attributes(ena_object_name, ena_cv, sample_attributes, xml_tree)):
+                # Populate pandas dataframe with attributes
+                header = [attrib['name'], attrib['cardinality'], f"{attrib['description'].capitalize()}{attrib['units']}"]
+                if 'cv' in attrib and attrib['cv']:
+                    header.append(", ".join(attrib['cv']))
+                else:
+                    header.append("")
+                df.loc[i] = header
+
+                # Populate the CV worksheet with values
+                if 'cv' in attrib and attrib['cv']:
+                    for row_index, value in enumerate(attrib['cv']):
+                        cv_worksheet.write(row_index, col_index, str(value))
+                    # Define a named range for the valid values.
+                    range = f"'cv_{ena_object_name}'!${index_to_letter(col_index)}$1:${index_to_letter(col_index)}${len(attrib['cv'])}"
+                    name = re.sub(r'[!\(\)\'*?/\\[\]:]', '_', attrib["name"]).replace(' ', '_')
+                    workbook.define_name(name, range)
+
+                # Write the header
+                worksheet.write(0, col_index, attrib['name'], header_format)
+                # Write the description row
+                worksheet.set_row(1, 150)
+                worksheet.write(1, col_index, f"({attrib['cardinality'].capitalize()}) {attrib['description'].capitalize()}{attrib['units']}", description_format)
+                # Add data validation
+                if 'cv' in attrib and attrib['cv']:
+                    name = re.sub(r'[!\'*?/\\[\]:]', '_', attrib["name"]).replace(' ', '_')
+                    worksheet.data_validation(2, col_index, 100, col_index, {'validate': 'list', 'source': f'={name}'})
+                col_index += 1
+            # write data table to README
+            readme_file.write(df.to_markdown(index=False, tablefmt='pipe'))
+            readme_file.write("\n\n")
+        
+        readme_file.close()
         workbook.close()    
 
 if __name__ == "__main__":
