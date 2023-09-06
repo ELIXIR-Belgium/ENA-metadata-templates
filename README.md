@@ -10,3 +10,6 @@ There are four *(\\*.tsv)* files, one for each metadata object (**study**, **sam
 ## Workbook (*.xlsx) templates
 Workbook templates contain one worksheet per metadata object. Controlled vocabulary options can be selected from dropdown menus.
 
+## Versioning
+
+The version releases on this repository will be synchronized with the [ena-upload-cli](https://github.com/usegalaxy-eu/ena-upload-cli) release cycle, guarantying compliance between what the tool can submit, and the templates it uses.
