@@ -207,8 +207,14 @@ def main():
 
                 else:
                     break
+    # Fetch all checklist IDs and names:
+    all_checklists = fetching_checklists()
 
-    for response_object in fetching_checklists(): #[{'accession':'ERC000013'}]: 
+    # Write yaml file with all information
+    with open("./checklist_overview.yml", 'w') as yaml_file:
+        yaml.dump(all_checklists, yaml_file, default_flow_style=False)
+
+    for response_object in all_checklists: #[{'accession':'ERC000013'}]
         checklist = response_object['accession']
         print(f"Parsing {checklist}")
         # Getting the xml checklist from ENA
