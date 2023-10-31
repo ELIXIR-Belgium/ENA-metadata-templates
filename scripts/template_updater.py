@@ -7,6 +7,8 @@ import xlsxwriter
 import os
 import pandas as pd
 import yaml
+import copy
+
 
 def fetch_object(url):
     print('  GET ' + url)
@@ -257,7 +259,7 @@ def main():
             readme_file.write(f"## {ena_object_name.title()}\n\n")
             readme_file.write( ena_cv['description'] + "\n\n")
 
-            df = pd.DataFrame(columns=["Field name", "Cardinality", "Description", "CV"])
+            df = pd.DataFrame(columns=["Field name", "Cardinality", "Description", "Controlled vocabulary"])
 
             # Create worksheet
             worksheet = workbook.add_worksheet(ena_object_name)
@@ -296,12 +298,22 @@ def main():
                     name = create_alphanum(attrib['name'])
                     worksheet.data_validation(2, col_index, 100, col_index, {'validate': 'list', 'source': f'={name}'})
                 col_index += 1
-            # write data table to README
+            # Write data table to README
             readme_file.write(df.to_markdown(index=False, tablefmt='pipe'))
             readme_file.write("\n\n")
-        
+
         readme_file.close()
-        workbook.close()    
+        workbook.close()
+
+        # Combine sample attributes with fixed fields
+        fixed_fields_copy = copy.deepcopy(fixed_fields)
+        sample_attrib_merged = fixed_fields_copy['sample']['fields'] + sample_attributes
+        fixed_fields_copy['sample']['fields'] = sample_attrib_merged
+
+        # Write yaml file with all information
+        yaml_file_path = os.path.join(folder_path, f"{checklist}.yml")
+        with open(yaml_file_path, 'w') as yaml_file:
+            yaml.dump(fixed_fields_copy, yaml_file, default_flow_style=False)
 
 if __name__ == "__main__":
 
