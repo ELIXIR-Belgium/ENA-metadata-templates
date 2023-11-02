@@ -8,6 +8,7 @@
                 "description": "Unique identificator for a study. This is used to link experiments to the study.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -16,6 +17,7 @@
                 "description": "Title of the study as would be used in a publication.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -24,7 +26,6 @@
                 "description": "The STUDY_TYPE presents a controlled vocabulary for expressing the overall purpose of the study.",
                 "units": "",
                 "regex": "",
-                "field_type": "TEXT_CHOICE_FIELD",
                 "cv": [
                     "Whole Genome Sequencing",
                     "Metagenomics",
@@ -41,7 +42,8 @@
                     "Pooled Clone Sequencing",
                     "Transcriptome Sequencing",
                     "Other"
-                ]
+                ],
+                "field_type": "TEXT_CHOICE_FIELD"
             },
             {
                 "name": "new_study_type",
@@ -49,6 +51,7 @@
                 "description": "Optional if 'study_type' is not 'other'To propose a new term, select Other and enter a new study type.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -57,6 +60,7 @@
                 "description": "Briefly describes the goals, purpose, and scope of the Study.  This need not be listed if it can be inherited from a referenced publication.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             }
         ]
@@ -70,6 +74,7 @@
                 "description": "Unique identificator for each experiment. This is used to link runs to experiments.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -78,6 +83,7 @@
                 "description": "Short text that can be used to call out experiment records in searches or in displays. This element is technically optional but should be used for all new records.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -86,6 +92,7 @@
                 "description": "Identifies the parent study. (From study metadata)",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -94,6 +101,7 @@
                 "description": "(From sample metadata)",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -102,6 +110,7 @@
                 "description": "Goal and setup of the individual library including library was constructed.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -110,6 +119,7 @@
                 "description": "The submitter's name for this library.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -118,7 +128,6 @@
                 "description": "Sequencing technique intended for this library.",
                 "units": "",
                 "regex": "",
-                "field_type": "TEXT_CHOICE_FIELD",
                 "cv": [
                     "WGS",
                     "WGA",
@@ -161,7 +170,8 @@
                     "GBS",
                     "Ribo-Seq",
                     "OTHER"
-                ]
+                ],
+                "field_type": "TEXT_CHOICE_FIELD"
             },
             {
                 "name": "library_source",
@@ -169,7 +179,6 @@
                 "description": "The LIBRARY_SOURCE specifies the type of source material that is being sequenced.",
                 "units": "",
                 "regex": "",
-                "field_type": "TEXT_CHOICE_FIELD",
                 "cv": [
                     "GENOMIC",
                     "GENOMIC SINGLE CELL",
@@ -180,7 +189,8 @@
                     "SYNTHETIC",
                     "VIRAL RNA",
                     "OTHER"
-                ]
+                ],
+                "field_type": "TEXT_CHOICE_FIELD"
             },
             {
                 "name": "library_selection",
@@ -188,7 +198,6 @@
                 "description": "Method used to enrich the target in the sequence library preparation",
                 "units": "",
                 "regex": "",
-                "field_type": "TEXT_CHOICE_FIELD",
                 "cv": [
                     "RANDOM",
                     "PCR",
@@ -221,7 +230,8 @@
                     "padlock probes capture method",
                     "other",
                     "unspecified"
-                ]
+                ],
+                "field_type": "TEXT_CHOICE_FIELD"
             },
             {
                 "name": "library_layout",
@@ -229,6 +239,7 @@
                 "description": "LIBRARY_LAYOUT specifies whether to expect single, paired, or other configuration of reads. In the case of paired reads, information about the relative distance and orientation is specified.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -237,6 +248,7 @@
                 "description": "Insert size for paired reads",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -245,6 +257,7 @@
                 "description": "Free form text describing the protocol by which the sequencing library was constructed.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -253,7 +266,6 @@
                 "description": "The PLATFORM record selects which sequencing platform and platform-specific runtime parameters. This will be determined by the Center. optional if 'instrument_model' is provided.",
                 "units": "",
                 "regex": "",
-                "field_type": "TEXT_CHOICE_FIELD",
                 "cv": [
                     "LS454",
                     "ILLUMINA",
@@ -272,7 +284,8 @@
                     "GENAPSYS",
                     "GENEMIND",
                     "TAPESTRI"
-                ]
+                ],
+                "field_type": "TEXT_CHOICE_FIELD"
             },
             {
                 "name": "instrument_model",
@@ -280,7 +293,6 @@
                 "description": "Model of the sequencing instrument.",
                 "units": "",
                 "regex": "",
-                "field_type": "TEXT_CHOICE_FIELD",
                 "cv": [
                     "454 GS",
                     "454 GS 20",
@@ -365,7 +377,8 @@
                     "Tapestri",
                     "UG 100",
                     "unspecified"
-                ]
+                ],
+                "field_type": "TEXT_CHOICE_FIELD"
             }
         ]
     },
@@ -378,6 +391,7 @@
                 "description": "Unique identificator for each run.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -386,6 +400,7 @@
                 "description": "From_experiment_metadata",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -394,6 +409,7 @@
                 "description": "The name or relative pathname of a run data file.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -402,7 +418,6 @@
                 "description": "The run data file model.",
                 "units": "",
                 "regex": "",
-                "field_type": "TEXT_CHOICE_FIELD",
                 "cv": [
                     "sra",
                     "srf",
@@ -428,7 +443,8 @@
                     "cram",
                     "CompleteGenomics_native",
                     "OxfordNanopore_native"
-                ]
+                ],
+                "field_type": "TEXT_CHOICE_FIELD"
             }
         ]
     },
@@ -441,6 +457,7 @@
                 "description": "Unique identificator for each run.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -449,6 +466,7 @@
                 "description": "Short text that can be used to call out sample records in search results or in displays.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -457,6 +475,7 @@
                 "description": "NCBI Taxonomy Identifier.  This is appropriate for individual organisms and some environmental samples.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
@@ -465,6 +484,7 @@
                 "description": "Free-form text describing the sample, its origin, and its method of isolation.",
                 "units": "",
                 "regex": "",
+                "cv": [],
                 "field_type": "TEXT_FIELD"
             },
             {
