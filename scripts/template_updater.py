@@ -7,6 +7,7 @@ import xlsxwriter
 import os
 import pandas as pd
 import yaml
+import json
 import copy
 
 
@@ -91,6 +92,9 @@ def fetch_sample_attrib(root):
         output['description'] = ''
         output['cv'] = []
         output['units'] = ''
+        output['field_type'] = ''
+        output['regex'] = ''
+
         for sub_attr in attribute:
             if sub_attr.tag == 'NAME':
                 output['name'] = sub_attr.text
@@ -101,13 +105,18 @@ def fetch_sample_attrib(root):
             elif sub_attr.tag == 'UNITS':
                 for unit in sub_attr:
                     output['units'] = unit.text
-                output['units'] = ' Units: ' + sub_attr.text
             elif sub_attr.tag == 'FIELD_TYPE':
                 for options in sub_attr:
+                    output['field_type'] = options.tag
                     if options.tag == 'TEXT_CHOICE_FIELD':
                         for value in options:
                             for choice in value:
                                 output['cv'].append(choice.text)
+                    elif options.tag == 'TEXT_FIELD':
+                        for regex_value in options:
+                            if regex_value.tag == 'REGEX_VALUE':
+                                output['regex'] = regex_value.text
+                            
         output_list.append(output)
     return output_list
 
@@ -210,9 +219,9 @@ def main():
     # Fetch all checklist IDs and names:
     all_checklists = fetching_checklists()
 
-    # Write yaml file with all information
-    with open("./checklist_overview.yml", 'w') as yaml_file:
-        yaml.dump(all_checklists, yaml_file, default_flow_style=False)
+    # Write json file with all information
+    with open("./checklist_overview.json", 'w') as json_file:
+        json.dump(all_checklists, json_file, indent=4)
 
     for response_object in all_checklists: #[{'accession':'ERC000013'}]
         checklist = response_object['accession']
@@ -278,7 +287,11 @@ def main():
             
             for i, attrib in enumerate(create_attributes(ena_object_name, ena_cv, sample_attributes, xml_tree)):
                 # Populate pandas dataframe with attributes
-                header = [attrib['name'], attrib['cardinality'], f"{attrib['description'].capitalize()}{attrib['units']}"]
+                units = ''
+                if 'units' in attrib and attrib['units']:
+                    units = f" (Units: {attrib['units']})"
+                
+                header = [attrib['name'], attrib['cardinality'], f"{attrib['description'].capitalize()}{units}"]
                 if 'cv' in attrib and attrib['cv']:
                     header.append(", ".join(attrib['cv']))
                 else:
@@ -298,7 +311,7 @@ def main():
                 worksheet.write(0, col_index, attrib['name'], header_format)
                 # Write the description row
                 worksheet.set_row(1, 150)
-                worksheet.write(1, col_index, f"({attrib['cardinality'].capitalize()}) {attrib['description'].capitalize()}{attrib['units']}", description_format)
+                worksheet.write(1, col_index, f"({attrib['cardinality'].capitalize()}) {attrib['description'].capitalize()}{units}", description_format)
                 # Add data validation
                 if 'cv' in attrib and attrib['cv']:
                     name = create_alphanum(attrib['name'])
@@ -316,10 +329,10 @@ def main():
         sample_attrib_merged = fixed_fields_copy['sample']['fields'] + sample_attributes
         fixed_fields_copy['sample']['fields'] = sample_attrib_merged
 
-        # Write yaml file with all information
-        yaml_file_path = os.path.join(folder_path, f"{checklist}.yml")
-        with open(yaml_file_path, 'w') as yaml_file:
-            yaml.dump(fixed_fields_copy, yaml_file, default_flow_style=False)
+        # Write json file with all information
+        json_file_path = os.path.join(folder_path, f"{checklist}.json")
+        with open(json_file_path, 'w') as json_file:
+            json.dump(fixed_fields_copy, json_file, indent=4)
 
 if __name__ == "__main__":
 
