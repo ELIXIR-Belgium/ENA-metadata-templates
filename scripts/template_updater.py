@@ -10,6 +10,31 @@ import yaml
 import json
 import copy
 
+def generate_markdown_table(data_dict):
+    # Generate a Markdown table from a dictionary
+    table_content = '| ID       | Name       | Description |\n| ---------- | ---------- | ------------ |\n'
+    for checklist in data_dict:
+        table_content += f"| [{checklist['accession']}](./templates/{checklist['accession']}) | {checklist['name']} | {checklist['description']} |\n"
+    return table_content
+
+def update_markdown_table(file_path, table_start, table_end, data_dict):
+    # Read the content of the Markdown file
+    with open(file_path, 'r') as file:
+        content = file.read()
+
+    # Find the start and end indices of the table using a marker
+    start_index = content.find(table_start)
+    end_index = content.find(table_end)
+
+    # Generate the updated table content from the dictionary
+    new_table_content = generate_markdown_table(data_dict)
+
+    # Replace the old table content with the updated one
+    content = f"{content[:start_index]}{table_start}\n{new_table_content}{content[end_index:]}"
+
+    # Write the modified content back to the file
+    with open(file_path, 'w') as file:
+        file.write(content)
 
 def fetch_object(url):
     print('  GET ' + url)
@@ -219,9 +244,15 @@ def main():
     # Fetch all checklist IDs and names:
     all_checklists = fetching_checklists()
 
-    # Write json file with all information
+    # Write json file listing all checklists
     with open("./checklist_overview.json", 'w') as json_file:
         json.dump(all_checklists, json_file, indent=4)
+
+    # List all checklists inside of main README
+    file_path = './README.md'
+    table_start = '<!-- TABLE START -->'
+    table_end = '<!-- TABLE END -->'
+    update_markdown_table(file_path, table_start, table_end, all_checklists)
 
     for response_object in all_checklists: #[{'accession':'ERC000013'}]
         checklist = response_object['accession']
