@@ -24,7 +24,7 @@ study:
       field_type: TEXT_CHOICE_FIELD
     - name: new_study_type
       cardinality: optional
-      description: Optional if 'study_type' is not 'other'To propose a new term, select Other and enter a new study type.
+      description: Optional if 'study_type' is not 'other'. To propose a new term, select Other and enter a new study type.
       units: ""
       regex: ""
       cv: []
@@ -35,7 +35,7 @@ study:
       units: ""
       regex: ""
       cv: []
-      field_type: TEXT_FIELD
+      field_type: TEXT_AREA_FIELD
 
 experiment:
   description: "An experiment object serves as a metadata record encapsulating essential details about a sequencing experiment, including the experimental design, sequencing type, and relevant parameters. This information enhances the interpretation and contextual understanding of nucleotide sequences submitted to the archive."
@@ -74,7 +74,7 @@ experiment:
       units: ""
       regex: ""
       cv: []
-      field_type: TEXT_FIELD
+      field_type: TEXT_AREA_FIELD
     - name: library_name
       cardinality: optional
       description: The submitter's name for this library.
@@ -201,5 +201,5 @@ sample:
       units: ""
       regex: ""
       cv: []
-      field_type: TEXT_FIELD
+      field_type: TEXT_AREA_FIELD
 
