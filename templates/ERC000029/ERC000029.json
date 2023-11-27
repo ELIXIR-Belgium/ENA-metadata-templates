@@ -48,7 +48,7 @@
             {
                 "name": "new_study_type",
                 "cardinality": "optional",
-                "description": "Optional if 'study_type' is not 'other'To propose a new term, select Other and enter a new study type.",
+                "description": "Optional if 'study_type' is not 'other'. To propose a new term, select Other and enter a new study type.",
                 "units": "",
                 "regex": "",
                 "cv": [],
@@ -61,7 +61,7 @@
                 "units": "",
                 "regex": "",
                 "cv": [],
-                "field_type": "TEXT_FIELD"
+                "field_type": "TEXT_AREA_FIELD"
             }
         ]
     },
@@ -111,7 +111,7 @@
                 "units": "",
                 "regex": "",
                 "cv": [],
-                "field_type": "TEXT_FIELD"
+                "field_type": "TEXT_AREA_FIELD"
             },
             {
                 "name": "library_name",
@@ -485,7 +485,7 @@
                 "units": "",
                 "regex": "",
                 "cv": [],
-                "field_type": "TEXT_FIELD"
+                "field_type": "TEXT_AREA_FIELD"
             },
             {
                 "name": "subject exposure",
