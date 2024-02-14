@@ -173,7 +173,7 @@ def main():
         template_name_sm = template_name.split(".")[1]
         print(f"Downloading {template_name_sm} template")
         # Getting the xml checklist from ENA
-        url = f"https://raw.githubusercontent.com/enasequence/schema/master/src/main/resources/uk/ac/ebi/ena/sra/schema/{template_name}.xsd"
+        url = f"https://raw.githubusercontent.com/enasequence/webin-xml/master/src/main/resources/uk/ac/ebi/ena/sra/schema/{template_name}.xsd"
         response = fetch_object(url)
         
         if template_name_sm in mapping.keys():
