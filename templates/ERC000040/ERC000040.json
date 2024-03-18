@@ -488,22 +488,31 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "Size Fraction Lower Threshold",
+                "name": "sample collection method",
                 "cardinality": "optional",
-                "description": "SAMPLE_PROTOCOL_Size-Fraction_Lower-Threshold_(\u00b5m) indicates the lower size threshold. Materials smaller than the size threshold are excluded from the sample. Example: 0.22 \u00b5m",
+                "description": "The method employed for collecting the sample. Can be provided in the form of a PMID, DOI, url or text.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "Size Fraction Upper Threshold",
+                "name": "size-fraction lower threshold",
                 "cardinality": "optional",
-                "description": "SAMPLE_PROTOCOL_Size-Fraction_Upper-Threshold_(\u00b5m) indicates the upper size threshold. Materials larger than the size threshold are excluded from the sample.Example: 1.6 \u00b5m",
+                "description": "Refers to the mesh/pore size used to retain the sample. Materials smaller than the size threshold are excluded from the sample",
                 "cv": [],
-                "units": "",
+                "units": "\u00b5m",
                 "field_type": "TEXT_FIELD",
-                "regex": ""
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
+            },
+            {
+                "name": "size-fraction upper threshold",
+                "cardinality": "optional",
+                "description": "Refers to the mesh/pore size used to pre-filter/pre-sort the sample. Materials larger than the size threshold are excluded from the sample",
+                "cv": [],
+                "units": "\u00b5m",
+                "field_type": "TEXT_FIELD",
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
                 "name": "target gene",
@@ -518,15 +527,6 @@
                 "name": "target subfragment",
                 "cardinality": "mandatory",
                 "description": "Name of subfragment of a gene or locus. Important to e.g. identify special regions on marker genes like V6 on 16S rRNA",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "pcr primers",
-                "cardinality": "mandatory",
-                "description": "PCR primers that were used to amplify the sequence of the targeted gene, locus or subfragment. This field should contain all the primers used for a single PCR reaction if multiple forward or reverse primers are present in a single PCR reaction. The primer sequence should be reported in uppercase letters",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -566,12 +566,12 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
             },
             {
                 "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
-                "description": "The location the sample was collected from with the intention of sequencing, as defined by the country or sea. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
+                "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
                     "Afghanistan",
                     "Albania",
@@ -638,6 +638,7 @@
                     "Curacao",
                     "Cyprus",
                     "Czech Republic",
+                    "Czechia",
                     "Democratic Republic of the Congo",
                     "Denmark",
                     "Djibouti",
@@ -893,15 +894,6 @@
                 "regex": ""
             },
             {
-                "name": "depth",
-                "cardinality": "optional",
-                "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
-                "cv": [],
-                "units": "m",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
                 "name": "broad-scale environmental context",
                 "cardinality": "mandatory",
                 "description": "Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO\u2019s biome class: http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
@@ -929,15 +921,6 @@
                 "regex": ""
             },
             {
-                "name": "sample collection device or method",
-                "cardinality": "optional",
-                "description": "The method or deviced employed for collecting the sample",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "environmental_sample",
                 "cardinality": "mandatory",
                 "description": "identifies sequences derived by direct molecular isolation from a bulk environmental DNA sample (by PCR with or without subsequent cloning of the product, DGGE, or other anonymous methods) with no reliable identification of the source organism",
@@ -950,7 +933,7 @@
                 "regex": ""
             },
             {
-                "name": "Salinity",
+                "name": "salinity",
                 "cardinality": "optional",
                 "description": "The total concentration of all dissolved salts in a liquid or solid sample. While salinity can be measured by a complete chemical analysis, this method is difficult and time consuming. More often, it is instead derived from the conductivity measurement. This is known as practical salinity. These derivations compare the specific conductance of the sample to a salinity standard such as seawater.",
                 "cv": [],
@@ -966,6 +949,24 @@
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
+            },
+            {
+                "name": "pcr primers",
+                "cardinality": "mandatory",
+                "description": "PCR primers that were used to amplify the sequence of the targeted gene, locus or subfragment. This field should contain all the primers used for a single PCR reaction if multiple forward or reverse primers are present in a single PCR reaction. The primer sequence should be reported in uppercase letters",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "depth",
+                "cardinality": "optional",
+                "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
+                "cv": [],
+                "units": "mm",
+                "field_type": "TEXT_FIELD",
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
             }
         ]
     }

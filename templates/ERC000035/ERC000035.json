@@ -533,15 +533,6 @@
                 "regex": ""
             },
             {
-                "name": "protocol",
-                "cardinality": "optional",
-                "description": "The laboratory method used to reveal the presence of the sample sequenced in the experiment.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "collection date",
                 "cardinality": "mandatory",
                 "description": "The date the sample was collected with the intention of sequencing, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid ISO8601 compliant times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008.",
@@ -553,7 +544,7 @@
             {
                 "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
-                "description": "The location the sample was collected from with the intention of sequencing, as defined by the country or sea. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
+                "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
                     "Afghanistan",
                     "Albania",
@@ -620,6 +611,7 @@
                     "Curacao",
                     "Cyprus",
                     "Czech Republic",
+                    "Czechia",
                     "Democratic Republic of the Congo",
                     "Denmark",
                     "Djibouti",
@@ -850,7 +842,7 @@
             {
                 "name": "sampling time point",
                 "cardinality": "optional",
-                "description": "",
+                "description": "Time point at which a sample or observation is made or taken from a biomaterial as measured from some reference point. Indicate the timepoint written in ISO 8601 format.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -860,24 +852,6 @@
                 "name": "initial time point",
                 "cardinality": "optional",
                 "description": "The first time point measured at the start of some process.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "growth condition",
-                "cardinality": "optional",
-                "description": "A role that a material entity can play which enables particular conditions used to grow organisms or parts of the organism. This includes isolated environments such as cultures and open environments such as field studies.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "genotype",
-                "cardinality": "recommended",
-                "description": "name or code for genotype of organism",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -896,15 +870,6 @@
                 "name": "age",
                 "cardinality": "recommended",
                 "description": "Age of the organism the sample was derived from.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "genetic modification",
-                "cardinality": "optional",
-                "description": "A genetic modification of the genome of an organism which may occur naturally by spontaneous mutation, or be introduced by some experimental means. Examples of genetic modification include specification of a transgene or the gene knocked-out or details of transient transfection.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -958,7 +923,7 @@
             {
                 "name": "replicate",
                 "cardinality": "optional",
-                "description": "A role played by a a biological sample in the context of an experiment where the intent is that biological or technical variation is measured.",
+                "description": "A role played by a biological sample in the context of an experiment where the intent is that biological or technical variation is measured.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -1262,6 +1227,33 @@
                 "regex": ""
             },
             {
+                "name": "genotype",
+                "cardinality": "recommended",
+                "description": "name or code for genotype of organism",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "genetic modification",
+                "cardinality": "optional",
+                "description": "A genetic modification of the genome of an organism which may occur naturally by spontaneous mutation, or be introduced by some experimental means. Examples of genetic modification include specification of a transgene or the gene knocked-out or details of transient transfection.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "protocol",
+                "cardinality": "optional",
+                "description": "The laboratory method used to reveal the presence of the sample sequenced in the experiment.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
                 "name": "environmental stress",
                 "cardinality": "optional",
                 "description": "Environmental stress is a treatment where some aspect of the environment is perturbed in order to stress the organism or culture, e.g. change in temperature, change in watering regime.",
@@ -1274,6 +1266,15 @@
                 "name": "environmental history",
                 "cardinality": "optional",
                 "description": "Information concerning the envinonrment a material entity has been exposed to, such as an organism from a lake.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "growth condition",
+                "cardinality": "optional",
+                "description": "A role that a material entity can play which enables particular conditions used to grow organisms or parts of the organism. This includes isolated environments such as cultures and open environments such as field studies.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",

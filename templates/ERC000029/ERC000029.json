@@ -488,18 +488,18 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "subject exposure",
+                "name": "sample storage conditions",
                 "cardinality": "optional",
-                "description": "Exposure of the subject to infected human or animals, such as poultry, wild bird or swine. If multiple exposures are applicable, please state them separated by semicolon. Example: poultry; wild bird",
+                "description": "Conditions at which sample was stored, usually storage temperature, duration and location. In soil context: Explain how and for how long the soil sample was stored before DNA extraction (fresh/frozen/other).",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "subject exposure duration",
+                "name": "subject exposure",
                 "cardinality": "optional",
-                "description": "Duration of the exposure of the subject to an infected human or animal. If multiple exposures are applicable, please state their duration in the same order in which you reported the exposure in the field 'subject exposure'. Example: 1 day; 0.33 days",
+                "description": "Exposure of the subject to infected human or animals, such as poultry, wild bird or swine. If multiple exposures are applicable, please state them separated by semicolon. Example: poultry; wild bird",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -838,12 +838,12 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
             },
             {
                 "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
-                "description": "The location the sample was collected from with the intention of sequencing, as defined by the country or sea. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
+                "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
                     "Afghanistan",
                     "Albania",
@@ -910,6 +910,7 @@
                     "Curacao",
                     "Cyprus",
                     "Czech Republic",
+                    "Czechia",
                     "Democratic Republic of the Congo",
                     "Denmark",
                     "Djibouti",
@@ -1174,13 +1175,13 @@
                 "regex": ""
             },
             {
-                "name": "depth",
+                "name": "subject exposure duration",
                 "cardinality": "optional",
-                "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
+                "description": "Duration of the exposure of the subject to an infected human or animal. If multiple exposures are applicable, please state their duration in the same order in which you reported the exposure in the field 'subject exposure'. Example: 1 day; 0.33 days",
                 "cv": [],
-                "units": "m",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+                "regex": ""
             },
             {
                 "name": "amount or size of sample collected",
@@ -1207,15 +1208,6 @@
                 "name": "mating_type",
                 "cardinality": "optional",
                 "description": "mating type of the organism from which the sequence was obtained; mating type is used for prokaryotes, and for eukaryotes that undergo meiosis without sexually dimorphic gametes",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "genotype",
-                "cardinality": "optional",
-                "description": "name or code for genotype of organism",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -1367,15 +1359,6 @@
                 "regex": ""
             },
             {
-                "name": "sample storage conditions",
-                "cardinality": "optional",
-                "description": "Conditions at which sample was stored, usually storage temperature, duration and location",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "Is the sequenced pathogen host associated?",
                 "cardinality": "mandatory",
                 "description": "Is the sequenced pathogen host associated? ('Yes' or 'No')",
@@ -1505,6 +1488,15 @@
                 "regex": ""
             },
             {
+                "name": "genotype",
+                "cardinality": "optional",
+                "description": "name or code for genotype of organism",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
                 "name": "isolation source non-host-associated",
                 "cardinality": "recommended",
                 "description": "Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived. Example: soil",
@@ -1512,6 +1504,15 @@
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
+            },
+            {
+                "name": "depth",
+                "cardinality": "optional",
+                "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
+                "cv": [],
+                "units": "mm",
+                "field_type": "TEXT_FIELD",
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
             }
         ]
     }
