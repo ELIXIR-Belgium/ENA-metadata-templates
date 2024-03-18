@@ -497,15 +497,6 @@
                 "regex": ""
             },
             {
-                "name": "subject exposure duration",
-                "cardinality": "optional",
-                "description": "Duration of the exposure of the subject to an infected human or animal. If multiple exposures are applicable, please state their duration in the same order in which you reported the exposure in the field 'subject exposure'. Example: 1 day; 0.33 days",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "travel-relation",
                 "cardinality": "optional",
                 "description": "Designates the relation of the main diagnosis to the patient's travel.",
@@ -834,7 +825,7 @@
             {
                 "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
-                "description": "The location the sample was collected from with the intention of sequencing, as defined by the country or sea. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
+                "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
                     "Afghanistan",
                     "Albania",
@@ -901,6 +892,7 @@
                     "Curacao",
                     "Cyprus",
                     "Czech Republic",
+                    "Czechia",
                     "Democratic Republic of the Congo",
                     "Denmark",
                     "Djibouti",
@@ -1134,6 +1126,15 @@
                 "description": "The geographical origin of the sample as defined by the specific region name followed by the locality name.",
                 "cv": [],
                 "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "subject exposure duration",
+                "cardinality": "optional",
+                "description": "Duration of the exposure of the subject to an infected human or animal. If multiple exposures are applicable, please state their duration in the same order in which you reported the exposure in the field 'subject exposure'. Example: 1 day; 0.33 days",
+                "cv": [],
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
