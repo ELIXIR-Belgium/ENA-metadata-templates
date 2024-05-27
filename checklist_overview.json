@@ -318,5 +318,37 @@
         "dataType": "CHECKLIST",
         "status": 4,
         "statusDescription": "public"
+    },
+    {
+        "accession": "ERC000055",
+        "description": "Genomic Standards Consortium package extension for reporting of measurements and observations obtained from the environment where the sample was obtained. By choosing the environmental package, a selection of fields can be made from a relevant subsets of the GSC terms.",
+        "name": "GSC MIxS agriculture",
+        "dataType": "CHECKLIST",
+        "status": 4,
+        "statusDescription": "public"
+    },
+    {
+        "accession": "ERC000056",
+        "description": "Genomic Standards Consortium package extension for reporting of measurements and observations obtained from the environment where the sample was obtained. By choosing the environmental package, a selection of fields can be made from a relevant subsets of the GSC terms. This package is a combination of the four food extensions (MIxS-food-animal and animal feed, MIxS-food-farm environment, MIxS-food-food production facility, MIxS-food-human foods).",
+        "name": "GSC MIxS Food and Production",
+        "dataType": "CHECKLIST",
+        "status": 4,
+        "statusDescription": "public"
+    },
+    {
+        "accession": "ERC000057",
+        "description": "Genomic Standards Consortium package extension for reporting of measurements and observations obtained from the environment where the sample was obtained. By choosing the environmental package, a selection of fields can be made from a relevant subsets of the GSC terms.",
+        "name": "GSC MIxS Symbiont",
+        "dataType": "CHECKLIST",
+        "status": 4,
+        "statusDescription": "public"
+    },
+    {
+        "accession": "ERC000058",
+        "description": "Genomic Standards Consortium package extension for reporting of measurements and observations obtained from the environment where the sample was obtained. By choosing the environmental package, a selection of fields can be made from a relevant subsets of the GSC terms.",
+        "name": "GSC MIxS Hydrocarbon",
+        "dataType": "CHECKLIST",
+        "status": 4,
+        "statusDescription": "public"
     }
 ]
