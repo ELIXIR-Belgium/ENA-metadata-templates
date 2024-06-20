@@ -566,6 +566,72 @@
                 "regex": ""
             },
             {
+                "name": "relationship",
+                "cardinality": "optional",
+                "description": "indicates if the specimen has a known relationship to another specimen (e.g. parental, child, sibling or other kind of relationship)",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample symbiont of",
+                "cardinality": "optional",
+                "description": "Reference to host sample from symbiont. The referenced sample should already be registered in INSDC. E.g. ERSxxxxxx",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": "(^[ESD]RS\\d{6,}$)|(^SAM[END][AG]?\\d+$)|(^EGAN\\d{11}$)"
+            },
+            {
+                "name": "symbiont",
+                "cardinality": "optional",
+                "description": "Used to separate host and symbiont metadata within a symbiont system where the host species are indicated as 'N' and symbionts are indicated as 'Y'",
+                "cv": [
+                    "N",
+                    "Y"
+                ],
+                "units": "",
+                "field_type": "TEXT_CHOICE_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample collection method",
+                "cardinality": "optional",
+                "description": "The method employed for collecting the sample. Can be provided in the form of a PMID, DOI, url or text.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample coordinator affiliation",
+                "cardinality": "optional",
+                "description": "The university, institution, or society affiliation of the sample coordinator.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample same as",
+                "cardinality": "optional",
+                "description": "Reference to sample(s) that are equivalent. The referenced sample(s) should already be registered in INSDC. This should be formatted as one of the following. A single sample e.g. ERSxxxxxx OR a comma separated list e.g. ERSxxxxxx,ERSxxxxxx",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": "(^[ESD]RS\\d{6,}(,[ESD]RS\\d{6,})*$)|(^SAM[END][AG]?\\d+(,SAM[END][AG]?\\d+)*$)|(^EGAN\\d{11}(,EGAN\\d{11})*$)"
+            },
+            {
+                "name": "sample derived from",
+                "cardinality": "optional",
+                "description": "Reference to parental sample(s) or original run(s) that the assembly is derived from. The referenced samples or runs should already be registered in INSDC. This should be formatted as one of the following. A single sample/run e.g. ERSxxxxxx OR a comma separated list e.g. ERSxxxxxx,ERSxxxxxx OR a range e.g. ERSxxxxxx-ERSxxxxxx",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": "(^[ESD]R[SR]\\d{6,}(,[ESD]R[SR]\\d{6,})*$)|(^SAM[END][AG]?\\d+(,SAM[END][AG]?\\d+)*$)|(^EGA[NR]\\d{11}(,EGA[NR]\\d{11})*$)|(^[ESD]R[SR]\\d{6,}-[ESD]R[SR]\\d{6,}$)|(^SAM[END][AG]?\\d+-SAM[END][AG]?\\d+$)|(^EGA[NR]\\d{11}-EGA[NR]\\d{11}$)"
+            },
+            {
                 "name": "project name",
                 "cardinality": "mandatory",
                 "description": "Name of the project within which the sequencing was organized",
@@ -575,18 +641,18 @@
                 "regex": ""
             },
             {
-                "name": "tolid",
+                "name": "barcoding center",
                 "cardinality": "optional",
-                "description": "A ToLID (Tree of Life ID) is a unique and easy to communicate sample identifier that provides species recognition, differentiates between specimen of the same species and adds taxonomic context. ToLIDs are issued by id.tol.sanger.ac.uk. They are endorsed by the EarthBioGenome Project (EBP) and should be assigned to any sample with association to the EBP.",
+                "description": "Center where DNA barcoding was/will be performed.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "barcoding center",
+                "name": "tolid",
                 "cardinality": "optional",
-                "description": "Center where DNA barcoding was/will be performed.",
+                "description": "A ToLID (Tree of Life ID) is a unique and easy to communicate sample identifier that provides species recognition, differentiates between specimen of the same species and adds taxonomic context. ToLIDs are issued by id.tol.sanger.ac.uk. They are endorsed by the EarthBioGenome Project (EBP) and should be assigned to any sample with association to the EBP.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -613,7 +679,7 @@
             {
                 "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
-                "description": "The location the sample was collected from with the intention of sequencing, as defined by the country or sea. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
+                "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
                     "Afghanistan",
                     "Albania",
@@ -679,6 +745,7 @@
                     "Cuba",
                     "Curacao",
                     "Cyprus",
+                    "Czechia",
                     "Czech Republic",
                     "Democratic Republic of the Congo",
                     "Denmark",
@@ -944,22 +1011,13 @@
                 "regex": ""
             },
             {
-                "name": "depth",
-                "cardinality": "optional",
-                "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
-                "cv": [],
-                "units": "m",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
                 "name": "elevation",
                 "cardinality": "optional",
                 "description": "The elevation of the sampling site as measured by the vertical distance from mean sea level.",
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
             },
             {
                 "name": "habitat",
@@ -1016,54 +1074,9 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)"
             },
             {
-                "name": "sample collection device or method",
-                "cardinality": "optional",
-                "description": "The method or deviced employed for collecting the sample",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample derived from",
-                "cardinality": "optional",
-                "description": "Reference to parental sample(s) or original run(s) that the assembly is derived from. The referenced samples or runs should already be registered in INSDC. This should be formatted as one of the following. A single sample/run e.g. ERSxxxxxx OR a comma separated list e.g. ERSxxxxxx,ERSxxxxxx OR a range e.g. ERSxxxxxx-ERSxxxxxx",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": "(^[ESD]R[SR]\\d{6,}(,[ESD]R[SR]\\d{6,})*$)|(^SAM[END][AG]?\\d+(,SAM[END][AG]?\\d+)*$)|(^EGA[NR]\\d{11}(,EGA[NR]\\d{11})*$)|(^[ESD]R[SR]\\d{6,}-[ESD]R[SR]\\d{6,}$)|(^SAM[END][AG]?\\d+-SAM[END][AG]?\\d+$)|(^EGA[NR]\\d{11}-EGA[NR]\\d{11}$)"
-            },
-            {
-                "name": "sample same as",
-                "cardinality": "optional",
-                "description": "Reference to sample(s) that are equivalent. The referenced sample(s) should already be registered in INSDC. This should be formatted as one of the following. A single sample e.g. ERSxxxxxx OR a comma separated list e.g. ERSxxxxxx,ERSxxxxxx",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": "(^[ESD]RS\\d{6,}(,[ESD]RS\\d{6,})*$)|(^SAM[END][AG]?\\d+(,SAM[END][AG]?\\d+)*$)|(^EGAN\\d{11}(,EGAN\\d{11})*$)"
-            },
-            {
-                "name": "sample symbiont of",
-                "cardinality": "optional",
-                "description": "Reference to host sample from symbiont. The referenced sample should already be registered in INSDC. E.g. ERSxxxxxx",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": "(^[ESD]RS\\d{6,}$)|(^SAM[END][AG]?\\d+$)|(^EGAN\\d{11}$)"
-            },
-            {
                 "name": "sample coordinator",
                 "cardinality": "optional",
                 "description": "The name of the sample coordinator.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample coordinator affiliation",
-                "cardinality": "optional",
-                "description": "The university, institution, or society affiliation of the sample coordinator.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -1076,27 +1089,6 @@
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "relationship",
-                "cardinality": "optional",
-                "description": "indicates if the specimen has a known relationship to another specimen (e.g. parental, child, sibling or other kind of relationship)",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "symbiont",
-                "cardinality": "optional",
-                "description": "Used to separate host and symbiont metadata within a symbiont system where the host species are indicated as 'N' and symbionts are indicated as 'Y'",
-                "cv": [
-                    "N",
-                    "Y"
-                ],
-                "units": "",
-                "field_type": "TEXT_CHOICE_FIELD",
                 "regex": ""
             },
             {
@@ -1223,6 +1215,15 @@
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
+            },
+            {
+                "name": "depth",
+                "cardinality": "optional",
+                "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
+                "cv": [],
+                "units": "mm",
+                "field_type": "TEXT_FIELD",
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
             }
         ]
     }

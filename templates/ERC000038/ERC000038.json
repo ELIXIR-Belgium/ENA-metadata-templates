@@ -506,27 +506,97 @@
                 "regex": "[+-]?[0-9]+.?[0-9]*"
             },
             {
-                "name": "Depth",
+                "name": "Protocol Label",
                 "cardinality": "mandatory",
-                "description": "The distance below the surface of the water at which a measurement was made or a sample was collected. Format: ####.##, Positive below the sea surface. SDN:P06:46:ULAA for m. Example: 14.71",
-                "cv": [],
-                "units": "m",
-                "field_type": "TEXT_FIELD",
-                "regex": "([0-9]*\\.)?[0-9]+\\s?([-]\\s?([0-9]*\\.)?[0-9]+)?"
-            },
-            {
-                "name": "Sample Collection Device",
-                "cardinality": "optional",
-                "description": "The sampling device(s) used for the Event. Example: CTD(sbe9C)/Rosette with Niskin bottles.",
+                "description": "Identifies the protocol used to produce the sample, e.g. filtration and preservation. Example: BACT_NUC_W0.22-1.6.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "Protocol Label",
+                "name": "sample storage conditions",
+                "cardinality": "optional",
+                "description": "Conditions at which sample was stored, usually storage temperature, duration and location. In soil context: Explain how and for how long the soil sample was stored before DNA extraction (fresh/frozen/other).",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "aquaculture origin",
                 "cardinality": "mandatory",
-                "description": "Identifies the protocol used to produce the sample, e.g. filtration and preservation. Example: BACT_NUC_W0.22-1.6.",
+                "description": "Origin of stock and raised conditions",
+                "cv": [
+                    "AOAR - aquacultue origin aquaculture raised",
+                    "WOAR - wild origin aquaculture raised",
+                    "WOWR - wild origin wild raised"
+                ],
+                "units": "",
+                "field_type": "TEXT_CHOICE_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "shellfish total weight",
+                "cardinality": "mandatory",
+                "description": "Total weight of shellfish including shell at the time of sampling. Epifauna and epiphytes to be removed.",
+                "cv": [],
+                "units": "g",
+                "field_type": "TEXT_FIELD",
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "shellfish soft tissue weight",
+                "cardinality": "mandatory",
+                "description": "Total weight of all soft tissue, i.e. weight of entire organism without shell, at the time of sampling",
+                "cv": [],
+                "units": "g",
+                "field_type": "TEXT_FIELD",
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "shell length",
+                "cardinality": "mandatory",
+                "description": "length of shell (perpendicular to the hinge)",
+                "cv": [],
+                "units": "g",
+                "field_type": "TEXT_FIELD",
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "shell width",
+                "cardinality": "mandatory",
+                "description": "width of shell (perpendicular angle to length)",
+                "cv": [],
+                "units": "g",
+                "field_type": "TEXT_FIELD",
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "shell markings",
+                "cardinality": "recommended",
+                "description": "Visible markings on outer shell",
+                "cv": [],
+                "units": "g",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample health state",
+                "cardinality": "optional",
+                "description": "health status of the subject at the time of sample collection",
+                "cv": [
+                    "diseased",
+                    "healthy"
+                ],
+                "units": "",
+                "field_type": "TEXT_CHOICE_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample disease status",
+                "cardinality": "optional",
+                "description": "list of diseases with which the subject has been diagnosed at the time of sample collection; can include multiple diagnoses; the value of the field depends on subject; e.g. Charcoal rot (Macrophomina phaseolina), Late wilt (Cephalosporium maydis)",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -544,7 +614,7 @@
             {
                 "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
-                "description": "The location the sample was collected from with the intention of sequencing, as defined by the country or sea. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
+                "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
                     "Afghanistan",
                     "Albania",
@@ -610,6 +680,7 @@
                     "Cuba",
                     "Curacao",
                     "Cyprus",
+                    "Czechia",
                     "Czech Republic",
                     "Democratic Republic of the Congo",
                     "Denmark",
@@ -893,36 +964,6 @@
                 "regex": ""
             },
             {
-                "name": "storage conditions (fresh/frozen/other)",
-                "cardinality": "optional",
-                "description": "explain how and for how long the soil sample was stored before DNA extraction.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample health state",
-                "cardinality": "optional",
-                "description": "health status of the subject at the time of sample collection",
-                "cv": [
-                    "diseased",
-                    "healthy"
-                ],
-                "units": "",
-                "field_type": "TEXT_CHOICE_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample disease status",
-                "cardinality": "optional",
-                "description": "list of diseases with which the subject has been diagnosed at the time of sample collection; can include multiple diagnoses; the value of the field depends on subject; e.g. Charcoal rot (Macrophomina phaseolina), Late wilt (Cephalosporium maydis)",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "Marine Region",
                 "cardinality": "recommended",
                 "description": "The geographical origin of the sample as defined by the marine region name chosen from the Marine Regions vocabulary at http://www.marineregions.org/. Example: Aegean Sea.",
@@ -950,55 +991,6 @@
                 "regex": ""
             },
             {
-                "name": "aquaculture origin",
-                "cardinality": "mandatory",
-                "description": "Origin of stock and raised conditions",
-                "cv": [
-                    "AOAR - aquacultue origin aquaculture raised",
-                    "WOAR - wild origin aquaculture raised",
-                    "WOWR - wild origin wild raised"
-                ],
-                "units": "",
-                "field_type": "TEXT_CHOICE_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "shellfish total weight",
-                "cardinality": "mandatory",
-                "description": "Total weight of shellfish including shell at the time of sampling. Epifauna and epiphytes to be removed.",
-                "cv": [],
-                "units": "g",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "shellfish soft tissue weight",
-                "cardinality": "mandatory",
-                "description": "Total weight of all soft tissue, i.e. weight of entire organism without shell, at the time of sampling",
-                "cv": [],
-                "units": "g",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "shell length",
-                "cardinality": "mandatory",
-                "description": "length of shell (perpendicular to the hinge)",
-                "cv": [],
-                "units": "g",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "shell width",
-                "cardinality": "mandatory",
-                "description": "width of shell (perpendicular angle to length)",
-                "cv": [],
-                "units": "g",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
                 "name": "adductor weight",
                 "cardinality": "recommended",
                 "description": "Total weight of striated muscle and smooth muscle",
@@ -1015,15 +1007,6 @@
                 "units": "g",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "shell markings",
-                "cardinality": "recommended",
-                "description": "Visible markings on outer shell",
-                "cv": [],
-                "units": "g",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
             },
             {
                 "name": "toxin burden",
@@ -1051,6 +1034,15 @@
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
+            },
+            {
+                "name": "depth",
+                "cardinality": "mandatory",
+                "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
+                "cv": [],
+                "units": "mm",
+                "field_type": "TEXT_FIELD",
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
             }
         ]
     }

@@ -551,45 +551,9 @@
                 "regex": "[+-]?[0-9]+.?[0-9]*"
             },
             {
-                "name": "Depth",
-                "cardinality": "mandatory",
-                "description": "The distance below the surface of the water at which a measurement was made or a sample was collected. Format: ####.##, Positive below the sea surface. SDN:P06:46:ULAA for m. Example: 14.71",
-                "cv": [],
-                "units": "m",
-                "field_type": "TEXT_FIELD",
-                "regex": "([0-9]*\\.)?[0-9]+\\s?([-]\\s?([0-9]*\\.)?[0-9]+)?"
-            },
-            {
-                "name": "Sample Collection Device",
-                "cardinality": "recommended",
-                "description": "The sampling device(s) used for the Event. Example: CTD(sbe9C)/Rosette with Niskin bottles.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "Protocol Label",
                 "cardinality": "mandatory",
                 "description": "Identifies the protocol used to produce the sample, e.g. filtration and preservation. Example: BACT_NUC_W0.22-1.6.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "Size Fraction Lower Threshold",
-                "cardinality": "recommended",
-                "description": "SAMPLE_PROTOCOL_Size-Fraction_Lower-Threshold_(\u00b5m) indicates the lower size threshold. Materials smaller than the size threshold are excluded from the sample. Example: 0.22 \u00b5m",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "Size Fraction Upper Threshold",
-                "cardinality": "recommended",
-                "description": "SAMPLE_PROTOCOL_Size-Fraction_Upper-Threshold_(\u00b5m) indicates the upper size threshold. Materials larger than the size threshold are excluded from the sample.Example: 1.6 \u00b5m",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -612,6 +576,42 @@
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
+            },
+            {
+                "name": "sample collection device",
+                "cardinality": "optional",
+                "description": "The device used to collect an environmental sample. It is recommended to use terms listed under environmental sampling device (http://purl.obolibrary.org/obo/ENVO) and/or terms listed under specimen collection device (http://purl.obolibrary.org/obo/GENEPIO_0002094).",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample storage device",
+                "cardinality": "recommended",
+                "description": "The container used to store the sample. This field accepts terms listed under container (http://purl.obolibrary.org/obo/NCIT_C43186). If the proper descriptor is not listed please use text to describe the storage device.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "size-fraction lower threshold",
+                "cardinality": "recommended",
+                "description": "Refers to the mesh/pore size used to retain the sample. Materials smaller than the size threshold are excluded from the sample",
+                "cv": [],
+                "units": "\u00b5m",
+                "field_type": "TEXT_FIELD",
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
+            },
+            {
+                "name": "size-fraction upper threshold",
+                "cardinality": "recommended",
+                "description": "Refers to the mesh/pore size used to pre-filter/pre-sort the sample. Materials larger than the size threshold are excluded from the sample",
+                "cv": [],
+                "units": "\u00b5m",
+                "field_type": "TEXT_FIELD",
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
                 "name": "project name",
@@ -645,7 +645,7 @@
             {
                 "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
-                "description": "The location the sample was collected from with the intention of sequencing, as defined by the country or sea. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
+                "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
                     "Afghanistan",
                     "Albania",
@@ -711,6 +711,7 @@
                     "Cuba",
                     "Curacao",
                     "Cyprus",
+                    "Czechia",
                     "Czech Republic",
                     "Democratic Republic of the Congo",
                     "Denmark",
@@ -1030,7 +1031,7 @@
                 "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "Temperature",
+                "name": "water temperature",
                 "cardinality": "mandatory",
                 "description": "Temperature of water at the time of taking the sample. Format: ##.####, SDN:P02:75:TEMP, SDN:P06:46:UPAA for \u00b0C. Example: 17.7122.",
                 "cv": [],
@@ -1064,6 +1065,15 @@
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
+            },
+            {
+                "name": "depth",
+                "cardinality": "optional",
+                "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
+                "cv": [],
+                "units": "mm",
+                "field_type": "TEXT_FIELD",
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
             }
         ]
     }

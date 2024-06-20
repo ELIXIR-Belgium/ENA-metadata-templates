@@ -488,13 +488,31 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "Depth",
-                "cardinality": "recommended",
-                "description": "The distance below the surface of the water at which a measurement was made or a sample was collected. Format: ####.##, Positive below the sea surface. SDN:P06:46:ULAA for m. Example: 14.71",
+                "name": "sample collection method",
+                "cardinality": "optional",
+                "description": "The method employed for collecting the sample. Can be provided in the form of a PMID, DOI, url or text.",
                 "cv": [],
-                "units": "m",
+                "units": "",
                 "field_type": "TEXT_FIELD",
-                "regex": "([0-9]*\\.)?[0-9]+\\s?([-]\\s?([0-9]*\\.)?[0-9]+)?"
+                "regex": ""
+            },
+            {
+                "name": "sample storage conditions",
+                "cardinality": "optional",
+                "description": "Conditions at which sample was stored, usually storage temperature, duration and location. In soil context: Explain how and for how long the soil sample was stored before DNA extraction (fresh/frozen/other).",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample storage temperature",
+                "cardinality": "optional",
+                "description": "temperature at which sample was stored, e.g. -80",
+                "cv": [],
+                "units": "\u00b0C",
+                "field_type": "TEXT_FIELD",
+                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
                 "name": "collected_by",
@@ -517,7 +535,7 @@
             {
                 "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
-                "description": "The location the sample was collected from with the intention of sequencing, as defined by the country or sea. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
+                "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
                     "Afghanistan",
                     "Albania",
@@ -583,6 +601,7 @@
                     "Cuba",
                     "Curacao",
                     "Cyprus",
+                    "Czechia",
                     "Czech Republic",
                     "Democratic Republic of the Congo",
                     "Denmark",
@@ -830,24 +849,6 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)"
             },
             {
-                "name": "sample collection device or method",
-                "cardinality": "optional",
-                "description": "The method or deviced employed for collecting the sample",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "isolation and growth condition",
-                "cardinality": "optional",
-                "description": "Publication reference in the form of pubmed ID (pmid), digital object identifier (doi) or url for isolation and growth condition specifications of the organism/material. Mandatory for MIGS and MIMARKS Specimen.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "amount or size of sample collected",
                 "cardinality": "optional",
                 "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.",
@@ -857,34 +858,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "sample storage duration",
-                "cardinality": "optional",
-                "description": "duration for which sample was stored",
-                "cv": [],
-                "units": "years",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "sample storage temperature",
-                "cardinality": "optional",
-                "description": "temperature at which sample was stored, e.g. -80",
-                "cv": [],
-                "units": "\u00b0C",
-                "field_type": "TEXT_FIELD",
-                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "growth condition",
-                "cardinality": "optional",
-                "description": "A role that a material entity can play which enables particular conditions used to grow organisms or parts of the organism. This includes isolated environments such as cultures and open environments such as field studies.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "Temperature",
+                "name": "water temperature",
                 "cardinality": "optional",
                 "description": "Temperature of water at the time of taking the sample. Format: ##.####, SDN:P02:75:TEMP, SDN:P06:46:UPAA for \u00b0C. Example: 17.7122.",
                 "cv": [],
@@ -893,18 +867,9 @@
                 "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "Salinity",
+                "name": "sample storage duration",
                 "cardinality": "optional",
-                "description": "The total concentration of all dissolved salts in a liquid or solid sample. While salinity can be measured by a complete chemical analysis, this method is difficult and time consuming. More often, it is instead derived from the conductivity measurement. This is known as practical salinity. These derivations compare the specific conductance of the sample to a salinity standard such as seawater.",
-                "cv": [],
-                "units": "psu",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "sample storage conditions",
-                "cardinality": "optional",
-                "description": "Conditions at which sample was stored, usually storage temperature, duration and location",
+                "description": "Duration for which the sample was stored. Indicate the duration for which the sample was stored written in ISO 8601 format.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -925,6 +890,15 @@
                 "description": "pH measurement",
                 "cv": [],
                 "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "salinity",
+                "cardinality": "optional",
+                "description": "The total concentration of all dissolved salts in a liquid or solid sample. While salinity can be measured by a complete chemical analysis, this method is difficult and time consuming. More often, it is instead derived from the conductivity measurement. This is known as practical salinity. These derivations compare the specific conductance of the sample to a salinity standard such as seawater.",
+                "cv": [],
+                "units": "psu",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -950,6 +924,33 @@
                 "name": "Further Details",
                 "cardinality": "optional",
                 "description": "Reference details related to a sample in form of an URI.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "isolation and growth condition",
+                "cardinality": "optional",
+                "description": "Publication reference in the form of pubmed ID (pmid), digital object identifier (doi) or url for isolation and growth condition specifications of the organism/material. Mandatory for MIGS and MIMARKS Specimen.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "depth",
+                "cardinality": "recommended",
+                "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
+                "cv": [],
+                "units": "mm",
+                "field_type": "TEXT_FIELD",
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
+            },
+            {
+                "name": "growth condition",
+                "cardinality": "optional",
+                "description": "A role that a material entity can play which enables particular conditions used to grow organisms or parts of the organism. This includes isolated environments such as cultures and open environments such as field studies.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",

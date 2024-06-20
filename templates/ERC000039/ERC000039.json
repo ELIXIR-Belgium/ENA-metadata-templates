@@ -497,18 +497,27 @@
                 "regex": ""
             },
             {
-                "name": "subject exposure",
-                "cardinality": "optional",
-                "description": "Exposure of the subject to infected human or animals, such as poultry, wild bird or swine. If multiple exposures are applicable, please state them separated by semicolon. Example: poultry; wild bird",
+                "name": "known pathogenicity",
+                "cardinality": "recommended",
+                "description": "To what is the entity pathogenic, for instance plant, fungi, bacteria",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "subject exposure duration",
+                "name": "sample storage conditions",
                 "cardinality": "optional",
-                "description": "Duration of the exposure of the subject to an infected human or animal. If multiple exposures are applicable, please state their duration in the same order in which you reported the exposure in the field 'subject exposure'. Example: 1 day; 0.33 days",
+                "description": "Conditions at which sample was stored, usually storage temperature, duration and location. In soil context: Explain how and for how long the soil sample was stored before DNA extraction (fresh/frozen/other).",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "subject exposure",
+                "cardinality": "optional",
+                "description": "Exposure of the subject to infected human or animals, such as poultry, wild bird or swine. If multiple exposures are applicable, please state them separated by semicolon. Example: poultry; wild bird",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -834,7 +843,7 @@
             {
                 "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
-                "description": "The location the sample was collected from with the intention of sequencing, as defined by the country or sea. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
+                "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
                     "Afghanistan",
                     "Albania",
@@ -900,6 +909,7 @@
                     "Cuba",
                     "Curacao",
                     "Cyprus",
+                    "Czechia",
                     "Czech Republic",
                     "Democratic Republic of the Congo",
                     "Denmark",
@@ -1156,11 +1166,11 @@
                 "regex": ""
             },
             {
-                "name": "genotype",
-                "cardinality": "recommended",
-                "description": "name or code for genotype of organism",
+                "name": "subject exposure duration",
+                "cardinality": "optional",
+                "description": "Duration of the exposure of the subject to an infected human or animal. If multiple exposures are applicable, please state their duration in the same order in which you reported the exposure in the field 'subject exposure'. Example: 1 day; 0.33 days",
                 "cv": [],
-                "units": "",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1283,15 +1293,6 @@
                 "regex": ""
             },
             {
-                "name": "sample storage conditions",
-                "cardinality": "optional",
-                "description": "Conditions at which sample was stored, usually storage temperature, duration and location",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "isolate",
                 "cardinality": "mandatory",
                 "description": "individual isolate from which the sample was obtained",
@@ -1328,9 +1329,9 @@
                 "regex": ""
             },
             {
-                "name": "known pathogenicity",
+                "name": "genotype",
                 "cardinality": "recommended",
-                "description": "To what is the entity pathogenic, for instance plant, fungi, bacteria",
+                "description": "name or code for genotype of organism",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",

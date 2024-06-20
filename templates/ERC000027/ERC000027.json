@@ -524,15 +524,6 @@
                 "regex": "[+-]?[0-9]+.?[0-9]*"
             },
             {
-                "name": "Depth",
-                "cardinality": "mandatory",
-                "description": "The distance below the surface of the water at which a measurement was made or a sample was collected. Format: ####.##, Positive below the sea surface. SDN:P06:46:ULAA for m. Example: 14.71",
-                "cv": [],
-                "units": "m",
-                "field_type": "TEXT_FIELD",
-                "regex": "([0-9]*\\.)?[0-9]+\\s?([-]\\s?([0-9]*\\.)?[0-9]+)?"
-            },
-            {
                 "name": "Protocol Label",
                 "cardinality": "mandatory",
                 "description": "Identifies the protocol used to produce the sample, e.g. filtration and preservation. Example: BACT_NUC_W0.22-1.6.",
@@ -540,6 +531,144 @@
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
+            },
+            {
+                "name": "trophic level",
+                "cardinality": "optional",
+                "description": "Trophic levels are the feeding position in a food chain. Microbes can be a range of producers (e.g. chemolithotroph)",
+                "cv": [
+                    "autotroph",
+                    "carboxydotroph",
+                    "chemoautotroph",
+                    "chemoheterotroph",
+                    "chemolithoautotroph",
+                    "chemolithotroph",
+                    "chemoorganoheterotroph",
+                    "chemoorganotroph",
+                    "chemosynthetic",
+                    "chemotroph",
+                    "copiotroph",
+                    "diazotroph",
+                    "facultative autotroph",
+                    "heterotroph",
+                    "lithoautotroph",
+                    "lithoheterotroph",
+                    "lithotroph",
+                    "methanotroph",
+                    "methylotroph",
+                    "mixotroph",
+                    "obligate chemoautolithotroph",
+                    "oligotroph",
+                    "organoheterotroph",
+                    "organotroph",
+                    "photoautotroph",
+                    "photoheterotroph",
+                    "photolithoautotroph",
+                    "photolithotroph",
+                    "photosynthetic",
+                    "phototroph"
+                ],
+                "units": "",
+                "field_type": "TEXT_CHOICE_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "observed biotic relationship",
+                "cardinality": "optional",
+                "description": "Description of relationship(s) between the subject organism and other organism(s) it is associated with. E.g., parasite on species X; mutualist with species Y. The target organism is the subject of the relationship, and the other organism(s) is the object.",
+                "cv": [
+                    "commensal",
+                    "free living",
+                    "mutualism",
+                    "parasite",
+                    "symbiont"
+                ],
+                "units": "",
+                "field_type": "TEXT_CHOICE_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "known pathogenicity",
+                "cardinality": "optional",
+                "description": "To what is the entity pathogenic, for instance plant, fungi, bacteria",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "relationship to oxygen",
+                "cardinality": "optional",
+                "description": "Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments",
+                "cv": [
+                    "aerobe",
+                    "anaerobe",
+                    "facultative",
+                    "microaerophilic",
+                    "microanaerobe",
+                    "obligate aerobe",
+                    "obligate anaerobe"
+                ],
+                "units": "",
+                "field_type": "TEXT_CHOICE_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "propagation",
+                "cardinality": "optional",
+                "description": "The type of reproduction from the parent stock. Values for this field is specific to different taxa. For phage or virus: lytic/lysogenic/temperate/obligately lytic. For plasmids: incompatibility group. For eukaryotes: sexual/asexual. Mandatory for MIGs of eukayotes, plasmids and viruses.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample collection method",
+                "cardinality": "optional",
+                "description": "The method employed for collecting the sample. Can be provided in the form of a PMID, DOI, url or text.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample storage temperature",
+                "cardinality": "optional",
+                "description": "temperature at which sample was stored, e.g. -80",
+                "cv": [],
+                "units": "\u00b0C",
+                "field_type": "TEXT_FIELD",
+                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "sample storage location",
+                "cardinality": "optional",
+                "description": "Location at which sample was stored, usually name of a specific freezer/room. Indicate the location name.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "oxygenation status of sample",
+                "cardinality": "optional",
+                "description": "oxygenation status of sample",
+                "cv": [
+                    "aerobic",
+                    "anaerobic"
+                ],
+                "units": "",
+                "field_type": "TEXT_CHOICE_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "density",
+                "cardinality": "optional",
+                "description": "density of sample",
+                "cv": [],
+                "units": "g/m3",
+                "field_type": "TEXT_FIELD",
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
                 "name": "project name",
@@ -551,9 +680,9 @@
                 "regex": ""
             },
             {
-                "name": "experimental factor",
+                "name": "finishing strategy",
                 "cardinality": "optional",
-                "description": "Experimental factors are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI). For a browser of EFO (v 2.95) terms, please see http://purl.bioontology.org/ontology/EFO; for a browser of OBI (v 2018-02-12) terms please see http://purl.bioontology.org/ontology/OBI. E.g. time series design [EFO:EFO_0001779]",
+                "description": "Was the genome project intended to produce a complete or draft genome, Coverage, the fold coverage of the sequencing expressed as 2x, 3x, 18x etc, and how many contigs were produced for the genome. Mandatory for MIGS of eukaryote, bacteria and archaea.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -596,105 +725,6 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "reference for biomaterial",
-                "cardinality": "optional",
-                "description": "Primary publication if isolated before genome publication; otherwise, primary genome report. Mandatory for MIGS of bacteria and archaea.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "finishing strategy",
-                "cardinality": "optional",
-                "description": "Was the genome project intended to produce a complete or draft genome, Coverage, the fold coverage of the sequencing expressed as 2x, 3x, 18x etc, and how many contigs were produced for the genome. Mandatory for MIGS of eukaryote, bacteria and archaea.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "annotation source",
-                "cardinality": "optional",
-                "description": "For cases where annotation was provided by a community jamboree or model organism database rather than by a specific submitter",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample volume or weight for DNA extraction",
-                "cardinality": "optional",
-                "description": "Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term 'sample size'.",
-                "cv": [],
-                "units": "ng",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "nucleic acid extraction",
-                "cardinality": "optional",
-                "description": "A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the material separation to recover the nucleic acid fraction from a sample",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "nucleic acid amplification",
-                "cardinality": "optional",
-                "description": "A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the enzymatic amplification (PCR, TMA, NASBA) of specific nucleic acids",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "library size",
-                "cardinality": "optional",
-                "description": "Total number of clones in the library prepared for the project",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": "[+-]?[0-9]+"
-            },
-            {
-                "name": "library reads sequenced",
-                "cardinality": "optional",
-                "description": "Total number of clones sequenced from the library",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": "[+-]?[0-9]+"
-            },
-            {
-                "name": "library construction method",
-                "cardinality": "optional",
-                "description": "Library construction method used for clone libraries",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "library vector",
-                "cardinality": "optional",
-                "description": "Cloning vector type(s) used in construction of libraries",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "library screening strategy",
-                "cardinality": "optional",
-                "description": "Specific enrichment or screening methods applied before and/or after creating clone libraries in order to select a specific group of sequences",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "target gene",
                 "cardinality": "optional",
                 "description": "Targeted gene or locus name for marker gene studies",
@@ -713,36 +743,9 @@
                 "regex": ""
             },
             {
-                "name": "pcr primers",
-                "cardinality": "optional",
-                "description": "PCR primers that were used to amplify the sequence of the targeted gene, locus or subfragment. This field should contain all the primers used for a single PCR reaction if multiple forward or reverse primers are present in a single PCR reaction. The primer sequence should be reported in uppercase letters",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "multiplex identifiers",
                 "cardinality": "optional",
                 "description": "Molecular barcodes, called Multiplex Identifiers (MIDs), that are used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "adapters",
-                "cardinality": "optional",
-                "description": "Adapters provide priming sequences for both amplification and sequencing of the sample-library fragments. Both adapters should be reported; in uppercase letters",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "pcr conditions",
-                "cardinality": "optional",
-                "description": "Description of reaction conditions and components for PCR in the form of 'initial denaturation:94degC_1.5min; annealing=...'",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -811,7 +814,7 @@
             {
                 "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
-                "description": "The location the sample was collected from with the intention of sequencing, as defined by the country or sea. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
+                "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
                     "Afghanistan",
                     "Albania",
@@ -877,6 +880,7 @@
                     "Cuba",
                     "Curacao",
                     "Cyprus",
+                    "Czechia",
                     "Czech Republic",
                     "Democratic Republic of the Congo",
                     "Denmark",
@@ -1160,51 +1164,6 @@
                 "regex": ""
             },
             {
-                "name": "source material identifiers",
-                "cardinality": "optional",
-                "description": "A unique identifier assigned to a material sample (as defined by http://rs.tdwg.org/dwc/terms/materialSampleID, and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples. The INSDC qualifiers /specimen_voucher, /bio_material, or /culture_collection may or may not share the same value as the source_mat_id field. For instance, the /specimen_voucher qualifier and source_mat_id may both contain 'UAM:Herps:14' , referring to both the specimen voucher and sampled tissue with the same identifier. However, the /culture_collection qualifier may refer to a value from an initial culture (e.g. ATCC:11775) while source_mat_id would refer to an identifier from some derived culture from which the nucleic acids were extracted (e.g. xatc123 or ark:/2154/R2).",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample collection device or method",
-                "cardinality": "optional",
-                "description": "The method or deviced employed for collecting the sample",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample material processing",
-                "cardinality": "optional",
-                "description": "A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "isolation and growth condition",
-                "cardinality": "optional",
-                "description": "Publication reference in the form of pubmed ID (pmid), digital object identifier (doi) or url for isolation and growth condition specifications of the organism/material. Mandatory for MIGS and MIMARKS Specimen.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "propagation",
-                "cardinality": "optional",
-                "description": "The type of reproduction from the parent stock. Values for this field is specific to different taxa. For phage or virus: lytic/lysogenic/temperate/obligately lytic. For plasmids: incompatibility group. For eukaryotes: sexual/asexual. Mandatory for MIGs of eukayotes, plasmids and viruses.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "amount or size of sample collected",
                 "cardinality": "optional",
                 "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.",
@@ -1223,57 +1182,9 @@
                 "regex": ""
             },
             {
-                "name": "density",
-                "cardinality": "optional",
-                "description": "density of sample",
-                "cv": [],
-                "units": "g/m3",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "oxygenation status of sample",
-                "cardinality": "optional",
-                "description": "oxygenation status of sample",
-                "cv": [
-                    "aerobic",
-                    "anaerobic"
-                ],
-                "units": "",
-                "field_type": "TEXT_CHOICE_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "organism count",
                 "cardinality": "optional",
                 "description": "Total cell count of any organism (or group of organisms) per gram, volume or area of sample, should include name of organism followed by count. The method that was used for the enumeration (e.g. qPCR, atp, mpn, etc.) Should also be provided. (example: total prokaryotes; 3.5e7 cells per ml; qpcr)",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample storage duration",
-                "cardinality": "optional",
-                "description": "duration for which sample was stored",
-                "cv": [],
-                "units": "years",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "sample storage temperature",
-                "cardinality": "optional",
-                "description": "temperature at which sample was stored, e.g. -80",
-                "cv": [],
-                "units": "\u00b0C",
-                "field_type": "TEXT_FIELD",
-                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "sample storage location",
-                "cardinality": "optional",
-                "description": "location at which sample was stored, usually name of a specific freezer/room",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -1289,7 +1200,7 @@
                 "regex": ""
             },
             {
-                "name": "Temperature",
+                "name": "water temperature",
                 "cardinality": "mandatory",
                 "description": "Temperature of water at the time of taking the sample. Format: ##.####, SDN:P02:75:TEMP, SDN:P06:46:UPAA for \u00b0C. Example: 17.7122.",
                 "cv": [],
@@ -1298,13 +1209,13 @@
                 "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "Salinity",
-                "cardinality": "mandatory",
-                "description": "The total concentration of all dissolved salts in a liquid or solid sample. While salinity can be measured by a complete chemical analysis, this method is difficult and time consuming. More often, it is instead derived from the conductivity measurement. This is known as practical salinity. These derivations compare the specific conductance of the sample to a salinity standard such as seawater.",
+                "name": "sample storage duration",
+                "cardinality": "optional",
+                "description": "Duration for which the sample was stored. Indicate the duration for which the sample was stored written in ISO 8601 format.",
                 "cv": [],
-                "units": "psu",
+                "units": "",
                 "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+                "regex": ""
             },
             {
                 "name": "specific host",
@@ -1323,15 +1234,6 @@
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
-            },
-            {
-                "name": "alkalinity",
-                "cardinality": "optional",
-                "description": "alkalinity, the ability of a solution to neutralize acids to the equivalence point of carbonate or bicarbonate",
-                "cv": [],
-                "units": "mEq/L",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
                 "name": "atmospheric data",
@@ -1697,9 +1599,9 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "nitrogen",
+                "name": "total nitrogen concentration",
                 "cardinality": "optional",
-                "description": "concentration of nitrogen (total)",
+                "description": "Concentration of nitrogen (total). Total nitrogen concentration of water samples, calculated by: total nitrogen = total dissolved nitrogen + particulate nitrogen. Can also be measured without filtering, reported as nitrogen",
                 "cv": [],
                 "units": "\u00b5mol/L",
                 "field_type": "TEXT_FIELD",
@@ -1814,6 +1716,15 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
+                "name": "salinity",
+                "cardinality": "optional",
+                "description": "The total concentration of all dissolved salts in a liquid or solid sample. While salinity can be measured by a complete chemical analysis, this method is difficult and time consuming. More often, it is instead derived from the conductivity measurement. This is known as practical salinity. These derivations compare the specific conductance of the sample to a salinity standard such as seawater.",
+                "cv": [],
+                "units": "psu",
+                "field_type": "TEXT_FIELD",
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
                 "name": "silicate",
                 "cardinality": "optional",
                 "description": "concentration of silicate",
@@ -1886,9 +1797,9 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "total nitrogen",
+                "name": "total nitrogen content",
                 "cardinality": "optional",
-                "description": "total nitrogen content of the sample",
+                "description": "Total nitrogen content of the sample",
                 "cv": [],
                 "units": "\u00b5mol/L",
                 "field_type": "TEXT_FIELD",
@@ -1913,6 +1824,24 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
+                "name": "alkalinity",
+                "cardinality": "optional",
+                "description": "alkalinity, the ability of a solution to neutralize acids to the equivalence point of carbonate or bicarbonate",
+                "cv": [],
+                "units": "mEq/L",
+                "field_type": "TEXT_FIELD",
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "source material identifiers",
+                "cardinality": "optional",
+                "description": "A unique identifier assigned to a material sample (as defined by http://rs.tdwg.org/dwc/terms/materialSampleID, and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples. The INSDC qualifiers /specimen_voucher, /bio_material, or /culture_collection may or may not share the same value as the source_mat_id field. For instance, the /specimen_voucher qualifier and source_mat_id may both contain 'UAM:Herps:14' , referring to both the specimen voucher and sampled tissue with the same identifier. However, the /culture_collection qualifier may refer to a value from an initial culture (e.g. ATCC:11775) while source_mat_id would refer to an identifier from some derived culture from which the nucleic acids were extracted (e.g. xatc123 or ark:/2154/R2).",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
                 "name": "miscellaneous parameter",
                 "cardinality": "optional",
                 "description": "Any other measurement performed or parameter collected, that is not listed here",
@@ -1922,75 +1851,18 @@
                 "regex": ""
             },
             {
-                "name": "subspecific genetic lineage",
+                "name": "perturbation",
                 "cardinality": "optional",
-                "description": "Information about the genetic distinctness of the sequenced organism below the subspecies level, e.g., serovar, serotype, biotype, ecotype, or any relevant genetic typing schemes like Group I plasmid. Subspecies should not be recorded in this term, but in the NCBI taxonomy. Supply both the lineage name and the lineage rank separated by a colon, e.g., biovar:abc123.",
+                "description": "type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "trophic level",
+                "name": "experimental factor",
                 "cardinality": "optional",
-                "description": "Trophic levels are the feeding position in a food chain. Microbes can be a range of producers (e.g. chemolithotroph)",
-                "cv": [
-                    "autotroph",
-                    "carboxydotroph",
-                    "chemoautotroph",
-                    "chemoheterotroph",
-                    "chemolithoautotroph",
-                    "chemolithotroph",
-                    "chemoorganoheterotroph",
-                    "chemoorganotroph",
-                    "chemosynthetic",
-                    "chemotroph",
-                    "copiotroph",
-                    "diazotroph",
-                    "facultative autotroph",
-                    "heterotroph",
-                    "lithoautotroph",
-                    "lithoheterotroph",
-                    "lithotroph",
-                    "methanotroph",
-                    "methylotroph",
-                    "mixotroph",
-                    "obligate chemoautolithotroph",
-                    "oligotroph",
-                    "organoheterotroph",
-                    "organotroph",
-                    "photoautotroph",
-                    "photoheterotroph",
-                    "photolithoautotroph",
-                    "photolithotroph",
-                    "photosynthetic",
-                    "phototroph"
-                ],
-                "units": "",
-                "field_type": "TEXT_CHOICE_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "relationship to oxygen",
-                "cardinality": "optional",
-                "description": "Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments",
-                "cv": [
-                    "aerobe",
-                    "anaerobe",
-                    "facultative",
-                    "microaerophilic",
-                    "microanaerobe",
-                    "obligate aerobe",
-                    "obligate anaerobe"
-                ],
-                "units": "",
-                "field_type": "TEXT_CHOICE_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "known pathogenicity",
-                "cardinality": "optional",
-                "description": "To what is the entity pathogenic, for instance plant, fungi, bacteria",
+                "description": "Experimental factors are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI). For a browser of EFO (v 2.95) terms, please see http://purl.bioontology.org/ontology/EFO; for a browser of OBI (v 2018-02-12) terms please see http://purl.bioontology.org/ontology/OBI. E.g. time series design [EFO:EFO_0001779]",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -2006,33 +1878,162 @@
                 "regex": ""
             },
             {
-                "name": "observed biotic relationship",
+                "name": "subspecific genetic lineage",
                 "cardinality": "optional",
-                "description": "Is it free-living or in a host and if the latter what type of relationship is observed",
-                "cv": [
-                    "commensal",
-                    "free living",
-                    "mutualism",
-                    "parasite",
-                    "symbiont"
-                ],
-                "units": "",
-                "field_type": "TEXT_CHOICE_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "chemical administration",
-                "cardinality": "optional",
-                "description": "list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v111), please see http://purl.bioontology.org/ontology/CHEBI",
+                "description": "Information about the genetic distinctness of the sequenced organism below the subspecies level, e.g., serovar, serotype, biotype, ecotype, or any relevant genetic typing schemes like Group I plasmid. Subspecies should not be recorded in this term, but in the NCBI taxonomy. Supply both the lineage name and the lineage rank separated by a colon, e.g., biovar:abc123.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "perturbation",
+                "name": "isolation and growth condition",
                 "cardinality": "optional",
-                "description": "type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types",
+                "description": "Publication reference in the form of pubmed ID (pmid), digital object identifier (doi) or url for isolation and growth condition specifications of the organism/material. Mandatory for MIGS and MIMARKS Specimen.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "annotation source",
+                "cardinality": "optional",
+                "description": "For cases where annotation was provided by a community jamboree or model organism database rather than by a specific submitter",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "reference for biomaterial",
+                "cardinality": "optional",
+                "description": "Primary publication if isolated before genome publication; otherwise, primary genome report. Mandatory for MIGS of bacteria and archaea.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample material processing",
+                "cardinality": "optional",
+                "description": "A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample volume or weight for DNA extraction",
+                "cardinality": "optional",
+                "description": "Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term 'sample size'.",
+                "cv": [],
+                "units": "ng",
+                "field_type": "TEXT_FIELD",
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "nucleic acid extraction",
+                "cardinality": "optional",
+                "description": "A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the material separation to recover the nucleic acid fraction from a sample",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "nucleic acid amplification",
+                "cardinality": "optional",
+                "description": "A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the enzymatic amplification (PCR, TMA, NASBA) of specific nucleic acids",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "library size",
+                "cardinality": "optional",
+                "description": "Total number of clones in the library prepared for the project",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": "[+-]?[0-9]+"
+            },
+            {
+                "name": "library reads sequenced",
+                "cardinality": "optional",
+                "description": "Total number of clones sequenced from the library",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": "[+-]?[0-9]+"
+            },
+            {
+                "name": "library construction method",
+                "cardinality": "optional",
+                "description": "Library construction method used for clone libraries",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "library vector",
+                "cardinality": "optional",
+                "description": "Cloning vector type(s) used in construction of libraries",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "library screening strategy",
+                "cardinality": "optional",
+                "description": "Specific enrichment or screening methods applied before and/or after creating clone libraries in order to select a specific group of sequences",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "pcr conditions",
+                "cardinality": "optional",
+                "description": "Description of reaction conditions and components for PCR in the form of 'initial denaturation:94degC_1.5min; annealing=...'",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "pcr primers",
+                "cardinality": "optional",
+                "description": "PCR primers that were used to amplify the sequence of the targeted gene, locus or subfragment. This field should contain all the primers used for a single PCR reaction if multiple forward or reverse primers are present in a single PCR reaction. The primer sequence should be reported in uppercase letters",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "adapters",
+                "cardinality": "optional",
+                "description": "Adapters provide priming sequences for both amplification and sequencing of the sample-library fragments. Both adapters should be reported; in uppercase letters",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "depth",
+                "cardinality": "mandatory",
+                "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
+                "cv": [],
+                "units": "mm",
+                "field_type": "TEXT_FIELD",
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
+            },
+            {
+                "name": "chemical administration",
+                "cardinality": "optional",
+                "description": "list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v111), please see http://purl.bioontology.org/ontology/CHEBI",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",

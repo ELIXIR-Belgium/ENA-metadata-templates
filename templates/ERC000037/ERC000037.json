@@ -488,6 +488,271 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
+                "name": "observed biotic relationship",
+                "cardinality": "optional",
+                "description": "Description of relationship(s) between the subject organism and other organism(s) it is associated with. E.g., parasite on species X; mutualist with species Y. The target organism is the subject of the relationship, and the other organism(s) is the object.",
+                "cv": [
+                    "commensal",
+                    "free living",
+                    "mutualism",
+                    "parasite",
+                    "symbiont"
+                ],
+                "units": "",
+                "field_type": "TEXT_CHOICE_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "propagation",
+                "cardinality": "recommended",
+                "description": "The type of reproduction from the parent stock. Values for this field is specific to different taxa. For phage or virus: lytic/lysogenic/temperate/obligately lytic. For plasmids: incompatibility group. For eukaryotes: sexual/asexual. Mandatory for MIGs of eukayotes, plasmids and viruses.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample collection method",
+                "cardinality": "optional",
+                "description": "The method employed for collecting the sample. Can be provided in the form of a PMID, DOI, url or text.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample storage temperature",
+                "cardinality": "optional",
+                "description": "temperature at which sample was stored, e.g. -80",
+                "cv": [],
+                "units": "\u00b0C",
+                "field_type": "TEXT_FIELD",
+                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "sample storage location",
+                "cardinality": "optional",
+                "description": "Location at which sample was stored, usually name of a specific freezer/room. Indicate the location name.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "soil_taxonomic/FAO classification",
+                "cardinality": "recommended",
+                "description": "soil classification from the FAO World Reference Database for Soil Resources",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "soil_taxonomic/local classification",
+                "cardinality": "optional",
+                "description": "soil classification based on local soil classification system",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "soil_taxonomic/local classification method",
+                "cardinality": "optional",
+                "description": "reference or method used in determining the local soil classification",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "soil type",
+                "cardinality": "optional",
+                "description": "Description of the soil type or classification. This field accepts terms under soil (http://purl.obolibrary.org/obo/ENVO_00001998). Multiple terms can be separated by pipes.",
+                "cv": [
+                    "Acrisol",
+                    "Albeluvisol",
+                    "Alisol",
+                    "Andosol",
+                    "Anthrosol",
+                    "Arenosol",
+                    "Calcisol",
+                    "Cambisol",
+                    "Chernozem",
+                    "Cryosol",
+                    "Durisol",
+                    "Ferralsol",
+                    "Fluvisol",
+                    "Gleysol",
+                    "Gypsisol",
+                    "Histosol",
+                    "Kastanozem",
+                    "Leptosol",
+                    "Lixisol",
+                    "Luvisol",
+                    "Nitisol",
+                    "Phaeozem",
+                    "Planosol",
+                    "Plinthosol",
+                    "Podzol",
+                    "Regosol",
+                    "Solonchak",
+                    "Solonetz",
+                    "Stagnosol",
+                    "Technosol",
+                    "Umbrisol",
+                    "Vertisol"
+                ],
+                "units": "",
+                "field_type": "TEXT_CHOICE_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "soil type method",
+                "cardinality": "optional",
+                "description": "reference or method used in determining soil series name or other lower-level classification",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "soil texture measurement",
+                "cardinality": "optional",
+                "description": "the relative proportion of different grain sizes of mineral particles in a soil, as described using a standard system; express as % sand (50 um to 2 mm), silt (2 um to 50 um), and clay (<2 um) with textural name (e.g., silty clay loam) optional.",
+                "cv": [],
+                "units": "% sand/silt/clay",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "soil texture method",
+                "cardinality": "optional",
+                "description": "reference or method used in determining soil texture",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "soil pH",
+                "cardinality": "recommended",
+                "description": "pH measurement of the soil; e.g. 6.2",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "growth facility",
+                "cardinality": "recommended",
+                "description": "type of facility where the sampled plant was grown",
+                "cv": [
+                    "experimental garden",
+                    "field",
+                    "glasshouse",
+                    "growth chamber",
+                    "open top chamber",
+                    "other"
+                ],
+                "units": "",
+                "field_type": "TEXT_CHOICE_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "plant developmental stage",
+                "cardinality": "mandatory",
+                "description": "developmental stage at the time of sample collection; for Plant Ontology (PO) (v 20) terms, see http://purl.bioontology.org/ontology/PO, e.g. hypocotyl emergence stage (PO_0007043)",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sampled age",
+                "cardinality": "optional",
+                "description": "age of subject at the time of sample collection; relevant scale depends on species and study; e.g. 2 weeks old",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample health state",
+                "cardinality": "recommended",
+                "description": "health status of the subject at the time of sample collection",
+                "cv": [
+                    "diseased",
+                    "healthy"
+                ],
+                "units": "",
+                "field_type": "TEXT_CHOICE_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample wet mass",
+                "cardinality": "optional",
+                "description": "measurement of wet mass at the time of sample collection; e.g. 0.23 g",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample disease stage",
+                "cardinality": "optional",
+                "description": "stage of the disease at the time of sample collection, e.g. inoculation, penetration, infection, growth and reproduction, dissemination of pathogen",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample length",
+                "cardinality": "optional",
+                "description": "length of subject at the time of sampling, if different from the height; e.g. 2m",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample height",
+                "cardinality": "optional",
+                "description": "height of subject at the time of sampling, if different from the length; e.g. 0.75m",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample dry mass",
+                "cardinality": "optional",
+                "description": "measurement of dry mass at the time of sample collection; e.g. 0.05g",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample disease status",
+                "cardinality": "recommended",
+                "description": "list of diseases with which the subject has been diagnosed at the time of sample collection; can include multiple diagnoses; the value of the field depends on subject; e.g. Charcoal rot (Macrophomina phaseolina), Late wilt (Cephalosporium maydis)",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample phenotype",
+                "cardinality": "optional",
+                "description": "phenotype of the plant from which the sample was obtained, such as colour of corolla, fruit diameter, circular leaf shape; Plant Trait Ontology (TO), Phenotypic Quality Ontology (PATO), or other ontology is recommended; e.g. stem epidermis colour (TO:1000018)",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
                 "name": "ploidy",
                 "cardinality": "recommended",
                 "description": "The ploidy level of the genome (e.g. allopolyploid, haploid, diploid, triploid, tetraploid). It has implications for the downstream study of duplicated gene and regions of the genomes (and perhaps for difficulties in assembly). For terms, please select terms listed under class ploidy (PATO:001374) of Phenotypic Quality Ontology (PATO), and for a browser of PATO (v 2018-03-27) please refer to http://purl.bioontology.org/ontology/PATO",
@@ -524,15 +789,6 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "sample volume or weight for DNA extraction",
-                "cardinality": "optional",
-                "description": "Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term 'sample size'.",
-                "cv": [],
-                "units": "ng",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
                 "name": "collected_by",
                 "cardinality": "optional",
                 "description": "name of persons or institute who collected the specimen",
@@ -557,12 +813,12 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
             },
             {
                 "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
-                "description": "The location the sample was collected from with the intention of sequencing, as defined by the country or sea. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
+                "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
                     "Afghanistan",
                     "Albania",
@@ -628,6 +884,7 @@
                     "Cuba",
                     "Curacao",
                     "Cyprus",
+                    "Czechia",
                     "Czech Republic",
                     "Democratic Republic of the Congo",
                     "Denmark",
@@ -893,15 +1150,6 @@
                 "regex": ""
             },
             {
-                "name": "depth",
-                "cardinality": "optional",
-                "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
-                "cv": [],
-                "units": "m",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
                 "name": "broad-scale environmental context",
                 "cardinality": "optional",
                 "description": "Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO\u2019s biome class: http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
@@ -926,52 +1174,7 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "source material identifiers",
-                "cardinality": "recommended",
-                "description": "A unique identifier assigned to a material sample (as defined by http://rs.tdwg.org/dwc/terms/materialSampleID, and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples. The INSDC qualifiers /specimen_voucher, /bio_material, or /culture_collection may or may not share the same value as the source_mat_id field. For instance, the /specimen_voucher qualifier and source_mat_id may both contain 'UAM:Herps:14' , referring to both the specimen voucher and sampled tissue with the same identifier. However, the /culture_collection qualifier may refer to a value from an initial culture (e.g. ATCC:11775) while source_mat_id would refer to an identifier from some derived culture from which the nucleic acids were extracted (e.g. xatc123 or ark:/2154/R2).",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample collection device or method",
-                "cardinality": "optional",
-                "description": "The method or deviced employed for collecting the sample",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample material processing",
-                "cardinality": "optional",
-                "description": "A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "isolation and growth condition",
-                "cardinality": "mandatory",
-                "description": "Publication reference in the form of pubmed ID (pmid), digital object identifier (doi) or url for isolation and growth condition specifications of the organism/material. Mandatory for MIGS and MIMARKS Specimen.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "propagation",
-                "cardinality": "recommended",
-                "description": "The type of reproduction from the parent stock. Values for this field is specific to different taxa. For phage or virus: lytic/lysogenic/temperate/obligately lytic. For plasmids: incompatibility group. For eukaryotes: sexual/asexual. Mandatory for MIGs of eukayotes, plasmids and viruses.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
+                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
             },
             {
                 "name": "amount or size of sample collected",
@@ -983,157 +1186,12 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "sample storage duration",
-                "cardinality": "optional",
-                "description": "duration for which sample was stored",
-                "cv": [],
-                "units": "years",
-                "field_type": "TEXT_FIELD",
-                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "sample storage temperature",
-                "cardinality": "optional",
-                "description": "temperature at which sample was stored, e.g. -80",
-                "cv": [],
-                "units": "\u00b0C",
-                "field_type": "TEXT_FIELD",
-                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "sample storage location",
-                "cardinality": "optional",
-                "description": "location at which sample was stored, usually name of a specific freezer/room",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "sampling time point",
                 "cardinality": "optional",
-                "description": "",
+                "description": "Time point at which a sample or observation is made or taken from a biomaterial as measured from some reference point. Indicate the timepoint written in ISO 8601 format.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "plant structure",
-                "cardinality": "mandatory",
-                "description": "name of plant structure that the sample was obtained from; for Plant Ontology (PO) terms see http://purl.bioontology.org/ontology/PO, e.g. petiole epidermis (PO_0000051); if an individual flower is sampled the sex of it can be recorded here",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "plant developmental stage",
-                "cardinality": "mandatory",
-                "description": "developmental stage at the time of sample collection; for Plant Ontology (PO) (v 20) terms, see http://purl.bioontology.org/ontology/PO, e.g. hypocotyl emergence stage (PO_0007043)",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sampled age",
-                "cardinality": "optional",
-                "description": "age of subject at the time of sample collection; relevant scale depends on species and study; e.g. 2 weeks old",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample phenotype",
-                "cardinality": "optional",
-                "description": "phenotype of the plant from which the sample was obtained, such as colour of corolla, fruit diameter, circular leaf shape; Plant Trait Ontology (TO), Phenotypic Quality Ontology (PATO), or other ontology is recommended; e.g. stem epidermis colour (TO:1000018)",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample health state",
-                "cardinality": "recommended",
-                "description": "health status of the subject at the time of sample collection",
-                "cv": [
-                    "diseased",
-                    "healthy"
-                ],
-                "units": "",
-                "field_type": "TEXT_CHOICE_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample disease status",
-                "cardinality": "recommended",
-                "description": "list of diseases with which the subject has been diagnosed at the time of sample collection; can include multiple diagnoses; the value of the field depends on subject; e.g. Charcoal rot (Macrophomina phaseolina), Late wilt (Cephalosporium maydis)",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample disease stage",
-                "cardinality": "optional",
-                "description": "stage of the disease at the time of sample collection, e.g. inoculation, penetration, infection, growth and reproduction, dissemination of pathogen",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample wet mass",
-                "cardinality": "optional",
-                "description": "measurement of wet mass at the time of sample collection; e.g. 0.23 g",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample dry mass",
-                "cardinality": "optional",
-                "description": "measurement of dry mass at the time of sample collection; e.g. 0.05g",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample height",
-                "cardinality": "optional",
-                "description": "height of subject at the time of sampling, if different from the length; e.g. 0.75m",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sample length",
-                "cardinality": "optional",
-                "description": "length of subject at the time of sampling, if different from the height; e.g. 2m",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "growth facility",
-                "cardinality": "recommended",
-                "description": "type of facility where the sampled plant was grown",
-                "cv": [
-                    "experimental garden",
-                    "field",
-                    "glasshouse",
-                    "growth chamber",
-                    "open top chamber",
-                    "other"
-                ],
-                "units": "",
-                "field_type": "TEXT_CHOICE_FIELD",
                 "regex": ""
             },
             {
@@ -1154,24 +1212,6 @@
                 "regex": ""
             },
             {
-                "name": "genotype",
-                "cardinality": "optional",
-                "description": "name or code for genotype of organism",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "genetic modification",
-                "cardinality": "optional",
-                "description": "A genetic modification of the genome of an organism which may occur naturally by spontaneous mutation, or be introduced by some experimental means. Examples of genetic modification include specification of a transgene or the gene knocked-out or details of transient transfection.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "organism common name",
                 "cardinality": "recommended",
                 "description": "common name of the subject organism, e.g. maize",
@@ -1181,63 +1221,9 @@
                 "regex": ""
             },
             {
-                "name": "subspecific genetic lineage rank",
-                "cardinality": "recommended",
-                "description": "further information about the genetic distinctness of this lineage by recording additional information i.e. variety, cultivar, ecotype, inbred line,; it can also contain alternative taxonomic information",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "subspecific genetic lineage name",
-                "cardinality": "recommended",
-                "description": "name of the infraspecific rank, e.g ecotype Col-0",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "biological status",
                 "cardinality": "optional",
                 "description": "the level of genome modification; controlled vocabulary: wild, natural, semi-natural, inbred line, breeder's line, hybrid, clonal selection, mutant",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "organism phenotype",
-                "cardinality": "optional",
-                "description": "most relevant phenotypic traits of the subject; for Phenotypic quality Ontology (PATO) (v 2013-10-28) terms, please see http://purl.bioontology.org/ontology/PATO, e.g. bifurcated (PATO_0001784); terms from Trait Ontology (TO), Plant Ontology (PO) or Crop Ontology (CO) are also accepted; include name/method/scale for each trait; can include multiple traits",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "ancestral data",
-                "cardinality": "optional",
-                "description": "information about either pedigree or other description of ancestral information (e.g. parental variety in case of mutant or selection), e.g. A/3*B (meaning [(A x B) x B] x B)",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "source material description",
-                "cardinality": "optional",
-                "description": "further information to clarify the nature of the specimen or population used that is not collected elsewhere, e.g. if source was derived from accessioned stock, describe how it links to the original material",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "biotic relationship",
-                "cardinality": "optional",
-                "description": "free text description of relationship(s) between the subject organism and other organism(s) it is associate with, e.g., parasite on species X; mutualist with species Y, the target organism is the subject of the relationship, and the other organism(s) is the object",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -1261,6 +1247,24 @@
                 "name": "plant sex",
                 "cardinality": "optional",
                 "description": "sex of the reproductive parts on the whole plant, e.g. pistilate, staminate, monoecieous, hermaphrodite",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "plant structure",
+                "cardinality": "mandatory",
+                "description": "name of plant structure that the sample was obtained from; for Plant Ontology (PO) terms see http://purl.bioontology.org/ontology/PO, e.g. petiole epidermis (PO_0000051); if an individual flower is sampled the sex of it can be recorded here",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample storage duration",
+                "cardinality": "optional",
+                "description": "Duration for which the sample was stored. Indicate the duration for which the sample was stored written in ISO 8601 format.",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -1294,84 +1298,6 @@
                 "regex": ""
             },
             {
-                "name": "soil_taxonomic/FAO classification",
-                "cardinality": "recommended",
-                "description": "soil classification from the FAO World Reference Database for Soil Resources",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "soil_taxonomic/local classification",
-                "cardinality": "optional",
-                "description": "soil classification based on local soil classification system",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "soil_taxonomic/local classification method",
-                "cardinality": "optional",
-                "description": "reference or method used in determining the local soil classification",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "soil type",
-                "cardinality": "optional",
-                "description": "Description of the soil type or classification. This field accepts terms under soil (http://purl.obolibrary.org/obo/ENVO_00001998). Multiple terms can be separated by pipes.",
-                "cv": [
-                    "Acrisol",
-                    "Albeluvisol",
-                    "Alisol",
-                    "Andosol",
-                    "Anthrosol",
-                    "Arenosol",
-                    "Calcisol",
-                    "Cambisol",
-                    "Chernozem",
-                    "Cryosol",
-                    "Durisol",
-                    "Ferralsol",
-                    "Fluvisol",
-                    "Gleysol",
-                    "Gypsisol",
-                    "Histosol",
-                    "Kastanozem",
-                    "Leptosol",
-                    "Lixisol",
-                    "Luvisol",
-                    "Nitisol",
-                    "Phaeozem",
-                    "Planosol",
-                    "Plinthosol",
-                    "Podzol",
-                    "Regosol",
-                    "Solonchak",
-                    "Solonetz",
-                    "Stagnosol",
-                    "Technosol",
-                    "Umbrisol",
-                    "Vertisol"
-                ],
-                "units": "",
-                "field_type": "TEXT_CHOICE_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "soil type method",
-                "cardinality": "optional",
-                "description": "reference or method used in determining soil series name or other lower-level classification",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "drainage classification",
                 "cardinality": "optional",
                 "description": "drainage classification from a standard system such as the USDA system",
@@ -1388,36 +1314,81 @@
                 "regex": ""
             },
             {
-                "name": "soil texture measurement",
-                "cardinality": "optional",
-                "description": "the relative proportion of different grain sizes of mineral particles in a soil, as described using a standard system; express as % sand (50 um to 2 mm), silt (2 um to 50 um), and clay (<2 um) with textural name (e.g., silty clay loam) optional.",
-                "cv": [],
-                "units": "% sand/silt/clay",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "soil texture method",
-                "cardinality": "optional",
-                "description": "reference or method used in determining soil texture",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "soil water content",
-                "cardinality": "optional",
-                "description": "water content measurement; e.g. 13.6%",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "soil pH",
+                "name": "source material identifiers",
                 "cardinality": "recommended",
-                "description": "pH measurement of the soil; e.g. 6.2",
+                "description": "A unique identifier assigned to a material sample (as defined by http://rs.tdwg.org/dwc/terms/materialSampleID, and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples. The INSDC qualifiers /specimen_voucher, /bio_material, or /culture_collection may or may not share the same value as the source_mat_id field. For instance, the /specimen_voucher qualifier and source_mat_id may both contain 'UAM:Herps:14' , referring to both the specimen voucher and sampled tissue with the same identifier. However, the /culture_collection qualifier may refer to a value from an initial culture (e.g. ATCC:11775) while source_mat_id would refer to an identifier from some derived culture from which the nucleic acids were extracted (e.g. xatc123 or ark:/2154/R2).",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "source material description",
+                "cardinality": "optional",
+                "description": "further information to clarify the nature of the specimen or population used that is not collected elsewhere, e.g. if source was derived from accessioned stock, describe how it links to the original material",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "perturbation",
+                "cardinality": "optional",
+                "description": "type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "genotype",
+                "cardinality": "optional",
+                "description": "name or code for genotype of organism",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "genetic modification",
+                "cardinality": "optional",
+                "description": "A genetic modification of the genome of an organism which may occur naturally by spontaneous mutation, or be introduced by some experimental means. Examples of genetic modification include specification of a transgene or the gene knocked-out or details of transient transfection.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "subspecific genetic lineage rank",
+                "cardinality": "recommended",
+                "description": "further information about the genetic distinctness of this lineage by recording additional information i.e. variety, cultivar, ecotype, inbred line,; it can also contain alternative taxonomic information",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "subspecific genetic lineage name",
+                "cardinality": "recommended",
+                "description": "name of the infraspecific rank, e.g ecotype Col-0",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "organism phenotype",
+                "cardinality": "optional",
+                "description": "most relevant phenotypic traits of the subject; for Phenotypic quality Ontology (PATO) (v 2013-10-28) terms, please see http://purl.bioontology.org/ontology/PATO, e.g. bifurcated (PATO_0001784); terms from Trait Ontology (TO), Plant Ontology (PO) or Crop Ontology (CO) are also accepted; include name/method/scale for each trait; can include multiple traits",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "ancestral data",
+                "cardinality": "optional",
+                "description": "information about either pedigree or other description of ancestral information (e.g. parental variety in case of mutant or selection), e.g. A/3*B (meaning [(A x B) x B] x B)",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -1514,6 +1485,42 @@
                 "regex": ""
             },
             {
+                "name": "isolation and growth condition",
+                "cardinality": "mandatory",
+                "description": "Publication reference in the form of pubmed ID (pmid), digital object identifier (doi) or url for isolation and growth condition specifications of the organism/material. Mandatory for MIGS and MIMARKS Specimen.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample material processing",
+                "cardinality": "optional",
+                "description": "A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sample volume or weight for DNA extraction",
+                "cardinality": "optional",
+                "description": "Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term 'sample size'.",
+                "cv": [],
+                "units": "ng",
+                "field_type": "TEXT_FIELD",
+                "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "depth",
+                "cardinality": "optional",
+                "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
+                "cv": [],
+                "units": "mm",
+                "field_type": "TEXT_FIELD",
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
+            },
+            {
                 "name": "air temperature regimen",
                 "cardinality": "recommended",
                 "description": "information about treatment involving an exposure to varying temperatures; should include the temperature, treatment duration, interval and total experimental duration; can include different temperature regimens",
@@ -1541,9 +1548,9 @@
                 "regex": ""
             },
             {
-                "name": "fertilizer regimen",
+                "name": "fertilizer administration",
                 "cardinality": "optional",
-                "description": "information about treatment involving the use of fertilizers; should include the name fertilizer, amount administered, treatment duration, interval and total experimental duration; can include multiple fertilizer regimens",
+                "description": "Type of fertilizer or amendment added to the soil or water for the purpose of improving substrate health and quality for plant growth. This field accepts terms listed under agronomic fertilizer (http://purl.obolibrary.org/obo/AGRO_00002062). Multiple terms may apply and can be separated by pipes, listing in reverse chronological order. N.B. Old ENA definition as \"fertilizer regimen\": information about treatment involving the use of fertilizers; should include the name fertilizer, amount administered, treatment duration, interval and total experimental duration; can include multiple fertilizer regimens",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
@@ -1724,15 +1731,6 @@
                 "name": "chemical administration",
                 "cardinality": "optional",
                 "description": "list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v111), please see http://purl.bioontology.org/ontology/CHEBI",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "perturbation",
-                "cardinality": "optional",
-                "description": "type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types",
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
