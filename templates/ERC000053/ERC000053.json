@@ -1147,7 +1147,13 @@
                     "University of Vienna (Mollusc)",
                     "West German Genome Centre",
                     "industry partner",
-                    "other ERGA associated GAL"
+                    "other ERGA associated GAL",
+                    "Biology Centre of the Academy of Sciences of the Czech Republic",
+                    "Grigore Antipa National Museum of Natural History",
+                    "Institut de Biologia Evolutiva, CSIC-UPF",
+                    "Lund University",
+                    "University of Neuchatel",
+                    "University of Oulu"
                 ],
                 "units": "",
                 "field_type": "TEXT_CHOICE_FIELD",
