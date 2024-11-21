@@ -454,7 +454,7 @@
             {
                 "name": "alias",
                 "cardinality": "mandatory",
-                "description": "Unique identificator for each run.",
+                "description": "Unique identificator for each sample.",
                 "units": "",
                 "regex": "",
                 "cv": [],

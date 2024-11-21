@@ -454,7 +454,7 @@
             {
                 "name": "alias",
                 "cardinality": "mandatory",
-                "description": "Unique identificator for each run.",
+                "description": "Unique identificator for each sample.",
                 "units": "",
                 "regex": "",
                 "cv": [],
@@ -674,7 +674,124 @@
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
-                "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)"
+                "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
+            },
+            {
+                "name": "geographic location (latitude)",
+                "cardinality": "recommended",
+                "description": "The geographical origin of the sample as defined by latitude. The values should be reported in decimal degrees and in WGS84 system",
+                "cv": [],
+                "units": "DD",
+                "field_type": "TEXT_FIELD",
+                "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
+            },
+            {
+                "name": "geographic location (longitude)",
+                "cardinality": "recommended",
+                "description": "The geographical origin of the sample as defined by longitude. The values should be reported in decimal degrees and in WGS84 system",
+                "cv": [],
+                "units": "DD",
+                "field_type": "TEXT_FIELD",
+                "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
+            },
+            {
+                "name": "geographic location (region and locality)",
+                "cardinality": "mandatory",
+                "description": "The geographical origin of the sample as defined by the specific region name followed by the locality name.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "identified_by",
+                "cardinality": "optional",
+                "description": "name of the expert who identified the specimen taxonomically",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "elevation",
+                "cardinality": "optional",
+                "description": "The elevation of the sampling site as measured by the vertical distance from mean sea level.",
+                "cv": [],
+                "units": "m",
+                "field_type": "TEXT_FIELD",
+                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+            },
+            {
+                "name": "habitat",
+                "cardinality": "mandatory",
+                "description": "description of the location of the sample material. please use EnvO terms where possible: https://www.ebi.ac.uk/ols/ontologies/envo",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "identifier_affiliation",
+                "cardinality": "optional",
+                "description": "the university, institution, or society responsible for identifying the specimen.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "original collection date",
+                "cardinality": "optional",
+                "description": "For use if the specimen is from a zoo, botanic garden, culture collection etc. and has a known original date of collection. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid ISO8601 compliant times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": "^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$"
+            },
+            {
+                "name": "original geographic location",
+                "cardinality": "optional",
+                "description": "For use if the specimen is from a zoo, botanic garden or culture collection etc. and has a known origin elsewhere. Please record the general description of the original collection location. This should be formatted as a country and optionally include more specific locations ranging from least to most specific separated by a | character, e.g. \u201cUnited Kingdom | East Anglia | Norfolk | Norwich | University of East Anglia | UEA Broad\".",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "original geographic location (latitude)",
+                "cardinality": "optional",
+                "description": "For use if the specimen is from a zoo, botanic garden or culture collection etc. and has a known origin elsewhere. Please record the geographic location where the specimen or sample was originally taken as defined by latitude. The values should be reported in decimal degrees and in WGS84 system",
+                "cv": [],
+                "units": "DD",
+                "field_type": "TEXT_FIELD",
+                "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)"
+            },
+            {
+                "name": "original geographic location (longitude)",
+                "cardinality": "optional",
+                "description": "For use if the specimen is from a zoo, botanic garden or culture collection etc. and has a known origin elsewhere. Please record the geographic location where the specimen or sample was originally taken as defined by longitude. The values should be reported in decimal degrees and in WGS84 system",
+                "cv": [],
+                "units": "DD",
+                "field_type": "TEXT_FIELD",
+                "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)"
+            },
+            {
+                "name": "sample coordinator",
+                "cardinality": "optional",
+                "description": "The name of the sample coordinator.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sex",
+                "cardinality": "mandatory",
+                "description": "sex of the organism from which the sample was obtained",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
             },
             {
                 "name": "geographic location (country and/or sea)",
@@ -957,6 +1074,7 @@
                     "Yemen",
                     "Zambia",
                     "Zimbabwe",
+                    "missing",
                     "missing: control sample",
                     "missing: data agreement established pre-2023",
                     "missing: endangered species",
@@ -975,123 +1093,6 @@
                 "regex": ""
             },
             {
-                "name": "geographic location (latitude)",
-                "cardinality": "recommended",
-                "description": "The geographical origin of the sample as defined by latitude. The values should be reported in decimal degrees and in WGS84 system",
-                "cv": [],
-                "units": "DD",
-                "field_type": "TEXT_FIELD",
-                "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)"
-            },
-            {
-                "name": "geographic location (longitude)",
-                "cardinality": "recommended",
-                "description": "The geographical origin of the sample as defined by longitude. The values should be reported in decimal degrees and in WGS84 system",
-                "cv": [],
-                "units": "DD",
-                "field_type": "TEXT_FIELD",
-                "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)"
-            },
-            {
-                "name": "geographic location (region and locality)",
-                "cardinality": "mandatory",
-                "description": "The geographical origin of the sample as defined by the specific region name followed by the locality name.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "identified_by",
-                "cardinality": "optional",
-                "description": "name of the expert who identified the specimen taxonomically",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "elevation",
-                "cardinality": "optional",
-                "description": "The elevation of the sampling site as measured by the vertical distance from mean sea level.",
-                "cv": [],
-                "units": "m",
-                "field_type": "TEXT_FIELD",
-                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
-            },
-            {
-                "name": "habitat",
-                "cardinality": "mandatory",
-                "description": "description of the location of the sample material. please use EnvO terms where possible: https://www.ebi.ac.uk/ols/ontologies/envo",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "identifier_affiliation",
-                "cardinality": "optional",
-                "description": "the university, institution, or society responsible for identifying the specimen.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "original collection date",
-                "cardinality": "optional",
-                "description": "For use if the specimen is from a zoo, botanic garden, culture collection etc. and has a known original date of collection. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid ISO8601 compliant times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": "^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$"
-            },
-            {
-                "name": "original geographic location",
-                "cardinality": "optional",
-                "description": "For use if the specimen is from a zoo, botanic garden or culture collection etc. and has a known origin elsewhere. Please record the general description of the original collection location. This should be formatted as a country and optionally include more specific locations ranging from least to most specific separated by a | character, e.g. \u201cUnited Kingdom | East Anglia | Norfolk | Norwich | University of East Anglia | UEA Broad\".",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "original geographic location (latitude)",
-                "cardinality": "optional",
-                "description": "For use if the specimen is from a zoo, botanic garden or culture collection etc. and has a known origin elsewhere. Please record the geographic location where the specimen or sample was originally taken as defined by latitude. The values should be reported in decimal degrees and in WGS84 system",
-                "cv": [],
-                "units": "DD",
-                "field_type": "TEXT_FIELD",
-                "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)"
-            },
-            {
-                "name": "original geographic location (longitude)",
-                "cardinality": "optional",
-                "description": "For use if the specimen is from a zoo, botanic garden or culture collection etc. and has a known origin elsewhere. Please record the geographic location where the specimen or sample was originally taken as defined by longitude. The values should be reported in decimal degrees and in WGS84 system",
-                "cv": [],
-                "units": "DD",
-                "field_type": "TEXT_FIELD",
-                "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)"
-            },
-            {
-                "name": "sample coordinator",
-                "cardinality": "optional",
-                "description": "The name of the sample coordinator.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sex",
-                "cardinality": "mandatory",
-                "description": "sex of the organism from which the sample was obtained",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
                 "name": "collecting institution",
                 "cardinality": "mandatory",
                 "description": "Name of the institution to which the person collecting the specimen belongs. Format: Institute Name, Institute Address",
@@ -1105,6 +1106,7 @@
                 "cardinality": "optional",
                 "description": "the name (or acronym) of the genome acquisition lab responsible for the sample.",
                 "cv": [
+                    "Biology Centre of the Academy of Sciences of the Czech Republic",
                     "Centro Nacional de An\u00e1lisis Gen\u00f3mico",
                     "DNA Sequencing and Genomics Laboratory, Helsinki Genomics Core Facility",
                     "Dalhousie University",
@@ -1114,9 +1116,12 @@
                     "GIGA-Genomics Core Facility, University of Liege",
                     "Genoscope",
                     "Geomar Helmholtz Centre",
+                    "Grigore Antipa National Museum of Natural History",
                     "Hansen Lab, Denmark",
+                    "Institut de Biologia Evolutiva, CSIC-UPF",
                     "Lausanne Genomic Technologies Facility",
                     "Leibniz Institute for the Analysis of Biodiversity Change, Museum Koenig, Bonn",
+                    "Lund University",
                     "Marine Biological Association",
                     "NGS Bern",
                     "NGS Competence Center T\u00fcbingen",
@@ -1140,20 +1145,16 @@
                     "University of Derby",
                     "University of Edinburgh",
                     "University of Florence",
+                    "University of Neuchatel",
                     "University of Oregon",
+                    "University of Oulu",
                     "University of Oxford",
                     "University of Rhode Island",
                     "University of Vienna (Cephalopod)",
                     "University of Vienna (Mollusc)",
                     "West German Genome Centre",
                     "industry partner",
-                    "other ERGA associated GAL",
-                    "Biology Centre of the Academy of Sciences of the Czech Republic",
-                    "Grigore Antipa National Museum of Natural History",
-                    "Institut de Biologia Evolutiva, CSIC-UPF",
-                    "Lund University",
-                    "University of Neuchatel",
-                    "University of Oulu"
+                    "other ERGA associated GAL"
                 ],
                 "units": "",
                 "field_type": "TEXT_CHOICE_FIELD",
@@ -1229,7 +1230,7 @@
                 "cv": [],
                 "units": "mm",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             }
         ]
     }
