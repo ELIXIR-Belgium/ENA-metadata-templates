@@ -79,7 +79,7 @@
             },
             {
                 "name": "title",
-                "cardinality": "optional",
+                "cardinality": "mandatory",
                 "description": "Short text that can be used to call out experiment records in searches or in displays. This element is technically optional but should be used for all new records.",
                 "units": "",
                 "regex": "",
@@ -106,7 +106,7 @@
             },
             {
                 "name": "design_description",
-                "cardinality": "optional",
+                "cardinality": "mandatory",
                 "description": "Goal and setup of the individual library including library was constructed.",
                 "units": "",
                 "regex": "",
