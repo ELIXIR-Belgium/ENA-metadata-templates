@@ -563,7 +563,34 @@
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
-                "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)"
+                "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
+            },
+            {
+                "name": "engrafted tumor sample passage",
+                "cardinality": "mandatory",
+                "description": "If engrafted tumor sample, please indicate the passage from which the engrafted tumor sample was harvested (passage 0 must be the first engraftment in the mouse). Please ensure you add a non-negative number greater than 0. If the sample origin is \u201cpatient tumor\u201d please enter \"not applicable\". If passage number is unknown please enter \"not provided\u201d.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "engrafted tumor collection site",
+                "cardinality": "recommended",
+                "description": "If the sample origin is \u201cengrafted tumor\u201d, please indicate the collection site from which the engrafted tumor sample was extracted (e.g. Liver). Please use terminology from NCIT ontology: https://www.ebi.ac.uk/ols/ontologies/ncit. If unknown please select NCIT term: \u201cNot Available\u201d ( http://purl.obolibrary.org/obo/NCIT_C126101)\u201d. If the sample origin is \u201cpatient tumor\u201d please do not use this attribute.",
+                "cv": [],
+                "units": "",
+                "field_type": "ONTOLOGY_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "patient tumor site of collection",
+                "cardinality": "mandatory",
+                "description": "Site of collection of the patient tissue sample which was extracted (can be different to primary site if it is a metastatic sample). Please use NCIT ontology, e.g. Liver (http://purl.obolibrary.org/obo/NCIT_C12392). If unknown please select NCIT term: \u201cNot Available\u201d (http://purl.obolibrary.org/obo/NCIT_C126101)",
+                "cv": [],
+                "units": "",
+                "field_type": "ONTOLOGY_FIELD",
+                "regex": ""
             },
             {
                 "name": "geographic location (country and/or sea)",
@@ -846,6 +873,7 @@
                     "Yemen",
                     "Zambia",
                     "Zimbabwe",
+                    "missing",
                     "missing: control sample",
                     "missing: data agreement established pre-2023",
                     "missing: endangered species",
@@ -861,33 +889,6 @@
                 ],
                 "units": "",
                 "field_type": "TEXT_CHOICE_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "engrafted tumor sample passage",
-                "cardinality": "mandatory",
-                "description": "If engrafted tumor sample, please indicate the passage from which the engrafted tumor sample was harvested (passage 0 must be the first engraftment in the mouse). Please ensure you add a non-negative number greater than 0. If the sample origin is \u201cpatient tumor\u201d please enter \"not applicable\". If passage number is unknown please enter \"not provided\u201d.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "engrafted tumor collection site",
-                "cardinality": "recommended",
-                "description": "If the sample origin is \u201cengrafted tumor\u201d, please indicate the collection site from which the engrafted tumor sample was extracted (e.g. Liver). Please use terminology from NCIT ontology: https://www.ebi.ac.uk/ols/ontologies/ncit. If unknown please select NCIT term: \u201cNot Available\u201d ( http://purl.obolibrary.org/obo/NCIT_C126101)\u201d. If the sample origin is \u201cpatient tumor\u201d please do not use this attribute.",
-                "cv": [],
-                "units": "",
-                "field_type": "ONTOLOGY_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "patient tumor site of collection",
-                "cardinality": "mandatory",
-                "description": "Site of collection of the patient tissue sample which was extracted (can be different to primary site if it is a metastatic sample). Please use NCIT ontology, e.g. Liver (http://purl.obolibrary.org/obo/NCIT_C12392). If unknown please select NCIT term: \u201cNot Available\u201d (http://purl.obolibrary.org/obo/NCIT_C126101)",
-                "cv": [],
-                "units": "",
-                "field_type": "ONTOLOGY_FIELD",
                 "regex": ""
             },
             {
