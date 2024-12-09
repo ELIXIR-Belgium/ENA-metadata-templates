@@ -640,7 +640,115 @@
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
-                "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)"
+                "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
+            },
+            {
+                "name": "broad-scale environmental context",
+                "cardinality": "mandatory",
+                "description": "Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO\u2019s biome class: http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "local environmental context",
+                "cardinality": "mandatory",
+                "description": "Report the entity or entities which are in the sample or specimen\u2019s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for \"broad-scale environmental context\". Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "environmental medium",
+                "cardinality": "mandatory",
+                "description": "Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "Sampling Campaign",
+                "cardinality": "mandatory",
+                "description": "Refers to a finite or indefinite activity aiming at collecting data/samples, e.g. a cruise, a time series, a mesocosm experiment. Example: TARA_20110401Z.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "Sampling Station",
+                "cardinality": "mandatory",
+                "description": "Refers to the site/station where data/sample collection is performed. Example: TARA_100.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "Sampling Platform",
+                "cardinality": "mandatory",
+                "description": "Refers to the unique stage from which the sampling device has been deployed. Includes Platform category from SDN:L06, http://seadatanet.maris2.nl/v_bodc_vocab_v2/search.asp?lib=L06, and Platform name. Example: Research Vessel Tara.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "Marine Region",
+                "cardinality": "mandatory",
+                "description": "The geographical origin of the sample as defined by the marine region name chosen from the Marine Regions vocabulary at http://www.marineregions.org/. Example: Aegean Sea.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "Salinity Sensor",
+                "cardinality": "mandatory",
+                "description": "Salinity of water at the time of taking the sample. Format: ##.####, SDN:P02:75:PSAL, SDN:P06:46:UGKG for PSU. Example: 39.2268.",
+                "cv": [],
+                "units": "psu",
+                "field_type": "TEXT_FIELD",
+                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "Oxygen Sensor",
+                "cardinality": "recommended",
+                "description": "Oxygen concentration parameters in the water column measured in volts and converted to micromoles per kilogrammes. Format: ###.####, SDN:P02:75:DOXY, SDN:P06:46:KGUM for \u00b5mol/kg. Example: 217.7895.",
+                "cv": [],
+                "units": "\u00b5mol/kg",
+                "field_type": "TEXT_FIELD",
+                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "Nitrate Sensor",
+                "cardinality": "recommended",
+                "description": "Nitrate concentration parameters in the water column measured in volts and converted to micromoles per litres. Format: ##.####, SDN:P02:75:NTRA, SDN:P06:46:UPOX for \u00b5mol/L. Example: 0.2259.",
+                "cv": [],
+                "units": "\u00b5mol/L",
+                "field_type": "TEXT_FIELD",
+                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "water temperature",
+                "cardinality": "mandatory",
+                "description": "Temperature of water at the time of taking the sample. Format: ##.####, SDN:P02:75:TEMP, SDN:P06:46:UPAA for \u00b0C. Example: 17.7122.",
+                "cv": [],
+                "units": "\u00baC",
+                "field_type": "TEXT_FIELD",
+                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
+            },
+            {
+                "name": "Chlorophyll Sensor",
+                "cardinality": "recommended",
+                "description": "Fluorescence of the water measured in volts and converted to milligrammes of chlorophyll per cubic metre. Format: ##.####, SDN:P02:75:CPWC, SDN:P06:46:UMMC for mg Chl/m3. Example: 0.066.",
+                "cv": [],
+                "units": "mg Chl/m3",
+                "field_type": "TEXT_FIELD",
+                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
                 "name": "geographic location (country and/or sea)",
@@ -923,6 +1031,7 @@
                     "Yemen",
                     "Zambia",
                     "Zimbabwe",
+                    "missing",
                     "missing: control sample",
                     "missing: data agreement established pre-2023",
                     "missing: endangered species",
@@ -939,114 +1048,6 @@
                 "units": "",
                 "field_type": "TEXT_CHOICE_FIELD",
                 "regex": ""
-            },
-            {
-                "name": "broad-scale environmental context",
-                "cardinality": "mandatory",
-                "description": "Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO\u2019s biome class: http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "local environmental context",
-                "cardinality": "mandatory",
-                "description": "Report the entity or entities which are in the sample or specimen\u2019s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for \"broad-scale environmental context\". Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "environmental medium",
-                "cardinality": "mandatory",
-                "description": "Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "Sampling Campaign",
-                "cardinality": "mandatory",
-                "description": "Refers to a finite or indefinite activity aiming at collecting data/samples, e.g. a cruise, a time series, a mesocosm experiment. Example: TARA_20110401Z.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "Sampling Station",
-                "cardinality": "mandatory",
-                "description": "Refers to the site/station where data/sample collection is performed. Example: TARA_100.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "Sampling Platform",
-                "cardinality": "mandatory",
-                "description": "Refers to the unique stage from which the sampling device has been deployed. Includes Platform category from SDN:L06, http://seadatanet.maris2.nl/v_bodc_vocab_v2/search.asp?lib=L06, and Platform name. Example: Research Vessel Tara.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "Marine Region",
-                "cardinality": "mandatory",
-                "description": "The geographical origin of the sample as defined by the marine region name chosen from the Marine Regions vocabulary at http://www.marineregions.org/. Example: Aegean Sea.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "Salinity Sensor",
-                "cardinality": "mandatory",
-                "description": "Salinity of water at the time of taking the sample. Format: ##.####, SDN:P02:75:PSAL, SDN:P06:46:UGKG for PSU. Example: 39.2268.",
-                "cv": [],
-                "units": "psu",
-                "field_type": "TEXT_FIELD",
-                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "Oxygen Sensor",
-                "cardinality": "recommended",
-                "description": "Oxygen concentration parameters in the water column measured in volts and converted to micromoles per kilogrammes. Format: ###.####, SDN:P02:75:DOXY, SDN:P06:46:KGUM for \u00b5mol/kg. Example: 217.7895.",
-                "cv": [],
-                "units": "\u00b5mol/kg",
-                "field_type": "TEXT_FIELD",
-                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "Nitrate Sensor",
-                "cardinality": "recommended",
-                "description": "Nitrate concentration parameters in the water column measured in volts and converted to micromoles per litres. Format: ##.####, SDN:P02:75:NTRA, SDN:P06:46:UPOX for \u00b5mol/L. Example: 0.2259.",
-                "cv": [],
-                "units": "\u00b5mol/L",
-                "field_type": "TEXT_FIELD",
-                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "water temperature",
-                "cardinality": "mandatory",
-                "description": "Temperature of water at the time of taking the sample. Format: ##.####, SDN:P02:75:TEMP, SDN:P06:46:UPAA for \u00b0C. Example: 17.7122.",
-                "cv": [],
-                "units": "\u00baC",
-                "field_type": "TEXT_FIELD",
-                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
-            },
-            {
-                "name": "Chlorophyll Sensor",
-                "cardinality": "recommended",
-                "description": "Fluorescence of the water measured in volts and converted to milligrammes of chlorophyll per cubic metre. Format: ##.####, SDN:P02:75:CPWC, SDN:P06:46:UMMC for mg Chl/m3. Example: 0.066.",
-                "cv": [],
-                "units": "mg Chl/m3",
-                "field_type": "TEXT_FIELD",
-                "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
                 "name": "Citation",
@@ -1073,7 +1074,7 @@
                 "cv": [],
                 "units": "mm",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             }
         ]
     }

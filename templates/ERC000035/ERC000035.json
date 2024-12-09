@@ -539,7 +539,43 @@
                 "cv": [],
                 "units": "",
                 "field_type": "TEXT_FIELD",
-                "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)"
+                "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
+            },
+            {
+                "name": "sampling time point",
+                "cardinality": "optional",
+                "description": "Time point at which a sample or observation is made or taken from a biomaterial as measured from some reference point. Indicate the timepoint written in ISO 8601 format.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "initial time point",
+                "cardinality": "optional",
+                "description": "The first time point measured at the start of some process.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "sex",
+                "cardinality": "optional",
+                "description": "sex of the organism from which the sample was obtained",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
+            },
+            {
+                "name": "age",
+                "cardinality": "recommended",
+                "description": "Age of the organism the sample was derived from.",
+                "cv": [],
+                "units": "",
+                "field_type": "TEXT_FIELD",
+                "regex": ""
             },
             {
                 "name": "geographic location (country and/or sea)",
@@ -822,6 +858,7 @@
                     "Yemen",
                     "Zambia",
                     "Zimbabwe",
+                    "missing",
                     "missing: control sample",
                     "missing: data agreement established pre-2023",
                     "missing: endangered species",
@@ -837,42 +874,6 @@
                 ],
                 "units": "",
                 "field_type": "TEXT_CHOICE_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sampling time point",
-                "cardinality": "optional",
-                "description": "Time point at which a sample or observation is made or taken from a biomaterial as measured from some reference point. Indicate the timepoint written in ISO 8601 format.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "initial time point",
-                "cardinality": "optional",
-                "description": "The first time point measured at the start of some process.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "sex",
-                "cardinality": "optional",
-                "description": "sex of the organism from which the sample was obtained",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
-                "regex": ""
-            },
-            {
-                "name": "age",
-                "cardinality": "recommended",
-                "description": "Age of the organism the sample was derived from.",
-                "cv": [],
-                "units": "",
-                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
