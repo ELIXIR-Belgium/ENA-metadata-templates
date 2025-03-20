@@ -1,0 +1,34 @@
+name: Update Weekly GitHub Stats
+
+on:
+  workflow_dispatch:
+  # Run every 2 weeks on Monday at 00:00 UTC
+  schedule:
+    - cron: '0 0 * * 1/2'
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: stats
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install python dependencies
+        run: pip install numpy requests
+
+      - name: Update Stats File
+        run: python var/github_traffic.py --token ${{ secrets.STATS_TOKEN }}
+
+      - name: Commit and Push Changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: "Update weekly GitHub stats"
+          add: "github_traffic.csv"
+          branch: stats
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
