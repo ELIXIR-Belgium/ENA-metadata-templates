@@ -22,7 +22,7 @@ jobs:
         run: pip install numpy requests
 
       - name: Update Stats File
-        run: python var/github_traffic.py --token ${{ secrets.STATS_TOKEN }}
+        run: python scripts/github_traffic.py --token ${{ secrets.STATS_TOKEN }}
 
       - name: Commit and Push Changes
         uses: EndBug/add-and-commit@v7
