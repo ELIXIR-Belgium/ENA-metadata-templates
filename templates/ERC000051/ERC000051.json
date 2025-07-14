@@ -492,7 +492,7 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "sample origin",
+                "name": "sample_origin",
                 "cardinality": "mandatory",
                 "description": "Sample origin from which data deposited was generated, e.g. Engrafted tumor",
                 "cv": [
@@ -509,7 +509,7 @@
                 "regex": ""
             },
             {
-                "name": "sample material",
+                "name": "sample_material",
                 "cardinality": "mandatory",
                 "description": "Sample material from which data deposited was generated, e.g. tissue fragment. If unknown please select \"not provided\".",
                 "cv": [
@@ -526,7 +526,7 @@
                 "regex": ""
             },
             {
-                "name": "sample taxon name",
+                "name": "sample_taxon_name",
                 "cardinality": "mandatory",
                 "description": "This field indicates if a sample is derived from a patient or xenograft. The following two options are available: Homo sapiens/Mus musculus xenograft (sample is from a Xenograft derived tumor/cell culture) or Homo sapiens (sample is from a patient tumor/cell culture). Please ensure the selected value here is identical to the value in the 'scientific name' column/field.",
                 "cv": [
@@ -538,7 +538,7 @@
                 "regex": ""
             },
             {
-                "name": "sample unique ID",
+                "name": "sample_unique_id",
                 "cardinality": "mandatory",
                 "description": "Unique identifier of the PDX or tumor sample, e.g. CRC00003",
                 "cv": [],
@@ -547,7 +547,7 @@
                 "regex": ""
             },
             {
-                "name": "patient tumor type",
+                "name": "patient_tumor_type",
                 "cardinality": "mandatory",
                 "description": "For a primary sample (a tumor at the original site of origin), please select \u201cPrimary Neoplasm\u201d . For a metastatic sample (a tumor that has spread from its original (primary) site of growth to another site, close to or distant from the primary site), please select \u201cMetastatic Neoplasm\u201d . For a recurring neoplasm sample (neoplasm returning after a period of remission at the same location), please select \u201cRecurrent Neoplasm\u201d . If unknown tumor type, please select \u201cnot provided\u201d.",
                 "cv": [
@@ -561,7 +561,7 @@
                 "regex": ""
             },
             {
-                "name": "collection date",
+                "name": "collection_date",
                 "cardinality": "mandatory",
                 "description": "The date the sample was collected with the intention of sequencing, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid ISO8601 compliant times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008.",
                 "cv": [],
@@ -570,7 +570,7 @@
                 "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "engrafted tumor sample passage",
+                "name": "engrafted_tumor_sample_passage",
                 "cardinality": "mandatory",
                 "description": "If engrafted tumor sample, please indicate the passage from which the engrafted tumor sample was harvested (passage 0 must be the first engraftment in the mouse). Please ensure you add a non-negative number greater than 0. If the sample origin is \u201cpatient tumor\u201d please enter \"not applicable\". If passage number is unknown please enter \"not provided\u201d.",
                 "cv": [],
@@ -579,25 +579,25 @@
                 "regex": ""
             },
             {
-                "name": "engrafted tumor collection site",
+                "name": "engrafted_tumor_collection_site",
                 "cardinality": "recommended",
                 "description": "If the sample origin is \u201cengrafted tumor\u201d, please indicate the collection site from which the engrafted tumor sample was extracted (e.g. Liver). Please use terminology from NCIT ontology: https://www.ebi.ac.uk/ols/ontologies/ncit. If unknown please select NCIT term: \u201cNot Available\u201d ( http://purl.obolibrary.org/obo/NCIT_C126101)\u201d. If the sample origin is \u201cpatient tumor\u201d please do not use this attribute.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "patient tumor site of collection",
+                "name": "patient_tumor_site_of_collection",
                 "cardinality": "mandatory",
                 "description": "Site of collection of the patient tissue sample which was extracted (can be different to primary site if it is a metastatic sample). Please use NCIT ontology, e.g. Liver (http://purl.obolibrary.org/obo/NCIT_C12392). If unknown please select NCIT term: \u201cNot Available\u201d (http://purl.obolibrary.org/obo/NCIT_C126101)",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "geographic location (country and/or sea)",
+                "name": "geographic_location_country_andor_sea",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
@@ -672,13 +672,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
-                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
+                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -746,10 +746,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
+                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
-                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -763,7 +763,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia",
+                    "Micronesia, Federated States of",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -786,6 +786,7 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
+                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -811,6 +812,7 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
+                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -818,6 +820,7 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
+                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -833,14 +836,15 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
+                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
+                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
-                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -849,6 +853,7 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
+                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -869,8 +874,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Virgin Islands",
                     "Wake Island",
+                    "Virgin Islands",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -896,7 +901,7 @@
                 "regex": ""
             },
             {
-                "name": "engraftment host strain name",
+                "name": "engraftment_host_strain_name",
                 "cardinality": "recommended",
                 "description": "If the sample origin is \u201cengrafted tumor\u201d, please indicate the host mouse strain name from which the engrafted tumor sample was extracted (e.g. NOD.Cg-Prkdcscid Il2rgtm1Wjl/SzJ). Please use the following guidelines for the correct nomenclature format: http://www.informatics.jax.org/mgihome/nomen/strains.shtml#mice. If the sample origin is \u201cpatient tumor\u201d please add \"not applicable\" and if unknown please add \"not provided\".",
                 "cv": [],
@@ -905,7 +910,7 @@
                 "regex": ""
             },
             {
-                "name": "patient age at collection of tumor",
+                "name": "patient_age_at_collection_of_tumor",
                 "cardinality": "mandatory",
                 "description": "Age in years of the patient when the tumor was extracted. Please note this must be a whole number, e.g. 45",
                 "cv": [],
@@ -914,25 +919,25 @@
                 "regex": "^150|1[0-4][0-9]|[1-9][0-9]|[0-9]|not provided$"
             },
             {
-                "name": "patient tumor diagnosis at time of collection",
+                "name": "patient_tumor_diagnosis_at_time_of_collection",
                 "cardinality": "mandatory",
                 "description": "Patient tumor diagnosis at time of collection for engraftment in PDX model or organoid/cell derivation. Please use terminology from NCIT ontology: https://www.ebi.ac.uk/ols/ontologies/ncit - Please note in NCIT ontology, usually the \u201ccancer\u201d concept is represented with \u201cmalignant neoplasm\u201dexample: \u201clung cancer\u201d is \u201cMalignant Lung Neoplasm\u201d (http://purl.obolibrary.org/obo/NCIT_C7377). If precise diagnosis is unknown, please use \"Neoplasm\" (http://purl.obolibrary.org/obo/NCIT_C3262)",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "patient tumor primary site",
+                "name": "patient_tumor_primary_site",
                 "cardinality": "mandatory",
                 "description": "Site of the primary tumor where cancer originates (may not correspond to the site of the collected tissue sample). Please use NCIT ontology, e.g. Colon (http://purl.obolibrary.org/obo/NCIT_C12382). If unknown please select NCIT term: \u201cNot Available\u201d ( http://purl.obolibrary.org/obo/NCIT_C126101)",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "was the PDX model humanised?",
+                "name": "was_the_pdx_model_humanised",
                 "cardinality": "recommended",
                 "description": "If the sample origin is \u201cengrafted tumor\u201d, please indicate if the host strain, from which the sample was extracted, has undergone human immune system reconstitution, using \u201cYes\u201d (model humanised) or \u201cNo\u201d (model not humanised). If the sample origin is \u201cpatient tumor\u201d please select \"not applicable\".",
                 "cv": [
@@ -945,7 +950,7 @@
                 "regex": ""
             },
             {
-                "name": "patient sex",
+                "name": "patient_sex",
                 "cardinality": "mandatory",
                 "description": "Sex of the patient from which the tumor was extracted. If sex is unknown please select \u201cnot available\u201d",
                 "cv": [

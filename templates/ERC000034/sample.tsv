@@ -1,1 +1,1 @@
-"alias"	"title"	"taxon_id"	"sample_description"	"tissue_type"	"collection date"	"sex"	"date of birth"	"date of death"	"diagnosis"	"geographic location (country and/or sea)"	"strain"	"tumor grading (OBI_0600002)"	"treatment agent"	"treatment dose"	"treatment date"	"Further Details"
+"alias"	"title"	"taxon_id"	"sample_description"	"tissue_type"	"collection_date"	"sex"	"date_of_birth"	"date_of_death"	"diagnosis"	"geographic_location_country_andor_sea"	"strain"	"tumor_grading_obi_0600002"	"treatment_agent"	"treatment_dose"	"treatment_date"	"further_details"

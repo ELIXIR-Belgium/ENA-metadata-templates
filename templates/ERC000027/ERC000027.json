@@ -492,7 +492,7 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "Latitude Start",
+                "name": "latitude_start",
                 "cardinality": "mandatory",
                 "description": "Latitude of the location where the sampling event started, e.g. each CTD cast, net tow, or bucket collection is a distinct event. Format: ##.####, Decimal degrees; North= +, South= -; Use WGS 84 for GPS data. Example: -24.6666.",
                 "cv": [],
@@ -501,7 +501,7 @@
                 "regex": "[+-]?[0-9]+.?[0-9]*"
             },
             {
-                "name": "Longitude Start",
+                "name": "longitude_start",
                 "cardinality": "mandatory",
                 "description": "Longitude of the location where the sampling event started, e.g. each CTD cast, net tow, or bucket collection is a distinct event. Format: ###.####, Decimal degrees; East= +, West= -; Use WGS 84 for GPS data. Example: -096.1012.",
                 "cv": [],
@@ -510,7 +510,7 @@
                 "regex": "[+-]?[0-9]+.?[0-9]*"
             },
             {
-                "name": "Latitude End",
+                "name": "latitude_end",
                 "cardinality": "recommended",
                 "description": "Latitude of the location where the sampling event ended, e.g. each CTD cast, net tow, or bucket collection is a distinct event. Format: ##.####, Decimal degrees; North= +, South= -; Use WGS 84 for GPS data. Example: -24.6643.",
                 "cv": [],
@@ -519,7 +519,7 @@
                 "regex": "[+-]?[0-9]+.?[0-9]*"
             },
             {
-                "name": "Longitude End",
+                "name": "longitude_end",
                 "cardinality": "recommended",
                 "description": "Longitude of the location where the sampling event ended, e.g. each CTD cast, net tow, or bucket collection is a distinct event. Format: ###.####, Decimal degrees; East= +, West= -; Use WGS 84 for GPS data. Example: -096.1171.",
                 "cv": [],
@@ -528,7 +528,7 @@
                 "regex": "[+-]?[0-9]+.?[0-9]*"
             },
             {
-                "name": "Protocol Label",
+                "name": "protocol_label",
                 "cardinality": "mandatory",
                 "description": "Identifies the protocol used to produce the sample, e.g. filtration and preservation. Example: BACT_NUC_W0.22-1.6.",
                 "cv": [],
@@ -537,7 +537,7 @@
                 "regex": ""
             },
             {
-                "name": "trophic level",
+                "name": "trophic_level",
                 "cardinality": "optional",
                 "description": "Trophic levels are the feeding position in a food chain. Microbes can be a range of producers (e.g. chemolithotroph)",
                 "cv": [
@@ -577,7 +577,7 @@
                 "regex": ""
             },
             {
-                "name": "observed biotic relationship",
+                "name": "observed_biotic_relationship",
                 "cardinality": "optional",
                 "description": "Description of relationship(s) between the subject organism and other organism(s) it is associated with. E.g., parasite on species X; mutualist with species Y. The target organism is the subject of the relationship, and the other organism(s) is the object.",
                 "cv": [
@@ -592,7 +592,7 @@
                 "regex": ""
             },
             {
-                "name": "known pathogenicity",
+                "name": "known_pathogenicity",
                 "cardinality": "optional",
                 "description": "To what is the entity pathogenic, for instance plant, fungi, bacteria",
                 "cv": [],
@@ -601,7 +601,7 @@
                 "regex": ""
             },
             {
-                "name": "relationship to oxygen",
+                "name": "relationship_to_oxygen",
                 "cardinality": "optional",
                 "description": "Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments",
                 "cv": [
@@ -627,7 +627,7 @@
                 "regex": ""
             },
             {
-                "name": "sample collection method",
+                "name": "sample_collection_method",
                 "cardinality": "optional",
                 "description": "The method employed for collecting the sample. Can be provided in the form of a PMID, DOI, url or text.",
                 "cv": [],
@@ -636,7 +636,7 @@
                 "regex": ""
             },
             {
-                "name": "sample storage temperature",
+                "name": "sample_storage_temperature",
                 "cardinality": "optional",
                 "description": "temperature at which sample was stored, e.g. -80",
                 "cv": [],
@@ -645,7 +645,7 @@
                 "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "sample storage location",
+                "name": "sample_storage_location",
                 "cardinality": "optional",
                 "description": "Location at which sample was stored, usually name of a specific freezer/room. Indicate the location name.",
                 "cv": [],
@@ -654,7 +654,7 @@
                 "regex": ""
             },
             {
-                "name": "oxygenation status of sample",
+                "name": "oxygenation_status_of_sample",
                 "cardinality": "optional",
                 "description": "oxygenation status of sample",
                 "cv": [
@@ -675,7 +675,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "project name",
+                "name": "project_name",
                 "cardinality": "mandatory",
                 "description": "Name of the project within which the sequencing was organized",
                 "cv": [],
@@ -684,7 +684,7 @@
                 "regex": ""
             },
             {
-                "name": "finishing strategy",
+                "name": "finishing_strategy",
                 "cardinality": "optional",
                 "description": "Was the genome project intended to produce a complete or draft genome, Coverage, the fold coverage of the sequencing expressed as 2x, 3x, 18x etc, and how many contigs were produced for the genome. Mandatory for MIGS of eukaryote, bacteria and archaea.",
                 "cv": [],
@@ -702,7 +702,7 @@
                 "regex": ""
             },
             {
-                "name": "number of replicons",
+                "name": "number_of_replicons",
                 "cardinality": "optional",
                 "description": "Reports the number of replicons in a nuclear genome of eukaryotes, in the genome of a bacterium or archaea or the number of segments in a segmented virus. Always applied to the haploid chromosome count of a eukaryote. Mandatory for MIGS of eukaryotes, bacteria, archaea and segmented virus.",
                 "cv": [],
@@ -711,7 +711,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "extrachromosomal elements",
+                "name": "extrachromosomal_elements",
                 "cardinality": "optional",
                 "description": "Do plasmids exist of significant phenotypic consequence (e.g. ones that determine virulence or antibiotic resistance). Megaplasmids? Other plasmids (borrelia has 15+ plasmids).",
                 "cv": [],
@@ -720,7 +720,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "estimated size",
+                "name": "estimated_size",
                 "cardinality": "optional",
                 "description": "The estimated size of the genome (in bp) prior to sequencing. Of particular importance in the sequencing of (eukaryotic) genome which could remain in draft form for a long or unspecified period. Mandatory for MIGS of eukaryotes.",
                 "cv": [],
@@ -729,7 +729,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "target gene",
+                "name": "target_gene",
                 "cardinality": "optional",
                 "description": "Targeted gene or locus name for marker gene studies",
                 "cv": [],
@@ -738,7 +738,7 @@
                 "regex": ""
             },
             {
-                "name": "target subfragment",
+                "name": "target_subfragment",
                 "cardinality": "optional",
                 "description": "Name of subfragment of a gene or locus. Important to e.g. identify special regions on marker genes like V6 on 16S rRNA",
                 "cv": [],
@@ -747,7 +747,7 @@
                 "regex": ""
             },
             {
-                "name": "multiplex identifiers",
+                "name": "multiplex_identifiers",
                 "cardinality": "optional",
                 "description": "Molecular barcodes, called Multiplex Identifiers (MIDs), that are used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters",
                 "cv": [],
@@ -756,7 +756,7 @@
                 "regex": ""
             },
             {
-                "name": "sequence quality check",
+                "name": "sequence_quality_check",
                 "cardinality": "optional",
                 "description": "Indicate if the sequence has been called by automatic systems (none) or undergone a manual editing procedure (e.g. by inspecting the raw data or chromatograms). Applied only for sequences that are not submitted to SRA or DRA",
                 "cv": [
@@ -769,7 +769,7 @@
                 "regex": ""
             },
             {
-                "name": "chimera check software",
+                "name": "chimera_check_software",
                 "cardinality": "optional",
                 "description": "Tool(s) used for chimera checking, including version number and parameters, to discover and remove chimeric sequences. A chimeric sequence is comprised of two or more phylogenetically distinct parent sequences.",
                 "cv": [],
@@ -778,7 +778,7 @@
                 "regex": ""
             },
             {
-                "name": "relevant electronic resources",
+                "name": "relevant_electronic_resources",
                 "cardinality": "optional",
                 "description": "A related resource that is referenced, cited, or otherwise associated to the sequence in the format of a PMID, DOI or URL",
                 "cv": [],
@@ -787,7 +787,7 @@
                 "regex": ""
             },
             {
-                "name": "relevant standard operating procedures",
+                "name": "relevant_standard_operating_procedures",
                 "cardinality": "optional",
                 "description": "Standard operating procedures used in assembly and/or annotation of genomes, metagenomes or environmental sequences in the format of a PMID, DOI or URL",
                 "cv": [],
@@ -796,7 +796,7 @@
                 "regex": ""
             },
             {
-                "name": "environmental package",
+                "name": "environmental_package",
                 "cardinality": "mandatory",
                 "description": "MIGS/MIMS/MIMARKS extension for reporting of measurements and observations obtained from one or more of the environments where the sample was obtained. All environmental packages listed here are further defined in separate subtables. By giving the name of the environmental package, a selection of fields can be made from the subtables and can be reported",
                 "cv": [
@@ -807,7 +807,7 @@
                 "regex": ""
             },
             {
-                "name": "collection date",
+                "name": "collection_date",
                 "cardinality": "mandatory",
                 "description": "The date the sample was collected with the intention of sequencing, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid ISO8601 compliant times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008.",
                 "cv": [],
@@ -816,7 +816,7 @@
                 "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "broad-scale environmental context",
+                "name": "broadscale_environmental_context",
                 "cardinality": "mandatory",
                 "description": "Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO\u2019s biome class: http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
                 "cv": [],
@@ -825,7 +825,7 @@
                 "regex": ""
             },
             {
-                "name": "local environmental context",
+                "name": "local_environmental_context",
                 "cardinality": "mandatory",
                 "description": "Report the entity or entities which are in the sample or specimen\u2019s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for \"broad-scale environmental context\". Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
                 "cv": [],
@@ -834,7 +834,7 @@
                 "regex": ""
             },
             {
-                "name": "environmental medium",
+                "name": "environmental_medium",
                 "cardinality": "mandatory",
                 "description": "Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).",
                 "cv": [],
@@ -843,7 +843,7 @@
                 "regex": ""
             },
             {
-                "name": "Sampling Campaign",
+                "name": "sampling_campaign",
                 "cardinality": "mandatory",
                 "description": "Refers to a finite or indefinite activity aiming at collecting data/samples, e.g. a cruise, a time series, a mesocosm experiment. Example: TARA_20110401Z.",
                 "cv": [],
@@ -852,7 +852,7 @@
                 "regex": ""
             },
             {
-                "name": "Sampling Site",
+                "name": "sampling_site",
                 "cardinality": "mandatory",
                 "description": "Refers to the site/station where data/sample collection is performed. Term list: OSD Site Registry or SDN:C17, http://tinyurl.com/oxux985 Example: Poseidon-E1-M3A Time Series Station.",
                 "cv": [],
@@ -861,7 +861,7 @@
                 "regex": ""
             },
             {
-                "name": "Sampling Platform",
+                "name": "sampling_platform",
                 "cardinality": "mandatory",
                 "description": "Refers to the unique stage from which the sampling device has been deployed. Includes Platform category from SDN:L06, http://seadatanet.maris2.nl/v_bodc_vocab_v2/search.asp?lib=L06, and Platform name. Example: Research Vessel Tara.",
                 "cv": [],
@@ -870,11 +870,11 @@
                 "regex": ""
             },
             {
-                "name": "amount or size of sample collected",
+                "name": "amount_or_size_of_sample_collected",
                 "cardinality": "optional",
                 "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.",
                 "cv": [],
-                "units": "m3",
+                "units": "kg",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -883,12 +883,12 @@
                 "cardinality": "optional",
                 "description": "amount of biomass; should include the name for the part of biomass measured, e.g. microbial, total. can include multiple measurements",
                 "cv": [],
-                "units": "t",
+                "units": "kg",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "organism count",
+                "name": "organism_count",
                 "cardinality": "optional",
                 "description": "Total cell count of any organism (or group of organisms) per gram, volume or area of sample, should include name of organism followed by count. The method that was used for the enumeration (e.g. qPCR, atp, mpn, etc.) Should also be provided. (example: total prokaryotes; 3.5e7 cells per ml; qpcr)",
                 "cv": [],
@@ -897,7 +897,7 @@
                 "regex": ""
             },
             {
-                "name": "Marine Region",
+                "name": "marine_region",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of the sample as defined by the marine region name chosen from the Marine Regions vocabulary at http://www.marineregions.org/. Example: Aegean Sea.",
                 "cv": [],
@@ -906,7 +906,7 @@
                 "regex": ""
             },
             {
-                "name": "water temperature",
+                "name": "water_temperature",
                 "cardinality": "mandatory",
                 "description": "Temperature of water at the time of taking the sample. Format: ##.####, SDN:P02:75:TEMP, SDN:P06:46:UPAA for \u00b0C. Example: 17.7122.",
                 "cv": [],
@@ -915,7 +915,7 @@
                 "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "sample storage duration",
+                "name": "sample_storage_duration",
                 "cardinality": "optional",
                 "description": "Duration for which the sample was stored. Indicate the duration for which the sample was stored written in ISO 8601 format.",
                 "cv": [],
@@ -924,7 +924,7 @@
                 "regex": ""
             },
             {
-                "name": "geographic location (country and/or sea)",
+                "name": "geographic_location_country_andor_sea",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
@@ -999,13 +999,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
-                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
+                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -1073,10 +1073,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
+                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
-                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -1090,7 +1090,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia",
+                    "Micronesia, Federated States of",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -1113,6 +1113,7 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
+                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -1138,6 +1139,7 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
+                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -1145,6 +1147,7 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
+                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -1160,14 +1163,15 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
+                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
+                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
-                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -1176,6 +1180,7 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
+                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -1196,8 +1201,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Virgin Islands",
                     "Wake Island",
+                    "Virgin Islands",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -1223,7 +1228,7 @@
                 "regex": ""
             },
             {
-                "name": "specific host",
+                "name": "specific_host",
                 "cardinality": "optional",
                 "description": "If there is a host involved, please provide its taxid (or environmental if not actually isolated from the dead or alive host - i.e. pathogen could be isolated from a swipe of a bench etc) and report whether it is a laboratory or natural host). From this we can calculate any number of groupings of hosts (e.g. animal vs plant, all fish hosts, etc)",
                 "cv": [],
@@ -1232,7 +1237,7 @@
                 "regex": ""
             },
             {
-                "name": "health or disease status of specific host",
+                "name": "health_or_disease_status_of_specific_host",
                 "cardinality": "optional",
                 "description": "Health or disease status of specific host at time of collection. This field accepts PATO (v 2013-10-28) terms, for a browser please see http://purl.bioontology.org/ontology/PATO",
                 "cv": [],
@@ -1241,7 +1246,7 @@
                 "regex": ""
             },
             {
-                "name": "atmospheric data",
+                "name": "atmospheric_data",
                 "cardinality": "optional",
                 "description": "measurement of atmospheric data; can include multiple data",
                 "cv": [],
@@ -1259,11 +1264,11 @@
                 "regex": "[1-9][0-9]*\\.?[0-9]*([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "water current",
+                "name": "water_current",
                 "cardinality": "optional",
                 "description": "measurement of magnitude and direction of flow within a fluid",
                 "cv": [],
-                "units": "m3/s",
+                "units": "knot",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1277,7 +1282,7 @@
                 "regex": "[1-9][0-9]*\\.?[0-9]*([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "light intensity",
+                "name": "light_intensity",
                 "cardinality": "optional",
                 "description": "measurement of light intensity",
                 "cv": [],
@@ -1286,7 +1291,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "mean friction velocity",
+                "name": "mean_friction_velocity",
                 "cardinality": "optional",
                 "description": "measurement of mean friction velocity",
                 "cv": [],
@@ -1295,7 +1300,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "mean peak friction velocity",
+                "name": "mean_peak_friction_velocity",
                 "cardinality": "optional",
                 "description": "measurement of mean peak friction velocity",
                 "cv": [],
@@ -1304,7 +1309,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "downward PAR",
+                "name": "downward_par",
                 "cardinality": "optional",
                 "description": "visible waveband radiance and irradiance measurements in the water column",
                 "cv": [],
@@ -1313,7 +1318,7 @@
                 "regex": "[1-9][0-9]*\\.?[0-9]*([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "photon flux",
+                "name": "photon_flux",
                 "cardinality": "optional",
                 "description": "measurement of photon flux",
                 "cv": [],
@@ -1326,12 +1331,12 @@
                 "cardinality": "optional",
                 "description": "pressure to which the sample is subject, in atmospheres",
                 "cv": [],
-                "units": "bar",
+                "units": "atm",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "tidal stage",
+                "name": "tidal_stage",
                 "cardinality": "optional",
                 "description": "stage of tide",
                 "cv": [
@@ -1352,7 +1357,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "pH",
+                "name": "ph",
                 "cardinality": "optional",
                 "description": "pH measurement",
                 "cv": [],
@@ -1361,7 +1366,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "total depth of water column",
+                "name": "total_depth_of_water_column",
                 "cardinality": "optional",
                 "description": "measurement of total depth of water column",
                 "cv": [],
@@ -1370,7 +1375,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "alkyl diethers",
+                "name": "alkyl_diethers",
                 "cardinality": "optional",
                 "description": "concentration of alkyl diethers",
                 "cv": [],
@@ -1379,7 +1384,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "aminopeptidase activity",
+                "name": "aminopeptidase_activity",
                 "cardinality": "optional",
                 "description": "measurement of aminopeptidase activity",
                 "cv": [],
@@ -1397,7 +1402,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "bacterial carbon production",
+                "name": "bacterial_carbon_production",
                 "cardinality": "optional",
                 "description": "measurement of bacterial carbon production",
                 "cv": [],
@@ -1406,7 +1411,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "bacterial production",
+                "name": "bacterial_production",
                 "cardinality": "optional",
                 "description": "bacterial production in the water column measured by isotope uptake",
                 "cv": [],
@@ -1415,7 +1420,7 @@
                 "regex": "[1-9][0-9]*\\.?[0-9]*([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "bacterial respiration",
+                "name": "bacterial_respiration",
                 "cardinality": "optional",
                 "description": "measurement of bacterial respiration in the water column",
                 "cv": [],
@@ -1428,7 +1433,7 @@
                 "cardinality": "optional",
                 "description": "concentration of bishomohopanol",
                 "cv": [],
-                "units": "\u00b5g/g",
+                "units": "\u00b5g/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1446,12 +1451,12 @@
                 "cardinality": "optional",
                 "description": "concentration of calcium",
                 "cv": [],
-                "units": "\u00b5mol/L",
+                "units": "mg/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "carbon/nitrogen ratio",
+                "name": "carbonnitrogen_ratio",
                 "cardinality": "optional",
                 "description": "ratio of amount or concentrations of carbon to nitrogen",
                 "cv": [],
@@ -1478,7 +1483,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "diether lipids",
+                "name": "diether_lipids",
                 "cardinality": "optional",
                 "description": "concentration of diether lipids; can include multiple types of diether lipids",
                 "cv": [],
@@ -1487,7 +1492,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "dissolved carbon dioxide",
+                "name": "dissolved_carbon_dioxide",
                 "cardinality": "optional",
                 "description": "concentration of dissolved carbon dioxide",
                 "cv": [],
@@ -1496,7 +1501,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "dissolved hydrogen",
+                "name": "dissolved_hydrogen",
                 "cardinality": "optional",
                 "description": "concentration of dissolved hydrogen",
                 "cv": [],
@@ -1505,7 +1510,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "dissolved inorganic carbon",
+                "name": "dissolved_inorganic_carbon",
                 "cardinality": "optional",
                 "description": "dissolved inorganic carbon concentration",
                 "cv": [],
@@ -1514,7 +1519,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "dissolved inorganic nitrogen",
+                "name": "dissolved_inorganic_nitrogen",
                 "cardinality": "optional",
                 "description": "concentration of dissolved inorganic nitrogen",
                 "cv": [],
@@ -1523,7 +1528,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "dissolved inorganic phosphorus",
+                "name": "dissolved_inorganic_phosphorus",
                 "cardinality": "optional",
                 "description": "concentration of dissolved inorganic phosphorus",
                 "cv": [],
@@ -1532,7 +1537,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "dissolved organic carbon",
+                "name": "dissolved_organic_carbon",
                 "cardinality": "optional",
                 "description": "concentration of dissolved organic carbon",
                 "cv": [],
@@ -1541,7 +1546,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "dissolved organic nitrogen",
+                "name": "dissolved_organic_nitrogen",
                 "cardinality": "optional",
                 "description": "dissolved organic nitrogen concentration measured as; total dissolved nitrogen - NH4 - NO3 - NO2",
                 "cv": [],
@@ -1550,7 +1555,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "dissolved oxygen",
+                "name": "dissolved_oxygen",
                 "cardinality": "optional",
                 "description": "concentration of dissolved oxygen",
                 "cv": [],
@@ -1559,7 +1564,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "glucosidase activity",
+                "name": "glucosidase_activity",
                 "cardinality": "optional",
                 "description": "measurement of glucosidase activity",
                 "cv": [],
@@ -1572,12 +1577,12 @@
                 "cardinality": "optional",
                 "description": "concentration of magnesium",
                 "cv": [],
-                "units": "parts/million",
+                "units": "mg/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "n-alkanes",
+                "name": "nalkanes",
                 "cardinality": "optional",
                 "description": "concentration of n-alkanes; can include multiple n-alkanes",
                 "cv": [],
@@ -1604,7 +1609,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "total nitrogen concentration",
+                "name": "total_nitrogen_concentration",
                 "cardinality": "optional",
                 "description": "Concentration of nitrogen (total). Total nitrogen concentration of water samples, calculated by: total nitrogen = total dissolved nitrogen + particulate nitrogen. Can also be measured without filtering, reported as nitrogen",
                 "cv": [],
@@ -1613,7 +1618,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "organic carbon",
+                "name": "organic_carbon",
                 "cardinality": "optional",
                 "description": "concentration of organic carbon",
                 "cv": [],
@@ -1622,7 +1627,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "organic matter",
+                "name": "organic_matter",
                 "cardinality": "optional",
                 "description": "concentration of organic matter",
                 "cv": [],
@@ -1631,7 +1636,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "organic nitrogen",
+                "name": "organic_nitrogen",
                 "cardinality": "optional",
                 "description": "concentration of organic nitrogen",
                 "cv": [],
@@ -1640,7 +1645,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "particulate organic carbon",
+                "name": "particulate_organic_carbon",
                 "cardinality": "optional",
                 "description": "concentration of particulate organic carbon",
                 "cv": [],
@@ -1649,7 +1654,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "particulate organic nitrogen",
+                "name": "particulate_organic_nitrogen",
                 "cardinality": "optional",
                 "description": "concentration of particulate organic nitrogen",
                 "cv": [],
@@ -1658,7 +1663,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "petroleum hydrocarbon",
+                "name": "petroleum_hydrocarbon",
                 "cardinality": "optional",
                 "description": "concentration of petroleum hydrocarbon",
                 "cv": [],
@@ -1685,7 +1690,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "phospholipid fatty acid",
+                "name": "phospholipid_fatty_acid",
                 "cardinality": "optional",
                 "description": "concentration of phospholipid fatty acids; can include multiple values",
                 "cv": [],
@@ -1703,16 +1708,16 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "primary production",
+                "name": "primary_production",
                 "cardinality": "optional",
                 "description": "measurement of primary production",
                 "cv": [],
-                "units": "mg/m3/day",
+                "units": "g/m2/day",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "redox potential",
+                "name": "redox_potential",
                 "cardinality": "optional",
                 "description": "redox potential, measured relative to a hydrogen cell, indicating oxidation or reduction potential",
                 "cv": [],
@@ -1748,7 +1753,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "soluble reactive phosphorus",
+                "name": "soluble_reactive_phosphorus",
                 "cardinality": "optional",
                 "description": "concentration of soluble reactive phosphorus",
                 "cv": [],
@@ -1761,7 +1766,7 @@
                 "cardinality": "optional",
                 "description": "concentration of sulfate",
                 "cv": [],
-                "units": "\u00b5mol/L",
+                "units": "mg/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1770,12 +1775,12 @@
                 "cardinality": "optional",
                 "description": "concentration of sulfide",
                 "cv": [],
-                "units": "\u00b5mol/L",
+                "units": "mg/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "suspended particulate matter",
+                "name": "suspended_particulate_matter",
                 "cardinality": "optional",
                 "description": "concentration of suspended particulate matter",
                 "cv": [],
@@ -1784,7 +1789,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "total dissolved nitrogen",
+                "name": "total_dissolved_nitrogen",
                 "cardinality": "optional",
                 "description": "total dissolved nitrogen concentration, reported as nitrogen, measured by: total dissolved nitrogen = NH4 + NO3NO2 + dissolved organic nitrogen",
                 "cv": [],
@@ -1793,7 +1798,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "total inorganic nitrogen",
+                "name": "total_inorganic_nitrogen",
                 "cardinality": "optional",
                 "description": "total inorganic nitrogen content",
                 "cv": [],
@@ -1802,25 +1807,25 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "total nitrogen content",
+                "name": "total_nitrogen_content",
                 "cardinality": "optional",
                 "description": "Total nitrogen content of the sample",
                 "cv": [],
-                "units": "\u00b5mol/L",
+                "units": "\u00b5g/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "total particulate carbon",
+                "name": "total_particulate_carbon",
                 "cardinality": "optional",
                 "description": "total particulate carbon content",
                 "cv": [],
-                "units": "\u00b5mol/L",
+                "units": "\u00b5g/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "total phosphorus",
+                "name": "total_phosphorus",
                 "cardinality": "optional",
                 "description": "total phosphorus concentration, calculated by: total phosphorus = total dissolved phosphorus + particulate phosphorus. Can also be measured without filtering, reported as phosphorus",
                 "cv": [],
@@ -1838,7 +1843,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "source material identifiers",
+                "name": "source_material_identifiers",
                 "cardinality": "optional",
                 "description": "A unique identifier assigned to a material sample (as defined by http://rs.tdwg.org/dwc/terms/materialSampleID, and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples. The INSDC qualifiers /specimen_voucher, /bio_material, or /culture_collection may or may not share the same value as the source_mat_id field. For instance, the /specimen_voucher qualifier and source_mat_id may both contain 'UAM:Herps:14' , referring to both the specimen voucher and sampled tissue with the same identifier. However, the /culture_collection qualifier may refer to a value from an initial culture (e.g. ATCC:11775) while source_mat_id would refer to an identifier from some derived culture from which the nucleic acids were extracted (e.g. xatc123 or ark:/2154/R2).",
                 "cv": [],
@@ -1847,7 +1852,7 @@
                 "regex": ""
             },
             {
-                "name": "miscellaneous parameter",
+                "name": "miscellaneous_parameter",
                 "cardinality": "optional",
                 "description": "Any other measurement performed or parameter collected, that is not listed here",
                 "cv": [],
@@ -1865,7 +1870,7 @@
                 "regex": ""
             },
             {
-                "name": "experimental factor",
+                "name": "experimental_factor",
                 "cardinality": "optional",
                 "description": "Experimental factors are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI). For a browser of EFO (v 2.95) terms, please see http://purl.bioontology.org/ontology/EFO; for a browser of OBI (v 2018-02-12) terms please see http://purl.bioontology.org/ontology/OBI. E.g. time series design [EFO:EFO_0001779]",
                 "cv": [],
@@ -1874,7 +1879,7 @@
                 "regex": ""
             },
             {
-                "name": "encoded traits",
+                "name": "encoded_traits",
                 "cardinality": "optional",
                 "description": "Should include key traits like antibiotic resistance or xenobiotic degradation phenotypes for plasmids, converting genes for phage",
                 "cv": [],
@@ -1883,7 +1888,7 @@
                 "regex": ""
             },
             {
-                "name": "subspecific genetic lineage",
+                "name": "subspecific_genetic_lineage",
                 "cardinality": "optional",
                 "description": "Information about the genetic distinctness of the sequenced organism below the subspecies level, e.g., serovar, serotype, biotype, ecotype, or any relevant genetic typing schemes like Group I plasmid. Subspecies should not be recorded in this term, but in the NCBI taxonomy. Supply both the lineage name and the lineage rank separated by a colon, e.g., biovar:abc123.",
                 "cv": [],
@@ -1892,7 +1897,7 @@
                 "regex": ""
             },
             {
-                "name": "isolation and growth condition",
+                "name": "isolation_and_growth_condition",
                 "cardinality": "optional",
                 "description": "Publication reference in the form of pubmed ID (pmid), digital object identifier (doi) or url for isolation and growth condition specifications of the organism/material. Mandatory for MIGS and MIMARKS Specimen.",
                 "cv": [],
@@ -1901,7 +1906,7 @@
                 "regex": ""
             },
             {
-                "name": "annotation source",
+                "name": "annotation_source",
                 "cardinality": "optional",
                 "description": "For cases where annotation was provided by a community jamboree or model organism database rather than by a specific submitter",
                 "cv": [],
@@ -1910,7 +1915,7 @@
                 "regex": ""
             },
             {
-                "name": "reference for biomaterial",
+                "name": "reference_for_biomaterial",
                 "cardinality": "optional",
                 "description": "Primary publication if isolated before genome publication; otherwise, primary genome report. Mandatory for MIGS of bacteria and archaea.",
                 "cv": [],
@@ -1919,7 +1924,7 @@
                 "regex": ""
             },
             {
-                "name": "sample material processing",
+                "name": "sample_material_processing",
                 "cardinality": "optional",
                 "description": "A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.",
                 "cv": [],
@@ -1928,16 +1933,16 @@
                 "regex": ""
             },
             {
-                "name": "sample volume or weight for DNA extraction",
+                "name": "sample_volume_or_weight_for_dna_extraction",
                 "cardinality": "optional",
                 "description": "Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term 'sample size'.",
                 "cv": [],
-                "units": "ng",
+                "units": "mL",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "nucleic acid extraction",
+                "name": "nucleic_acid_extraction",
                 "cardinality": "optional",
                 "description": "A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the material separation to recover the nucleic acid fraction from a sample",
                 "cv": [],
@@ -1946,7 +1951,7 @@
                 "regex": ""
             },
             {
-                "name": "nucleic acid amplification",
+                "name": "nucleic_acid_amplification",
                 "cardinality": "optional",
                 "description": "A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the enzymatic amplification (PCR, TMA, NASBA) of specific nucleic acids",
                 "cv": [],
@@ -1955,7 +1960,7 @@
                 "regex": ""
             },
             {
-                "name": "library size",
+                "name": "library_size",
                 "cardinality": "optional",
                 "description": "Total number of clones in the library prepared for the project",
                 "cv": [],
@@ -1964,7 +1969,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "library reads sequenced",
+                "name": "library_reads_sequenced",
                 "cardinality": "optional",
                 "description": "Total number of clones sequenced from the library",
                 "cv": [],
@@ -1973,7 +1978,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "library construction method",
+                "name": "library_construction_method",
                 "cardinality": "optional",
                 "description": "Library construction method used for clone libraries",
                 "cv": [],
@@ -1982,7 +1987,7 @@
                 "regex": ""
             },
             {
-                "name": "library vector",
+                "name": "library_vector",
                 "cardinality": "optional",
                 "description": "Cloning vector type(s) used in construction of libraries",
                 "cv": [],
@@ -1991,7 +1996,7 @@
                 "regex": ""
             },
             {
-                "name": "library screening strategy",
+                "name": "library_screening_strategy",
                 "cardinality": "optional",
                 "description": "Specific enrichment or screening methods applied before and/or after creating clone libraries in order to select a specific group of sequences",
                 "cv": [],
@@ -2000,7 +2005,7 @@
                 "regex": ""
             },
             {
-                "name": "pcr conditions",
+                "name": "pcr_conditions",
                 "cardinality": "optional",
                 "description": "Description of reaction conditions and components for PCR in the form of 'initial denaturation:94degC_1.5min; annealing=...'",
                 "cv": [],
@@ -2009,7 +2014,7 @@
                 "regex": ""
             },
             {
-                "name": "pcr primers",
+                "name": "pcr_primers",
                 "cardinality": "optional",
                 "description": "PCR primers that were used to amplify the sequence of the targeted gene, locus or subfragment. This field should contain all the primers used for a single PCR reaction if multiple forward or reverse primers are present in a single PCR reaction. The primer sequence should be reported in uppercase letters",
                 "cv": [],
@@ -2031,12 +2036,12 @@
                 "cardinality": "mandatory",
                 "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
                 "cv": [],
-                "units": "mm",
+                "units": "m",
                 "field_type": "TEXT_FIELD",
                 "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
-                "name": "chemical administration",
+                "name": "chemical_administration",
                 "cardinality": "optional",
                 "description": "list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v111), please see http://purl.bioontology.org/ontology/CHEBI",
                 "cv": [],

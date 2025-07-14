@@ -492,7 +492,7 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "sample storage temperature",
+                "name": "sample_storage_temperature",
                 "cardinality": "recommended",
                 "description": "temperature at which sample was stored, e.g. -80",
                 "cv": [],
@@ -501,7 +501,7 @@
                 "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "sample storage buffer",
+                "name": "sample_storage_buffer",
                 "cardinality": "recommended",
                 "description": "buffer used for sample storage (e.g. RNAlater)",
                 "cv": [],
@@ -510,7 +510,7 @@
                 "regex": ""
             },
             {
-                "name": "sample storage device",
+                "name": "sample_storage_device",
                 "cardinality": "recommended",
                 "description": "The container used to store the sample. This field accepts terms listed under container (http://purl.obolibrary.org/obo/NCIT_C43186). If the proper descriptor is not listed please use text to describe the storage device.",
                 "cv": [],
@@ -519,7 +519,7 @@
                 "regex": ""
             },
             {
-                "name": "sample storage location",
+                "name": "sample_storage_location",
                 "cardinality": "optional",
                 "description": "Location at which sample was stored, usually name of a specific freezer/room. Indicate the location name.",
                 "cv": [],
@@ -528,7 +528,7 @@
                 "regex": ""
             },
             {
-                "name": "project name",
+                "name": "project_name",
                 "cardinality": "mandatory",
                 "description": "Name of the project within which the sequencing was organized",
                 "cv": [],
@@ -537,7 +537,7 @@
                 "regex": ""
             },
             {
-                "name": "reference host genome for decontamination",
+                "name": "reference_host_genome_for_decontamination",
                 "cardinality": "mandatory",
                 "description": "Reference host genome that was mapped against for host decontamination (in the form of a valid assembly accession - e.g. in the format GCA_xxxxxxx.x)",
                 "cv": [],
@@ -546,7 +546,7 @@
                 "regex": "(^(E|D|S)RZ[0-9]{6,}$)|(^GC(A|F)_[0-9]{9}.[0-9]+$|^[A-Z]{1}[0-9]{5}.[0-9]+$|^[A-Z]{2}[0-9]{6}.[0-9]+$|^[A-Z]{2}[0-9]{8}$|^[A-Z]{4}[0-9]{2}S?[0-9]{6,8}$|^[A-Z]{6}[0-9]{2}S?[0-9]{7,9}$)"
             },
             {
-                "name": "collection date",
+                "name": "collection_date",
                 "cardinality": "mandatory",
                 "description": "The date the sample was collected with the intention of sequencing, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid ISO8601 compliant times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008.",
                 "cv": [],
@@ -555,7 +555,7 @@
                 "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic location (latitude)",
+                "name": "geographic_location_latitude",
                 "cardinality": "optional",
                 "description": "The geographical origin of the sample as defined by latitude. The values should be reported in decimal degrees and in WGS84 system",
                 "cv": [],
@@ -564,7 +564,7 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic location (longitude)",
+                "name": "geographic_location_longitude",
                 "cardinality": "optional",
                 "description": "The geographical origin of the sample as defined by longitude. The values should be reported in decimal degrees and in WGS84 system",
                 "cv": [],
@@ -573,7 +573,7 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic location (region and locality)",
+                "name": "geographic_location_region_and_locality",
                 "cardinality": "optional",
                 "description": "The geographical origin of the sample as defined by the specific region name followed by the locality name.",
                 "cv": [],
@@ -582,7 +582,7 @@
                 "regex": ""
             },
             {
-                "name": "trial length",
+                "name": "trial_length",
                 "cardinality": "recommended",
                 "description": "Length of time from the beginning of the trial until the end of the trial",
                 "cv": [],
@@ -591,7 +591,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "trial timepoint",
+                "name": "trial_timepoint",
                 "cardinality": "mandatory",
                 "description": "Timepoint of the trial when the sample was collected - length of time after the beginning of the trial",
                 "cv": [],
@@ -600,7 +600,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "geographic location (country and/or sea)",
+                "name": "geographic_location_country_andor_sea",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
@@ -675,13 +675,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
-                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
+                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -749,10 +749,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
+                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
-                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -766,7 +766,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia",
+                    "Micronesia, Federated States of",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -789,6 +789,7 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
+                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -814,6 +815,7 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
+                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -821,6 +823,7 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
+                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -836,14 +839,15 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
+                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
+                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
-                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -852,6 +856,7 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
+                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -872,8 +877,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Virgin Islands",
                     "Wake Island",
+                    "Virgin Islands",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -899,7 +904,7 @@
                 "regex": ""
             },
             {
-                "name": "host disease status",
+                "name": "host_disease_status",
                 "cardinality": "recommended",
                 "description": "list of diseases with which the host has been diagnosed; can include multiple diagnoses. The value of the field depends on host; for humans the terms should be chosen from DO (Disease Ontology) at http://www.disease-ontology.org, other hosts are free text",
                 "cv": [],
@@ -908,7 +913,7 @@
                 "regex": ""
             },
             {
-                "name": "host common name",
+                "name": "host_common_name",
                 "cardinality": "mandatory",
                 "description": "common name of the host, e.g. human",
                 "cv": [],
@@ -917,7 +922,7 @@
                 "regex": ""
             },
             {
-                "name": "host subject id",
+                "name": "host_subject_id",
                 "cardinality": "mandatory",
                 "description": "a unique identifier by which each subject can be referred to, de-identified, e.g. #131",
                 "cv": [],
@@ -926,7 +931,7 @@
                 "regex": ""
             },
             {
-                "name": "host taxid",
+                "name": "host_taxid",
                 "cardinality": "mandatory",
                 "description": "NCBI taxon id of the host, e.g. 9606",
                 "cv": [],
@@ -935,7 +940,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "host body site",
+                "name": "host_body_site",
                 "cardinality": "mandatory",
                 "description": "name of body site where the sample was obtained from, such as a specific organ or tissue (tongue, lung etc...). For Foundational Model of Anatomy Ontology (FMA) (v 3.1) terms, please see http://purl.bioontology.org/ontology/FMA",
                 "cv": [],
@@ -944,16 +949,16 @@
                 "regex": ""
             },
             {
-                "name": "host length",
+                "name": "host_length",
                 "cardinality": "optional",
                 "description": "the length of subject",
                 "cv": [],
-                "units": "mm",
+                "units": "m",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "host total mass",
+                "name": "host_total_mass",
                 "cardinality": "recommended",
                 "description": "total mass of the host at collection, the unit depends on host",
                 "cv": [],
@@ -962,7 +967,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "host sex",
+                "name": "host_sex",
                 "cardinality": "optional",
                 "description": "Gender or sex of the host.",
                 "cv": [
@@ -989,7 +994,7 @@
                 "regex": ""
             },
             {
-                "name": "host scientific name",
+                "name": "host_scientific_name",
                 "cardinality": "recommended",
                 "description": "Scientific name of the natural (as opposed to laboratory) host to the organism from which sample was obtained.",
                 "cv": [],
@@ -998,7 +1003,7 @@
                 "regex": ""
             },
             {
-                "name": "host breed",
+                "name": "host_breed",
                 "cardinality": "recommended",
                 "description": "Breed of the host (e.g. COBB-500)",
                 "cv": [],
@@ -1007,7 +1012,7 @@
                 "regex": ""
             },
             {
-                "name": "host gutted mass",
+                "name": "host_gutted_mass",
                 "cardinality": "optional",
                 "description": "total mass of the host after gutting, the unit depends on host",
                 "cv": [],
@@ -1016,7 +1021,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "host diet",
+                "name": "host_diet",
                 "cardinality": "recommended",
                 "description": "type of diet depending on the host, for animals omnivore, herbivore etc., for humans high-fat, Mediterranean etc.; can include multiple diet types",
                 "cv": [],
@@ -1025,7 +1030,7 @@
                 "regex": ""
             },
             {
-                "name": "host diet treatment",
+                "name": "host_diet_treatment",
                 "cardinality": "mandatory",
                 "description": "Experimental diet treatment/additive to normal host feed e.g. Probiotic (GalliPro EPB5)",
                 "cv": [],
@@ -1034,7 +1039,7 @@
                 "regex": ""
             },
             {
-                "name": "host diet treatment concentration",
+                "name": "host_diet_treatment_concentration",
                 "cardinality": "optional",
                 "description": "Concentration of experimental diet treatment/additive to normal host feed as a percentage of the mass of the feed (e.g. 20%)",
                 "cv": [],
@@ -1043,7 +1048,7 @@
                 "regex": "^(\\d|[1-9]\\d|\\d\\.\\d{1,2}|[1-9]\\d\\.\\d{1,2}|100)$"
             },
             {
-                "name": "host storage container",
+                "name": "host_storage_container",
                 "cardinality": "optional",
                 "description": "storage container that the host organism is kept in before sampling (e.g. cage, water tank, pen) including details of size and type",
                 "cv": [],
@@ -1052,7 +1057,7 @@
                 "regex": ""
             },
             {
-                "name": "host storage container pH",
+                "name": "host_storage_container_ph",
                 "cardinality": "optional",
                 "description": "pH of the medium in which the host organism is kept before sampling (e.g. pH of water in tank)",
                 "cv": [],
@@ -1061,7 +1066,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "host storage container temperature",
+                "name": "host_storage_container_temperature",
                 "cardinality": "recommended",
                 "description": "temperature at which the host is kept before sampling",
                 "cv": [],
@@ -1070,16 +1075,16 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "sample volume or weight for DNA extraction",
+                "name": "sample_volume_or_weight_for_dna_extraction",
                 "cardinality": "mandatory",
                 "description": "Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term 'sample size'.",
                 "cv": [],
-                "units": "ng",
+                "units": "mL",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "nucleic acid extraction",
+                "name": "nucleic_acid_extraction",
                 "cardinality": "optional",
                 "description": "A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the material separation to recover the nucleic acid fraction from a sample",
                 "cv": [],
@@ -1088,7 +1093,7 @@
                 "regex": ""
             },
             {
-                "name": "pcr primers",
+                "name": "pcr_primers",
                 "cardinality": "optional",
                 "description": "PCR primers that were used to amplify the sequence of the targeted gene, locus or subfragment. This field should contain all the primers used for a single PCR reaction if multiple forward or reverse primers are present in a single PCR reaction. The primer sequence should be reported in uppercase letters",
                 "cv": [],
