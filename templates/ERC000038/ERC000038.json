@@ -492,7 +492,7 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "Latitude Start",
+                "name": "latitude_start",
                 "cardinality": "mandatory",
                 "description": "Latitude of the location where the sampling event started, e.g. each CTD cast, net tow, or bucket collection is a distinct event. Format: ##.####, Decimal degrees; North= +, South= -; Use WGS 84 for GPS data. Example: -24.6666.",
                 "cv": [],
@@ -501,7 +501,7 @@
                 "regex": "[+-]?[0-9]+.?[0-9]*"
             },
             {
-                "name": "Longitude Start",
+                "name": "longitude_start",
                 "cardinality": "mandatory",
                 "description": "Longitude of the location where the sampling event started, e.g. each CTD cast, net tow, or bucket collection is a distinct event. Format: ###.####, Decimal degrees; East= +, West= -; Use WGS 84 for GPS data. Example: -096.1012.",
                 "cv": [],
@@ -510,7 +510,7 @@
                 "regex": "[+-]?[0-9]+.?[0-9]*"
             },
             {
-                "name": "Protocol Label",
+                "name": "protocol_label",
                 "cardinality": "mandatory",
                 "description": "Identifies the protocol used to produce the sample, e.g. filtration and preservation. Example: BACT_NUC_W0.22-1.6.",
                 "cv": [],
@@ -519,7 +519,7 @@
                 "regex": ""
             },
             {
-                "name": "sample storage conditions",
+                "name": "sample_storage_conditions",
                 "cardinality": "optional",
                 "description": "Conditions at which sample was stored, usually storage temperature, duration and location. In soil context: Explain how and for how long the soil sample was stored before DNA extraction (fresh/frozen/other).",
                 "cv": [],
@@ -528,7 +528,7 @@
                 "regex": ""
             },
             {
-                "name": "aquaculture origin",
+                "name": "aquaculture_origin",
                 "cardinality": "mandatory",
                 "description": "Origin of stock and raised conditions",
                 "cv": [
@@ -541,7 +541,7 @@
                 "regex": ""
             },
             {
-                "name": "shellfish total weight",
+                "name": "shellfish_total_weight",
                 "cardinality": "mandatory",
                 "description": "Total weight of shellfish including shell at the time of sampling. Epifauna and epiphytes to be removed.",
                 "cv": [],
@@ -550,7 +550,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "shellfish soft tissue weight",
+                "name": "shellfish_soft_tissue_weight",
                 "cardinality": "mandatory",
                 "description": "Total weight of all soft tissue, i.e. weight of entire organism without shell, at the time of sampling",
                 "cv": [],
@@ -559,7 +559,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "shell length",
+                "name": "shell_length",
                 "cardinality": "mandatory",
                 "description": "length of shell (perpendicular to the hinge)",
                 "cv": [],
@@ -568,7 +568,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "shell width",
+                "name": "shell_width",
                 "cardinality": "mandatory",
                 "description": "width of shell (perpendicular angle to length)",
                 "cv": [],
@@ -577,7 +577,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "shell markings",
+                "name": "shell_markings",
                 "cardinality": "recommended",
                 "description": "Visible markings on outer shell",
                 "cv": [],
@@ -586,7 +586,7 @@
                 "regex": ""
             },
             {
-                "name": "sample health state",
+                "name": "sample_health_state",
                 "cardinality": "optional",
                 "description": "health status of the subject at the time of sample collection",
                 "cv": [
@@ -598,7 +598,7 @@
                 "regex": ""
             },
             {
-                "name": "sample disease status",
+                "name": "sample_disease_status",
                 "cardinality": "optional",
                 "description": "list of diseases with which the subject has been diagnosed at the time of sample collection; can include multiple diagnoses; the value of the field depends on subject; e.g. Charcoal rot (Macrophomina phaseolina), Late wilt (Cephalosporium maydis)",
                 "cv": [],
@@ -607,7 +607,7 @@
                 "regex": ""
             },
             {
-                "name": "collection date",
+                "name": "collection_date",
                 "cardinality": "mandatory",
                 "description": "The date the sample was collected with the intention of sequencing, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid ISO8601 compliant times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008.",
                 "cv": [],
@@ -616,7 +616,7 @@
                 "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "broad-scale environmental context",
+                "name": "broadscale_environmental_context",
                 "cardinality": "mandatory",
                 "description": "Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO\u2019s biome class: http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
                 "cv": [],
@@ -625,7 +625,7 @@
                 "regex": ""
             },
             {
-                "name": "local environmental context",
+                "name": "local_environmental_context",
                 "cardinality": "mandatory",
                 "description": "Report the entity or entities which are in the sample or specimen\u2019s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for \"broad-scale environmental context\". Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
                 "cv": [],
@@ -634,7 +634,7 @@
                 "regex": ""
             },
             {
-                "name": "environmental medium",
+                "name": "environmental_medium",
                 "cardinality": "mandatory",
                 "description": "Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).",
                 "cv": [],
@@ -643,7 +643,7 @@
                 "regex": ""
             },
             {
-                "name": "Sampling Campaign",
+                "name": "sampling_campaign",
                 "cardinality": "mandatory",
                 "description": "Refers to a finite or indefinite activity aiming at collecting data/samples, e.g. a cruise, a time series, a mesocosm experiment. Example: TARA_20110401Z.",
                 "cv": [],
@@ -652,7 +652,7 @@
                 "regex": ""
             },
             {
-                "name": "Sampling Station",
+                "name": "sampling_station",
                 "cardinality": "mandatory",
                 "description": "Refers to the site/station where data/sample collection is performed. Example: TARA_100.",
                 "cv": [],
@@ -661,7 +661,7 @@
                 "regex": ""
             },
             {
-                "name": "Sampling Platform",
+                "name": "sampling_platform",
                 "cardinality": "mandatory",
                 "description": "Refers to the unique stage from which the sampling device has been deployed. Includes Platform category from SDN:L06, http://seadatanet.maris2.nl/v_bodc_vocab_v2/search.asp?lib=L06, and Platform name. Example: Research Vessel Tara.",
                 "cv": [],
@@ -670,7 +670,7 @@
                 "regex": ""
             },
             {
-                "name": "Marine Region",
+                "name": "marine_region",
                 "cardinality": "recommended",
                 "description": "The geographical origin of the sample as defined by the marine region name chosen from the Marine Regions vocabulary at http://www.marineregions.org/. Example: Aegean Sea.",
                 "cv": [],
@@ -679,7 +679,7 @@
                 "regex": ""
             },
             {
-                "name": "seabed habitat",
+                "name": "seabed_habitat",
                 "cardinality": "mandatory",
                 "description": "Classification of the seabed where the organism has been found; for European seabed habitats please use terms from http://eunis.eea.europa.eu/habitats-code-browser.jsp; example: B3.4 : Soft sea-cliffs, often vegetated",
                 "cv": [],
@@ -697,7 +697,7 @@
                 "regex": ""
             },
             {
-                "name": "adductor weight",
+                "name": "adductor_weight",
                 "cardinality": "recommended",
                 "description": "Total weight of striated muscle and smooth muscle",
                 "cv": [],
@@ -706,7 +706,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "gonad weight",
+                "name": "gonad_weight",
                 "cardinality": "recommended",
                 "description": "Total weight of entire gonad tissue",
                 "cv": [],
@@ -715,16 +715,16 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "toxin burden",
+                "name": "toxin_burden",
                 "cardinality": "recommended",
                 "description": "Concentration of toxins in the organism at the time of sampling",
                 "cv": [],
-                "units": "mg",
+                "units": "kg",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "geographic location (country and/or sea)",
+                "name": "geographic_location_country_andor_sea",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
@@ -799,13 +799,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
-                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
+                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -873,10 +873,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
+                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
-                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -890,7 +890,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia",
+                    "Micronesia, Federated States of",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -913,6 +913,7 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
+                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -938,6 +939,7 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
+                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -945,6 +947,7 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
+                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -960,14 +963,15 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
+                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
+                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
-                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -976,6 +980,7 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
+                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -996,8 +1001,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Virgin Islands",
                     "Wake Island",
+                    "Virgin Islands",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -1023,7 +1028,7 @@
                 "regex": ""
             },
             {
-                "name": "treatment agent",
+                "name": "treatment_agent",
                 "cardinality": "optional",
                 "description": "The name of the treatment agent used.",
                 "cv": [],
@@ -1032,7 +1037,7 @@
                 "regex": ""
             },
             {
-                "name": "chemical compound",
+                "name": "chemical_compound",
                 "cardinality": "optional",
                 "description": "A drug, solvent, chemical, etc., with a property that can be measured such as concentration (http://purl.obolibrary.org/obo/CHEBI_37577).",
                 "cv": [],
@@ -1045,7 +1050,7 @@
                 "cardinality": "mandatory",
                 "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
                 "cv": [],
-                "units": "mm",
+                "units": "m",
                 "field_type": "TEXT_FIELD",
                 "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             }
