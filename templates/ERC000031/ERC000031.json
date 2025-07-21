@@ -492,7 +492,7 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "number_of_inoculated_individuals",
+                "name": "number of inoculated individuals",
                 "cardinality": "optional",
                 "description": "Number of host individuals inoculated for the experiment.",
                 "cv": [],
@@ -501,7 +501,7 @@
                 "regex": ""
             },
             {
-                "name": "trophic_level",
+                "name": "trophic level",
                 "cardinality": "optional",
                 "description": "Trophic levels are the feeding position in a food chain. Microbes can be a range of producers (e.g. chemolithotroph)",
                 "cv": [
@@ -541,7 +541,7 @@
                 "regex": ""
             },
             {
-                "name": "observed_biotic_relationship",
+                "name": "observed biotic relationship",
                 "cardinality": "optional",
                 "description": "Description of relationship(s) between the subject organism and other organism(s) it is associated with. E.g., parasite on species X; mutualist with species Y. The target organism is the subject of the relationship, and the other organism(s) is the object.",
                 "cv": [
@@ -556,7 +556,7 @@
                 "regex": ""
             },
             {
-                "name": "known_pathogenicity",
+                "name": "known pathogenicity",
                 "cardinality": "optional",
                 "description": "To what is the entity pathogenic, for instance plant, fungi, bacteria",
                 "cv": [],
@@ -565,7 +565,7 @@
                 "regex": ""
             },
             {
-                "name": "relationship_to_oxygen",
+                "name": "relationship to oxygen",
                 "cardinality": "optional",
                 "description": "Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments",
                 "cv": [
@@ -591,7 +591,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_collection_device",
+                "name": "sample collection device",
                 "cardinality": "optional",
                 "description": "The device used to collect an environmental sample. It is recommended to use terms listed under environmental sampling device (http://purl.obolibrary.org/obo/ENVO) and/or terms listed under specimen collection device (http://purl.obolibrary.org/obo/GENEPIO_0002094).",
                 "cv": [],
@@ -600,7 +600,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_collection_method",
+                "name": "sample collection method",
                 "cardinality": "optional",
                 "description": "The method employed for collecting the sample. Can be provided in the form of a PMID, DOI, url or text.",
                 "cv": [],
@@ -609,7 +609,7 @@
                 "regex": ""
             },
             {
-                "name": "project_name",
+                "name": "project name",
                 "cardinality": "mandatory",
                 "description": "Name of the project within which the sequencing was organized",
                 "cv": [],
@@ -618,7 +618,7 @@
                 "regex": ""
             },
             {
-                "name": "frequency_of_cooking",
+                "name": "frequency of cooking",
                 "cardinality": "optional",
                 "description": "The number of times a meal is cooked per week",
                 "cv": [],
@@ -636,7 +636,7 @@
                 "regex": ""
             },
             {
-                "name": "number_of_replicons",
+                "name": "number of replicons",
                 "cardinality": "optional",
                 "description": "Reports the number of replicons in a nuclear genome of eukaryotes, in the genome of a bacterium or archaea or the number of segments in a segmented virus. Always applied to the haploid chromosome count of a eukaryote. Mandatory for MIGS of eukaryotes, bacteria, archaea and segmented virus.",
                 "cv": [],
@@ -645,7 +645,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "extrachromosomal_elements",
+                "name": "extrachromosomal elements",
                 "cardinality": "optional",
                 "description": "Do plasmids exist of significant phenotypic consequence (e.g. ones that determine virulence or antibiotic resistance). Megaplasmids? Other plasmids (borrelia has 15+ plasmids).",
                 "cv": [],
@@ -654,7 +654,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "estimated_size",
+                "name": "estimated size",
                 "cardinality": "optional",
                 "description": "The estimated size of the genome (in bp) prior to sequencing. Of particular importance in the sequencing of (eukaryotic) genome which could remain in draft form for a long or unspecified period. Mandatory for MIGS of eukaryotes.",
                 "cv": [],
@@ -663,7 +663,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "target_gene",
+                "name": "target gene",
                 "cardinality": "optional",
                 "description": "Targeted gene or locus name for marker gene studies",
                 "cv": [],
@@ -672,7 +672,7 @@
                 "regex": ""
             },
             {
-                "name": "target_subfragment",
+                "name": "target subfragment",
                 "cardinality": "optional",
                 "description": "Name of subfragment of a gene or locus. Important to e.g. identify special regions on marker genes like V6 on 16S rRNA",
                 "cv": [],
@@ -681,7 +681,7 @@
                 "regex": ""
             },
             {
-                "name": "multiplex_identifiers",
+                "name": "multiplex identifiers",
                 "cardinality": "optional",
                 "description": "Molecular barcodes, called Multiplex Identifiers (MIDs), that are used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters",
                 "cv": [],
@@ -690,7 +690,7 @@
                 "regex": ""
             },
             {
-                "name": "sequence_quality_check",
+                "name": "sequence quality check",
                 "cardinality": "optional",
                 "description": "Indicate if the sequence has been called by automatic systems (none) or undergone a manual editing procedure (e.g. by inspecting the raw data or chromatograms). Applied only for sequences that are not submitted to SRA or DRA",
                 "cv": [
@@ -703,7 +703,7 @@
                 "regex": ""
             },
             {
-                "name": "chimera_check_software",
+                "name": "chimera check software",
                 "cardinality": "optional",
                 "description": "Tool(s) used for chimera checking, including version number and parameters, to discover and remove chimeric sequences. A chimeric sequence is comprised of two or more phylogenetically distinct parent sequences.",
                 "cv": [],
@@ -712,7 +712,7 @@
                 "regex": ""
             },
             {
-                "name": "relevant_electronic_resources",
+                "name": "relevant electronic resources",
                 "cardinality": "optional",
                 "description": "A related resource that is referenced, cited, or otherwise associated to the sequence in the format of a PMID, DOI or URL",
                 "cv": [],
@@ -721,7 +721,7 @@
                 "regex": ""
             },
             {
-                "name": "relevant_standard_operating_procedures",
+                "name": "relevant standard operating procedures",
                 "cardinality": "optional",
                 "description": "Standard operating procedures used in assembly and/or annotation of genomes, metagenomes or environmental sequences in the format of a PMID, DOI or URL",
                 "cv": [],
@@ -730,7 +730,7 @@
                 "regex": ""
             },
             {
-                "name": "collection_date",
+                "name": "collection date",
                 "cardinality": "mandatory",
                 "description": "The date the sample was collected with the intention of sequencing, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid ISO8601 compliant times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008.",
                 "cv": [],
@@ -748,7 +748,7 @@
                 "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
-                "name": "geographic_location_latitude",
+                "name": "geographic location (latitude)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of the sample as defined by latitude. The values should be reported in decimal degrees and in WGS84 system",
                 "cv": [],
@@ -757,7 +757,7 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic_location_longitude",
+                "name": "geographic location (longitude)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of the sample as defined by longitude. The values should be reported in decimal degrees and in WGS84 system",
                 "cv": [],
@@ -766,7 +766,7 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic_location_region_and_locality",
+                "name": "geographic location (region and locality)",
                 "cardinality": "optional",
                 "description": "The geographical origin of the sample as defined by the specific region name followed by the locality name.",
                 "cv": [],
@@ -775,7 +775,7 @@
                 "regex": ""
             },
             {
-                "name": "broadscale_environmental_context",
+                "name": "broad-scale environmental context",
                 "cardinality": "mandatory",
                 "description": "Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO\u2019s biome class: http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
                 "cv": [],
@@ -784,7 +784,7 @@
                 "regex": ""
             },
             {
-                "name": "local_environmental_context",
+                "name": "local environmental context",
                 "cardinality": "mandatory",
                 "description": "Report the entity or entities which are in the sample or specimen\u2019s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for \"broad-scale environmental context\". Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
                 "cv": [],
@@ -793,7 +793,7 @@
                 "regex": ""
             },
             {
-                "name": "environmental_medium",
+                "name": "environmental medium",
                 "cardinality": "mandatory",
                 "description": "Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).",
                 "cv": [],
@@ -811,7 +811,7 @@
                 "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
-                "name": "sampling_time_outside",
+                "name": "sampling time outside",
                 "cardinality": "optional",
                 "description": "The recent and long term history of outside sampling",
                 "cv": [],
@@ -820,7 +820,7 @@
                 "regex": ""
             },
             {
-                "name": "temperature_outside_house",
+                "name": "temperature outside house",
                 "cardinality": "optional",
                 "description": "The recorded temperature value at sampling time outside",
                 "cv": [],
@@ -829,7 +829,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "train_station_collection_location",
+                "name": "train station collection location",
                 "cardinality": "optional",
                 "description": "The train station collection location",
                 "cv": [],
@@ -838,7 +838,7 @@
                 "regex": ""
             },
             {
-                "name": "train_stop_collection_location",
+                "name": "train stop collection location",
                 "cardinality": "optional",
                 "description": "The train stop collection location",
                 "cv": [],
@@ -847,7 +847,7 @@
                 "regex": ""
             },
             {
-                "name": "surface_material",
+                "name": "surface material",
                 "cardinality": "optional",
                 "description": "surface materials at the point of sampling",
                 "cv": [
@@ -872,7 +872,7 @@
                 "regex": ""
             },
             {
-                "name": "surfaceair_contaminant",
+                "name": "surface-air contaminant",
                 "cardinality": "optional",
                 "description": "contaminant identified on surface",
                 "cv": [
@@ -890,7 +890,7 @@
                 "regex": ""
             },
             {
-                "name": "indoor_surface",
+                "name": "indoor surface",
                 "cardinality": "optional",
                 "description": "type of indoor surface",
                 "cv": [
@@ -908,7 +908,7 @@
                 "regex": ""
             },
             {
-                "name": "indoor_space",
+                "name": "indoor space",
                 "cardinality": "mandatory",
                 "description": "a distinguishable space within a structure, the purpose for which discrete areas of a building is used",
                 "cv": [
@@ -926,7 +926,7 @@
                 "regex": ""
             },
             {
-                "name": "filter_type",
+                "name": "filter type",
                 "cardinality": "mandatory",
                 "description": "a device which removes solid particulates or airborne molecular contaminants",
                 "cv": [
@@ -943,7 +943,7 @@
                 "regex": ""
             },
             {
-                "name": "heating_and_cooling_system_type",
+                "name": "heating and cooling system type",
                 "cardinality": "mandatory",
                 "description": "methods of conditioning or heating a room or building",
                 "cv": [
@@ -958,7 +958,7 @@
                 "regex": ""
             },
             {
-                "name": "substructure_type",
+                "name": "substructure type",
                 "cardinality": "optional",
                 "description": "the substructure or under building is that largely hidden section of the building which is built off the foundations to the ground floor level",
                 "cv": [
@@ -971,7 +971,7 @@
                 "regex": ""
             },
             {
-                "name": "light_type",
+                "name": "light type",
                 "cardinality": "mandatory",
                 "description": "application of light to achieve some practical or aesthetic effect. Lighting includes the use of both artificial light sources such as lamps and light fixtures, as well as natural illumination by capturing daylight. Can also include absence of light",
                 "cv": [
@@ -984,7 +984,7 @@
                 "regex": ""
             },
             {
-                "name": "building_setting",
+                "name": "building setting",
                 "cardinality": "mandatory",
                 "description": "a location (geography) where a building is set",
                 "cv": [
@@ -998,7 +998,7 @@
                 "regex": ""
             },
             {
-                "name": "building_occupancy_type",
+                "name": "building occupancy type",
                 "cardinality": "mandatory",
                 "description": "the primary function for which a building or discrete part of a building is intended to be used",
                 "cv": [
@@ -1029,7 +1029,7 @@
                 "regex": ""
             },
             {
-                "name": "space_typical_state",
+                "name": "space typical state",
                 "cardinality": "mandatory",
                 "description": "customary or normal state of the space",
                 "cv": [
@@ -1041,7 +1041,7 @@
                 "regex": ""
             },
             {
-                "name": "typical_occupant_density",
+                "name": "typical occupant density",
                 "cardinality": "mandatory",
                 "description": "customary or normal density of occupants",
                 "cv": [],
@@ -1050,7 +1050,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "occupancy_at_sampling",
+                "name": "occupancy at sampling",
                 "cardinality": "mandatory",
                 "description": "number of occupants present at time of sample within the given space",
                 "cv": [],
@@ -1059,7 +1059,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "occupant_density_at_sampling",
+                "name": "occupant density at sampling",
                 "cardinality": "mandatory",
                 "description": "average number of occupants at time of sampling per square footage",
                 "cv": [],
@@ -1068,7 +1068,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "ventilation_type",
+                "name": "ventilation type",
                 "cardinality": "mandatory",
                 "description": "The intentional movement of air from outside a building to the inside through forced or natural movement of air",
                 "cv": [
@@ -1081,7 +1081,7 @@
                 "regex": ""
             },
             {
-                "name": "rooms_that_are_on_the_same_hallway",
+                "name": "rooms that are on the same hallway",
                 "cardinality": "optional",
                 "description": "List of room(s) (room number, room name) located in the same hallway as sampling room",
                 "cv": [],
@@ -1090,7 +1090,7 @@
                 "regex": ""
             },
             {
-                "name": "wall_surface_treatment",
+                "name": "wall surface treatment",
                 "cardinality": "optional",
                 "description": "The surface treatment of interior wall",
                 "cv": [],
@@ -1099,7 +1099,7 @@
                 "regex": "[0-9]+(\\.[0-9]*)?"
             },
             {
-                "name": "wall_area",
+                "name": "wall area",
                 "cardinality": "optional",
                 "description": "The total area of the sampled room's walls",
                 "cv": [],
@@ -1108,7 +1108,7 @@
                 "regex": ""
             },
             {
-                "name": "elevator_count",
+                "name": "elevator count",
                 "cardinality": "optional",
                 "description": "The number of elevators within the built structure",
                 "cv": [],
@@ -1117,7 +1117,7 @@
                 "regex": "[0-9]+"
             },
             {
-                "name": "floor_area",
+                "name": "floor area",
                 "cardinality": "optional",
                 "description": "The area of the floor space within the room",
                 "cv": [],
@@ -1135,7 +1135,7 @@
                 "regex": ""
             },
             {
-                "name": "water_feature_type",
+                "name": "water feature type",
                 "cardinality": "optional",
                 "description": "The type of water feature present within the building being sampled",
                 "cv": [],
@@ -1144,7 +1144,7 @@
                 "regex": ""
             },
             {
-                "name": "room_door_distance",
+                "name": "room door distance",
                 "cardinality": "optional",
                 "description": "Distance between doors (meters) in the hallway between the sampling room and adjacent rooms",
                 "cv": [],
@@ -1153,7 +1153,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "room_type",
+                "name": "room type",
                 "cardinality": "optional",
                 "description": "The main purpose or activity of the sampling room. A room is any distinguishable space within a structure",
                 "cv": [],
@@ -1162,7 +1162,7 @@
                 "regex": ""
             },
             {
-                "name": "window_location",
+                "name": "window location",
                 "cardinality": "optional",
                 "description": "The relative location of the window within the room",
                 "cv": [],
@@ -1171,7 +1171,7 @@
                 "regex": ""
             },
             {
-                "name": "ceiling_type",
+                "name": "ceiling type",
                 "cardinality": "optional",
                 "description": "The type of ceiling according to the ceiling's appearance or construction",
                 "cv": [],
@@ -1180,7 +1180,7 @@
                 "regex": ""
             },
             {
-                "name": "door_direction_of_opening",
+                "name": "door direction of opening",
                 "cardinality": "optional",
                 "description": "The direction the door opens",
                 "cv": [],
@@ -1189,7 +1189,7 @@
                 "regex": ""
             },
             {
-                "name": "exposed_pipes",
+                "name": "exposed pipes",
                 "cardinality": "optional",
                 "description": "The number of exposed pipes in the room",
                 "cv": [],
@@ -1198,7 +1198,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*)))"
             },
             {
-                "name": "wall_height",
+                "name": "wall height",
                 "cardinality": "optional",
                 "description": "The average height of the walls in the sampled room",
                 "cv": [],
@@ -1207,7 +1207,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*)))"
             },
             {
-                "name": "door_type_metal",
+                "name": "door type, metal",
                 "cardinality": "optional",
                 "description": "The type of metal door",
                 "cv": [],
@@ -1216,7 +1216,7 @@
                 "regex": ""
             },
             {
-                "name": "inside_lux_light",
+                "name": "inside lux light",
                 "cardinality": "optional",
                 "description": "The recorded value at sampling time (power density)",
                 "cv": [],
@@ -1225,7 +1225,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "exposed_ductwork",
+                "name": "exposed ductwork",
                 "cardinality": "optional",
                 "description": "The amount of exposed ductwork in the room",
                 "cv": [],
@@ -1234,7 +1234,7 @@
                 "regex": ""
             },
             {
-                "name": "door_material",
+                "name": "door material",
                 "cardinality": "optional",
                 "description": "The material the door is composed of",
                 "cv": [],
@@ -1243,7 +1243,7 @@
                 "regex": ""
             },
             {
-                "name": "adjacent_rooms",
+                "name": "adjacent rooms",
                 "cardinality": "optional",
                 "description": "List of rooms (room number, room name) immediately adjacent to the sampling room",
                 "cv": [],
@@ -1252,7 +1252,7 @@
                 "regex": ""
             },
             {
-                "name": "wall_thermal_mass",
+                "name": "wall thermal mass",
                 "cardinality": "optional",
                 "description": "The ability of the wall to provide inertia against temperature fluctuations. Generally this means concrete or concrete block that is either exposed or covered only with paint",
                 "cv": [],
@@ -1261,7 +1261,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "ceiling_signs_of_watermold",
+                "name": "ceiling signs of water/mold",
                 "cardinality": "optional",
                 "description": "Signs of the presence of mold or mildew on the ceiling",
                 "cv": [],
@@ -1270,7 +1270,7 @@
                 "regex": ""
             },
             {
-                "name": "window_status",
+                "name": "window status",
                 "cardinality": "optional",
                 "description": "Defines whether the windows were open or closed during environmental testing",
                 "cv": [],
@@ -1279,25 +1279,25 @@
                 "regex": ""
             },
             {
-                "name": "door_location",
+                "name": "door location",
                 "cardinality": "optional",
                 "description": "The relative location of the door in the room",
                 "cv": [],
-                "units": "minute",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "window_signs_of_watermold",
+                "name": "window signs of water/mold",
                 "cardinality": "optional",
                 "description": "Signs of the presence of mold or mildew on the window.",
                 "cv": [],
-                "units": "minute",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "window_type",
+                "name": "window type",
                 "cardinality": "optional",
                 "description": "The type of windows",
                 "cv": [],
@@ -1306,16 +1306,16 @@
                 "regex": ""
             },
             {
-                "name": "window_material",
+                "name": "window material",
                 "cardinality": "optional",
                 "description": "The type of material used to finish a window",
                 "cv": [],
-                "units": "%",
+                "units": "g/m3",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "window_horizontal_position",
+                "name": "window horizontal position",
                 "cardinality": "optional",
                 "description": "The horizontal position of the window on the wall",
                 "cv": [],
@@ -1324,25 +1324,25 @@
                 "regex": ""
             },
             {
-                "name": "room_condition",
+                "name": "room condition",
                 "cardinality": "optional",
                 "description": "The condition of the room at the time of sampling",
                 "cv": [],
-                "units": "m",
+                "units": "mm",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "window_areasize",
+                "name": "window area/size",
                 "cardinality": "optional",
                 "description": "The window's length and width",
                 "cv": [],
-                "units": "m",
+                "units": "mm",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "sampling_floor",
+                "name": "sampling floor",
                 "cardinality": "optional",
                 "description": "The floor of the building, where the sampling room is located",
                 "cv": [],
@@ -1351,7 +1351,7 @@
                 "regex": ""
             },
             {
-                "name": "room_count",
+                "name": "room count",
                 "cardinality": "optional",
                 "description": "The total count of rooms in the built structure including all room types",
                 "cv": [],
@@ -1360,7 +1360,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "average_daily_occupancy",
+                "name": "average daily occupancy",
                 "cardinality": "optional",
                 "description": "Daily average occupancy of room. Indicate the number of person(s) daily occupying the sampling room.",
                 "cv": [],
@@ -1369,7 +1369,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "floor_condition",
+                "name": "floor condition",
                 "cardinality": "optional",
                 "description": "The physical condition of the floor at the time of sampling; photos or video preferred; use drawings to indicate location of damaged areas",
                 "cv": [],
@@ -1378,7 +1378,7 @@
                 "regex": ""
             },
             {
-                "name": "door_type_wood",
+                "name": "door type, wood",
                 "cardinality": "optional",
                 "description": "The type of wood door",
                 "cv": [],
@@ -1387,7 +1387,7 @@
                 "regex": ""
             },
             {
-                "name": "door_condition",
+                "name": "door condition",
                 "cardinality": "optional",
                 "description": "The physical condition of the door",
                 "cv": [],
@@ -1396,7 +1396,7 @@
                 "regex": ""
             },
             {
-                "name": "door_movement",
+                "name": "door movement",
                 "cardinality": "optional",
                 "description": "The type of movement of the door",
                 "cv": [],
@@ -1405,7 +1405,7 @@
                 "regex": ""
             },
             {
-                "name": "interior_wall_condition",
+                "name": "interior wall condition",
                 "cardinality": "optional",
                 "description": "The physical condition of the wall at the time of sampling; photos or video preferred; use drawings to indicate location of damaged areas",
                 "cv": [],
@@ -1414,7 +1414,7 @@
                 "regex": ""
             },
             {
-                "name": "floor_signs_of_watermold",
+                "name": "floor signs of water/mold",
                 "cardinality": "optional",
                 "description": "Signs of the presence of mold or mildew in a room",
                 "cv": [],
@@ -1423,7 +1423,7 @@
                 "regex": ""
             },
             {
-                "name": "ceiling_structure",
+                "name": "ceiling structure",
                 "cardinality": "optional",
                 "description": "The construction format of the ceiling",
                 "cv": [],
@@ -1432,7 +1432,7 @@
                 "regex": ""
             },
             {
-                "name": "wall_texture",
+                "name": "wall texture",
                 "cardinality": "optional",
                 "description": "The feel, appearance, or consistency of a wall surface",
                 "cv": [],
@@ -1441,7 +1441,7 @@
                 "regex": ""
             },
             {
-                "name": "floor_thermal_mass",
+                "name": "floor thermal mass",
                 "cardinality": "optional",
                 "description": "The ability of the floor to provide inertia against temperature fluctuations",
                 "cv": [],
@@ -1450,7 +1450,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "room_air_exchange_rate",
+                "name": "room air exchange rate",
                 "cardinality": "optional",
                 "description": "The rate at which outside air replaces indoor air in a given space",
                 "cv": [],
@@ -1459,7 +1459,7 @@
                 "regex": ""
             },
             {
-                "name": "bathroom_count",
+                "name": "bathroom count",
                 "cardinality": "optional",
                 "description": "The number of bathrooms in the building",
                 "cv": [],
@@ -1468,7 +1468,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "shading_device_signs_of_watermold",
+                "name": "shading device signs of water/mold",
                 "cardinality": "optional",
                 "description": "Signs of the presence of mold or mildew on the shading device",
                 "cv": [],
@@ -1477,7 +1477,7 @@
                 "regex": ""
             },
             {
-                "name": "window_covering",
+                "name": "window covering",
                 "cardinality": "optional",
                 "description": "The type of window covering",
                 "cv": [],
@@ -1486,7 +1486,7 @@
                 "regex": ""
             },
             {
-                "name": "ceiling_texture",
+                "name": "ceiling texture",
                 "cardinality": "optional",
                 "description": "The feel, appearance, or consistency of a ceiling surface",
                 "cv": [],
@@ -1495,7 +1495,7 @@
                 "regex": ""
             },
             {
-                "name": "maximum_occupancy",
+                "name": "maximum occupancy",
                 "cardinality": "optional",
                 "description": "The maximum amount of people allowed in the indoor environment",
                 "cv": [],
@@ -1504,7 +1504,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "gender_of_restroom",
+                "name": "gender of restroom",
                 "cardinality": "optional",
                 "description": "The gender type of the restroom",
                 "cv": [],
@@ -1513,7 +1513,7 @@
                 "regex": ""
             },
             {
-                "name": "ceiling_condition",
+                "name": "ceiling condition",
                 "cardinality": "optional",
                 "description": "The physical condition of the ceiling at the time of sampling; photos or video preferred; use drawings to indicate location of damaged areas",
                 "cv": [],
@@ -1522,88 +1522,88 @@
                 "regex": ""
             },
             {
-                "name": "floor_structure",
+                "name": "floor structure",
                 "cardinality": "optional",
                 "description": "Refers to the structural elements and subfloor upon which the finish flooring is installed",
                 "cv": [],
-                "units": "minute",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "rooms_that_share_a_wall_with_sampling_room",
+                "name": "rooms that share a wall with sampling room",
                 "cardinality": "optional",
                 "description": "List of room(s) (room number, room name) sharing a wall with the sampling room",
                 "cv": [],
-                "units": "minute",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "wall_finish_material",
+                "name": "wall finish material",
                 "cardinality": "optional",
                 "description": "The material utilized to finish the outer most layer of the wall",
                 "cv": [],
-                "units": "minute",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "room_occupancy",
+                "name": "room occupancy",
                 "cardinality": "optional",
                 "description": "Count of room occupancy at time of sampling",
                 "cv": [],
-                "units": "minute",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "room_location_in_building",
+                "name": "room location in building",
                 "cardinality": "optional",
                 "description": "The position of the room within the building",
                 "cv": [],
-                "units": "minute",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "floor_finish_material",
+                "name": "floor finish material",
                 "cardinality": "optional",
                 "description": "The floor covering type; the finished surface that is walked on",
                 "cv": [],
-                "units": "minute",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "room_window_count",
+                "name": "room window count",
                 "cardinality": "optional",
                 "description": "Number of windows in the room",
                 "cv": [],
-                "units": "minute",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "sampling_room_id_or_name",
+                "name": "sampling room id or name",
                 "cardinality": "optional",
                 "description": "Explain how and for how long the soil sample was stored before DNA extraction (fresh/frozen/other).",
                 "cv": [],
-                "units": "day",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "height_carpet_fiber_mat",
+                "name": "height carpet fiber mat",
                 "cardinality": "optional",
                 "description": "The average carpet fiber height in the indoor environment",
                 "cv": [],
-                "units": "cm",
+                "units": "mm",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "ceiling_area",
+                "name": "ceiling area",
                 "cardinality": "optional",
                 "description": "The area of the ceiling space within the room",
                 "cv": [],
@@ -1612,7 +1612,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "heating_system_delivery_method",
+                "name": "heating system delivery method",
                 "cardinality": "optional",
                 "description": "The method by which the heat is delivered through the system",
                 "cv": [],
@@ -1621,7 +1621,7 @@
                 "regex": ""
             },
             {
-                "name": "room_sampling_position",
+                "name": "room sampling position",
                 "cardinality": "optional",
                 "description": "The horizontal sampling position in the room relative to architectural elements",
                 "cv": [],
@@ -1630,7 +1630,7 @@
                 "regex": ""
             },
             {
-                "name": "room_moisture_damage_or_mold_history",
+                "name": "room moisture damage or mold history",
                 "cardinality": "optional",
                 "description": "The history of moisture damage or mold in the past 12 months. Number of events of moisture damage or mold observed",
                 "cv": [],
@@ -1639,7 +1639,7 @@
                 "regex": ""
             },
             {
-                "name": "door_signs_of_watermold",
+                "name": "door signs of water/mold",
                 "cardinality": "optional",
                 "description": "Signs of the presence of mold or mildew on a door",
                 "cv": [],
@@ -1648,7 +1648,7 @@
                 "regex": ""
             },
             {
-                "name": "room_net_area",
+                "name": "room net area",
                 "cardinality": "optional",
                 "description": "The net floor area of sampling room. Net area excludes wall thicknesses",
                 "cv": [],
@@ -1657,7 +1657,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "ceiling_thermal_mass",
+                "name": "ceiling thermal mass",
                 "cardinality": "optional",
                 "description": "The ability of the ceiling to provide inertia against temperature fluctuations. Generally this means concrete that is exposed. A metal deck that supports a concrete slab will act thermally as long as it is exposed to room air flow",
                 "cv": [],
@@ -1666,25 +1666,25 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "rooms_that_share_a_door_with_sampling_room",
+                "name": "rooms that share a door with sampling room",
                 "cardinality": "optional",
                 "description": "List of room(s) (room number, room name) sharing a door with the sampling room",
                 "cv": [],
-                "units": "day",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "orientations_of_exterior_window",
+                "name": "orientations of exterior window",
                 "cardinality": "optional",
                 "description": "The compass direction the exterior window of the room is facing",
                 "cv": [],
-                "units": "day",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "wall_location",
+                "name": "wall location",
                 "cardinality": "optional",
                 "description": "The relative location of the wall within the room",
                 "cv": [],
@@ -1693,7 +1693,7 @@
                 "regex": ""
             },
             {
-                "name": "room_volume",
+                "name": "room volume",
                 "cardinality": "optional",
                 "description": "Volume of sampling room",
                 "cv": [],
@@ -1702,7 +1702,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "door_type_composite",
+                "name": "door type, composite",
                 "cardinality": "optional",
                 "description": "The composite type of the door",
                 "cv": [],
@@ -1711,7 +1711,7 @@
                 "regex": ""
             },
             {
-                "name": "bedroom_count",
+                "name": "bedroom count",
                 "cardinality": "optional",
                 "description": "The number of bedrooms in the building",
                 "cv": [],
@@ -1720,7 +1720,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "wall_construction_type",
+                "name": "wall construction type",
                 "cardinality": "optional",
                 "description": "The building class of the wall defined by the composition of the building elements and fire-resistance rating.",
                 "cv": [],
@@ -1729,7 +1729,7 @@
                 "regex": ""
             },
             {
-                "name": "wall_signs_of_watermold",
+                "name": "wall signs of water/mold",
                 "cardinality": "optional",
                 "description": "Signs of the presence of mold or mildew on a wall",
                 "cv": [],
@@ -1738,7 +1738,7 @@
                 "regex": ""
             },
             {
-                "name": "window_condition",
+                "name": "window condition",
                 "cardinality": "optional",
                 "description": "The physical condition of the window at the time of sampling",
                 "cv": [],
@@ -1747,7 +1747,7 @@
                 "regex": ""
             },
             {
-                "name": "escalator_count",
+                "name": "escalator count",
                 "cardinality": "optional",
                 "description": "The number of escalators within the built structure",
                 "cv": [],
@@ -1756,7 +1756,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "cooling_system_identifier",
+                "name": "cooling system identifier",
                 "cardinality": "optional",
                 "description": "The cooling system identifier",
                 "cv": [],
@@ -1765,7 +1765,7 @@
                 "regex": ""
             },
             {
-                "name": "quadrant_position",
+                "name": "quadrant position",
                 "cardinality": "optional",
                 "description": "The quadrant position of the sampling room within the building",
                 "cv": [],
@@ -1774,7 +1774,7 @@
                 "regex": ""
             },
             {
-                "name": "number_of_pets",
+                "name": "number of pets",
                 "cardinality": "optional",
                 "description": "The number of pets residing in the sampled space",
                 "cv": [],
@@ -1783,7 +1783,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "window_vertical_position",
+                "name": "window vertical position",
                 "cardinality": "optional",
                 "description": "The vertical position of the window on the wall",
                 "cv": [],
@@ -1792,7 +1792,7 @@
                 "regex": ""
             },
             {
-                "name": "fireplace_type",
+                "name": "fireplace type",
                 "cardinality": "optional",
                 "description": "A firebox with chimney",
                 "cv": [],
@@ -1801,7 +1801,7 @@
                 "regex": ""
             },
             {
-                "name": "heating_delivery_locations",
+                "name": "heating delivery locations",
                 "cardinality": "optional",
                 "description": "The location of heat delivery within the room",
                 "cv": [],
@@ -1810,7 +1810,7 @@
                 "regex": ""
             },
             {
-                "name": "ceiling_finish_material",
+                "name": "ceiling finish material",
                 "cardinality": "optional",
                 "description": "The type of material used to finish a ceiling",
                 "cv": [],
@@ -1819,7 +1819,7 @@
                 "regex": ""
             },
             {
-                "name": "door_type",
+                "name": "door type",
                 "cardinality": "optional",
                 "description": "The type of door material",
                 "cv": [],
@@ -1828,7 +1828,7 @@
                 "regex": ""
             },
             {
-                "name": "number_of_houseplants",
+                "name": "number of houseplants",
                 "cardinality": "optional",
                 "description": "The number of plant(s) in the sampling space",
                 "cv": [],
@@ -1837,7 +1837,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "floor_age",
+                "name": "floor age",
                 "cardinality": "optional",
                 "description": "The time period since instalment of the carpet or flooring",
                 "cv": [],
@@ -1846,7 +1846,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "rooms_connected_by_a_doorway",
+                "name": "rooms connected by a doorway",
                 "cardinality": "optional",
                 "description": "List of rooms connected to the sampling room by a doorway",
                 "cv": [],
@@ -1864,7 +1864,7 @@
                 "regex": ""
             },
             {
-                "name": "specific_humidity",
+                "name": "specific humidity",
                 "cardinality": "optional",
                 "description": "The mass of water vapour in a unit mass of moist air, usually expressed as grams of vapour per kilogram of air, or, in air conditioning, as grains per pound.",
                 "cv": [],
@@ -1873,7 +1873,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "window_open_frequency",
+                "name": "window open frequency",
                 "cardinality": "optional",
                 "description": "The number of times windows are opened per week",
                 "cv": [],
@@ -1882,7 +1882,7 @@
                 "regex": ""
             },
             {
-                "name": "room_dimensions",
+                "name": "room dimensions",
                 "cardinality": "optional",
                 "description": "The length, width and height of sampling room",
                 "cv": [],
@@ -1891,25 +1891,25 @@
                 "regex": ""
             },
             {
-                "name": "water_feature_size",
+                "name": "water feature size",
                 "cardinality": "optional",
                 "description": "The size of the water feature",
                 "cv": [],
-                "units": "ha",
+                "units": "m2",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "amount_or_size_of_sample_collected",
+                "name": "amount or size of sample collected",
                 "cardinality": "optional",
                 "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.",
                 "cv": [],
-                "units": "kg",
+                "units": "m3",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "sample_size_sorting_method",
+                "name": "sample size sorting method",
                 "cardinality": "optional",
                 "description": "method by which samples are sorted",
                 "cv": [],
@@ -1918,7 +1918,7 @@
                 "regex": ""
             },
             {
-                "name": "organism_count",
+                "name": "organism count",
                 "cardinality": "mandatory",
                 "description": "Total cell count of any organism (or group of organisms) per gram, volume or area of sample, should include name of organism followed by count. The method that was used for the enumeration (e.g. qPCR, atp, mpn, etc.) Should also be provided. (example: total prokaryotes; 3.5e7 cells per ml; qpcr)",
                 "cv": [],
@@ -1927,7 +1927,7 @@
                 "regex": ""
             },
             {
-                "name": "mechanical_structure",
+                "name": "mechanical structure",
                 "cardinality": "optional",
                 "description": "mechanical structure: a moving structure",
                 "cv": [],
@@ -1945,7 +1945,7 @@
                 "regex": ""
             },
             {
-                "name": "geographic_location_country_andor_sea",
+                "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
@@ -2020,13 +2020,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
+                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
-                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -2094,10 +2094,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
-                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
+                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -2111,7 +2111,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia, Federated States of",
+                    "Micronesia",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -2134,7 +2134,6 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
-                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -2160,7 +2159,6 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
-                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -2168,7 +2166,6 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
-                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -2184,15 +2181,14 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
-                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
-                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
+                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -2201,7 +2197,6 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
-                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -2222,8 +2217,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Wake Island",
                     "Virgin Islands",
+                    "Wake Island",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -2249,7 +2244,7 @@
                 "regex": ""
             },
             {
-                "name": "host_disease_status",
+                "name": "host disease status",
                 "cardinality": "optional",
                 "description": "list of diseases with which the host has been diagnosed; can include multiple diagnoses. The value of the field depends on host; for humans the terms should be chosen from DO (Disease Ontology) at http://www.disease-ontology.org, other hosts are free text",
                 "cv": [],
@@ -2258,7 +2253,7 @@
                 "regex": ""
             },
             {
-                "name": "host_scientific_name",
+                "name": "host scientific name",
                 "cardinality": "optional",
                 "description": "Scientific name of the natural (as opposed to laboratory) host to the organism from which sample was obtained.",
                 "cv": [],
@@ -2267,7 +2262,7 @@
                 "regex": ""
             },
             {
-                "name": "relative_air_humidity",
+                "name": "relative air humidity",
                 "cardinality": "mandatory",
                 "description": "partial vapor and air pressure, density of the vapor and air, or by the actual mass of the vapor and air",
                 "cv": [],
@@ -2276,7 +2271,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "absolute_air_humidity",
+                "name": "absolute air humidity",
                 "cardinality": "mandatory",
                 "description": "actual mass of water vapor - mh20 - present in the air water vapor mixture",
                 "cv": [],
@@ -2285,7 +2280,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "surface_humidity",
+                "name": "surface humidity",
                 "cardinality": "optional",
                 "description": "surface water activity as a function of air and material moisture",
                 "cv": [],
@@ -2294,7 +2289,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "air_temperature",
+                "name": "air temperature",
                 "cardinality": "mandatory",
                 "description": "temperature of the air at time of sampling",
                 "cv": [],
@@ -2303,7 +2298,7 @@
                 "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "surface_temperature",
+                "name": "surface temperature",
                 "cardinality": "optional",
                 "description": "temperature of the surface at time of sampling",
                 "cv": [],
@@ -2312,7 +2307,7 @@
                 "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "surface_moisture",
+                "name": "surface moisture",
                 "cardinality": "optional",
                 "description": "water held on the surface",
                 "cv": [],
@@ -2321,7 +2316,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "surface_moisture_ph",
+                "name": "surface moisture pH",
                 "cardinality": "optional",
                 "description": "pH measurement of surface",
                 "cv": [],
@@ -2330,7 +2325,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "dew_point",
+                "name": "dew point",
                 "cardinality": "optional",
                 "description": "The temperature to which a given parcel of humid air must be cooled, at constant barometric pressure, for water vapor to condense into water",
                 "cv": [],
@@ -2348,16 +2343,16 @@
                 "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "last_time_sweptmoppedvacuumed",
+                "name": "last time swept/mopped/vacuumed",
                 "cardinality": "optional",
                 "description": "The last time the floor was cleaned (swept, mopped, vacuumed)",
                 "cv": [],
                 "units": "",
-                "field_type": "TEXT_FIELD",
+                "field_type": "DATE_FIELD",
                 "regex": ""
             },
             {
-                "name": "number_of_residents",
+                "name": "number of residents",
                 "cardinality": "optional",
                 "description": "The number of individuals currently occupying in the sampling location",
                 "cv": [],
@@ -2366,7 +2361,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "average_dew_point",
+                "name": "average dew point",
                 "cardinality": "optional",
                 "description": "The average of dew point measures taken at the beginning of every hour over a 24 hour period on the sampling day",
                 "cv": [],
@@ -2375,7 +2370,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "frequency_of_cleaning",
+                "name": "frequency of cleaning",
                 "cardinality": "optional",
                 "description": "The number of times the sample location is cleaned. Frequency of cleaning might be on a Daily basis, Weekly, Monthly, Quarterly or Annually.",
                 "cv": [
@@ -2385,12 +2380,12 @@
                     "Quarterly",
                     "Weekly"
                 ],
-                "units": "minute",
+                "units": "year",
                 "field_type": "TEXT_CHOICE_FIELD",
                 "regex": ""
             },
             {
-                "name": "carbon_dioxide",
+                "name": "carbon dioxide",
                 "cardinality": "mandatory",
                 "description": "carbon dioxide (gas) amount or concentration at the time of sampling",
                 "cv": [],
@@ -2399,7 +2394,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "source_material_identifiers",
+                "name": "source material identifiers",
                 "cardinality": "optional",
                 "description": "A unique identifier assigned to a material sample (as defined by http://rs.tdwg.org/dwc/terms/materialSampleID, and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples. The INSDC qualifiers /specimen_voucher, /bio_material, or /culture_collection may or may not share the same value as the source_mat_id field. For instance, the /specimen_voucher qualifier and source_mat_id may both contain 'UAM:Herps:14' , referring to both the specimen voucher and sampled tissue with the same identifier. However, the /culture_collection qualifier may refer to a value from an initial culture (e.g. ATCC:11775) while source_mat_id would refer to an identifier from some derived culture from which the nucleic acids were extracted (e.g. xatc123 or ark:/2154/R2).",
                 "cv": [],
@@ -2408,7 +2403,7 @@
                 "regex": ""
             },
             {
-                "name": "seasonal_use",
+                "name": "seasonal use",
                 "cardinality": "optional",
                 "description": "The seasons the space is occupied",
                 "cv": [],
@@ -2422,11 +2417,11 @@
                 "description": "The season when sampling occurred. Any of the four periods into which the year is divided by the equinoxes and solstices. This field accepts terms listed under season (http://purl.obolibrary.org/obo/NCIT_C94729).",
                 "cv": [],
                 "units": "",
-                "field_type": "TEXT_FIELD",
+                "field_type": "ONTOLOGY_FIELD",
                 "regex": ""
             },
             {
-                "name": "average_temperature",
+                "name": "average temperature",
                 "cardinality": "optional",
                 "description": "The average of temperatures taken at the beginning of every hour over a 24 hour period on the sampling day",
                 "cv": [],
@@ -2435,12 +2430,12 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "host_specificity_or_range",
+                "name": "host specificity or range",
                 "cardinality": "optional",
                 "description": "The range and diversity of host species that an organism is capable of infecting, defined by NCBI taxonomy identifier.",
                 "cv": [],
                 "units": "",
-                "field_type": "TEXT_FIELD",
+                "field_type": "ONTOLOGY_FIELD",
                 "regex": ""
             },
             {
@@ -2453,7 +2448,7 @@
                 "regex": ""
             },
             {
-                "name": "negative_control_type",
+                "name": "negative control type",
                 "cardinality": "optional",
                 "description": "The substance or equipment used as a negative control in an investigation",
                 "cv": [],
@@ -2462,7 +2457,7 @@
                 "regex": ""
             },
             {
-                "name": "positive_control_type",
+                "name": "positive control type",
                 "cardinality": "optional",
                 "description": "The substance, mixture, product, or apparatus used to verify that a process which is part of an investigation delivers a true positive.",
                 "cv": [],
@@ -2471,7 +2466,7 @@
                 "regex": ""
             },
             {
-                "name": "experimental_factor",
+                "name": "experimental factor",
                 "cardinality": "optional",
                 "description": "Experimental factors are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI). For a browser of EFO (v 2.95) terms, please see http://purl.bioontology.org/ontology/EFO; for a browser of OBI (v 2018-02-12) terms please see http://purl.bioontology.org/ontology/OBI. E.g. time series design [EFO:EFO_0001779]",
                 "cv": [],
@@ -2480,7 +2475,7 @@
                 "regex": ""
             },
             {
-                "name": "encoded_traits",
+                "name": "encoded traits",
                 "cardinality": "optional",
                 "description": "Should include key traits like antibiotic resistance or xenobiotic degradation phenotypes for plasmids, converting genes for phage",
                 "cv": [],
@@ -2489,7 +2484,7 @@
                 "regex": ""
             },
             {
-                "name": "subspecific_genetic_lineage",
+                "name": "subspecific genetic lineage",
                 "cardinality": "optional",
                 "description": "Information about the genetic distinctness of the sequenced organism below the subspecies level, e.g., serovar, serotype, biotype, ecotype, or any relevant genetic typing schemes like Group I plasmid. Subspecies should not be recorded in this term, but in the NCBI taxonomy. Supply both the lineage name and the lineage rank separated by a colon, e.g., biovar:abc123.",
                 "cv": [],
@@ -2498,7 +2493,7 @@
                 "regex": ""
             },
             {
-                "name": "taxonomic_classification",
+                "name": "taxonomic classification",
                 "cardinality": "optional",
                 "description": "Method used for taxonomic classification, along with reference database used, classification rank, and thresholds used to classify new genomes. Expected values are: classification method, database name, and other parameters e.g. vConTACT vContact2 (references from NCBI RefSeq v83, genus rank classification, default parameters)",
                 "cv": [],
@@ -2507,7 +2502,7 @@
                 "regex": ""
             },
             {
-                "name": "isolation_and_growth_condition",
+                "name": "isolation and growth condition",
                 "cardinality": "optional",
                 "description": "Publication reference in the form of pubmed ID (pmid), digital object identifier (doi) or url for isolation and growth condition specifications of the organism/material. Mandatory for MIGS and MIMARKS Specimen.",
                 "cv": [],
@@ -2516,7 +2511,7 @@
                 "regex": ""
             },
             {
-                "name": "annotation_source",
+                "name": "annotation source",
                 "cardinality": "optional",
                 "description": "For cases where annotation was provided by a community jamboree or model organism database rather than by a specific submitter",
                 "cv": [],
@@ -2525,7 +2520,7 @@
                 "regex": ""
             },
             {
-                "name": "reference_for_biomaterial",
+                "name": "reference for biomaterial",
                 "cardinality": "optional",
                 "description": "Primary publication if isolated before genome publication; otherwise, primary genome report. Mandatory for MIGS of bacteria and archaea.",
                 "cv": [],
@@ -2534,7 +2529,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_material_processing",
+                "name": "sample material processing",
                 "cardinality": "optional",
                 "description": "A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.",
                 "cv": [],
@@ -2543,16 +2538,16 @@
                 "regex": ""
             },
             {
-                "name": "sample_volume_or_weight_for_dna_extraction",
+                "name": "sample volume or weight for DNA extraction",
                 "cardinality": "optional",
                 "description": "Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term 'sample size'.",
                 "cv": [],
-                "units": "mL",
+                "units": "ng",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "nucleic_acid_extraction",
+                "name": "nucleic acid extraction",
                 "cardinality": "optional",
                 "description": "A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the material separation to recover the nucleic acid fraction from a sample",
                 "cv": [],
@@ -2561,7 +2556,7 @@
                 "regex": ""
             },
             {
-                "name": "nucleic_acid_amplification",
+                "name": "nucleic acid amplification",
                 "cardinality": "optional",
                 "description": "A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the enzymatic amplification (PCR, TMA, NASBA) of specific nucleic acids",
                 "cv": [],
@@ -2570,7 +2565,7 @@
                 "regex": ""
             },
             {
-                "name": "library_size",
+                "name": "library size",
                 "cardinality": "optional",
                 "description": "Total number of clones in the library prepared for the project",
                 "cv": [],
@@ -2579,7 +2574,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "library_reads_sequenced",
+                "name": "library reads sequenced",
                 "cardinality": "optional",
                 "description": "Total number of clones sequenced from the library",
                 "cv": [],
@@ -2588,7 +2583,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "library_construction_method",
+                "name": "library construction method",
                 "cardinality": "optional",
                 "description": "Library construction method used for clone libraries",
                 "cv": [],
@@ -2597,7 +2592,7 @@
                 "regex": ""
             },
             {
-                "name": "library_vector",
+                "name": "library vector",
                 "cardinality": "optional",
                 "description": "Cloning vector type(s) used in construction of libraries",
                 "cv": [],
@@ -2606,7 +2601,7 @@
                 "regex": ""
             },
             {
-                "name": "library_screening_strategy",
+                "name": "library screening strategy",
                 "cardinality": "optional",
                 "description": "Specific enrichment or screening methods applied before and/or after creating clone libraries in order to select a specific group of sequences",
                 "cv": [],
@@ -2615,7 +2610,7 @@
                 "regex": ""
             },
             {
-                "name": "pcr_conditions",
+                "name": "pcr conditions",
                 "cardinality": "optional",
                 "description": "Description of reaction conditions and components for PCR in the form of 'initial denaturation:94degC_1.5min; annealing=...'",
                 "cv": [],
@@ -2624,7 +2619,7 @@
                 "regex": ""
             },
             {
-                "name": "pcr_primers",
+                "name": "pcr primers",
                 "cardinality": "optional",
                 "description": "PCR primers that were used to amplify the sequence of the targeted gene, locus or subfragment. This field should contain all the primers used for a single PCR reaction if multiple forward or reverse primers are present in a single PCR reaction. The primer sequence should be reported in uppercase letters",
                 "cv": [],
@@ -2642,25 +2637,25 @@
                 "regex": ""
             },
             {
-                "name": "date_last_rain",
+                "name": "date last rain",
                 "cardinality": "optional",
                 "description": "The date of the last time it rained",
                 "cv": [],
                 "units": "",
-                "field_type": "TEXT_FIELD",
+                "field_type": "DATE_FIELD",
                 "regex": ""
             },
             {
-                "name": "sampling_day_weather",
+                "name": "sampling day weather",
                 "cardinality": "optional",
                 "description": "The weather on the sampling day",
                 "cv": [],
-                "units": "%",
+                "units": "g/m3",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "amount_of_light",
+                "name": "amount of light",
                 "cardinality": "optional",
                 "description": "The unit of illuminance and luminous emittance, measuring luminous flux per unit area",
                 "cv": [],
@@ -2669,7 +2664,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "train_line",
+                "name": "train line",
                 "cardinality": "optional",
                 "description": "The subway line name",
                 "cv": [],
@@ -2678,11 +2673,11 @@
                 "regex": ""
             },
             {
-                "name": "outside_relative_humidity",
+                "name": "outside relative humidity",
                 "cardinality": "optional",
                 "description": "The recorded outside relative humidity value at the time of sampling",
                 "cv": [],
-                "units": "%",
+                "units": "g/m3",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -2691,12 +2686,12 @@
                 "cardinality": "optional",
                 "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
                 "cv": [],
-                "units": "m",
+                "units": "mm",
                 "field_type": "TEXT_FIELD",
                 "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
-                "name": "door_area_or_size",
+                "name": "door area or size",
                 "cardinality": "optional",
                 "description": "The size of the door",
                 "cv": [],
@@ -2705,7 +2700,7 @@
                 "regex": ""
             },
             {
-                "name": "visual_media",
+                "name": "visual media",
                 "cardinality": "optional",
                 "description": "The building visual media",
                 "cv": [],
@@ -2714,7 +2709,7 @@
                 "regex": ""
             },
             {
-                "name": "built_structure_setting",
+                "name": "built structure setting",
                 "cardinality": "optional",
                 "description": "The characterization of the location of the built structure as high or low human density",
                 "cv": [],
@@ -2723,7 +2718,7 @@
                 "regex": ""
             },
             {
-                "name": "built_structure_type",
+                "name": "built structure type",
                 "cardinality": "optional",
                 "description": "A physical structure that is a body or assemblage of bodies in space to form a system capable of supporting loads",
                 "cv": [],
@@ -2732,7 +2727,7 @@
                 "regex": ""
             },
             {
-                "name": "exterior_door_count",
+                "name": "exterior door count",
                 "cardinality": "optional",
                 "description": "The number of exterior doors in the built structure",
                 "cv": [],
@@ -2741,7 +2736,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "design_construction_and_operation_documents",
+                "name": "design, construction, and operation documents",
                 "cardinality": "optional",
                 "description": "The building design, construction and operation documents",
                 "cv": [],
@@ -2750,7 +2745,7 @@
                 "regex": ""
             },
             {
-                "name": "shading_device_condition",
+                "name": "shading device condition",
                 "cardinality": "optional",
                 "description": "The physical condition of the shading device at the time of sampling",
                 "cv": [],
@@ -2759,52 +2754,52 @@
                 "regex": ""
             },
             {
-                "name": "occupancy_documentation",
+                "name": "occupancy documentation",
                 "cardinality": "optional",
                 "description": "The type of documentation of occupancy",
                 "cv": [],
-                "units": "minute",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "floor_count",
+                "name": "floor count",
                 "cardinality": "optional",
                 "description": "The number of floors in the building, including basements and mechanical penthouse",
                 "cv": [],
-                "units": "minute",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "shading_device_material",
+                "name": "shading device material",
                 "cardinality": "optional",
                 "description": "The material the shading device is composed of",
                 "cv": [],
-                "units": "minute",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "built_structure_age",
+                "name": "built structure age",
                 "cardinality": "optional",
                 "description": "The age of the built structure since construction",
                 "cv": [],
-                "units": "day",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "hallwaycorridor_count",
+                "name": "hallway/corridor count",
                 "cardinality": "optional",
                 "description": "The total count of hallways and corridors in the built structure",
                 "cv": [],
-                "units": "%",
+                "units": "g/m3",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
             {
-                "name": "architectural_structure",
+                "name": "architectural structure",
                 "cardinality": "optional",
                 "description": "An architectural structure is a human-made, free-standing, immobile outdoor construction",
                 "cv": [],
@@ -2813,7 +2808,7 @@
                 "regex": ""
             },
             {
-                "name": "shading_device_type",
+                "name": "shading device type",
                 "cardinality": "optional",
                 "description": "The type of shading device",
                 "cv": [],
@@ -2822,7 +2817,7 @@
                 "regex": ""
             },
             {
-                "name": "shading_device_location",
+                "name": "shading device location",
                 "cardinality": "optional",
                 "description": "The location of the shading device in relation to the built structure",
                 "cv": [],
@@ -2849,7 +2844,7 @@
                 "regex": ""
             },
             {
-                "name": "room_architectural_elements",
+                "name": "room architectural elements",
                 "cardinality": "optional",
                 "description": "The unique details and component parts that, together, form the architecture of a distinguishable space within a built structure",
                 "cv": [],
@@ -2858,7 +2853,7 @@
                 "regex": ""
             },
             {
-                "name": "aerospace_structure",
+                "name": "aerospace structure",
                 "cardinality": "optional",
                 "description": "Aerospace structures typically consist of thin plates with stiffeners for the external surfaces, bulkheads and frames to support the shape and fasteners such as welds, rivets, screws and bolts to hold the components together",
                 "cv": [],

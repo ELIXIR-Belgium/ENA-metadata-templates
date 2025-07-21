@@ -510,7 +510,7 @@
                 "regex": ""
             },
             {
-                "name": "organism_part",
+                "name": "organism part",
                 "cardinality": "optional",
                 "description": "The part of organism's anatomy or substance arising from an organism from which the biomaterial was derived, excludes cells.",
                 "cv": [],
@@ -537,7 +537,7 @@
                 "regex": ""
             },
             {
-                "name": "collection_date",
+                "name": "collection date",
                 "cardinality": "mandatory",
                 "description": "The date the sample was collected with the intention of sequencing, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid ISO8601 compliant times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008.",
                 "cv": [],
@@ -546,7 +546,7 @@
                 "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "sampling_time_point",
+                "name": "sampling time point",
                 "cardinality": "optional",
                 "description": "Time point at which a sample or observation is made or taken from a biomaterial as measured from some reference point. Indicate the timepoint written in ISO 8601 format.",
                 "cv": [],
@@ -555,7 +555,7 @@
                 "regex": ""
             },
             {
-                "name": "initial_time_point",
+                "name": "initial time point",
                 "cardinality": "optional",
                 "description": "The first time point measured at the start of some process.",
                 "cv": [],
@@ -582,7 +582,7 @@
                 "regex": ""
             },
             {
-                "name": "geographic_location_country_andor_sea",
+                "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
@@ -657,13 +657,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
+                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
-                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -731,10 +731,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
-                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
+                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -748,7 +748,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia, Federated States of",
+                    "Micronesia",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -771,7 +771,6 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
-                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -797,7 +796,6 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
-                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -805,7 +803,6 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
-                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -821,15 +818,14 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
-                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
-                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
+                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -838,7 +834,6 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
-                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -859,8 +854,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Wake Island",
                     "Virgin Islands",
+                    "Wake Island",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -895,7 +890,7 @@
                 "regex": ""
             },
             {
-                "name": "cellular_component",
+                "name": "cellular component",
                 "cardinality": "optional",
                 "description": "The part of a cell or its extracellular environment in which a gene product is located.",
                 "cv": [],
@@ -913,7 +908,7 @@
                 "regex": ""
             },
             {
-                "name": "disease_staging",
+                "name": "disease staging",
                 "cardinality": "optional",
                 "description": "The stage or progression of a disease in an organism. Includes pathological staging of cancers and other disease progression. E.g. Dukes C stage describing colon cancer (EFO_0000410).",
                 "cv": [],
@@ -994,7 +989,7 @@
                 "regex": ""
             },
             {
-                "name": "chemical_compound",
+                "name": "chemical compound",
                 "cardinality": "optional",
                 "description": "A drug, solvent, chemical, etc., with a property that can be measured such as concentration (http://purl.obolibrary.org/obo/CHEBI_37577).",
                 "cv": [],
@@ -1003,7 +998,7 @@
                 "regex": ""
             },
             {
-                "name": "experimental_factor_1",
+                "name": "experimental factor 1",
                 "cardinality": "optional",
                 "description": "A variable that the experiment is based on.",
                 "cv": [
@@ -1048,7 +1043,7 @@
                 "regex": ""
             },
             {
-                "name": "experimental_factor_2",
+                "name": "experimental factor 2",
                 "cardinality": "optional",
                 "description": "A variable that the experiment is based on.",
                 "cv": [
@@ -1093,7 +1088,7 @@
                 "regex": ""
             },
             {
-                "name": "experimental_factor_3",
+                "name": "experimental factor 3",
                 "cardinality": "optional",
                 "description": "A variable that the experiment is based on.",
                 "cv": [
@@ -1138,7 +1133,7 @@
                 "regex": ""
             },
             {
-                "name": "experimental_factor_4",
+                "name": "experimental factor 4",
                 "cardinality": "optional",
                 "description": "A variable that the experiment is based on.",
                 "cv": [
@@ -1183,7 +1178,7 @@
                 "regex": ""
             },
             {
-                "name": "experimental_factor_5",
+                "name": "experimental factor 5",
                 "cardinality": "optional",
                 "description": "A variable that the experiment is based on.",
                 "cv": [
@@ -1246,7 +1241,7 @@
                 "regex": ""
             },
             {
-                "name": "genetic_modification",
+                "name": "genetic modification",
                 "cardinality": "optional",
                 "description": "A genetic modification of the genome of an organism which may occur naturally by spontaneous mutation, or be introduced by some experimental means. Examples of genetic modification include specification of a transgene or the gene knocked-out or details of transient transfection.",
                 "cv": [],
@@ -1264,7 +1259,7 @@
                 "regex": ""
             },
             {
-                "name": "environmental_stress",
+                "name": "environmental stress",
                 "cardinality": "optional",
                 "description": "Environmental stress is a treatment where some aspect of the environment is perturbed in order to stress the organism or culture, e.g. change in temperature, change in watering regime.",
                 "cv": [],
@@ -1273,7 +1268,7 @@
                 "regex": ""
             },
             {
-                "name": "environmental_history",
+                "name": "environmental history",
                 "cardinality": "optional",
                 "description": "Information concerning the envinonrment a material entity has been exposed to, such as an organism from a lake.",
                 "cv": [],
@@ -1282,7 +1277,7 @@
                 "regex": ""
             },
             {
-                "name": "growth_condition",
+                "name": "growth condition",
                 "cardinality": "optional",
                 "description": "A role that a material entity can play which enables particular conditions used to grow organisms or parts of the organism. This includes isolated environments such as cultures and open environments such as field studies.",
                 "cv": [],

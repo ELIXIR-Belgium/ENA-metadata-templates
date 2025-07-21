@@ -492,7 +492,7 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "sample_storage_conditions",
+                "name": "sample storage conditions",
                 "cardinality": "optional",
                 "description": "Conditions at which sample was stored, usually storage temperature, duration and location. In soil context: Explain how and for how long the soil sample was stored before DNA extraction (fresh/frozen/other).",
                 "cv": [],
@@ -501,7 +501,7 @@
                 "regex": ""
             },
             {
-                "name": "subject_exposure",
+                "name": "subject exposure",
                 "cardinality": "optional",
                 "description": "Exposure of the subject to infected human or animals, such as poultry, wild bird or swine. If multiple exposures are applicable, please state them separated by semicolon. Example: poultry; wild bird",
                 "cv": [],
@@ -510,7 +510,7 @@
                 "regex": ""
             },
             {
-                "name": "travelrelation",
+                "name": "travel-relation",
                 "cardinality": "optional",
                 "description": "Designates the relation of the main diagnosis to the patient's travel.",
                 "cv": [
@@ -523,7 +523,7 @@
                 "regex": ""
             },
             {
-                "name": "clinical_setting",
+                "name": "clinical setting",
                 "cardinality": "optional",
                 "description": "The timing of the clinic visit in relation to travel.",
                 "cv": [
@@ -535,7 +535,7 @@
                 "regex": ""
             },
             {
-                "name": "country_of_travel",
+                "name": "country of travel",
                 "cardinality": "optional",
                 "description": "The name of the country of patient's travel.",
                 "cv": [
@@ -823,11 +823,11 @@
                 "description": "name of persons or institute who collected the specimen",
                 "cv": [],
                 "units": "",
-                "field_type": "TEXT_FIELD",
+                "field_type": "TEXT_AREA_FIELD",
                 "regex": ""
             },
             {
-                "name": "collection_date",
+                "name": "collection date",
                 "cardinality": "mandatory",
                 "description": "The date the sample was collected with the intention of sequencing, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid ISO8601 compliant times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008.",
                 "cv": [],
@@ -845,7 +845,7 @@
                 "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
-                "name": "geographic_location_latitude",
+                "name": "geographic location (latitude)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of the sample as defined by latitude. The values should be reported in decimal degrees and in WGS84 system",
                 "cv": [],
@@ -854,7 +854,7 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic_location_longitude",
+                "name": "geographic location (longitude)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of the sample as defined by longitude. The values should be reported in decimal degrees and in WGS84 system",
                 "cv": [],
@@ -863,7 +863,7 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic_location_region_and_locality",
+                "name": "geographic location (region and locality)",
                 "cardinality": "optional",
                 "description": "The geographical origin of the sample as defined by the specific region name followed by the locality name.",
                 "cv": [],
@@ -881,20 +881,20 @@
                 "regex": ""
             },
             {
-                "name": "subject_exposure_duration",
+                "name": "subject exposure duration",
                 "cardinality": "optional",
                 "description": "Duration of the exposure of the subject to an infected human or animal. If multiple exposures are applicable, please state their duration in the same order in which you reported the exposure in the field 'subject exposure'. Example: 1 day; 0.33 days",
                 "cv": [],
-                "units": "day",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "amount_or_size_of_sample_collected",
+                "name": "amount or size of sample collected",
                 "cardinality": "optional",
                 "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.",
                 "cv": [],
-                "units": "kg",
+                "units": "m3",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -929,7 +929,7 @@
                 "regex": ""
             },
             {
-                "name": "geographic_location_country_andor_sea",
+                "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
@@ -1004,13 +1004,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
+                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
-                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -1078,10 +1078,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
-                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
+                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -1095,7 +1095,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia, Federated States of",
+                    "Micronesia",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -1118,7 +1118,6 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
-                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -1144,7 +1143,6 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
-                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -1152,7 +1150,6 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
-                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -1168,15 +1165,14 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
-                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
-                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
+                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -1185,7 +1181,6 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
-                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -1206,8 +1201,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Wake Island",
                     "Virgin Islands",
+                    "Wake Island",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -1233,7 +1228,7 @@
                 "regex": ""
             },
             {
-                "name": "host_disease_status",
+                "name": "host disease status",
                 "cardinality": "optional",
                 "description": "list of diseases with which the host has been diagnosed; can include multiple diagnoses. The value of the field depends on host; for humans the terms should be chosen from DO (Disease Ontology) at http://www.disease-ontology.org, other hosts are free text",
                 "cv": [],
@@ -1242,7 +1237,7 @@
                 "regex": ""
             },
             {
-                "name": "host_disease_outcome",
+                "name": "host disease outcome",
                 "cardinality": "optional",
                 "description": "Disease outcome in the host.",
                 "cv": [
@@ -1255,7 +1250,7 @@
                 "regex": ""
             },
             {
-                "name": "host_subject_id",
+                "name": "host subject id",
                 "cardinality": "optional",
                 "description": "a unique identifier by which each subject can be referred to, de-identified, e.g. #131",
                 "cv": [],
@@ -1264,7 +1259,7 @@
                 "regex": ""
             },
             {
-                "name": "host_age",
+                "name": "host age",
                 "cardinality": "optional",
                 "description": "age of host at the time of sampling; relevant scale depends on species and study, e.g. could be seconds for amoebae or centuries for trees",
                 "cv": [],
@@ -1273,7 +1268,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "host_taxid",
+                "name": "host taxid",
                 "cardinality": "optional",
                 "description": "NCBI taxon id of the host, e.g. 9606",
                 "cv": [],
@@ -1282,7 +1277,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "host_life_stage",
+                "name": "host life stage",
                 "cardinality": "optional",
                 "description": "description of life stage of host",
                 "cv": [],
@@ -1291,7 +1286,7 @@
                 "regex": ""
             },
             {
-                "name": "host_health_state",
+                "name": "host health state",
                 "cardinality": "mandatory",
                 "description": "Health status of the host at the time of sample collection.",
                 "cv": [
@@ -1315,7 +1310,7 @@
                 "regex": ""
             },
             {
-                "name": "host_sex",
+                "name": "host sex",
                 "cardinality": "optional",
                 "description": "Gender or sex of the host.",
                 "cv": [
@@ -1351,7 +1346,7 @@
                 "regex": ""
             },
             {
-                "name": "host_scientific_name",
+                "name": "host scientific name",
                 "cardinality": "mandatory",
                 "description": "Scientific name of the natural (as opposed to laboratory) host to the organism from which sample was obtained.",
                 "cv": [],
@@ -1369,7 +1364,7 @@
                 "regex": ""
             },
             {
-                "name": "is_the_sequenced_pathogen_host_associated",
+                "name": "Is the sequenced pathogen host associated?",
                 "cardinality": "mandatory",
                 "description": "Is the sequenced pathogen host associated? ('Yes' or 'No')",
                 "cv": [
@@ -1471,7 +1466,7 @@
                 "regex": ""
             },
             {
-                "name": "host_disease_stage",
+                "name": "host disease stage",
                 "cardinality": "optional",
                 "description": "disease stage of host",
                 "cv": [],
@@ -1480,7 +1475,7 @@
                 "regex": ""
             },
             {
-                "name": "isolation_source_hostassociated",
+                "name": "isolation source host-associated",
                 "cardinality": "recommended",
                 "description": "Name of host tissue or organ sampled for analysis. Example: tracheal tissue",
                 "cv": [],
@@ -1489,7 +1484,7 @@
                 "regex": ""
             },
             {
-                "name": "host_description",
+                "name": "host description",
                 "cardinality": "optional",
                 "description": "Other descriptive information relating to the host.",
                 "cv": [],
@@ -1507,7 +1502,7 @@
                 "regex": ""
             },
             {
-                "name": "isolation_source_nonhostassociated",
+                "name": "isolation source non-host-associated",
                 "cardinality": "recommended",
                 "description": "Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived. Example: soil",
                 "cv": [],
@@ -1520,7 +1515,7 @@
                 "cardinality": "optional",
                 "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
                 "cv": [],
-                "units": "m",
+                "units": "mm",
                 "field_type": "TEXT_FIELD",
                 "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             }
