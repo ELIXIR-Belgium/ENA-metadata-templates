@@ -492,7 +492,7 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "number_of_inoculated_individuals",
+                "name": "number of inoculated individuals",
                 "cardinality": "optional",
                 "description": "Number of host individuals inoculated for the experiment.",
                 "cv": [],
@@ -501,7 +501,7 @@
                 "regex": ""
             },
             {
-                "name": "inoculation_route",
+                "name": "inoculation route",
                 "cardinality": "optional",
                 "description": "Brief description of the protocol inoculation route.",
                 "cv": [],
@@ -510,7 +510,7 @@
                 "regex": ""
             },
             {
-                "name": "inoculation_dose",
+                "name": "inoculation dose",
                 "cardinality": "optional",
                 "description": "Dose used for the inoculoation experiment.",
                 "cv": [],
@@ -519,7 +519,7 @@
                 "regex": ""
             },
             {
-                "name": "inoculation_stock_availability",
+                "name": "inoculation stock availability",
                 "cardinality": "optional",
                 "description": "Is the virus stock used for the inoculation available?",
                 "cv": [
@@ -531,7 +531,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_storage_conditions",
+                "name": "sample storage conditions",
                 "cardinality": "optional",
                 "description": "Conditions at which sample was stored, usually storage temperature, duration and location. In soil context: Explain how and for how long the soil sample was stored before DNA extraction (fresh/frozen/other).",
                 "cv": [],
@@ -540,7 +540,7 @@
                 "regex": ""
             },
             {
-                "name": "subject_exposure",
+                "name": "subject exposure",
                 "cardinality": "optional",
                 "description": "Exposure of the subject to infected human or animals, such as poultry, wild bird or swine. If multiple exposures are applicable, please state them separated by semicolon. Example: poultry; wild bird",
                 "cv": [],
@@ -549,7 +549,7 @@
                 "regex": ""
             },
             {
-                "name": "type_exposure",
+                "name": "type exposure",
                 "cardinality": "optional",
                 "description": "Setting within which the subject is exposed to animals, such as farm, slaughterhouse, food preparation. If multiple exposures are applicable, please state their type in the same order in which you reported the exposure in the field 'subject exposure'. Example: backyard flock; confined animal feeding operation",
                 "cv": [],
@@ -558,7 +558,7 @@
                 "regex": ""
             },
             {
-                "name": "personal_protective_equipment",
+                "name": "personal protective equipment",
                 "cardinality": "optional",
                 "description": "Use of personal protective equipment, such as gloves, gowns, during any type of exposure. Example: mask",
                 "cv": [],
@@ -579,7 +579,7 @@
                 "regex": ""
             },
             {
-                "name": "antiviral_treatment",
+                "name": "antiviral treatment",
                 "cardinality": "optional",
                 "description": "Antiviral treatment used for this subject, such as Zanamavir Oseltamivir, Amantadine. Example: Rimantadine",
                 "cv": [],
@@ -588,7 +588,7 @@
                 "regex": ""
             },
             {
-                "name": "antiviral_treatment_initiation",
+                "name": "antiviral treatment initiation",
                 "cardinality": "optional",
                 "description": "Initiation of antiviral treatment after onset of clinical symptoms in days. Example: 2.5",
                 "cv": [],
@@ -597,7 +597,7 @@
                 "regex": ""
             },
             {
-                "name": "antiviral_treatment_dosage",
+                "name": "antiviral treatment dosage",
                 "cardinality": "optional",
                 "description": "Dosage of the treatment taken by the subject. Example: 0.05 mg",
                 "cv": [],
@@ -606,7 +606,7 @@
                 "regex": ""
             },
             {
-                "name": "antiviral_treatment_duration",
+                "name": "antiviral treatment duration",
                 "cardinality": "optional",
                 "description": "Duration of antiviral treatment after onset of clinical symptoms in days.Example: 5",
                 "cv": [],
@@ -615,7 +615,7 @@
                 "regex": ""
             },
             {
-                "name": "influenza_vaccination_type",
+                "name": "influenza vaccination type",
                 "cardinality": "optional",
                 "description": "Influenza vaccinations that have been administered to the subject over the last year. Example: 2009 H1N1 Flumist",
                 "cv": [],
@@ -624,7 +624,7 @@
                 "regex": ""
             },
             {
-                "name": "influenza_vaccination_date",
+                "name": "influenza vaccination date",
                 "cardinality": "optional",
                 "description": "Date that the influenza vaccination was administered to the subject over the past year. Format: YYYY-MM-DD. Example: 2007-05-12",
                 "cv": [],
@@ -633,7 +633,7 @@
                 "regex": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
             },
             {
-                "name": "source_of_vaccination_information",
+                "name": "source of vaccination information",
                 "cardinality": "optional",
                 "description": "Designation of information related to vaccination history as self reported or documented.",
                 "cv": [
@@ -645,7 +645,7 @@
                 "regex": ""
             },
             {
-                "name": "vaccine_lot_number",
+                "name": "vaccine lot number",
                 "cardinality": "optional",
                 "description": "Lot number of the vaccine.",
                 "cv": [],
@@ -654,7 +654,7 @@
                 "regex": ""
             },
             {
-                "name": "vaccine_manufacturer",
+                "name": "vaccine manufacturer",
                 "cardinality": "optional",
                 "description": "Manufacturer of the vaccine.",
                 "cv": [],
@@ -663,7 +663,7 @@
                 "regex": ""
             },
             {
-                "name": "vaccine_dosage",
+                "name": "vaccine dosage",
                 "cardinality": "optional",
                 "description": "Dosage of the vaccine taken by the subject. Example: 0.05 mL",
                 "cv": [],
@@ -672,7 +672,7 @@
                 "regex": ""
             },
             {
-                "name": "influenzalike_illness_at_the_time_of_sample_collection",
+                "name": "influenza-like illness at the time of sample collection",
                 "cardinality": "optional",
                 "description": "Is the subject at the time of sample collection considered to have influenza like illness?",
                 "cv": [
@@ -684,7 +684,7 @@
                 "regex": ""
             },
             {
-                "name": "illness_onset_date",
+                "name": "illness onset date",
                 "cardinality": "optional",
                 "description": "Date the subject showed an onset of symptoms. Format: YYYY-MM-DD. Example: 2011-10-20",
                 "cv": [],
@@ -693,7 +693,7 @@
                 "regex": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
             },
             {
-                "name": "illness_duration",
+                "name": "illness duration",
                 "cardinality": "optional",
                 "description": "The number of days the illness lasted. Example: 4",
                 "cv": [],
@@ -702,16 +702,16 @@
                 "regex": ""
             },
             {
-                "name": "illness_symptoms",
+                "name": "illness symptoms",
                 "cardinality": "optional",
                 "description": "The symptoms that have been reported in relation to the illness, such as cough, diarrhea, fever, headache, malaise, myalgia, nausea, runny_nose, shortness_of_breath, sore_throat. If multiple exposures are applicable, please state them separated by semicolon.",
                 "cv": [],
                 "units": "",
-                "field_type": "TEXT_FIELD",
+                "field_type": "TEXT_AREA_FIELD",
                 "regex": ""
             },
             {
-                "name": "collection_date",
+                "name": "collection date",
                 "cardinality": "mandatory",
                 "description": "The date the sample was collected with the intention of sequencing, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid ISO8601 compliant times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008.",
                 "cv": [],
@@ -720,7 +720,7 @@
                 "regex": "(^[12][0-9]{3}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01])(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?(/[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2})?Z?([+-][0-9]{1,2})?)?)?)?)?$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic_location_latitude",
+                "name": "geographic location (latitude)",
                 "cardinality": "recommended",
                 "description": "The geographical origin of the sample as defined by latitude. The values should be reported in decimal degrees and in WGS84 system",
                 "cv": [],
@@ -729,7 +729,7 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic_location_longitude",
+                "name": "geographic location (longitude)",
                 "cardinality": "recommended",
                 "description": "The geographical origin of the sample as defined by longitude. The values should be reported in decimal degrees and in WGS84 system",
                 "cv": [],
@@ -738,7 +738,7 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic_location_region_and_locality",
+                "name": "geographic location (region and locality)",
                 "cardinality": "recommended",
                 "description": "The geographical origin of the sample as defined by the specific region name followed by the locality name.",
                 "cv": [],
@@ -747,16 +747,16 @@
                 "regex": ""
             },
             {
-                "name": "subject_exposure_duration",
+                "name": "subject exposure duration",
                 "cardinality": "optional",
                 "description": "Duration of the exposure of the subject to an infected human or animal. If multiple exposures are applicable, please state their duration in the same order in which you reported the exposure in the field 'subject exposure'. Example: 1 day; 0.33 days",
                 "cv": [],
-                "units": "day",
+                "units": "year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
-                "name": "sample_capture_status",
+                "name": "sample capture status",
                 "cardinality": "recommended",
                 "description": "Reason for the sample collection.",
                 "cv": [
@@ -773,7 +773,7 @@
                 "regex": ""
             },
             {
-                "name": "geographic_location_country_andor_sea",
+                "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
@@ -848,13 +848,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
+                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
-                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -922,10 +922,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
-                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
+                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -939,7 +939,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia, Federated States of",
+                    "Micronesia",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -962,7 +962,6 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
-                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -988,7 +987,6 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
-                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -996,7 +994,6 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
-                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -1012,15 +1009,14 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
-                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
-                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
+                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -1029,7 +1025,6 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
-                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -1050,8 +1045,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Wake Island",
                     "Virgin Islands",
+                    "Wake Island",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -1077,7 +1072,7 @@
                 "regex": ""
             },
             {
-                "name": "host_disease_outcome",
+                "name": "host disease outcome",
                 "cardinality": "recommended",
                 "description": "Disease outcome in the host.",
                 "cv": [
@@ -1090,7 +1085,7 @@
                 "regex": ""
             },
             {
-                "name": "host_common_name",
+                "name": "host common name",
                 "cardinality": "mandatory",
                 "description": "common name of the host, e.g. human",
                 "cv": [],
@@ -1099,7 +1094,7 @@
                 "regex": ""
             },
             {
-                "name": "host_subject_id",
+                "name": "host subject id",
                 "cardinality": "mandatory",
                 "description": "a unique identifier by which each subject can be referred to, de-identified, e.g. #131",
                 "cv": [],
@@ -1108,7 +1103,7 @@
                 "regex": ""
             },
             {
-                "name": "host_age",
+                "name": "host age",
                 "cardinality": "recommended",
                 "description": "age of host at the time of sampling; relevant scale depends on species and study, e.g. could be seconds for amoebae or centuries for trees",
                 "cv": [],
@@ -1117,7 +1112,7 @@
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "host_health_state",
+                "name": "host health state",
                 "cardinality": "mandatory",
                 "description": "Health status of the host at the time of sample collection.",
                 "cv": [
@@ -1141,7 +1136,7 @@
                 "regex": ""
             },
             {
-                "name": "host_sex",
+                "name": "host sex",
                 "cardinality": "mandatory",
                 "description": "Gender or sex of the host.",
                 "cv": [
@@ -1168,7 +1163,7 @@
                 "regex": ""
             },
             {
-                "name": "host_scientific_name",
+                "name": "host scientific name",
                 "cardinality": "mandatory",
                 "description": "Scientific name of the natural (as opposed to laboratory) host to the organism from which sample was obtained.",
                 "cv": [],
@@ -1177,7 +1172,7 @@
                 "regex": ""
             },
             {
-                "name": "influenza_test_method",
+                "name": "influenza test method",
                 "cardinality": "mandatory",
                 "description": "Method by which the current assessment of a sample as flu positive/negative is made. If multiple test were performed, please state them separated by semicolon. Example: RT-PCR; antigen ELISA",
                 "cv": [],
@@ -1186,7 +1181,7 @@
                 "regex": ""
             },
             {
-                "name": "influenza_test_result",
+                "name": "influenza test result",
                 "cardinality": "mandatory",
                 "description": "Classification of a sample as flu positive or negative based on the test performed and reported. If multiple tests were performed, please state the results in the same order in which you reported the tests in the field 'influenza test method'. Format: P(ositive)/N(egative). Example: P; P",
                 "cv": [],
@@ -1195,7 +1190,7 @@
                 "regex": ""
             },
             {
-                "name": "other_pathogens_tested",
+                "name": "other pathogens tested",
                 "cardinality": "mandatory",
                 "description": "Classification of pathogenic organisms other than influenza virus tested in the current assessment of a sample. If multiple tests were performed, please state them separated by semicolon. If no other pathogens test was performed, please state 'none'. Example: Newcastle",
                 "cv": [],
@@ -1204,7 +1199,7 @@
                 "regex": ""
             },
             {
-                "name": "other_pathogens_test_result",
+                "name": "other pathogens test result",
                 "cardinality": "mandatory",
                 "description": "Classification of a sample as positive or negative based on the test performed and reported. If tests for multiple pathogenic organisms were performed, please state the results in the same order in which you reported the tests in the field 'other pathogens tested'. Format: P(ositive)/N(egative)/not applicable. Example: N",
                 "cv": [],
@@ -1213,7 +1208,7 @@
                 "regex": ""
             },
             {
-                "name": "influenza_virus_type",
+                "name": "influenza virus type",
                 "cardinality": "recommended",
                 "description": "One of the three influenza virus classification types.",
                 "cv": [
@@ -1226,7 +1221,7 @@
                 "regex": ""
             },
             {
-                "name": "virus_identifier",
+                "name": "virus identifier",
                 "cardinality": "recommended",
                 "description": "Unique laboratory identifier assigned to the virus by the investigator. Strain name is not sufficient since it might not be unique due to various passsages of the same virus. Format: up to 50 alphanumeric characters",
                 "cv": [],
@@ -1235,7 +1230,7 @@
                 "regex": ""
             },
             {
-                "name": "influenza_strain_unique_number",
+                "name": "influenza strain unique number",
                 "cardinality": "optional",
                 "description": "Unique number of the strain which is reported as a part of the influenza strain name, such as A/chicken/Fujian/411/2002(HxN1). Format: integer number, Example: 411",
                 "cv": [],
@@ -1244,7 +1239,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "whooiefao_clade_required_for_hpai_h5n1_viruses",
+                "name": "WHO/OIE/FAO clade (required for HPAI H5N1 viruses)",
                 "cardinality": "optional",
                 "description": "WHO/OIE/FAO clade should be included for highly pathogenic H5N1 viruses. Example: 2.2",
                 "cv": [],
@@ -1253,7 +1248,7 @@
                 "regex": ""
             },
             {
-                "name": "lineageswl_required_for_h1n1_viruses",
+                "name": "lineage:swl (required for H1N1 viruses)",
                 "cardinality": "optional",
                 "description": "Does the H1N1 influenza virus originate from a swine-like outbreak (as opposed to a seasonal flu)?",
                 "cv": [
@@ -1265,25 +1260,25 @@
                 "regex": ""
             },
             {
-                "name": "collector_name",
+                "name": "collector name",
                 "cardinality": "mandatory",
                 "description": "Name of the person who collected the specimen. Example: John Smith",
                 "cv": [],
                 "units": "",
-                "field_type": "TEXT_FIELD",
+                "field_type": "TEXT_AREA_FIELD",
                 "regex": ""
             },
             {
-                "name": "collecting_institution",
+                "name": "collecting institution",
                 "cardinality": "mandatory",
                 "description": "Name of the institution to which the person collecting the specimen belongs. Format: Institute Name, Institute Address",
                 "cv": [],
                 "units": "",
-                "field_type": "TEXT_FIELD",
+                "field_type": "TEXT_AREA_FIELD",
                 "regex": ""
             },
             {
-                "name": "receipt_date",
+                "name": "receipt date",
                 "cardinality": "recommended",
                 "description": "Date on which the sample was received. Format:YYYY-MM-DD. Please provide the highest precision possible. If the sample was received by the institution and not collected, the 'receipt date' must be provided instead. Either the 'collection date' or 'receipt date' must be provided. If available, provide both dates.",
                 "cv": [],
@@ -1292,7 +1287,7 @@
                 "regex": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
             },
             {
-                "name": "definition_for_seropositive_sample",
+                "name": "definition for seropositive sample",
                 "cardinality": "recommended",
                 "description": "The cut off value used by an investigatior in determining that a sample was seropositive.",
                 "cv": [],
@@ -1301,7 +1296,7 @@
                 "regex": ""
             },
             {
-                "name": "meaning_of_cut_off_value",
+                "name": "meaning of cut off value",
                 "cardinality": "optional",
                 "description": "Description helping to explain what the cut off value means.",
                 "cv": [],
@@ -1310,7 +1305,7 @@
                 "regex": ""
             },
             {
-                "name": "serotype_required_for_a_seropositive_sample",
+                "name": "serotype (required for a seropositive sample)",
                 "cardinality": "recommended",
                 "description": "Serological variety of a species characterised by its antigenic properties. For Influenza, HA subtype should be the letter H followed by a number between 1-16 unless novel subtype is identified and the NA subtype should be the letter N followed by a number between 1-9 unless novel subtype is identified. If only one of the subtypes have been tested then use the format H5Nx or HxN1. Example: H1N1",
                 "cv": [],
@@ -1328,7 +1323,7 @@
                 "regex": ""
             },
             {
-                "name": "host_habitat",
+                "name": "host habitat",
                 "cardinality": "recommended",
                 "description": "Natural habitat of the avian or mammalian host.",
                 "cv": [
@@ -1345,7 +1340,7 @@
                 "regex": ""
             },
             {
-                "name": "isolation_source_hostassociated",
+                "name": "isolation source host-associated",
                 "cardinality": "recommended",
                 "description": "Name of host tissue or organ sampled for analysis. Example: tracheal tissue",
                 "cv": [],
@@ -1354,7 +1349,7 @@
                 "regex": ""
             },
             {
-                "name": "host_description",
+                "name": "host description",
                 "cardinality": "optional",
                 "description": "Other descriptive information relating to the host.",
                 "cv": [],
@@ -1372,7 +1367,7 @@
                 "regex": ""
             },
             {
-                "name": "host_behaviour",
+                "name": "host behaviour",
                 "cardinality": "recommended",
                 "description": "Natural behaviour of the host.",
                 "cv": [
@@ -1386,7 +1381,7 @@
                 "regex": ""
             },
             {
-                "name": "isolation_source_nonhostassociated",
+                "name": "isolation source non-host-associated",
                 "cardinality": "recommended",
                 "description": "Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived. Example: soil",
                 "cv": [],

@@ -492,7 +492,7 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "relationship_to_oxygen",
+                "name": "relationship to oxygen",
                 "cardinality": "optional",
                 "description": "Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments",
                 "cv": [
@@ -509,7 +509,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_collection_device",
+                "name": "sample collection device",
                 "cardinality": "optional",
                 "description": "The device used to collect an environmental sample. It is recommended to use terms listed under environmental sampling device (http://purl.obolibrary.org/obo/ENVO) and/or terms listed under specimen collection device (http://purl.obolibrary.org/obo/GENEPIO_0002094).",
                 "cv": [],
@@ -518,7 +518,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_collection_method",
+                "name": "sample collection method",
                 "cardinality": "optional",
                 "description": "The method employed for collecting the sample. Can be provided in the form of a PMID, DOI, url or text.",
                 "cv": [],
@@ -527,16 +527,16 @@
                 "regex": ""
             },
             {
-                "name": "metagenomic_source",
+                "name": "metagenomic source",
                 "cardinality": "mandatory",
                 "description": "The metagenomic source of the sample. This value should contain \u201cmetagenome\u201d and be in the taxonomy database e.g. wastewater metagenome or human gut metagenome. Please note \u201cmetagenome\u201d alone will not be accepted. Check here for more details on metagenome taxonomy: https://ena-docs.readthedocs.io/en/latest/faq_taxonomy.html#environmental-taxonomic-classifications",
                 "cv": [],
                 "units": "",
-                "field_type": "TEXT_FIELD",
+                "field_type": "TAXON_FIELD",
                 "regex": ""
             },
             {
-                "name": "sample_derived_from",
+                "name": "sample derived from",
                 "cardinality": "mandatory",
                 "description": "Reference to parental sample(s) or original run(s) that the assembly is derived from. The referenced samples or runs should already be registered in INSDC. This should be formatted as one of the following. A single sample/run e.g. ERSxxxxxx OR a comma separated list e.g. ERSxxxxxx,ERSxxxxxx OR a range e.g. ERSxxxxxx-ERSxxxxxx",
                 "cv": [],
@@ -545,7 +545,7 @@
                 "regex": "(^[ESD]R[SR]\\d{6,}(,[ESD]R[SR]\\d{6,})*$)|(^SAM[END][AG]?\\d+(,SAM[END][AG]?\\d+)*$)|(^EGA[NR]\\d{11}(,EGA[NR]\\d{11})*$)|(^[ESD]R[SR]\\d{6,}-[ESD]R[SR]\\d{6,}$)|(^SAM[END][AG]?\\d+-SAM[END][AG]?\\d+$)|(^EGA[NR]\\d{11}-EGA[NR]\\d{11}$)"
             },
             {
-                "name": "project_name",
+                "name": "project name",
                 "cardinality": "mandatory",
                 "description": "Name of the project within which the sequencing was organized",
                 "cv": [],
@@ -554,7 +554,7 @@
                 "regex": ""
             },
             {
-                "name": "multiplex_identifiers",
+                "name": "multiplex identifiers",
                 "cardinality": "optional",
                 "description": "Molecular barcodes, called Multiplex Identifiers (MIDs), that are used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters",
                 "cv": [],
@@ -563,7 +563,7 @@
                 "regex": ""
             },
             {
-                "name": "relevant_electronic_resources",
+                "name": "relevant electronic resources",
                 "cardinality": "optional",
                 "description": "A related resource that is referenced, cited, or otherwise associated to the sequence in the format of a PMID, DOI or URL",
                 "cv": [],
@@ -572,7 +572,7 @@
                 "regex": ""
             },
             {
-                "name": "relevant_standard_operating_procedures",
+                "name": "relevant standard operating procedures",
                 "cardinality": "optional",
                 "description": "Standard operating procedures used in assembly and/or annotation of genomes, metagenomes or environmental sequences in the format of a PMID, DOI or URL",
                 "cv": [],
@@ -581,7 +581,7 @@
                 "regex": ""
             },
             {
-                "name": "number_of_standard_trnas_extracted",
+                "name": "number of standard tRNAs extracted",
                 "cardinality": "optional",
                 "description": "The total number of tRNAs identified from the bin, SAG or MAG",
                 "cv": [],
@@ -590,7 +590,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "feature_prediction",
+                "name": "feature prediction",
                 "cardinality": "optional",
                 "description": "Method used to predict UViGs features such as ORFs, integration site, etc. Add names and versions of software(s), parameters used",
                 "cv": [],
@@ -599,7 +599,7 @@
                 "regex": ""
             },
             {
-                "name": "similarity_search_method",
+                "name": "similarity search method",
                 "cardinality": "optional",
                 "description": "Tool used to compare ORFs with database, along with version and cutoffs used. Add names and versions of software(s), parameters used",
                 "cv": [],
@@ -608,7 +608,7 @@
                 "regex": ""
             },
             {
-                "name": "_16s_recovered",
+                "name": "16s recovered",
                 "cardinality": "optional",
                 "description": "Can a 16S gene be recovered from the submitted bin, SAG or MAG?",
                 "cv": [
@@ -620,7 +620,7 @@
                 "regex": ""
             },
             {
-                "name": "_16s_recovery_software",
+                "name": "16S recovery software",
                 "cardinality": "optional",
                 "description": "Tools used for 16S rRNA gene extraction. Add names and versions of software(s), parameters used",
                 "cv": [],
@@ -629,7 +629,7 @@
                 "regex": ""
             },
             {
-                "name": "trna_extraction_software",
+                "name": "tRNA extraction software",
                 "cardinality": "optional",
                 "description": "Tools used for tRNA identification. Add names and versions of software(s), parameters used",
                 "cv": [],
@@ -638,7 +638,7 @@
                 "regex": ""
             },
             {
-                "name": "completeness_score",
+                "name": "completeness score",
                 "cardinality": "recommended",
                 "description": "Completeness score is typically based on either the fraction of markers found as compared to a database or the percent of a genome found as compared to a closely related reference genome. Completeness score is one of 3 attributes which in combination reflect the standard quality of a MAG, see here for more information: https://ena-docs.readthedocs.io/en/latest/faq_metagenomes.html. Mandatory for all samples directly linked with SAGs or MAGs.",
                 "cv": [],
@@ -647,7 +647,7 @@
                 "regex": "^(\\d|[1-9]\\d|\\d\\.\\d{1,2}|[1-9]\\d\\.\\d{1,2}|100)$"
             },
             {
-                "name": "completeness_software",
+                "name": "completeness software",
                 "cardinality": "recommended",
                 "description": "Tools used for completion estimate, i.e. checkm, anvi'o, busco. Mandatory for all samples directly linked with SAGs or MAGs.",
                 "cv": [],
@@ -656,7 +656,7 @@
                 "regex": ""
             },
             {
-                "name": "completeness_approach",
+                "name": "completeness approach",
                 "cardinality": "optional",
                 "description": "The approach used to determine the completeness of a given bin, SAG or MAG, which would typically make use of a set of conserved marker genes or a closely related reference genome. For UViG completeness, include reference genome or group used, and contig feature suggesting a complete genome",
                 "cv": [],
@@ -665,7 +665,7 @@
                 "regex": ""
             },
             {
-                "name": "contamination_score",
+                "name": "contamination score",
                 "cardinality": "recommended",
                 "description": "The contamination score is based on the fraction of single-copy genes that are observed more than once in a query genome. Contamination score is one of 3 attributes which in combination reflect the standard quality of a MAG, see here for more information: https://ena-docs.readthedocs.io/en/latest/faq_metagenomes.html. If contamination \u2265 10% then please submit as a binned assembly. In SAGs, contamination score is mandatory for prokaryotes and optional for eukaryotes.",
                 "cv": [],
@@ -674,7 +674,7 @@
                 "regex": "^(\\d|[1-9]\\d|\\d\\.\\d{1,2}|[1-9]\\d\\.\\d{1,2}|100)$"
             },
             {
-                "name": "contamination_screening_input",
+                "name": "contamination screening input",
                 "cardinality": "optional",
                 "description": "The type of sequence data used as input",
                 "cv": [
@@ -686,7 +686,7 @@
                 "regex": ""
             },
             {
-                "name": "contamination_screening_parameters",
+                "name": "contamination screening parameters",
                 "cardinality": "optional",
                 "description": "Specific parameters used in the decontamination sofware, such as reference database, coverage, and kmers. Combinations of these parameters may also be used, i.e. kmer and coverage, or reference database and kmer",
                 "cv": [],
@@ -695,7 +695,7 @@
                 "regex": ""
             },
             {
-                "name": "decontamination_software",
+                "name": "decontamination software",
                 "cardinality": "optional",
                 "description": "Tool(s) used in contamination screening",
                 "cv": [],
@@ -704,7 +704,7 @@
                 "regex": ""
             },
             {
-                "name": "assembly_quality",
+                "name": "assembly quality",
                 "cardinality": "recommended",
                 "description": "The assembly quality category is based on sets of criteria outlined for each assembly quality category. For MISAG/MIMAG; Finished: Single, validated, contiguous sequence per replicon without gaps or ambiguities with a consensus error rate equivalent to Q50 or better. High Quality Draft:Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S and 5S rRNA genes and at least 18 tRNAs. Medium Quality Draft:Many fragments with little to no review of assembly other than reporting of standard assembly statistics. Low Quality Draft:Many fragments with little to no review of assembly other than reporting of standard assembly statistics. Assembly statistics include, but are not limited to total assembly size, number of contigs, contig N50/L50, and maximum contig length. For MIUVIG; Finished: Single, validated, contiguous sequence per replicon without gaps or ambiguities, with extensive manual review and editing to annotate putative gene functions and transcriptional units. High-quality draft genome: One or multiple fragments, totaling \u2265 90% of the expected genome or replicon sequence or predicted complete. Genome fragment(s): One or multiple fragments, totalling < 90% of the expected genome or replicon sequence, or for which no genome size could be estimated.",
                 "cv": [
@@ -717,7 +717,7 @@
                 "regex": ""
             },
             {
-                "name": "taxonomic_identity_marker",
+                "name": "taxonomic identity marker",
                 "cardinality": "recommended",
                 "description": "The phylogenetic marker(s) used to assign an organism name to the bin, SAG or MAG. Examples are 16S gene, multi-marker approach or other e.g. rpoB gene. Mandatory for all samples directly linked with SAGs or MAGs.",
                 "cv": [],
@@ -735,7 +735,7 @@
                 "regex": ""
             },
             {
-                "name": "collection_date",
+                "name": "collection date",
                 "cardinality": "mandatory",
                 "description": "The date the sample was collected with the intention of sequencing, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid ISO8601 compliant times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008.",
                 "cv": [],
@@ -753,7 +753,7 @@
                 "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
-                "name": "geographic_location_latitude",
+                "name": "geographic location (latitude)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of the sample as defined by latitude. The values should be reported in decimal degrees and in WGS84 system",
                 "cv": [],
@@ -762,7 +762,7 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic_location_longitude",
+                "name": "geographic location (longitude)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of the sample as defined by longitude. The values should be reported in decimal degrees and in WGS84 system",
                 "cv": [],
@@ -771,7 +771,7 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic_location_region_and_locality",
+                "name": "geographic location (region and locality)",
                 "cardinality": "optional",
                 "description": "The geographical origin of the sample as defined by the specific region name followed by the locality name.",
                 "cv": [],
@@ -780,7 +780,7 @@
                 "regex": ""
             },
             {
-                "name": "broadscale_environmental_context",
+                "name": "broad-scale environmental context",
                 "cardinality": "mandatory",
                 "description": "Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO\u2019s biome class: http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
                 "cv": [],
@@ -789,7 +789,7 @@
                 "regex": ""
             },
             {
-                "name": "local_environmental_context",
+                "name": "local environmental context",
                 "cardinality": "mandatory",
                 "description": "Report the entity or entities which are in the sample or specimen\u2019s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for \"broad-scale environmental context\". Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
                 "cv": [],
@@ -798,7 +798,7 @@
                 "regex": ""
             },
             {
-                "name": "environmental_medium",
+                "name": "environmental medium",
                 "cardinality": "mandatory",
                 "description": "Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).",
                 "cv": [],
@@ -816,16 +816,16 @@
                 "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
-                "name": "amount_or_size_of_sample_collected",
+                "name": "amount or size of sample collected",
                 "cardinality": "optional",
                 "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.",
                 "cv": [],
-                "units": "kg",
+                "units": "m3",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "size_fraction_selected",
+                "name": "size fraction selected",
                 "cardinality": "optional",
                 "description": "Filtering pore size used in sample preparation e.g. 0-0.22 micrometer",
                 "cv": [],
@@ -834,7 +834,7 @@
                 "regex": ""
             },
             {
-                "name": "geographic_location_country_andor_sea",
+                "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
@@ -909,13 +909,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
+                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
-                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -983,10 +983,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
-                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
+                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -1000,7 +1000,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia, Federated States of",
+                    "Micronesia",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -1023,7 +1023,6 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
-                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -1049,7 +1048,6 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
-                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -1057,7 +1055,6 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
-                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -1073,15 +1070,14 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
-                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
-                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
+                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -1090,7 +1086,6 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
-                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -1111,8 +1106,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Wake Island",
                     "Virgin Islands",
+                    "Wake Island",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -1138,7 +1133,7 @@
                 "regex": ""
             },
             {
-                "name": "source_material_identifiers",
+                "name": "source material identifiers",
                 "cardinality": "optional",
                 "description": "A unique identifier assigned to a material sample (as defined by http://rs.tdwg.org/dwc/terms/materialSampleID, and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples. The INSDC qualifiers /specimen_voucher, /bio_material, or /culture_collection may or may not share the same value as the source_mat_id field. For instance, the /specimen_voucher qualifier and source_mat_id may both contain 'UAM:Herps:14' , referring to both the specimen voucher and sampled tissue with the same identifier. However, the /culture_collection qualifier may refer to a value from an initial culture (e.g. ATCC:11775) while source_mat_id would refer to an identifier from some derived culture from which the nucleic acids were extracted (e.g. xatc123 or ark:/2154/R2).",
                 "cv": [],
@@ -1147,7 +1142,7 @@
                 "regex": ""
             },
             {
-                "name": "experimental_factor",
+                "name": "experimental factor",
                 "cardinality": "optional",
                 "description": "Experimental factors are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI). For a browser of EFO (v 2.95) terms, please see http://purl.bioontology.org/ontology/EFO; for a browser of OBI (v 2018-02-12) terms please see http://purl.bioontology.org/ontology/OBI. E.g. time series design [EFO:EFO_0001779]",
                 "cv": [],
@@ -1156,7 +1151,7 @@
                 "regex": ""
             },
             {
-                "name": "taxonomic_classification",
+                "name": "taxonomic classification",
                 "cardinality": "optional",
                 "description": "Method used for taxonomic classification, along with reference database used, classification rank, and thresholds used to classify new genomes. Expected values are: classification method, database name, and other parameters e.g. vConTACT vContact2 (references from NCBI RefSeq v83, genus rank classification, default parameters)",
                 "cv": [],
@@ -1165,7 +1160,7 @@
                 "regex": ""
             },
             {
-                "name": "annotation_source",
+                "name": "annotation source",
                 "cardinality": "optional",
                 "description": "For cases where annotation was provided by a community jamboree or model organism database rather than by a specific submitter",
                 "cv": [],
@@ -1174,7 +1169,7 @@
                 "regex": ""
             },
             {
-                "name": "reference_for_biomaterial",
+                "name": "reference for biomaterial",
                 "cardinality": "optional",
                 "description": "Primary publication if isolated before genome publication; otherwise, primary genome report. Mandatory for MIGS of bacteria and archaea.",
                 "cv": [],
@@ -1183,7 +1178,7 @@
                 "regex": ""
             },
             {
-                "name": "reference_databases",
+                "name": "reference database(s)",
                 "cardinality": "optional",
                 "description": "List of database(s) used for ORF annotation, along with version number and reference to website or publication",
                 "cv": [],
@@ -1192,7 +1187,7 @@
                 "regex": ""
             },
             {
-                "name": "single_cell_or_viral_particle_lysis_approach",
+                "name": "single cell or viral particle lysis approach",
                 "cardinality": "mandatory",
                 "description": "Method used to free DNA from interior of the cell(s) or particle(s)",
                 "cv": [
@@ -1206,7 +1201,7 @@
                 "regex": ""
             },
             {
-                "name": "single_cell_or_viral_particle_lysis_kit_protocol",
+                "name": "single cell or viral particle lysis kit protocol",
                 "cardinality": "optional",
                 "description": "Name of the kit or standard protocol used for cell(s) or particle(s) lysis",
                 "cv": [],
@@ -1215,7 +1210,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_material_processing",
+                "name": "sample material processing",
                 "cardinality": "optional",
                 "description": "A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.",
                 "cv": [],
@@ -1224,7 +1219,7 @@
                 "regex": ""
             },
             {
-                "name": "nucleic_acid_extraction",
+                "name": "nucleic acid extraction",
                 "cardinality": "optional",
                 "description": "A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the material separation to recover the nucleic acid fraction from a sample",
                 "cv": [],
@@ -1233,7 +1228,7 @@
                 "regex": ""
             },
             {
-                "name": "nucleic_acid_amplification",
+                "name": "nucleic acid amplification",
                 "cardinality": "optional",
                 "description": "A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the enzymatic amplification (PCR, TMA, NASBA) of specific nucleic acids",
                 "cv": [],
@@ -1242,7 +1237,7 @@
                 "regex": ""
             },
             {
-                "name": "library_size",
+                "name": "library size",
                 "cardinality": "optional",
                 "description": "Total number of clones in the library prepared for the project",
                 "cv": [],
@@ -1251,7 +1246,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "library_reads_sequenced",
+                "name": "library reads sequenced",
                 "cardinality": "optional",
                 "description": "Total number of clones sequenced from the library",
                 "cv": [],
@@ -1260,7 +1255,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "library_vector",
+                "name": "library vector",
                 "cardinality": "optional",
                 "description": "Cloning vector type(s) used in construction of libraries",
                 "cv": [],
@@ -1269,7 +1264,7 @@
                 "regex": ""
             },
             {
-                "name": "library_screening_strategy",
+                "name": "library screening strategy",
                 "cardinality": "optional",
                 "description": "Specific enrichment or screening methods applied before and/or after creating clone libraries in order to select a specific group of sequences",
                 "cv": [],
@@ -1278,7 +1273,7 @@
                 "regex": ""
             },
             {
-                "name": "assembly_software",
+                "name": "assembly software",
                 "cardinality": "recommended",
                 "description": "Tool(s) used for assembly, including version number and parameters in the format {software};{version};{parameters} e.g. metaSPAdes;3.11.0;kmer set 21,33,55,77,99,121, default parameters otherwise",
                 "cv": [],
@@ -1287,7 +1282,7 @@
                 "regex": ""
             },
             {
-                "name": "wga_amplification_approach",
+                "name": "WGA amplification approach",
                 "cardinality": "mandatory",
                 "description": "Method used to amplify genomic DNA in preparation for sequencing",
                 "cv": [
@@ -1299,7 +1294,7 @@
                 "regex": ""
             },
             {
-                "name": "wga_amplification_kit",
+                "name": "WGA amplification kit",
                 "cardinality": "optional",
                 "description": "Kit used to amplify genomic DNA in preparation for sequencing",
                 "cv": [],
@@ -1308,7 +1303,7 @@
                 "regex": ""
             },
             {
-                "name": "sorting_technology",
+                "name": "sorting technology",
                 "cardinality": "mandatory",
                 "description": "Method used to sort/isolate cells or particles of interest",
                 "cv": [
@@ -1337,7 +1332,7 @@
                 "cardinality": "optional",
                 "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
                 "cv": [],
-                "units": "m",
+                "units": "mm",
                 "field_type": "TEXT_FIELD",
                 "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             }

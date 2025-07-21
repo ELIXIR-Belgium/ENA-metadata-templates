@@ -492,7 +492,7 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "observed_biotic_relationship",
+                "name": "observed biotic relationship",
                 "cardinality": "optional",
                 "description": "Description of relationship(s) between the subject organism and other organism(s) it is associated with. E.g., parasite on species X; mutualist with species Y. The target organism is the subject of the relationship, and the other organism(s) is the object.",
                 "cv": [
@@ -516,7 +516,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_collection_method",
+                "name": "sample collection method",
                 "cardinality": "optional",
                 "description": "The method employed for collecting the sample. Can be provided in the form of a PMID, DOI, url or text.",
                 "cv": [],
@@ -525,7 +525,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_storage_temperature",
+                "name": "sample storage temperature",
                 "cardinality": "optional",
                 "description": "temperature at which sample was stored, e.g. -80",
                 "cv": [],
@@ -534,7 +534,7 @@
                 "regex": "[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "sample_storage_location",
+                "name": "sample storage location",
                 "cardinality": "optional",
                 "description": "Location at which sample was stored, usually name of a specific freezer/room. Indicate the location name.",
                 "cv": [],
@@ -543,7 +543,7 @@
                 "regex": ""
             },
             {
-                "name": "soil_taxonomicfao_classification",
+                "name": "soil_taxonomic/FAO classification",
                 "cardinality": "recommended",
                 "description": "soil classification from the FAO World Reference Database for Soil Resources",
                 "cv": [],
@@ -552,7 +552,7 @@
                 "regex": ""
             },
             {
-                "name": "soil_taxonomiclocal_classification",
+                "name": "soil_taxonomic/local classification",
                 "cardinality": "optional",
                 "description": "soil classification based on local soil classification system",
                 "cv": [],
@@ -561,7 +561,7 @@
                 "regex": ""
             },
             {
-                "name": "soil_taxonomiclocal_classification_method",
+                "name": "soil_taxonomic/local classification method",
                 "cardinality": "optional",
                 "description": "reference or method used in determining the local soil classification",
                 "cv": [],
@@ -570,7 +570,7 @@
                 "regex": ""
             },
             {
-                "name": "soil_type",
+                "name": "soil type",
                 "cardinality": "optional",
                 "description": "Description of the soil type or classification. This field accepts terms under soil (http://purl.obolibrary.org/obo/ENVO_00001998). Multiple terms can be separated by pipes.",
                 "cv": [
@@ -612,7 +612,7 @@
                 "regex": ""
             },
             {
-                "name": "soil_type_method",
+                "name": "soil type method",
                 "cardinality": "optional",
                 "description": "reference or method used in determining soil series name or other lower-level classification",
                 "cv": [],
@@ -621,7 +621,7 @@
                 "regex": ""
             },
             {
-                "name": "soil_texture_measurement",
+                "name": "soil texture measurement",
                 "cardinality": "optional",
                 "description": "the relative proportion of different grain sizes of mineral particles in a soil, as described using a standard system; express as % sand (50 um to 2 mm), silt (2 um to 50 um), and clay (<2 um) with textural name (e.g., silty clay loam) optional.",
                 "cv": [],
@@ -630,7 +630,7 @@
                 "regex": ""
             },
             {
-                "name": "soil_texture_method",
+                "name": "soil texture method",
                 "cardinality": "optional",
                 "description": "reference or method used in determining soil texture",
                 "cv": [],
@@ -639,7 +639,7 @@
                 "regex": ""
             },
             {
-                "name": "soil_ph",
+                "name": "soil pH",
                 "cardinality": "recommended",
                 "description": "pH measurement of the soil; e.g. 6.2",
                 "cv": [],
@@ -648,7 +648,7 @@
                 "regex": ""
             },
             {
-                "name": "growth_facility",
+                "name": "growth facility",
                 "cardinality": "recommended",
                 "description": "type of facility where the sampled plant was grown",
                 "cv": [
@@ -664,7 +664,7 @@
                 "regex": ""
             },
             {
-                "name": "plant_developmental_stage",
+                "name": "plant developmental stage",
                 "cardinality": "mandatory",
                 "description": "developmental stage at the time of sample collection; for Plant Ontology (PO) (v 20) terms, see http://purl.bioontology.org/ontology/PO, e.g. hypocotyl emergence stage (PO_0007043)",
                 "cv": [],
@@ -673,7 +673,7 @@
                 "regex": ""
             },
             {
-                "name": "sampled_age",
+                "name": "sampled age",
                 "cardinality": "optional",
                 "description": "age of subject at the time of sample collection; relevant scale depends on species and study; e.g. 2 weeks old",
                 "cv": [],
@@ -682,7 +682,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_health_state",
+                "name": "sample health state",
                 "cardinality": "recommended",
                 "description": "health status of the subject at the time of sample collection",
                 "cv": [
@@ -694,7 +694,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_wet_mass",
+                "name": "sample wet mass",
                 "cardinality": "optional",
                 "description": "measurement of wet mass at the time of sample collection; e.g. 0.23 g",
                 "cv": [],
@@ -703,7 +703,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_disease_stage",
+                "name": "sample disease stage",
                 "cardinality": "optional",
                 "description": "stage of the disease at the time of sample collection, e.g. inoculation, penetration, infection, growth and reproduction, dissemination of pathogen",
                 "cv": [],
@@ -712,7 +712,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_length",
+                "name": "sample length",
                 "cardinality": "optional",
                 "description": "length of subject at the time of sampling, if different from the height; e.g. 2m",
                 "cv": [],
@@ -721,7 +721,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_height",
+                "name": "sample height",
                 "cardinality": "optional",
                 "description": "height of subject at the time of sampling, if different from the length; e.g. 0.75m",
                 "cv": [],
@@ -730,7 +730,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_dry_mass",
+                "name": "sample dry mass",
                 "cardinality": "optional",
                 "description": "measurement of dry mass at the time of sample collection; e.g. 0.05g",
                 "cv": [],
@@ -739,7 +739,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_disease_status",
+                "name": "sample disease status",
                 "cardinality": "recommended",
                 "description": "list of diseases with which the subject has been diagnosed at the time of sample collection; can include multiple diagnoses; the value of the field depends on subject; e.g. Charcoal rot (Macrophomina phaseolina), Late wilt (Cephalosporium maydis)",
                 "cv": [],
@@ -748,7 +748,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_phenotype",
+                "name": "sample phenotype",
                 "cardinality": "optional",
                 "description": "phenotype of the plant from which the sample was obtained, such as colour of corolla, fruit diameter, circular leaf shape; Plant Trait Ontology (TO), Phenotypic Quality Ontology (PATO), or other ontology is recommended; e.g. stem epidermis colour (TO:1000018)",
                 "cv": [],
@@ -766,7 +766,7 @@
                 "regex": ""
             },
             {
-                "name": "number_of_replicons",
+                "name": "number of replicons",
                 "cardinality": "recommended",
                 "description": "Reports the number of replicons in a nuclear genome of eukaryotes, in the genome of a bacterium or archaea or the number of segments in a segmented virus. Always applied to the haploid chromosome count of a eukaryote. Mandatory for MIGS of eukaryotes, bacteria, archaea and segmented virus.",
                 "cv": [],
@@ -775,7 +775,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "extrachromosomal_elements",
+                "name": "extrachromosomal elements",
                 "cardinality": "optional",
                 "description": "Do plasmids exist of significant phenotypic consequence (e.g. ones that determine virulence or antibiotic resistance). Megaplasmids? Other plasmids (borrelia has 15+ plasmids).",
                 "cv": [],
@@ -784,7 +784,7 @@
                 "regex": "[+-]?[0-9]+"
             },
             {
-                "name": "estimated_size",
+                "name": "estimated size",
                 "cardinality": "recommended",
                 "description": "The estimated size of the genome (in bp) prior to sequencing. Of particular importance in the sequencing of (eukaryotic) genome which could remain in draft form for a long or unspecified period. Mandatory for MIGS of eukaryotes.",
                 "cv": [],
@@ -798,11 +798,11 @@
                 "description": "name of persons or institute who collected the specimen",
                 "cv": [],
                 "units": "",
-                "field_type": "TEXT_FIELD",
+                "field_type": "TEXT_AREA_FIELD",
                 "regex": ""
             },
             {
-                "name": "collection_date",
+                "name": "collection date",
                 "cardinality": "mandatory",
                 "description": "The date the sample was collected with the intention of sequencing, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid ISO8601 compliant times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008.",
                 "cv": [],
@@ -820,7 +820,7 @@
                 "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
-                "name": "geographic_location_latitude",
+                "name": "geographic location (latitude)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of the sample as defined by latitude. The values should be reported in decimal degrees and in WGS84 system",
                 "cv": [],
@@ -829,7 +829,7 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic_location_longitude",
+                "name": "geographic location (longitude)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of the sample as defined by longitude. The values should be reported in decimal degrees and in WGS84 system",
                 "cv": [],
@@ -838,7 +838,7 @@
                 "regex": "(^[+-]?[0-9]+.?[0-9]{0,8}$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
-                "name": "geographic_location_region_and_locality",
+                "name": "geographic location (region and locality)",
                 "cardinality": "optional",
                 "description": "The geographical origin of the sample as defined by the specific region name followed by the locality name.",
                 "cv": [],
@@ -856,7 +856,7 @@
                 "regex": ""
             },
             {
-                "name": "broadscale_environmental_context",
+                "name": "broad-scale environmental context",
                 "cardinality": "optional",
                 "description": "Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO\u2019s biome class: http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
                 "cv": [],
@@ -865,7 +865,7 @@
                 "regex": ""
             },
             {
-                "name": "local_environmental_context",
+                "name": "local environmental context",
                 "cardinality": "optional",
                 "description": "Report the entity or entities which are in the sample or specimen\u2019s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for \"broad-scale environmental context\". Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
                 "cv": [],
@@ -883,16 +883,16 @@
                 "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
-                "name": "amount_or_size_of_sample_collected",
+                "name": "amount or size of sample collected",
                 "cardinality": "optional",
                 "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.",
                 "cv": [],
-                "units": "kg",
+                "units": "m3",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
             {
-                "name": "sampling_time_point",
+                "name": "sampling time point",
                 "cardinality": "optional",
                 "description": "Time point at which a sample or observation is made or taken from a biomaterial as measured from some reference point. Indicate the timepoint written in ISO 8601 format.",
                 "cv": [],
@@ -901,7 +901,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_capture_status",
+                "name": "sample capture status",
                 "cardinality": "optional",
                 "description": "Reason for the sample collection.",
                 "cv": [
@@ -918,7 +918,7 @@
                 "regex": ""
             },
             {
-                "name": "organism_common_name",
+                "name": "organism common name",
                 "cardinality": "recommended",
                 "description": "common name of the subject organism, e.g. maize",
                 "cv": [],
@@ -927,7 +927,7 @@
                 "regex": ""
             },
             {
-                "name": "biological_status",
+                "name": "biological status",
                 "cardinality": "optional",
                 "description": "the level of genome modification; controlled vocabulary: wild, natural, semi-natural, inbred line, breeder's line, hybrid, clonal selection, mutant",
                 "cv": [],
@@ -936,7 +936,7 @@
                 "regex": ""
             },
             {
-                "name": "growth_habit",
+                "name": "growth habit",
                 "cardinality": "optional",
                 "description": "characteristic shape, appearance or growth form of a plant species",
                 "cv": [
@@ -950,7 +950,7 @@
                 "regex": ""
             },
             {
-                "name": "plant_sex",
+                "name": "plant sex",
                 "cardinality": "optional",
                 "description": "sex of the reproductive parts on the whole plant, e.g. pistilate, staminate, monoecieous, hermaphrodite",
                 "cv": [],
@@ -959,7 +959,7 @@
                 "regex": ""
             },
             {
-                "name": "plant_structure",
+                "name": "plant structure",
                 "cardinality": "mandatory",
                 "description": "name of plant structure that the sample was obtained from; for Plant Ontology (PO) terms see http://purl.bioontology.org/ontology/PO, e.g. petiole epidermis (PO_0000051); if an individual flower is sampled the sex of it can be recorded here",
                 "cv": [],
@@ -968,7 +968,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_storage_duration",
+                "name": "sample storage duration",
                 "cardinality": "optional",
                 "description": "Duration for which the sample was stored. Indicate the duration for which the sample was stored written in ISO 8601 format.",
                 "cv": [],
@@ -977,7 +977,7 @@
                 "regex": ""
             },
             {
-                "name": "geographic_location_country_andor_sea",
+                "name": "geographic location (country and/or sea)",
                 "cardinality": "mandatory",
                 "description": "The geographical origin of where the sample was collected from, with the intention of sequencing, as defined by the country or sea name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html).",
                 "cv": [
@@ -1052,13 +1052,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
+                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
-                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -1126,10 +1126,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
-                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
+                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -1143,7 +1143,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia, Federated States of",
+                    "Micronesia",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -1166,7 +1166,6 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
-                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -1192,7 +1191,6 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
-                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -1200,7 +1198,6 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
-                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -1216,15 +1213,14 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
-                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
-                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
+                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -1233,7 +1229,6 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
-                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -1254,8 +1249,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Wake Island",
                     "Virgin Islands",
+                    "Wake Island",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -1281,7 +1276,7 @@
                 "regex": ""
             },
             {
-                "name": "climate_environment",
+                "name": "climate environment",
                 "cardinality": "optional",
                 "description": "treatment involving an exposure to a particular climate; can include multiple climates",
                 "cv": [],
@@ -1290,7 +1285,7 @@
                 "regex": ""
             },
             {
-                "name": "gaseous_environment",
+                "name": "gaseous environment",
                 "cardinality": "optional",
                 "description": "use of conditions with differing gaseous environments; should include the name of gaseous compound, amount administered, treatment duration, interval and total experimental duration; can include multiple gaseous environment regimens",
                 "cv": [],
@@ -1299,7 +1294,7 @@
                 "regex": ""
             },
             {
-                "name": "seasonal_environment",
+                "name": "seasonal environment",
                 "cardinality": "optional",
                 "description": "treatment involving an exposure to a particular season (e.g. winter, summer, rabi, rainy etc.)",
                 "cv": [],
@@ -1308,7 +1303,7 @@
                 "regex": ""
             },
             {
-                "name": "drainage_classification",
+                "name": "drainage classification",
                 "cardinality": "optional",
                 "description": "drainage classification from a standard system such as the USDA system",
                 "cv": [
@@ -1324,7 +1319,7 @@
                 "regex": ""
             },
             {
-                "name": "source_material_identifiers",
+                "name": "source material identifiers",
                 "cardinality": "recommended",
                 "description": "A unique identifier assigned to a material sample (as defined by http://rs.tdwg.org/dwc/terms/materialSampleID, and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples. The INSDC qualifiers /specimen_voucher, /bio_material, or /culture_collection may or may not share the same value as the source_mat_id field. For instance, the /specimen_voucher qualifier and source_mat_id may both contain 'UAM:Herps:14' , referring to both the specimen voucher and sampled tissue with the same identifier. However, the /culture_collection qualifier may refer to a value from an initial culture (e.g. ATCC:11775) while source_mat_id would refer to an identifier from some derived culture from which the nucleic acids were extracted (e.g. xatc123 or ark:/2154/R2).",
                 "cv": [],
@@ -1333,7 +1328,7 @@
                 "regex": ""
             },
             {
-                "name": "source_material_description",
+                "name": "source material description",
                 "cardinality": "optional",
                 "description": "further information to clarify the nature of the specimen or population used that is not collected elsewhere, e.g. if source was derived from accessioned stock, describe how it links to the original material",
                 "cv": [],
@@ -1360,7 +1355,7 @@
                 "regex": ""
             },
             {
-                "name": "genetic_modification",
+                "name": "genetic modification",
                 "cardinality": "optional",
                 "description": "A genetic modification of the genome of an organism which may occur naturally by spontaneous mutation, or be introduced by some experimental means. Examples of genetic modification include specification of a transgene or the gene knocked-out or details of transient transfection.",
                 "cv": [],
@@ -1369,7 +1364,7 @@
                 "regex": ""
             },
             {
-                "name": "subspecific_genetic_lineage_rank",
+                "name": "subspecific genetic lineage rank",
                 "cardinality": "recommended",
                 "description": "further information about the genetic distinctness of this lineage by recording additional information i.e. variety, cultivar, ecotype, inbred line,; it can also contain alternative taxonomic information",
                 "cv": [],
@@ -1378,7 +1373,7 @@
                 "regex": ""
             },
             {
-                "name": "subspecific_genetic_lineage_name",
+                "name": "subspecific genetic lineage name",
                 "cardinality": "recommended",
                 "description": "name of the infraspecific rank, e.g ecotype Col-0",
                 "cv": [],
@@ -1387,7 +1382,7 @@
                 "regex": ""
             },
             {
-                "name": "organism_phenotype",
+                "name": "organism phenotype",
                 "cardinality": "optional",
                 "description": "most relevant phenotypic traits of the subject; for Phenotypic quality Ontology (PATO) (v 2013-10-28) terms, please see http://purl.bioontology.org/ontology/PATO, e.g. bifurcated (PATO_0001784); terms from Trait Ontology (TO), Plant Ontology (PO) or Crop Ontology (CO) are also accepted; include name/method/scale for each trait; can include multiple traits",
                 "cv": [],
@@ -1396,7 +1391,7 @@
                 "regex": ""
             },
             {
-                "name": "ancestral_data",
+                "name": "ancestral data",
                 "cardinality": "optional",
                 "description": "information about either pedigree or other description of ancestral information (e.g. parental variety in case of mutant or selection), e.g. A/3*B (meaning [(A x B) x B] x B)",
                 "cv": [],
@@ -1405,7 +1400,7 @@
                 "regex": ""
             },
             {
-                "name": "plant_growth_medium",
+                "name": "plant growth medium",
                 "cardinality": "mandatory",
                 "description": "Specification of the media for growing the plants or tissue cultured samples, e.g. soil, aeroponic, hydroponic, in vitro solid culture medium, in vitro liquid culture medium. Recommended value is a specific value from EO:plant growth medium (follow this link for terms http://purl.obolibrary.org/obo/EO_0007147).",
                 "cv": [],
@@ -1414,7 +1409,7 @@
                 "regex": ""
             },
             {
-                "name": "rooting_conditions",
+                "name": "rooting conditions",
                 "cardinality": "recommended",
                 "description": "relevant rooting conditions, such as field plot size, sowing density, container dimensions, number of plants per container",
                 "cv": [],
@@ -1423,7 +1418,7 @@
                 "regex": ""
             },
             {
-                "name": "culture_rooting_medium",
+                "name": "culture rooting medium",
                 "cardinality": "recommended",
                 "description": "name or reference for the hydroponic or in vitro culture rooting medium, can be a name of a commonly used medium or reference to a specific medium; e.g. Murashige and Skoog medium, if the medium has not been formally published, use the rooting medium descriptors",
                 "cv": [],
@@ -1432,7 +1427,7 @@
                 "regex": ""
             },
             {
-                "name": "rooting_medium_macronutrients",
+                "name": "rooting medium macronutrients",
                 "cardinality": "recommended",
                 "description": "measurement of the culture rooting medium macronutrients (N,P, K, Ca, Mg, S); e.g. KH2PO4 (170mg/L)",
                 "cv": [],
@@ -1441,7 +1436,7 @@
                 "regex": ""
             },
             {
-                "name": "rooting_medium_micronutrients",
+                "name": "rooting medium micronutrients",
                 "cardinality": "recommended",
                 "description": "measurement of the culture rooting medium micronutrients (Fe, Mn, Zn, B, Cu, Mo); e.g. H3BO3 (6.2mg/L)",
                 "cv": [],
@@ -1450,7 +1445,7 @@
                 "regex": ""
             },
             {
-                "name": "rooting_medium_organic_supplements",
+                "name": "rooting medium organic supplements",
                 "cardinality": "recommended",
                 "description": "organic supplements of the culture rooting medium, such as vitaimins, amino acids, organic acids, antibiotics activated charcoal; e.g. Nicotinic acid (0.5mg/L)",
                 "cv": [],
@@ -1459,7 +1454,7 @@
                 "regex": ""
             },
             {
-                "name": "rooting_medium_carbon",
+                "name": "rooting medium carbon",
                 "cardinality": "recommended",
                 "description": "source of organic carbon in the culture rooting medium; e.g. sucrose",
                 "cv": [],
@@ -1468,7 +1463,7 @@
                 "regex": ""
             },
             {
-                "name": "rooting_medium_regulators",
+                "name": "rooting medium regulators",
                 "cardinality": "recommended",
                 "description": "growth regulators in the culture rooting medium, such as cytokinins, auxins, gybberellins, abscisic acid; e.g. 0.5mg/L NAA",
                 "cv": [],
@@ -1477,7 +1472,7 @@
                 "regex": ""
             },
             {
-                "name": "rooting_medium_solidifier",
+                "name": "rooting medium solidifier",
                 "cardinality": "recommended",
                 "description": "specification of the solidifying agent in the culture rooting medium; e.g. agar",
                 "cv": [],
@@ -1486,7 +1481,7 @@
                 "regex": ""
             },
             {
-                "name": "rooting_medium_ph",
+                "name": "rooting medium pH",
                 "cardinality": "recommended",
                 "description": "pH measurement of the culture rooting medium; e.g. 5.5",
                 "cv": [],
@@ -1495,7 +1490,7 @@
                 "regex": ""
             },
             {
-                "name": "isolation_and_growth_condition",
+                "name": "isolation and growth condition",
                 "cardinality": "mandatory",
                 "description": "Publication reference in the form of pubmed ID (pmid), digital object identifier (doi) or url for isolation and growth condition specifications of the organism/material. Mandatory for MIGS and MIMARKS Specimen.",
                 "cv": [],
@@ -1504,7 +1499,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_material_processing",
+                "name": "sample material processing",
                 "cardinality": "optional",
                 "description": "A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.",
                 "cv": [],
@@ -1513,11 +1508,11 @@
                 "regex": ""
             },
             {
-                "name": "sample_volume_or_weight_for_dna_extraction",
+                "name": "sample volume or weight for DNA extraction",
                 "cardinality": "optional",
                 "description": "Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term 'sample size'.",
                 "cv": [],
-                "units": "mL",
+                "units": "ng",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1526,12 +1521,12 @@
                 "cardinality": "optional",
                 "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
                 "cv": [],
-                "units": "m",
+                "units": "mm",
                 "field_type": "TEXT_FIELD",
                 "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
-                "name": "air_temperature_regimen",
+                "name": "air temperature regimen",
                 "cardinality": "recommended",
                 "description": "information about treatment involving an exposure to varying temperatures; should include the temperature, treatment duration, interval and total experimental duration; can include different temperature regimens",
                 "cv": [],
@@ -1540,7 +1535,7 @@
                 "regex": ""
             },
             {
-                "name": "antibiotic_regimen",
+                "name": "antibiotic regimen",
                 "cardinality": "optional",
                 "description": "information about treatment involving antibiotic administration; should include the name of antibiotic, amount administered, treatment duration, interval and total experimental duration; can include multiple antibiotic regimens",
                 "cv": [],
@@ -1549,7 +1544,7 @@
                 "regex": ""
             },
             {
-                "name": "chemical_mutagen",
+                "name": "chemical mutagen",
                 "cardinality": "optional",
                 "description": "treatment involving use of mutagens; should include the name of mutagen, amount administered, treatment duration, interval and total experimental duration; can include multiple mutagen regimens",
                 "cv": [],
@@ -1558,7 +1553,7 @@
                 "regex": ""
             },
             {
-                "name": "fertilizer_administration",
+                "name": "fertilizer administration",
                 "cardinality": "optional",
                 "description": "Type of fertilizer or amendment added to the soil or water for the purpose of improving substrate health and quality for plant growth. This field accepts terms listed under agronomic fertilizer (http://purl.obolibrary.org/obo/AGRO_00002062). Multiple terms may apply and can be separated by pipes, listing in reverse chronological order. N.B. Old ENA definition as \"fertilizer regimen\": information about treatment involving the use of fertilizers; should include the name fertilizer, amount administered, treatment duration, interval and total experimental duration; can include multiple fertilizer regimens",
                 "cv": [],
@@ -1567,7 +1562,7 @@
                 "regex": ""
             },
             {
-                "name": "fungicide_regimen",
+                "name": "fungicide regimen",
                 "cardinality": "optional",
                 "description": "information about treatment involving use of fungicides; should include the name of fungicide, amount administered, treatment duration, interval and total experimental duration; can include multiple fungicide regimens",
                 "cv": [],
@@ -1585,7 +1580,7 @@
                 "regex": ""
             },
             {
-                "name": "growth_hormone_regimen",
+                "name": "growth hormone regimen",
                 "cardinality": "optional",
                 "description": "information about treatment involving use of growth hormones; should include the name of growth hormone, amount administered, treatment duration, interval and total experimental duration; can include multiple growth hormone regimens",
                 "cv": [],
@@ -1594,7 +1589,7 @@
                 "regex": ""
             },
             {
-                "name": "herbicide_regimen",
+                "name": "herbicide regimen",
                 "cardinality": "optional",
                 "description": "information about treatment involving use of herbicides; information about treatment involving use of growth hormones; should include the name of herbicide, amount administered, treatment duration, interval and total experimental duration; can include multiple regimens",
                 "cv": [],
@@ -1603,7 +1598,7 @@
                 "regex": ""
             },
             {
-                "name": "humidity_regimen",
+                "name": "humidity regimen",
                 "cardinality": "optional",
                 "description": "information about treatment involving an exposure to varying degree of humidity; information about treatment involving use of growth hormones; should include amount of humidity administered, treatment duration, interval and total experimental duration; can include multiple regimens",
                 "cv": [],
@@ -1612,7 +1607,7 @@
                 "regex": ""
             },
             {
-                "name": "mineral_nutrient_regimen",
+                "name": "mineral nutrient regimen",
                 "cardinality": "recommended",
                 "description": "information about treatment involving the use of mineral supplements; should include the name of mineral nutrient, amount administered, treatment duration, interval and total experimental duration; can include multiple mineral nutrient regimens",
                 "cv": [],
@@ -1621,7 +1616,7 @@
                 "regex": ""
             },
             {
-                "name": "nonmineral_nutrient_regimen",
+                "name": "non-mineral nutrient regimen",
                 "cardinality": "optional",
                 "description": "information about treatment involving the exposure of plant to non-mineral nutrient such as oxygen, hydrogen or carbon; should include the name of non-mineral nutrient, amount administered, treatment duration, interval and total experimental duration; can include multiple non-mineral nutrient regimens",
                 "cv": [],
@@ -1630,7 +1625,7 @@
                 "regex": ""
             },
             {
-                "name": "pesticide_regimen",
+                "name": "pesticide regimen",
                 "cardinality": "optional",
                 "description": "information about treatment involving use of insecticides; should include the name of pesticide, amount administered, treatment duration, interval and total experimental duration; can include multiple pesticide regimens",
                 "cv": [],
@@ -1639,7 +1634,7 @@
                 "regex": ""
             },
             {
-                "name": "ph_regimen",
+                "name": "pH regimen",
                 "cardinality": "optional",
                 "description": "information about treatment involving exposure of plants to varying levels of pH of the growth media; can include multiple regimen",
                 "cv": [],
@@ -1648,7 +1643,7 @@
                 "regex": ""
             },
             {
-                "name": "radiation_regimen",
+                "name": "radiation regimen",
                 "cardinality": "optional",
                 "description": "information about treatment involving exposure of plant or a plant part to a particular radiation regimen; should include the radiation type, amount or intensity administered, treatment duration, interval and total experimental duration; can include multiple radiation regimens",
                 "cv": [],
@@ -1657,7 +1652,7 @@
                 "regex": ""
             },
             {
-                "name": "rainfall_regimen",
+                "name": "rainfall regimen",
                 "cardinality": "optional",
                 "description": "information about treatment involving an exposure to a given amount of rainfall; can include multiple regimens",
                 "cv": [],
@@ -1666,7 +1661,7 @@
                 "regex": ""
             },
             {
-                "name": "salt_regimen",
+                "name": "salt regimen",
                 "cardinality": "optional",
                 "description": "information about treatment involving use of salts as supplement to liquid and soil growth media; should include the name of salt, amount administered, treatment duration, interval and total experimental duration; can include multiple salt regimens",
                 "cv": [],
@@ -1675,7 +1670,7 @@
                 "regex": ""
             },
             {
-                "name": "standing_water_regimen",
+                "name": "standing water regimen",
                 "cardinality": "optional",
                 "description": "treatment involving an exposure to standing water during a plant's life span, types can be flood water or standing water; can include multiple regimens",
                 "cv": [],
@@ -1684,7 +1679,7 @@
                 "regex": ""
             },
             {
-                "name": "watering_regimen",
+                "name": "watering regimen",
                 "cardinality": "recommended",
                 "description": "information about treatment involving an exposure to watering frequencies; can include multiple regimens",
                 "cv": [],
@@ -1693,7 +1688,7 @@
                 "regex": ""
             },
             {
-                "name": "water_temperature_regimen",
+                "name": "water temperature regimen",
                 "cardinality": "optional",
                 "description": "information about treatment involving an exposure to water with varying degree of temperature; can include multiple regimens",
                 "cv": [],
@@ -1702,7 +1697,7 @@
                 "regex": ""
             },
             {
-                "name": "plant_treatment",
+                "name": "plant treatment",
                 "cardinality": "recommended",
                 "description": "ontology term(s) that describes the plant treatment or relevant environmental conditions, recommend use of Plant Environment Ontology (EO) or other ontology, such as XEML Environment Ontology (XEO) or Crop Ontology (CO), more specific fields in the treatment section can be used in addition to or in place of this field",
                 "cv": [],
@@ -1711,7 +1706,7 @@
                 "regex": ""
             },
             {
-                "name": "light_regimen",
+                "name": "light regimen",
                 "cardinality": "recommended",
                 "description": "information about treatment involving an exposure to light, this includes both light intensity and quality",
                 "cv": [],
@@ -1720,7 +1715,7 @@
                 "regex": ""
             },
             {
-                "name": "biotic_regimen",
+                "name": "biotic regimen",
                 "cardinality": "optional",
                 "description": "information about treatment involving use of biotic factors, such as bacteria, viruses or fungi",
                 "cv": [],
@@ -1729,7 +1724,7 @@
                 "regex": ""
             },
             {
-                "name": "mechanical_damage",
+                "name": "mechanical damage",
                 "cardinality": "optional",
                 "description": "information about any mechanical damage exerted on the plant; can include multiple damages and sites",
                 "cv": [],
@@ -1738,7 +1733,7 @@
                 "regex": ""
             },
             {
-                "name": "chemical_administration",
+                "name": "chemical administration",
                 "cardinality": "optional",
                 "description": "list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v111), please see http://purl.bioontology.org/ontology/CHEBI",
                 "cv": [],
