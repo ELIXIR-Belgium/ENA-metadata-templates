@@ -195,6 +195,13 @@ sample:
       regex: ""
       cv: []
       field_type: TEXT_FIELD
+    - name: scientific_name
+      cardinality: optional
+      description: Scientific name of sample that distinguishes its taxonomy.  Please use a name or synonym that is tracked in the INSDC Taxonomy database. Also, this field can be used to confirm the TAXON_ID setting.
+      units: ""
+      regex: ""
+      cv: []
+      field_type: TEXT_FIELD
     - name: sample_description
       cardinality: optional
       description: Free-form text describing the sample, its origin, and its method of isolation.
