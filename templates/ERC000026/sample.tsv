@@ -1,1 +1,1 @@
-"alias"	"title"	"taxon_id"	"sample_description"	"sex"	"subject_id"	"gender"	"phenotype"	"disease_site"	"sample_type"	"donor_id"
+"alias"	"title"	"taxon_id"	"scientific_name"	"common_name"	"sample_description"	"sex"	"subject_id"	"gender"	"phenotype"	"disease_site"	"sample_type"	"donor_id"
