@@ -116,7 +116,7 @@ def fetch_sample_attrib(root):
         output['cardinality'] = ''
         output['description'] = ''
         output['cv'] = []
-        output['units'] = ''
+        output['units'] = []
         output['field_type'] = ''
         output['regex'] = ''
 
@@ -129,7 +129,7 @@ def fetch_sample_attrib(root):
                 output['description'] = sub_attr.text
             elif sub_attr.tag == 'UNITS':
                 for unit in sub_attr:
-                    output['units'] = unit.text
+                    output['units'].append(unit.text)
             elif sub_attr.tag == 'FIELD_TYPE':
                 for options in sub_attr:
                     output['field_type'] = options.tag
@@ -320,7 +320,7 @@ def main():
                 # Populate pandas dataframe with attributes
                 units = ''
                 if 'units' in attrib and attrib['units']:
-                    units = f" (Units: {attrib['units']})"
+                    units = f" (Units: {', '.join(attrib['units'])})"
                 
                 header = [attrib['name'], attrib['cardinality'], f"{attrib['description'].capitalize()}{units}"]
                 if 'cv' in attrib and attrib['cv']:
