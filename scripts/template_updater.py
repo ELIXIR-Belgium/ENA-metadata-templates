@@ -116,7 +116,7 @@ def fetch_sample_attrib(root):
         output['cardinality'] = ''
         output['description'] = ''
         output['cv'] = []
-        output['units'] = ''
+        output['units'] = []
         output['field_type'] = ''
         output['regex'] = ''
 
@@ -129,7 +129,7 @@ def fetch_sample_attrib(root):
                 output['description'] = sub_attr.text
             elif sub_attr.tag == 'UNITS':
                 for unit in sub_attr:
-                    output['units'] = unit.text
+                    output['units'].append(unit.text)
             elif sub_attr.tag == 'FIELD_TYPE':
                 for options in sub_attr:
                     output['field_type'] = options.tag
@@ -141,7 +141,7 @@ def fetch_sample_attrib(root):
                         for regex_value in options:
                             if regex_value.tag == 'REGEX_VALUE':
                                 output['regex'] = regex_value.text
-                            
+        output['units'] = ', '.join(output['units'])   
         output_list.append(output)
     return output_list
 
