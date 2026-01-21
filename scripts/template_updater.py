@@ -141,7 +141,7 @@ def fetch_sample_attrib(root):
                         for regex_value in options:
                             if regex_value.tag == 'REGEX_VALUE':
                                 output['regex'] = regex_value.text
-        output['units'] = ', '.join(attrib['units'])   
+        output['units'] = ', '.join(output['units'])   
         output_list.append(output)
     return output_list
 
