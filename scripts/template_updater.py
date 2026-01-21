@@ -121,7 +121,7 @@ def fetch_sample_attrib(root):
         output['regex'] = ''
 
         for sub_attr in attribute:
-            if sub_attr.tag == 'NAME':
+            if sub_attr.tag == 'LABEL':
                 output['name'] = sub_attr.text
             elif sub_attr.tag == 'MANDATORY':
                 output['cardinality'] = sub_attr.text
