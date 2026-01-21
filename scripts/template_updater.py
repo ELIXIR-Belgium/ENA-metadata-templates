@@ -141,7 +141,7 @@ def fetch_sample_attrib(root):
                         for regex_value in options:
                             if regex_value.tag == 'REGEX_VALUE':
                                 output['regex'] = regex_value.text
-                            
+        output['units'] = ', '.join(attrib['units'])   
         output_list.append(output)
     return output_list
 
@@ -320,7 +320,7 @@ def main():
                 # Populate pandas dataframe with attributes
                 units = ''
                 if 'units' in attrib and attrib['units']:
-                    units = f" (Units: {', '.join(attrib['units'])})"
+                    units = f" (Units: {attrib['units']})"
                 
                 header = [attrib['name'], attrib['cardinality'], f"{attrib['description'].capitalize()}{units}"]
                 if 'cv' in attrib and attrib['cv']:
