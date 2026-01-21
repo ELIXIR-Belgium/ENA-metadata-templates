@@ -559,7 +559,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_type",
+                "name": "sample type",
                 "cardinality": "optional",
                 "description": "Affected organ",
                 "cv": [

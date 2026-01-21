@@ -510,7 +510,7 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "project_name",
+                "name": "project name",
                 "cardinality": "optional",
                 "description": "Name of the project within which the sequencing was organized",
                 "cv": [],
@@ -550,7 +550,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_type",
+                "name": "sample type",
                 "cardinality": "mandatory",
                 "description": "Affected organ",
                 "cv": [
@@ -576,7 +576,7 @@
                 "regex": ""
             },
             {
-                "name": "ppcg_id",
+                "name": "PPCG ID",
                 "cardinality": "mandatory",
                 "description": "Pan Prostate Cancer Group participant ID",
                 "cv": [],
@@ -585,7 +585,7 @@
                 "regex": ""
             },
             {
-                "name": "ppcg_sample_id",
+                "name": "PPCG sample ID",
                 "cardinality": "mandatory",
                 "description": "Pan Prostate Cancer Group sample ID. This is an extension of the participant ID: As a different sample is added from an individual a letter is added to the identifier in alphanumeric order. E.g., for PPCG ID P0076 the first sample ID would be PPCG0076a and then PPCG0076b, PPCG0076c and so on. At the end of each sample ID please always add whether the sample is DNA or RNA. Therefore, naming should look like either PPCG0076b_DNA for DNA samples or PPCG0076b_RNA for RNA samples",
                 "cv": [
@@ -597,7 +597,7 @@
                 "regex": ""
             },
             {
-                "name": "pipelineuuid",
+                "name": "Pipeline/UUID",
                 "cardinality": "mandatory",
                 "description": "A unique sample identifier used within various pipeline groups - used to avoid sample ID clash when pipeline results are merged.",
                 "cv": [],
