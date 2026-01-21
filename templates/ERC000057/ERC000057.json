@@ -814,7 +814,7 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "geographic location (latitude)",
@@ -877,14 +877,14 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "amount or size of sample collected",
                 "cardinality": "optional",
                 "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.",
                 "cv": [],
-                "units": "m3",
+                "units": "m2, m3, g, L, kg",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -982,13 +982,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
-                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
+                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -1056,10 +1056,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
+                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
-                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -1073,7 +1073,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia",
+                    "Micronesia, Federated States of",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -1096,6 +1096,7 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
+                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -1121,6 +1122,7 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
+                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -1128,6 +1130,7 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
+                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -1143,14 +1146,15 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
+                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
+                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
-                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -1159,6 +1163,7 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
+                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -1179,8 +1184,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Virgin Islands",
                     "Wake Island",
+                    "Virgin Islands",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -1246,7 +1251,7 @@
                 "cardinality": "optional",
                 "description": "age of host at the time of sampling; relevant scale depends on species and study, e.g. could be seconds for amoebae or centuries for trees",
                 "cv": [],
-                "units": "years",
+                "units": "centuries, hours, seconds, months, weeks, minutes, days, decades, years",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1291,16 +1296,16 @@
                 "cardinality": "optional",
                 "description": "the height of subject",
                 "cv": [],
-                "units": "mm",
+                "units": "mm, cm, m",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
             },
             {
                 "name": "host length",
                 "cardinality": "optional",
                 "description": "the length of subject",
                 "cv": [],
-                "units": "mm",
+                "units": "mm, cm, m",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1327,7 +1332,7 @@
                 "cardinality": "optional",
                 "description": "total mass of the host at collection, the unit depends on host",
                 "cv": [],
-                "units": "kg",
+                "units": "g, kg",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1417,7 +1422,7 @@
                 "cardinality": "optional",
                 "description": "A unique identifier by which each host of the symbiotic host organism subject can be referred to, de-identified, e.g. #H14.",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1435,7 +1440,7 @@
                 "cardinality": "optional",
                 "description": "Time spent in host of the symbiotic organism at the time of sampling; relevant scale depends on symbiotic organism and study.",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year, day, minute",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1499,7 +1504,7 @@
                 "description": "The range and diversity of host species that an organism is capable of infecting, defined by NCBI taxonomy identifier.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -1508,7 +1513,7 @@
                 "description": "Phenotype of the host of the symbiotic host organism. For phenotypic quality ontology (PATO) terms, see http://purl.bioontology.org/ontology/pato.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -1579,7 +1584,7 @@
                 "cardinality": "optional",
                 "description": "The taxonomic name of any coinfecting organism observed in a symbiotic relationship with the host of the sampled host organism. e.g. where a sample collected from a host trematode species (A) which was collected from a host_of_host fish (B) that was also infected with a nematode (C), the value here would be (C) the nematode {species name} or {common name}. Multiple co-infecting species may be added in a comma-separated list. For listing symbiotic organisms associated with the host (A) use the term Observed host symbiont.",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1588,7 +1593,7 @@
                 "cardinality": "optional",
                 "description": "Taxonomic name information of the host of the symbiotic host organism below subspecies level.",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1597,7 +1602,7 @@
                 "cardinality": "optional",
                 "description": "Total mass of the host of the symbiotic host organism at collection, the unit depends on the host.",
                 "cv": [],
-                "units": "\u00b5g",
+                "units": "\u00b5g, g, pg, ng, mg, kg",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -1606,7 +1611,7 @@
                 "cardinality": "optional",
                 "description": "For a symbiotic host organism the local anatomical environment within its host may have causal influences. Report the anatomical entity(s) which are in the direct environment of the symbiotic host organism being sampled and which you believe have significant causal influences on your sample or specimen. For example, if the symbiotic host organism being sampled is an intestinal worm, its local environmental context will be the term for intestine from UBERON (http://uberon.github.io/).",
                 "cv": [],
-                "units": "g/m3",
+                "units": "g/m3, %",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1624,7 +1629,7 @@
                 "cardinality": "optional",
                 "description": "Observed genotype of the host of the symbiotic host organism.",
                 "cv": [],
-                "units": "year",
+                "units": "century, week, month, year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1642,7 +1647,7 @@
                 "cardinality": "optional",
                 "description": "measurement of dry mass",
                 "cv": [],
-                "units": "mg",
+                "units": "g, mg, kg",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1791,7 +1796,7 @@
                 "cardinality": "optional",
                 "description": "Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term 'sample size'.",
                 "cv": [],
-                "units": "ng",
+                "units": "g, ng, mg, mL",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1881,9 +1886,9 @@
                 "cardinality": "recommended",
                 "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
                 "cv": [],
-                "units": "mm",
+                "units": "mm, m",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "chemical administration",

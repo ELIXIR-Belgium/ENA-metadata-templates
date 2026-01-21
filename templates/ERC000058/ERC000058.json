@@ -613,7 +613,7 @@
                 "cardinality": "optional",
                 "description": "Sample transport duration (in days or hrs) and temperature the sample was exposed to (e.g. 5.5 days; 20 \u00b0C)",
                 "cv": [],
-                "units": "m2",
+                "units": "km2, m2, cm2, ha",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -667,7 +667,7 @@
                 "cardinality": "optional",
                 "description": "In non deviated well, measured depth is equal to the true vertical depth, TVD (TVD=TVDSS plus the reference or datum it refers to). In deviated wells, the MD is the length of trajectory of the borehole measured from the same reference or datum. Common datums used are ground level (GL), drilling rig floor (DF), rotary table (RT), kelly bushing (KB) and mean sea level (MSL). If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "mm",
+                "units": "mm, km, m",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -857,7 +857,7 @@
                 "cardinality": "optional",
                 "description": "A unique identifier of a well or wellbore. This is part of the Global Framework for Well Identification initiative which is compiled by the Professional Petroleum Data Management Association (PPDM) in an effort to improve well identification systems. (Supporting information: https://ppdm.org/ and http://dl.ppdm.org/dl/690)",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year, day, minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -866,7 +866,7 @@
                 "cardinality": "optional",
                 "description": "Current amount of water (%) in a produced fluid stream; or the average of the combined streams",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year, day, minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -904,7 +904,7 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "geographic location (latitude)",
@@ -967,7 +967,7 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "secondary and tertiary recovery methods and start date",
@@ -983,7 +983,7 @@
                 "cardinality": "optional",
                 "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.",
                 "cv": [],
-                "units": "m3",
+                "units": "m2, m3, g, L, kg",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1001,7 +1001,7 @@
                 "cardinality": "optional",
                 "description": "If qpcr was used for the cell count, the target gene name, the primer sequence and the cycling conditions should also be provided. (Example: 16S rrna; FWD:ACGTAGCTATGACGT REV:GTGCTAGTCGAGTAC; initial denaturation:90C_5min; denaturation:90C_2min; annealing:52C_30 sec; elongation:72C_30 sec; 90 C for 1 min; final elongation:72C_5min; 30 cycles)",
                 "cv": [],
-                "units": "year",
+                "units": "century, week, month, year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1010,7 +1010,7 @@
                 "cardinality": "optional",
                 "description": "Main hydrocarbon type produced from resource (i.e. Oil, gas, condensate, etc). If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year, day, minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1108,13 +1108,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
-                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
+                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -1182,10 +1182,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
+                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
-                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -1199,7 +1199,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia",
+                    "Micronesia, Federated States of",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -1222,6 +1222,7 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
+                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -1247,6 +1248,7 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
+                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -1254,6 +1256,7 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
+                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -1269,14 +1272,15 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
+                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
+                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
-                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -1285,6 +1289,7 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
+                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -1305,8 +1310,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Virgin Islands",
                     "Wake Island",
+                    "Virgin Islands",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -1354,7 +1359,7 @@
                 "cardinality": "optional",
                 "description": "pressure to which the sample is subject, in atmospheres",
                 "cv": [],
-                "units": "bar",
+                "units": "bar, atm",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1390,7 +1395,7 @@
                 "cardinality": "optional",
                 "description": "Measure of the ability of a hydrocarbon resource to allow fluids to pass through it. (Additional information: https://en.wikipedia.org/wiki/Permeability_(earth_sciences))",
                 "cv": [],
-                "units": "mm",
+                "units": "mm, km, m",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1408,7 +1413,7 @@
                 "cardinality": "optional",
                 "description": "Original pressure of the hydrocarbon resource",
                 "cv": [],
-                "units": "Pa",
+                "units": "Pa, N/m2",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*)))"
             },
@@ -1444,7 +1449,7 @@
                 "cardinality": "optional",
                 "description": "concentration of calcium",
                 "cv": [],
-                "units": "\u00b5mol/L",
+                "units": "parts/million, \u00b5mol/L, mg/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1462,7 +1467,7 @@
                 "cardinality": "optional",
                 "description": "concentration of substances including a wide variety of material, such as silt, decaying plant and animal matter, etc,; can include multiple substances",
                 "cv": [],
-                "units": "parts/million",
+                "units": "parts/million, mol/L, g/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1507,7 +1512,7 @@
                 "cardinality": "optional",
                 "description": "concentration of magnesium",
                 "cv": [],
-                "units": "parts/million",
+                "units": "parts/million, mol/L, mg/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1543,7 +1548,7 @@
                 "cardinality": "optional",
                 "description": "concentration of potassium",
                 "cv": [],
-                "units": "\u00b5mol/L",
+                "units": "parts/million, \u00b5mol/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1561,7 +1566,7 @@
                 "cardinality": "optional",
                 "description": "sodium concentration",
                 "cv": [],
-                "units": "\u00b5mol/L",
+                "units": "parts/million, \u00b5mol/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1570,7 +1575,7 @@
                 "cardinality": "optional",
                 "description": "concentration of sulfate",
                 "cv": [],
-                "units": "\u00b5mol/L",
+                "units": "\u00b5mol/L, mg/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1579,7 +1584,7 @@
                 "cardinality": "optional",
                 "description": "concentration of sulfide",
                 "cv": [],
-                "units": "\u00b5mol/L",
+                "units": "\u00b5mol/L, mg/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1615,7 +1620,7 @@
                 "cardinality": "optional",
                 "description": "Concentration of dissolved iron in the sample",
                 "cv": [],
-                "units": "\u00b5l/L",
+                "units": "mg/L, \u00b5l/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1633,7 +1638,7 @@
                 "cardinality": "optional",
                 "description": "Concentration of dissolved oxygen in the oil field produced fluids as it contributes to oxgyen-corrosion and microbial activity (e.g. Mic).",
                 "cv": [],
-                "units": "\u00b5mol/kg",
+                "units": "\u00b5mol/kg, \u00b5mol/L, mg/L, \u00b5g/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1642,7 +1647,7 @@
                 "cardinality": "optional",
                 "description": "Concentration of total sulfur in the sample",
                 "cv": [],
-                "units": "\u00b5mol/L",
+                "units": "\u00b5mol/L, mg/L, \u00b5g/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1660,7 +1665,7 @@
                 "cardinality": "optional",
                 "description": "Concentration of ethylbenzene in the sample",
                 "cv": [],
-                "units": "\u00b5mol/L",
+                "units": "\u00b5mol/L, mg/L, \u00b5g/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1678,7 +1683,7 @@
                 "cardinality": "optional",
                 "description": "Total Acid Number(TAN) is a measurement of acidity that is determined by the amount of potassium hydroxide in milligrams that is needed to neutralize the acids in one gram of oil. It is an important quality measurement of crude oil. (source: https://en.wikipedia.org/wiki/Total_acid_number)",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1687,7 +1692,7 @@
                 "cardinality": "optional",
                 "description": "Original sulfate concentration in the hydrocarbon resource",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year, day, minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1696,7 +1701,7 @@
                 "cardinality": "optional",
                 "description": "Concentration of toluene in the sample",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year, day, minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1759,7 +1764,7 @@
                 "cardinality": "optional",
                 "description": "Lithology of source rock (https://en.wikipedia.org/wiki/Source_rock). If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year, day, minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1778,7 +1783,7 @@
                 "description": "Phenotype of the host of the symbiotic host organism. For phenotypic quality ontology (PATO) terms, see http://purl.bioontology.org/ontology/pato.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -1804,7 +1809,7 @@
                 "cardinality": "optional",
                 "description": "List of biocides (commercial name of product and supplier) and date of administration",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year, day, minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1813,7 +1818,7 @@
                 "cardinality": "optional",
                 "description": "Method of chemical administration(dose, frequency, duration, time elapsed between administration and sampling) (e.g. 50 mg/l; twice a week; 1 hr; 0 days)",
                 "cv": [],
-                "units": "J/K",
+                "units": "Cth, J/K",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1953,7 +1958,7 @@
                 "cardinality": "optional",
                 "description": "Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term 'sample size'.",
                 "cv": [],
-                "units": "ng",
+                "units": "g, ng, mg, mL",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -2044,7 +2049,7 @@
                 "description": "Date of field's first production",
                 "cv": [],
                 "units": "m",
-                "field_type": "DATE_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2079,7 +2084,7 @@
                 "cardinality": "optional",
                 "description": "Original formation water salinity (prior to secondary recovery e.g. Waterflooding) expressed as TDS",
                 "cv": [],
-                "units": "ppm",
+                "units": "mg/L, ppm",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -2088,7 +2093,7 @@
                 "cardinality": "optional",
                 "description": "Name of the basin (e.g. Campos)",
                 "cv": [],
-                "units": "g/m3",
+                "units": "g/m3, %",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2133,7 +2138,7 @@
                 "cardinality": "optional",
                 "description": "Origin of kerogen. Type I: Algal (aquatic), Type II: planktonic and soft plant material (aquatic or terrestrial), Type III: terrestrial woody/ fibrous plant material (terrestrial), Type IV: oxidized recycled woody debris (terrestrial) (additional information: https://en.wikipedia.org/wiki/Kerogen). If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2142,7 +2147,7 @@
                 "cardinality": "optional",
                 "description": "Main Hydrocarbon Resource type. The term \"Hydrocarbon Resource\" HCR defined as a natural environmental feature containing large amounts of hydrocarbons at high concentrations potentially suitable for commercial exploitation. This term should not be confused with the Hydrocarbon Occurrence term which also includes hydrocarbon-rich environments with currently limited commercial interest such as seeps, outcrops, gas hydrates etc. If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2160,7 +2165,7 @@
                 "cardinality": "optional",
                 "description": "Hydrocarbon resource main lithology (Additional information: http://petrowiki.org/Lithology_and_rock_type_determination). If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "year",
+                "units": "week, hour, month, year, day, minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2178,9 +2183,9 @@
                 "cardinality": "optional",
                 "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
                 "cv": [],
-                "units": "mm",
+                "units": "mm, m",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "injection water breakthrough date of specific well",
