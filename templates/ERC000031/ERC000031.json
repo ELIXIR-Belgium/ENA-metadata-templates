@@ -763,7 +763,7 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "geographic location (latitude)",
@@ -826,7 +826,7 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "sampling time outside",
@@ -1301,7 +1301,7 @@
                 "cardinality": "optional",
                 "description": "The relative location of the door in the room",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1310,7 +1310,7 @@
                 "cardinality": "optional",
                 "description": "Signs of the presence of mold or mildew on the window.",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1328,7 +1328,7 @@
                 "cardinality": "optional",
                 "description": "The type of material used to finish a window",
                 "cv": [],
-                "units": "g/m3",
+                "units": "%",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1346,7 +1346,7 @@
                 "cardinality": "optional",
                 "description": "The condition of the room at the time of sampling",
                 "cv": [],
-                "units": "mm",
+                "units": "m",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1355,7 +1355,7 @@
                 "cardinality": "optional",
                 "description": "The window's length and width",
                 "cv": [],
-                "units": "mm",
+                "units": "m",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1544,7 +1544,7 @@
                 "cardinality": "optional",
                 "description": "Refers to the structural elements and subfloor upon which the finish flooring is installed",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1553,7 +1553,7 @@
                 "cardinality": "optional",
                 "description": "List of room(s) (room number, room name) sharing a wall with the sampling room",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1562,7 +1562,7 @@
                 "cardinality": "optional",
                 "description": "The material utilized to finish the outer most layer of the wall",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1571,7 +1571,7 @@
                 "cardinality": "optional",
                 "description": "Count of room occupancy at time of sampling",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -1580,7 +1580,7 @@
                 "cardinality": "optional",
                 "description": "The position of the room within the building",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1589,7 +1589,7 @@
                 "cardinality": "optional",
                 "description": "The floor covering type; the finished surface that is walked on",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1598,7 +1598,7 @@
                 "cardinality": "optional",
                 "description": "Number of windows in the room",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -1607,7 +1607,7 @@
                 "cardinality": "optional",
                 "description": "Explain how and for how long the soil sample was stored before DNA extraction (fresh/frozen/other).",
                 "cv": [],
-                "units": "year",
+                "units": "day",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1616,7 +1616,7 @@
                 "cardinality": "optional",
                 "description": "The average carpet fiber height in the indoor environment",
                 "cv": [],
-                "units": "mm",
+                "units": "cm",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -1688,7 +1688,7 @@
                 "cardinality": "optional",
                 "description": "List of room(s) (room number, room name) sharing a door with the sampling room",
                 "cv": [],
-                "units": "year",
+                "units": "day",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1697,7 +1697,7 @@
                 "cardinality": "optional",
                 "description": "The compass direction the exterior window of the room is facing",
                 "cv": [],
-                "units": "year",
+                "units": "day",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1913,7 +1913,7 @@
                 "cardinality": "optional",
                 "description": "The size of the water feature",
                 "cv": [],
-                "units": "m2",
+                "units": "ha",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1922,7 +1922,7 @@
                 "cardinality": "optional",
                 "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.",
                 "cv": [],
-                "units": "m3",
+                "units": "kg",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -2038,13 +2038,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
-                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
+                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -2112,10 +2112,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
+                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
-                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -2129,7 +2129,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia",
+                    "Micronesia, Federated States of",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -2152,6 +2152,7 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
+                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -2177,6 +2178,7 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
+                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -2184,6 +2186,7 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
+                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -2199,14 +2202,15 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
+                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
+                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
-                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -2215,6 +2219,7 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
+                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -2235,8 +2240,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Virgin Islands",
                     "Wake Island",
+                    "Virgin Islands",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -2366,7 +2371,7 @@
                 "description": "The last time the floor was cleaned (swept, mopped, vacuumed)",
                 "cv": [],
                 "units": "",
-                "field_type": "DATE_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2398,7 +2403,7 @@
                     "Quarterly",
                     "Weekly"
                 ],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_CHOICE_FIELD",
                 "regex": ""
             },
@@ -2435,7 +2440,7 @@
                 "description": "The season when sampling occurred. Any of the four periods into which the year is divided by the equinoxes and solstices. This field accepts terms listed under season (http://purl.obolibrary.org/obo/NCIT_C94729).",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2453,7 +2458,7 @@
                 "description": "The range and diversity of host species that an organism is capable of infecting, defined by NCBI taxonomy identifier.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2560,7 +2565,7 @@
                 "cardinality": "optional",
                 "description": "Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term 'sample size'.",
                 "cv": [],
-                "units": "ng",
+                "units": "mL",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -2660,7 +2665,7 @@
                 "description": "The date of the last time it rained",
                 "cv": [],
                 "units": "",
-                "field_type": "DATE_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2668,7 +2673,7 @@
                 "cardinality": "optional",
                 "description": "The weather on the sampling day",
                 "cv": [],
-                "units": "g/m3",
+                "units": "%",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2695,7 +2700,7 @@
                 "cardinality": "optional",
                 "description": "The recorded outside relative humidity value at the time of sampling",
                 "cv": [],
-                "units": "g/m3",
+                "units": "%",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -2704,9 +2709,9 @@
                 "cardinality": "optional",
                 "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
                 "cv": [],
-                "units": "mm",
+                "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "door area or size",
@@ -2776,7 +2781,7 @@
                 "cardinality": "optional",
                 "description": "The type of documentation of occupancy",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2785,7 +2790,7 @@
                 "cardinality": "optional",
                 "description": "The number of floors in the building, including basements and mechanical penthouse",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -2794,7 +2799,7 @@
                 "cardinality": "optional",
                 "description": "The material the shading device is composed of",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2803,7 +2808,7 @@
                 "cardinality": "optional",
                 "description": "The age of the built structure since construction",
                 "cv": [],
-                "units": "year",
+                "units": "day",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -2812,7 +2817,7 @@
                 "cardinality": "optional",
                 "description": "The total count of hallways and corridors in the built structure",
                 "cv": [],
-                "units": "g/m3",
+                "units": "%",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },

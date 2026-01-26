@@ -533,7 +533,7 @@
                 "description": "The target microbial analyte in terms of investigation scope. This field accepts terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also accepts identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -730,7 +730,7 @@
                 "cardinality": "optional",
                 "description": "Refers to the mesh/pore size used to retain the sample. Materials smaller than the size threshold are excluded from the sample",
                 "cv": [],
-                "units": "\u00b5m",
+                "units": "nm",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -739,7 +739,7 @@
                 "cardinality": "optional",
                 "description": "Refers to the mesh/pore size used to pre-filter/pre-sort the sample. Materials larger than the size threshold are excluded from the sample",
                 "cv": [],
-                "units": "\u00b5m",
+                "units": "nm",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -818,7 +818,7 @@
                 "description": "Description of the material covering the sampled soil. This field accepts terms under ENVO:00010483, environmental material.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -862,8 +862,8 @@
                 "cardinality": "optional",
                 "description": "Text or terms that describe the geographic feature where the food sample was obtained by the researcher. This field accepts selected terms listed under the following ontologies: anthropogenic geographic feature (http://purl.obolibrary.org/obo/ENVO_00000002), for example agricultural fairground [ENVO:01000986]; garden [ENVO:00000011} or any of its subclasses; market [ENVO:01000987]; water well [ENVO:01000002]; or human construction (http://purl.obolibrary.org/obo/ENVO_00000070).",
                 "cv": [],
-                "units": "m2",
-                "field_type": "ONTOLOGY_FIELD",
+                "units": "ha",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -1016,7 +1016,7 @@
                 "description": "Date of administration of soil amendment or fertilizer. Multiple terms may apply and can be separated by pipes, listing in reverse chronological order.",
                 "cv": [],
                 "units": "",
-                "field_type": "DATE_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -1253,7 +1253,7 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "geographic location (latitude)",
@@ -1316,7 +1316,7 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "culture isolation date",
@@ -1324,7 +1324,7 @@
                 "description": "A culture isolation date is a date-time entity marking the end of a process in which a sample yields a positive result for the target microbial analyte(s) in the form of an isolated colony or colonies.",
                 "cv": [],
                 "units": "",
-                "field_type": "DATE_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -1332,7 +1332,7 @@
                 "cardinality": "optional",
                 "description": "For time-course research studies involving samples of the food commodity, indicate the total duration of the time-course study.",
                 "cv": [],
-                "units": "year",
+                "units": "day",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1416,7 +1416,7 @@
                 "description": "The method used to sterilize the sampling room. This field accepts terms listed under electromagnetic radiation (http://purl.obolibrary.org/obo/ENVO_01001026). If the proper descriptor is not listed, please use text to describe the sampling room sterilization method. Multiple terms can be separated by pipes.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -1442,7 +1442,7 @@
                 "cardinality": "optional",
                 "description": "Degree of water held on a sampled surface. If present, user can state the degree of water held on surface (intermittent moisture, submerged). If no surface moisture is present indicate not present.",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1451,7 +1451,7 @@
                 "cardinality": "optional",
                 "description": "Explain how and for how long the soil sample was stored before DNA extraction (fresh/frozen/other).",
                 "cv": [],
-                "units": "year",
+                "units": "day",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1460,7 +1460,7 @@
                 "cardinality": "optional",
                 "description": "The relative humidity of the fermented food fermentation process.",
                 "cv": [],
-                "units": "g/m3",
+                "units": "%",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -1478,7 +1478,7 @@
                 "cardinality": "optional",
                 "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.",
                 "cv": [],
-                "units": "m3",
+                "units": "kg",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1608,13 +1608,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
-                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
+                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -1682,10 +1682,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
+                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
-                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -1699,7 +1699,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia",
+                    "Micronesia, Federated States of",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -1722,6 +1722,7 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
+                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -1747,6 +1748,7 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
+                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -1754,6 +1756,7 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
+                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -1769,14 +1772,15 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
+                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
+                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
-                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -1785,6 +1789,7 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
+                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -1805,8 +1810,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Virgin Islands",
                     "Wake Island",
+                    "Virgin Islands",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -1863,16 +1868,16 @@
                 "cardinality": "optional",
                 "description": "the height of subject",
                 "cv": [],
-                "units": "mm",
+                "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
             },
             {
                 "name": "host length",
                 "cardinality": "optional",
                 "description": "the length of subject",
                 "cv": [],
-                "units": "mm",
+                "units": "m",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1926,7 +1931,7 @@
                 "cardinality": "optional",
                 "description": "amount of water vapour in the air, at the time of sampling",
                 "cv": [],
-                "units": "g/m3",
+                "units": "%",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1962,7 +1967,7 @@
                 "cardinality": "optional",
                 "description": "speed of wind measured at the time of sampling",
                 "cv": [],
-                "units": "m/s",
+                "units": "km/h",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -2031,7 +2036,7 @@
                     "Quarterly",
                     "Weekly"
                 ],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_CHOICE_FIELD",
                 "regex": ""
             },
@@ -2103,7 +2108,7 @@
                 "cardinality": "optional",
                 "description": "Total nitrogen content of the sample",
                 "cv": [],
-                "units": "\u00b5mol/L",
+                "units": "\u00b5g/L",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -2130,8 +2135,8 @@
                 "cardinality": "optional",
                 "description": "Number of bacteria in sample, as defined by bacteria density (http://purl.obolibrary.org/obo/GENEPIO_0000043).",
                 "cv": [],
-                "units": "g/m3",
-                "field_type": "ONTOLOGY_FIELD",
+                "units": "%",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2212,7 +2217,7 @@
                 "cardinality": "optional",
                 "description": "Average humidity of the region throughout the growing season.",
                 "cv": [],
-                "units": "g/m3",
+                "units": "%",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -2240,7 +2245,7 @@
                 "description": "Date of unusual weather events that may have affected microbial populations. Multiple terms can be separated by pipes, listed in reverse chronological order.",
                 "cv": [],
                 "units": "J/\u00b0C",
-                "field_type": "DATE_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2258,7 +2263,7 @@
                 "description": "The season when sampling occurred. Any of the four periods into which the year is divided by the equinoxes and solstices. This field accepts terms listed under season (http://purl.obolibrary.org/obo/NCIT_C94729).",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2276,7 +2281,7 @@
                 "description": "The range and diversity of host species that an organism is capable of infecting, defined by NCBI taxonomy identifier.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2284,7 +2289,7 @@
                 "cardinality": "optional",
                 "description": "measurement of dry mass",
                 "cv": [],
-                "units": "mg",
+                "units": "kg",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -2320,7 +2325,7 @@
                 "description": "Taxonomic information about the spike-in organism(s) at the strain level. This field accepts terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also accepts identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy. Multiple terms can be separated by pipes.",
                 "cv": [],
                 "units": "",
-                "field_type": "TAXON_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2355,8 +2360,8 @@
                 "cardinality": "optional",
                 "description": "Taxonomic information about the spike-in organism(s). This field accepts terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also accepts identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy. Multiple terms can be separated by pipes.",
                 "cv": [],
-                "units": "g/m3",
-                "field_type": "ONTOLOGY_FIELD",
+                "units": "%",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2364,7 +2369,7 @@
                 "cardinality": "optional",
                 "description": "Total cell count of any organism (or group of organisms) per gram, volume or area of sample, should include name of organism followed by count. The method that was used for the enumeration (e.g. qPCR, atp, mpn, etc.) should also be provided (example: total prokaryotes; 3.5e7 cells per ml; qPCR).",
                 "cv": [],
-                "units": "mm",
+                "units": "m",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2400,7 +2405,7 @@
                 "cardinality": "optional",
                 "description": "The source from which the microbial starter culture was sourced. If commercially supplied, list supplier.",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2409,7 +2414,7 @@
                 "cardinality": "optional",
                 "description": "Information about the protocol or method used to prepare the starter inoculum.",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2418,7 +2423,7 @@
                 "cardinality": "optional",
                 "description": "Taxonomic information about the spike-in organism(s) at the serovar or serotype level. This field accepts terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also accepts identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy. Multiple terms can be separated by pipes.",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2428,7 +2433,7 @@
                 "description": "Qualitative description of a microbial response to antimicrobial agents. Bacteria may be susceptible or resistant to a broad range of antibiotic drugs or drug classes, with several intermediate states or phases. This field accepts terms under antimicrobial phenotype (http://purl.obolibrary.org/obo/ARO_3004299).",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2436,7 +2441,7 @@
                 "cardinality": "optional",
                 "description": "The time duration of the fermented food fermentation process.",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -2481,7 +2486,7 @@
                 "cardinality": "optional",
                 "description": "Sample incubation duration if unpublished or unvalidated method is used. Indicate the timepoint written in ISO 8601 format.",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -2625,7 +2630,7 @@
                 "cardinality": "optional",
                 "description": "A culture medium used to select for, grow, and maintain prokaryotic microorganisms. Can be in either liquid (broth) or solidified (e.g. with agar) forms. This field accepts terms listed under microbiological culture medium (http://purl.obolibrary.org/obo/MICRO_0000067). If the proper descriptor is not listed please use text to describe the culture medium.",
                 "cv": [],
-                "units": "Pa",
+                "units": "N/m2",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2715,7 +2720,7 @@
                 "cardinality": "optional",
                 "description": "The name of the extraction kit used to recover the nucleic acid fraction of an input material is performed.",
                 "cv": [],
-                "units": "ppm",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2783,7 +2788,7 @@
                 "cardinality": "optional",
                 "description": "Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term 'sample size'.",
                 "cv": [],
-                "units": "ng",
+                "units": "mL",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -2928,7 +2933,7 @@
                 "description": "The material the food contacted (e.g., was processed in) prior to packaging. This field accepts terms listed under material of contact prior to food packaging (http://purl.obolibrary.org/obo/FOODON_03530077). If the proper descriptor is not listed please use text to describe the material of contact prior to food packaging.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2937,7 +2942,7 @@
                 "description": "A datum indicating that use of a food product name is regulated in some legal jurisdiction. This field accepts terms listed under food product name legal status (http://purl.obolibrary.org/obo/FOODON_03530087).",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2946,7 +2951,7 @@
                 "description": "The date recommended for the use of the product while at peak quality, this date is not a reflection of safety unless used on infant formula this date is not a reflection of safety and is typically labeled on a food product as \"best if used by,\" best by,\" \"use by,\" or \"freeze by.\"",
                 "cv": [],
                 "units": "",
-                "field_type": "DATE_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2964,7 +2969,7 @@
                 "description": "The subdivision of areas within a food production facility according to hygienic requirements. This field accepts terms listed under hygienic food production area (http://purl.obolibrary.org/obo/ENVO). Please add a term that most accurately indicates the hygienic area your sample was taken from according to the definitions provided.",
                 "cv": [],
                 "units": "kg s\u22123",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2973,7 +2978,7 @@
                 "description": "The specific container or coating materials in direct contact with the food. Multiple values can be assigned. This field accepts terms listed under food contact surface (http://purl.obolibrary.org/obo/FOODON_03500010).",
                 "cv": [],
                 "units": "J/\u00b0C",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2982,7 +2987,7 @@
                 "description": "The transformation of raw food by the application of heat. This field accepts terms listed under food cooking (http://purl.obolibrary.org/obo/FOODON_03450002).",
                 "cv": [],
                 "units": "%",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2990,8 +2995,8 @@
                 "cardinality": "optional",
                 "description": "Descriptors for describing food visually or via other senses, which is useful for tasks like food inspection where little prior knowledge of how the food came to be is available. Some terms like \"food (frozen)\" are both a quality descriptor and the output of a process. This field accepts terms listed under food product by quality (http://purl.obolibrary.org/obo/FOODON_00002454).",
                 "cv": [],
-                "units": "year",
-                "field_type": "ONTOLOGY_FIELD",
+                "units": "minute",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -2999,7 +3004,7 @@
                 "cardinality": "optional",
                 "description": "The route by which the antimicrobial is administered into the body of the food animal.",
                 "cv": [],
-                "units": "m2",
+                "units": "ha",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -3009,7 +3014,7 @@
                 "description": "A label indication that the product contains a recognized allergen. This field accepts terms listed under dietary claim or use (http://purl.obolibrary.org/obo/FOODON_03510213).",
                 "cv": [],
                 "units": "W/m2",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -3018,7 +3023,7 @@
                 "description": "A food product type is a class of food products that is differentiated by its food composition (e.g., single- or multi-ingredient), processing and/or consumption characteristics. This does not include brand name products but it may include generic food dish categories. This field accepts terms under food product type (http://purl.obolibrary.org/obo/FOODON:03400361). For terms related to food product for an animal, consult food product for animal (http://purl.obolibrary.org/obo/FOODON_03309997). If the proper descriptor is not listed please use text to describe the food type. Multiple terms can be separated by one or more pipes.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -3045,7 +3050,7 @@
                 "description": "A term label and term id to describe the state of the packing material and text to explain the exact condition. This field accepts terms listed under food packing medium integrity (http://purl.obolibrary.org/obo/FOODON_03530218).",
                 "cv": [],
                 "units": "\u00b0C",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -3054,7 +3059,7 @@
                 "description": "Any type of microorganisms used in food production. This field accepts terms listed under live organisms for food production (http://purl.obolibrary.org/obo/FOODON_0344453).",
                 "cv": [],
                 "units": "\u00b0C",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -3063,7 +3068,7 @@
                 "description": "Used to specifically characterize a food product based on the treatment or processes applied to the product or any indexed ingredient. The processes include adding, substituting or removing components or modifying the food or component, e.g., through fermentation. Multiple values can be assigned. This fields accepts terms listed under food treatment process (http://purl.obolibrary.org/obo/FOODON_03460111).",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -3072,7 +3077,7 @@
                 "description": "The methods contributing to the prevention or retardation of microbial, enzymatic or oxidative spoilage and thus to the extension of shelf life. This field accepts terms listed under food preservation process (http://purl.obolibrary.org/obo/FOODON_03470107).",
                 "cv": [],
                 "units": "J/\u00b0C",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -3117,7 +3122,7 @@
                 "description": "In this field, please list individual ingredients for multi-component food [FOODON:00002501] and simple foods that is not captured in food_type. Please use terms that are present in FoodOn. Multiple terms can be separated by one or more pipes |, but please consider limiting this list to the top 5 ingredients listed in order as on the food label. See also, https://www.fda.gov/food/food-ingredients-packaging/overview-food-ingredients-additives-colors.",
                 "cv": [],
                 "units": "year",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -3125,7 +3130,7 @@
                 "cardinality": "optional",
                 "description": "The storage duration of the food commodity by the consumer, prior to onset of illness or sample collection. Indicate the timepoint written in ISO 8601 format.",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -3134,7 +3139,7 @@
                 "cardinality": "optional",
                 "description": "The duration of time (days) that the antimicrobial was administered to the food animal.",
                 "cv": [],
-                "units": "year",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -3143,8 +3148,8 @@
                 "cardinality": "optional",
                 "description": "The anatomical part of the organism being involved in food production or consumption; e.g., a carrot is the root of the plant (root vegetable). This field accepts terms listed under part of plant or animal (http://purl.obolibrary.org/obo/FOODON_03420116).",
                 "cv": [],
-                "units": "year",
-                "field_type": "ONTOLOGY_FIELD",
+                "units": "minute",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -3152,8 +3157,8 @@
                 "cardinality": "optional",
                 "description": "Hazard Analysis Critical Control Points (HACCP) food safety terms; This field accepts terms listed under HACCP guide food safety term (http://purl.obolibrary.org/obo/FOODON_03530221).",
                 "cv": [],
-                "units": "year",
-                "field_type": "ONTOLOGY_FIELD",
+                "units": "minute",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -3170,8 +3175,8 @@
                 "cardinality": "optional",
                 "description": "A description of the stage of development of a plant or plant part based on maturity or ripeness. This field accepts terms listed under degree of plant maturity (http://purl.obolibrary.org/obo/FOODON_03530050).",
                 "cv": [],
-                "units": "year",
-                "field_type": "ONTOLOGY_FIELD",
+                "units": "day",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -3197,7 +3202,7 @@
                 "cardinality": "optional",
                 "description": "The FDA is proposing to establish additional traceability recordkeeping requirements (beyond what is already required in existing regulations) for persons who manufacture, process, pack, or hold foods the Agency has designated for inclusion on the Food Traceability List. The Food Traceability List (FTL) identifies the foods for which the additional traceability records described in the proposed rule would be required. The term \u201cFood Traceability List\u201d (FTL) refers not only to the foods specifically listed (https://www.fda.gov/media/142303/download), but also to any foods that contain listed foods as ingredients.",
                 "cv": [],
-                "units": "mm",
+                "units": "cm",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -3234,7 +3239,7 @@
                 "description": "Type of container or wrapping defined by the main container material, the container form, and the material of the liner lids or ends. Also type of container or wrapping by form; prefer description by material first, then by form. This field accepts terms listed under food container or wrapping (http://purl.obolibrary.org/obo/FOODON_03490100).",
                 "cv": [],
                 "units": "\u00b0C",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -3242,7 +3247,7 @@
                 "cardinality": "optional",
                 "description": "A substance or substances added to food to maintain or improve safety and freshness, to improve or maintain nutritional value, or improve taste, texture and appearance. This field accepts terms listed under food additive (http://purl.obolibrary.org/obo/FOODON_03412972). Multiple terms can be separated by one or more pipes, but please consider limiting this list to the top 5 ingredients listed in order as on the food label. See also, https://www.fda.gov/food/food-ingredients-packaging/overview-food-ingredients-additives-colors.",
                 "cv": [],
-                "units": "g/m3",
+                "units": "%",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -3251,7 +3256,7 @@
                 "cardinality": "optional",
                 "description": "The age of the food source host organism. Depending on the type of host organism, age may be more appropriate to report in days, weeks, or years.",
                 "cv": [],
-                "units": "year",
+                "units": "day",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -3260,7 +3265,7 @@
                 "cardinality": "optional",
                 "description": "The prescribed intended use of or the condition treated by the antimicrobial given to the food animal by any route of administration.",
                 "cv": [],
-                "units": "year",
+                "units": "day",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -3279,7 +3284,7 @@
                 "description": "Food consumer type, human or animal, for which the food product is produced and marketed. This field accepts terms listed under food consumer group (http://purl.obolibrary.org/obo/FOODON_03510136).",
                 "cv": [],
                 "units": "m2",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -3359,9 +3364,9 @@
                 "cardinality": "optional",
                 "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
                 "cv": [],
-                "units": "mm",
+                "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "environment adjacent to site",
@@ -3369,7 +3374,7 @@
                 "description": "Description of the environmental system or features that are adjacent to the sampling site. This field accepts terms under ecosystem (http://purl.obolibrary.org/obo/ENVO_01001110) and human construction (http://purl.obolibrary.org/obo/ENVO_00000070). Multiple terms can be separated by pipes.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
