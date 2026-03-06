@@ -279,6 +279,7 @@
                     "CAPILLARY",
                     "DNBSEQ",
                     "ELEMENT",
+                    "AVITI",
                     "ULTIMA",
                     "VELA_DIAGNOSTICS",
                     "GENAPSYS",
@@ -317,6 +318,7 @@
                     "AB SOLiD System",
                     "AB SOLiD System 2.0",
                     "AB SOLiD System 3.0",
+                    "AVITI 24",
                     "BGISEQ-50",
                     "BGISEQ-500",
                     "Complete Genomics",
@@ -483,6 +485,15 @@
                 "field_type": "TEXT_FIELD"
             },
             {
+                "name": "scientific_name",
+                "cardinality": "optional",
+                "description": "Scientific name of sample that distinguishes its taxonomy.  Please use a name or synonym that is tracked in the INSDC Taxonomy database. Also, this field can be used to confirm the TAXON_ID setting.",
+                "units": "",
+                "regex": "",
+                "cv": [],
+                "field_type": "TEXT_FIELD"
+            },
+            {
                 "name": "sample_description",
                 "cardinality": "optional",
                 "description": "Free-form text describing the sample, its origin, and its method of isolation.",
@@ -492,7 +503,7 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "project_name",
+                "name": "project name",
                 "cardinality": "optional",
                 "description": "Name of the project within which the sequencing was organized",
                 "cv": [],
@@ -532,7 +543,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_type",
+                "name": "sample type",
                 "cardinality": "mandatory",
                 "description": "Affected organ",
                 "cv": [
@@ -558,7 +569,7 @@
                 "regex": ""
             },
             {
-                "name": "ppcg_id",
+                "name": "PPCG ID",
                 "cardinality": "mandatory",
                 "description": "Pan Prostate Cancer Group participant ID",
                 "cv": [],
@@ -567,7 +578,7 @@
                 "regex": ""
             },
             {
-                "name": "ppcg_sample_id",
+                "name": "PPCG sample ID",
                 "cardinality": "mandatory",
                 "description": "Pan Prostate Cancer Group sample ID. This is an extension of the participant ID: As a different sample is added from an individual a letter is added to the identifier in alphanumeric order. E.g., for PPCG ID P0076 the first sample ID would be PPCG0076a and then PPCG0076b, PPCG0076c and so on. At the end of each sample ID please always add whether the sample is DNA or RNA. Therefore, naming should look like either PPCG0076b_DNA for DNA samples or PPCG0076b_RNA for RNA samples",
                 "cv": [
@@ -579,7 +590,7 @@
                 "regex": ""
             },
             {
-                "name": "pipelineuuid",
+                "name": "Pipeline/UUID",
                 "cardinality": "mandatory",
                 "description": "A unique sample identifier used within various pipeline groups - used to avoid sample ID clash when pipeline results are merged.",
                 "cv": [],

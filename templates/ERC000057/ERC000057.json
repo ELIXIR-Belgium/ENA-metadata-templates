@@ -279,6 +279,7 @@
                     "CAPILLARY",
                     "DNBSEQ",
                     "ELEMENT",
+                    "AVITI",
                     "ULTIMA",
                     "VELA_DIAGNOSTICS",
                     "GENAPSYS",
@@ -317,6 +318,7 @@
                     "AB SOLiD System",
                     "AB SOLiD System 2.0",
                     "AB SOLiD System 3.0",
+                    "AVITI 24",
                     "BGISEQ-50",
                     "BGISEQ-500",
                     "Complete Genomics",
@@ -477,6 +479,15 @@
                 "name": "taxon_id",
                 "cardinality": "mandatory",
                 "description": "NCBI Taxonomy Identifier.  This is appropriate for individual organisms and some environmental samples.",
+                "units": "",
+                "regex": "",
+                "cv": [],
+                "field_type": "TEXT_FIELD"
+            },
+            {
+                "name": "scientific_name",
+                "cardinality": "optional",
+                "description": "Scientific name of sample that distinguishes its taxonomy.  Please use a name or synonym that is tracked in the INSDC Taxonomy database. Also, this field can be used to confirm the TAXON_ID setting.",
                 "units": "",
                 "regex": "",
                 "cv": [],
@@ -796,7 +807,7 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "geographic location (latitude)",
@@ -859,7 +870,7 @@
                 "cv": [],
                 "units": "m",
                 "field_type": "TEXT_FIELD",
-                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "([+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "amount or size of sample collected",
@@ -964,13 +975,13 @@
                     "Djibouti",
                     "Dominica",
                     "Dominican Republic",
-                    "East Timor",
                     "Ecuador",
                     "Egypt",
                     "El Salvador",
                     "Equatorial Guinea",
                     "Eritrea",
                     "Estonia",
+                    "Eswatini",
                     "Ethiopia",
                     "Europa Island",
                     "Falkland Islands (Islas Malvinas)",
@@ -1038,10 +1049,10 @@
                     "Liberia",
                     "Libya",
                     "Liechtenstein",
+                    "Line Islands",
                     "Lithuania",
                     "Luxembourg",
                     "Macau",
-                    "Macedonia",
                     "Madagascar",
                     "Malawi",
                     "Malaysia",
@@ -1055,7 +1066,7 @@
                     "Mayotte",
                     "Mediterranean Sea",
                     "Mexico",
-                    "Micronesia",
+                    "Micronesia, Federated States of",
                     "Midway Islands",
                     "Moldova",
                     "Monaco",
@@ -1078,6 +1089,7 @@
                     "Niue",
                     "Norfolk Island",
                     "North Korea",
+                    "North Macedonia",
                     "North Sea",
                     "Northern Mariana Islands",
                     "Norway",
@@ -1103,6 +1115,7 @@
                     "Ross Sea",
                     "Russia",
                     "Rwanda",
+                    "Saint Barthelemy",
                     "Saint Helena",
                     "Saint Kitts and Nevis",
                     "Saint Lucia",
@@ -1110,6 +1123,7 @@
                     "Saint Vincent and the Grenadines",
                     "Samoa",
                     "San Marino",
+                    "Saint Martin",
                     "Sao Tome and Principe",
                     "Saudi Arabia",
                     "Senegal",
@@ -1125,14 +1139,15 @@
                     "South Africa",
                     "South Georgia and the South Sandwich Islands",
                     "South Korea",
+                    "South Sudan",
                     "Southern Ocean",
                     "Spain",
                     "Spratly Islands",
                     "Sri Lanka",
+                    "State of Palestine",
                     "Sudan",
                     "Suriname",
                     "Svalbard",
-                    "Swaziland",
                     "Sweden",
                     "Switzerland",
                     "Syria",
@@ -1141,6 +1156,7 @@
                     "Tanzania",
                     "Tasman Sea",
                     "Thailand",
+                    "Timor-Leste",
                     "Togo",
                     "Tokelau",
                     "Tonga",
@@ -1161,8 +1177,8 @@
                     "Vanuatu",
                     "Venezuela",
                     "Viet Nam",
-                    "Virgin Islands",
                     "Wake Island",
+                    "Virgin Islands",
                     "Wallis and Futuna",
                     "West Bank",
                     "Western Sahara",
@@ -1275,7 +1291,7 @@
                 "cv": [],
                 "units": "mm",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$))"
             },
             {
                 "name": "host length",
@@ -1481,7 +1497,7 @@
                 "description": "The range and diversity of host species that an organism is capable of infecting, defined by NCBI taxonomy identifier.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -1490,7 +1506,7 @@
                 "description": "Phenotype of the host of the symbiotic host organism. For phenotypic quality ontology (PATO) terms, see http://purl.bioontology.org/ontology/pato.",
                 "cv": [],
                 "units": "",
-                "field_type": "ONTOLOGY_FIELD",
+                "field_type": "TEXT_FIELD",
                 "regex": ""
             },
             {
@@ -1865,7 +1881,7 @@
                 "cv": [],
                 "units": "mm",
                 "field_type": "TEXT_FIELD",
-                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
+                "regex": "((0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?)|((^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$))"
             },
             {
                 "name": "chemical administration",
