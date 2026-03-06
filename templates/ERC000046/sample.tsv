@@ -1,1 +1,1 @@
-"alias"	"title"	"taxon_id"	"scientific_name"	"common_name"	"sample_description"	"project_name"	"subject_id"	"gender"	"phenotype"	"sample_type"	"ppcg_id"	"ppcg_sample_id"	"pipelineuuid"	"preservation"	"xenograft"
+"alias"	"title"	"taxon_id"	"scientific_name"	"common_name"	"sample_description"	"project name"	"subject_id"	"gender"	"phenotype"	"sample type"	"PPCG ID"	"PPCG sample ID"	"Pipeline/UUID"	"preservation"	"xenograft"
