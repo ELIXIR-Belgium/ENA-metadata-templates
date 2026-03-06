@@ -107,7 +107,35 @@ def fetching_checklists():
     response = fetch_object('https://www.ebi.ac.uk/ena/browser/api/summary/ERC000001-ERC999999')
     return response.json()['summaries']
 
-def fetch_sample_attrib(root):
+def load_previous_sample_units(checklist, root_dir="templates"):
+    """
+    Load previously generated sample units for a checklist from JSON.
+    Returns a dict: {attribute_name: unit}.
+    """
+    units_by_name = {}
+    json_file_path = os.path.join(root_dir, checklist, f"{checklist}.json")
+    if not os.path.exists(json_file_path):
+        return units_by_name
+
+    try:
+        with open(json_file_path, 'r') as json_file:
+            checklist_data = json.load(json_file)
+    except (OSError, json.JSONDecodeError):
+        return units_by_name
+
+    sample_fields = checklist_data.get('sample', {}).get('fields', [])
+    for field in sample_fields:
+        field_name = field.get('name')
+        field_unit = field.get('units')
+        if field_name and field_unit:
+            units_by_name[field_name] = field_unit
+
+    return units_by_name
+
+def fetch_sample_attrib(root, previous_units_by_name=None):
+    if previous_units_by_name is None:
+        previous_units_by_name = {}
+
     # Looping over all fields and storing their name and cardinality
     output_list = []
     for attribute in root.iter('FIELD'):
@@ -121,15 +149,25 @@ def fetch_sample_attrib(root):
         output['regex'] = ''
 
         for sub_attr in attribute:
-            if sub_attr.tag == 'NAME':
+            if sub_attr.tag == 'LABEL':
                 output['name'] = sub_attr.text
             elif sub_attr.tag == 'MANDATORY':
                 output['cardinality'] = sub_attr.text
             elif sub_attr.tag == 'DESCRIPTION':
                 output['description'] = sub_attr.text
             elif sub_attr.tag == 'UNITS':
+                candidate_units = []
                 for unit in sub_attr:
-                    output['units'] = unit.text
+                    if unit.text:
+                        candidate_units.append(unit.text)
+
+                # Preserve previously chosen unit if still valid.
+                if candidate_units:
+                    old_unit = previous_units_by_name.get(output['name'])
+                    if old_unit in candidate_units:
+                        output['units'] = old_unit
+                    else:
+                        output['units'] = candidate_units[-1]
             elif sub_attr.tag == 'FIELD_TYPE':
                 for options in sub_attr:
                     output['field_type'] = options.tag
@@ -266,7 +304,8 @@ def main():
         root_dir = "templates"
         folder_name = checklist
         folder_path = os.path.join(root_dir, folder_name)
-        sample_attributes = fetch_sample_attrib(root)
+        previous_units_by_name = load_previous_sample_units(checklist, root_dir=root_dir)
+        sample_attributes = fetch_sample_attrib(root, previous_units_by_name=previous_units_by_name)
         checklist_name, checklist_description = descriptor_xml(root)
         
         # Create the folder if it doesn't exist
@@ -368,4 +407,3 @@ def main():
 if __name__ == "__main__":
 
     main()
-
