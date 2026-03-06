@@ -279,6 +279,7 @@
                     "CAPILLARY",
                     "DNBSEQ",
                     "ELEMENT",
+                    "AVITI",
                     "ULTIMA",
                     "VELA_DIAGNOSTICS",
                     "GENAPSYS",
@@ -317,6 +318,7 @@
                     "AB SOLiD System",
                     "AB SOLiD System 2.0",
                     "AB SOLiD System 3.0",
+                    "AVITI 24",
                     "BGISEQ-50",
                     "BGISEQ-500",
                     "Complete Genomics",
@@ -559,7 +561,7 @@
                 "regex": ""
             },
             {
-                "name": "sample_type",
+                "name": "sample type",
                 "cardinality": "optional",
                 "description": "Affected organ",
                 "cv": [
