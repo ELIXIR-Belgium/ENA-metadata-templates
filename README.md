@@ -56,6 +56,7 @@ This repository contains tabular-format and xlsx spreadsheet metadata templates 
 | [ERC000057](./templates/ERC000057) | GSC MIxS Symbiont | Genomic Standards Consortium package extension for reporting of measurements and observations obtained from the environment where the sample was obtained. By choosing the environmental package, a selection of fields can be made from a relevant subsets of the GSC terms. |
 | [ERC000058](./templates/ERC000058) | GSC MIxS Hydrocarbon | Genomic Standards Consortium package extension for reporting of measurements and observations obtained from the environment where the sample was obtained. By choosing the environmental package, a selection of fields can be made from a relevant subsets of the GSC terms. |
 | [ERC000059](./templates/ERC000059) | ena_ancient_dna | This is the ancient DNA checklist compiled at ENA. It is based on the various Genomic Standards Consortium(GSC) packages for reporting of measurements and observations obtained from the environment where the sample was obtained, with many additional fields from the proposed MinAS, and a few more. |
+| [ERC000060](./templates/ERC000060) | ena_marker_sequence_checklist | This is general checklist for barcode marker sequence data. It is used for automatic sequence and metadata feeds from BOLD for example. |
 <!-- TABLE END -->
 
 ## Tabular metadata templates (*.tsv)

@@ -374,5 +374,13 @@
         "dataType": "CHECKLIST",
         "status": 4,
         "statusDescription": "public"
+    },
+    {
+        "accession": "ERC000060",
+        "description": "This is general checklist for barcode marker sequence data. It is used for automatic sequence and metadata feeds from BOLD for example.",
+        "name": "ena_marker_sequence_checklist",
+        "dataType": "CHECKLIST",
+        "status": 4,
+        "statusDescription": "public"
     }
 ]
