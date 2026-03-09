@@ -512,7 +512,7 @@
                 "field_type": "TEXT_AREA_FIELD"
             },
             {
-                "name": "Event Label",
+                "name": "event label",
                 "cardinality": "recommended",
                 "description": "An Event corresponds to the deployment of a sampling device. It is bound in space and time. The Event Label is a unique identifier composed of the project prefix \"TARA\", sampling date/time \"yyyymmddThh:mm:ssZ\", station number \"000\" and a short label to indicate the sampling device used, e.g. \"EVENT_CAST\", \"EVENT_NET\", \"EVENT_PUMP\". Example: TARA_20110416T1508Z_100_EVENT_CAST.",
                 "cv": [],
