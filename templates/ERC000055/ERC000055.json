@@ -879,7 +879,7 @@
                 "cardinality": "optional",
                 "description": "Descriptors of the food production system such as wild caught, free-range, organic, free-range, industrial, dairy, beef.",
                 "cv": [],
-                "units": "\u00b0C",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2192,7 +2192,7 @@
                 "cardinality": "optional",
                 "description": "A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch. Synonym: Batch Number. The submitter should provide lot number of the item followed by the item name for which the lot number was provided.",
                 "cv": [],
-                "units": "%",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },

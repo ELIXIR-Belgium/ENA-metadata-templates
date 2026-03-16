@@ -615,7 +615,7 @@
                 "cardinality": "optional",
                 "description": "Sample transport duration (in days or hrs) and temperature the sample was exposed to (e.g. 5.5 days; 20 \u00b0C)",
                 "cv": [],
-                "units": "m2",
+                "units": "minute",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -859,7 +859,7 @@
                 "cardinality": "optional",
                 "description": "A unique identifier of a well or wellbore. This is part of the Global Framework for Well Identification initiative which is compiled by the Professional Petroleum Data Management Association (PPDM) in an effort to improve well identification systems. (Supporting information: https://ppdm.org/ and http://dl.ppdm.org/dl/690)",
                 "cv": [],
-                "units": "year",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -868,7 +868,7 @@
                 "cardinality": "optional",
                 "description": "Current amount of water (%) in a produced fluid stream; or the average of the combined streams",
                 "cv": [],
-                "units": "year",
+                "units": "%",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -877,7 +877,7 @@
                 "cardinality": "optional",
                 "description": "Oil and/or gas production rates per well (e.g. 524 m3 / day)",
                 "cv": [],
-                "units": "\u00b0C",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1003,7 +1003,7 @@
                 "cardinality": "optional",
                 "description": "If qpcr was used for the cell count, the target gene name, the primer sequence and the cycling conditions should also be provided. (Example: 16S rrna; FWD:ACGTAGCTATGACGT REV:GTGCTAGTCGAGTAC; initial denaturation:90C_5min; denaturation:90C_2min; annealing:52C_30 sec; elongation:72C_30 sec; 90 C for 1 min; final elongation:72C_5min; 30 cycles)",
                 "cv": [],
-                "units": "year",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1012,7 +1012,7 @@
                 "cardinality": "optional",
                 "description": "Main hydrocarbon type produced from resource (i.e. Oil, gas, condensate, etc). If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "year",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1021,7 +1021,7 @@
                 "cardinality": "optional",
                 "description": "API gravity is a measure of how heavy or light a petroleum liquid is compared to water (source: https://en.wikipedia.org/wiki/API_gravity) (e.g. 31.1API)",
                 "cv": [],
-                "units": "\u00b0C",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1397,7 +1397,7 @@
                 "cardinality": "optional",
                 "description": "Measure of the ability of a hydrocarbon resource to allow fluids to pass through it. (Additional information: https://en.wikipedia.org/wiki/Permeability_(earth_sciences))",
                 "cv": [],
-                "units": "mm",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1424,7 +1424,7 @@
                 "cardinality": "optional",
                 "description": "Geological age of source rock (Additional info: https://en.wikipedia.org/wiki/Period_(geology)). If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "\u00b0C",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1685,7 +1685,7 @@
                 "cardinality": "optional",
                 "description": "Total Acid Number(TAN) is a measurement of acidity that is determined by the amount of potassium hydroxide in milligrams that is needed to neutralize the acids in one gram of oil. It is an important quality measurement of crude oil. (source: https://en.wikipedia.org/wiki/Total_acid_number)",
                 "cv": [],
-                "units": "year",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?"
             },
@@ -1703,7 +1703,7 @@
                 "cardinality": "optional",
                 "description": "Concentration of toluene in the sample",
                 "cv": [],
-                "units": "year",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1721,7 +1721,7 @@
                 "cardinality": "optional",
                 "description": "Concentration of xylene in the sample",
                 "cv": [],
-                "units": "m2",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1739,7 +1739,7 @@
                 "cardinality": "optional",
                 "description": "Concentration of benzene in the sample",
                 "cv": [],
-                "units": "m2",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1766,7 +1766,7 @@
                 "cardinality": "optional",
                 "description": "Lithology of source rock (https://en.wikipedia.org/wiki/Source_rock). If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "year",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1811,7 +1811,7 @@
                 "cardinality": "optional",
                 "description": "List of biocides (commercial name of product and supplier) and date of administration",
                 "cv": [],
-                "units": "year",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1820,7 +1820,7 @@
                 "cardinality": "optional",
                 "description": "Method of chemical administration(dose, frequency, duration, time elapsed between administration and sampling) (e.g. 50 mg/l; twice a week; 1 hr; 0 days)",
                 "cv": [],
-                "units": "J/K",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -1910,7 +1910,7 @@
                 "cardinality": "optional",
                 "description": "Name of sample sub-type. For example if \"sample type\" is \"Produced Water\" then subtype could be \"Oil Phase\" or \"Water Phase\". If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "m2",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2050,7 +2050,7 @@
                 "cardinality": "optional",
                 "description": "Date of field's first production",
                 "cv": [],
-                "units": "m",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2059,7 +2059,7 @@
                 "cardinality": "optional",
                 "description": "Saturate, Aromatic, Resin and Asphaltene(SARA) is an analysis method that divides crude oil components according to their polarizability and polarity. There are three main methods to obtain SARA results. The most popular one is known as the Iatroscan TLC-FID and is referred to as IP-143 (source: https://en.wikipedia.org/wiki/Saturate,_aromatic,_resin_and_asphaltene)",
                 "cv": [],
-                "units": "%",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": "(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)"
             },
@@ -2095,7 +2095,7 @@
                 "cardinality": "optional",
                 "description": "Name of the basin (e.g. Campos)",
                 "cv": [],
-                "units": "g/m3",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2113,7 +2113,7 @@
                 "cardinality": "optional",
                 "description": "Name of the reservoir (e.g. Carapebus)",
                 "cv": [],
-                "units": "\u00b0C",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2131,7 +2131,7 @@
                 "cardinality": "optional",
                 "description": "Main depositional environment (https://en.wikipedia.org/wiki/Depositional_environment). If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "m",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2140,7 +2140,7 @@
                 "cardinality": "optional",
                 "description": "Origin of kerogen. Type I: Algal (aquatic), Type II: planktonic and soft plant material (aquatic or terrestrial), Type III: terrestrial woody/ fibrous plant material (terrestrial), Type IV: oxidized recycled woody debris (terrestrial) (additional information: https://en.wikipedia.org/wiki/Kerogen). If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "year",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2149,7 +2149,7 @@
                 "cardinality": "optional",
                 "description": "Main Hydrocarbon Resource type. The term \"Hydrocarbon Resource\" HCR defined as a natural environmental feature containing large amounts of hydrocarbons at high concentrations potentially suitable for commercial exploitation. This term should not be confused with the Hydrocarbon Occurrence term which also includes hydrocarbon-rich environments with currently limited commercial interest such as seeps, outcrops, gas hydrates etc. If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "year",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2167,7 +2167,7 @@
                 "cardinality": "optional",
                 "description": "Hydrocarbon resource main lithology (Additional information: http://petrowiki.org/Lithology_and_rock_type_determination). If \"other\" is specified, please propose entry in \"additional info\" field",
                 "cv": [],
-                "units": "year",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             },
@@ -2194,7 +2194,7 @@
                 "cardinality": "optional",
                 "description": "Injection water breakthrough date per well following a secondary and/or tertiary recovery",
                 "cv": [],
-                "units": "%",
+                "units": "",
                 "field_type": "TEXT_FIELD",
                 "regex": ""
             }
