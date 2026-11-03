@@ -911,7 +911,7 @@
                     "Trinidad and Tobago",
                     "Tromelin Island",
                     "Tunisia",
-                    "Turkey",
+                    "Turkiye",
                     "Turkmenistan",
                     "Turks and Caicos Islands",
                     "Tuvalu",
@@ -1093,7 +1093,7 @@
                 "cv": [],
                 "units": "Ka",
                 "field_type": "TEXT_FIELD",
-                "regex": "^[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?$"
+                "regex": "(^[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
                 "name": "sample age range oldest limit",
@@ -1102,7 +1102,7 @@
                 "cv": [],
                 "units": "Ka",
                 "field_type": "TEXT_FIELD",
-                "regex": "^[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?$"
+                "regex": "(^[+-]?(0|((0\\.)|([1-9][0-9]*\\.?))[0-9]*)([Ee][+-]?[0-9]+)?$)|(^not applicable$)|(^not collected$)|(^not provided$)|(^restricted access$)|(^missing: control sample$)|(^missing: sample group$)|(^missing: synthetic construct$)|(^missing: lab stock$)|(^missing: third party data$)|(^missing: data agreement established pre-2023$)|(^missing: endangered species$)|(^missing: human-identifiable$)|(^missing$)"
             },
             {
                 "name": "sample age inference method",
@@ -1118,7 +1118,19 @@
                     "relative dating",
                     "historical records",
                     "age-depth modelling",
-                    "other"
+                    "other",
+                    "not applicable",
+                    "not collected",
+                    "not provided",
+                    "restricted access",
+                    "missing: control sample",
+                    "missing: sample group",
+                    "missing: synthetic construct",
+                    "missing: lab stock",
+                    "missing: third party data",
+                    "missing: data agreement established pre-2023",
+                    "missing: endangered species",
+                    "missing: human-identifiable"
                 ],
                 "units": "",
                 "field_type": "TEXT_CHOICE_FIELD",

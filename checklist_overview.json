@@ -382,5 +382,21 @@
         "dataType": "CHECKLIST",
         "status": 4,
         "statusDescription": "public"
+    },
+    {
+        "accession": "ERC000061",
+        "description": "A comprehensive checklist for storing information about DNA taken from laboratory animals",
+        "name": "laboratory_animal",
+        "dataType": "CHECKLIST",
+        "status": 4,
+        "statusDescription": "public"
+    },
+    {
+        "accession": "ERC000062",
+        "description": "The ENA version of the sample relevant aspects of the PHA4GE wastewater genomic surveillance checklist. Using the MIxS terms where appropriate, else using PHA4GE terms(MIxS style) and PHA4GE descriptions",
+        "name": "enapha4ge_wastewater_genomic_surveillance",
+        "dataType": "CHECKLIST",
+        "status": 4,
+        "statusDescription": "public"
     }
 ]
