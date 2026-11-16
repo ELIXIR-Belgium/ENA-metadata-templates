@@ -714,7 +714,7 @@
                     "No",
                     "Yes"
                 ],
-                "units": "Yes",
+                "units": "",
                 "field_type": "TEXT_CHOICE_FIELD",
                 "regex": ""
             },
@@ -1143,7 +1143,7 @@
                     "Trinidad and Tobago",
                     "Tromelin Island",
                     "Tunisia",
-                    "Turkey",
+                    "Turkiye",
                     "Turkmenistan",
                     "Turks and Caicos Islands",
                     "Tuvalu",
