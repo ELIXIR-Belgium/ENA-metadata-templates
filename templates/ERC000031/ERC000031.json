@@ -2263,7 +2263,7 @@
                     "Trinidad and Tobago",
                     "Tromelin Island",
                     "Tunisia",
-                    "Turkey",
+                    "Turkiye",
                     "Turkmenistan",
                     "Turks and Caicos Islands",
                     "Tuvalu",
@@ -2323,7 +2323,7 @@
             },
             {
                 "name": "relative air humidity",
-                "cardinality": "mandatory",
+                "cardinality": "recommended",
                 "description": "partial vapor and air pressure, density of the vapor and air, or by the actual mass of the vapor and air",
                 "cv": [],
                 "units": "%",
@@ -2332,7 +2332,7 @@
             },
             {
                 "name": "absolute air humidity",
-                "cardinality": "mandatory",
+                "cardinality": "recommended",
                 "description": "actual mass of water vapor - mh20 - present in the air water vapor mixture",
                 "cv": [],
                 "units": "kg",
